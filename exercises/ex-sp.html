@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Reservoir Volume (Sequent Peak Algorithm) &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/ex-sp';</script>
     <link rel="canonical" href="https://hydro-informatics.com/exercises/ex-sp.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flood Return Periods" href="ex-floods.html" />
     <link rel="prev" title="1d Hydraulics (Manning-Strickler Formula)" href="ex-ms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -546,10 +569,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="reservoir-volume-sequent-peak-algorithm">
-<span id="ex-seq-peak"></span><h1>Reservoir Volume (Sequent Peak Algorithm)<a class="headerlink" href="#reservoir-volume-sequent-peak-algorithm" title="Permalink to this headline">#</a></h1>
+<span id="ex-seq-peak"></span><h1>Reservoir Volume (Sequent Peak Algorithm)<a class="headerlink" href="#reservoir-volume-sequent-peak-algorithm" title="Link to this heading">#</a></h1>
 <div class="admonition-goals-requirements admonition">
 <p class="admonition-title">Goals &amp; requirements</p>
 <p><strong>Goals</strong>: Write custom functions, load data from comma-type delimited text files, and manipulate data with <em>numpy</em>. Use loops and error exceptions efficiently.</p>
@@ -564,28 +587,28 @@ document.write(`
 <figure class="align-default" id="new-bullards">
 <img alt="New Bullards Bar Dam California USA Yuba River" src="https://github.com/Ecohydraulics/media/raw/main/jpg/new_bullards_bar.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">New Bullards Bar Dam in California, USA (source: Sebastian Schwindt 2017).</span><a class="headerlink" href="#new-bullards" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">New Bullards Bar Dam in California, USA (source: Sebastian Schwindt 2017).</span><a class="headerlink" href="#new-bullards" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="theory">
-<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h2>
+<h2>Theory<a class="headerlink" href="#theory" title="Link to this heading">#</a></h2>
 <p>Seasonal storage reservoirs retain water during wet months (e.g., monsoon, or rainy winters in Mediterranean climates) to ensure sufficient drinking water and agricultural supply during dry months. For this purpose, enormous storage volumes are necessary, which often exceed 1,000,000 m<span class="math notranslate nohighlight">\(^3\)</span>.</p>
 <p>The necessary storage volume is determined from historical inflow measurements and target discharge volumes (e.g., agriculture, drinking water, hydropower, or ecological residual water quantities).
 The sequent peak algorithm <span id="id1">[<a class="reference internal" href="../documentation/bibliography.html#id1342" title="Kenneth W. Potter. Sequent Peak Procedure: Minimum Reservoir Capacity Subject to Constraint on Final Storage. JAWRA Journal of the American Water Resources Association, 13(3):521–528, 1977. URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1752-1688.1977.tb05564.x (visited on 2021-06-07), doi:10.1111/j.1752-1688.1977.tb05564.x.">Pot77</a>]</span> based on <span id="id2">Rippl [<a class="reference internal" href="../documentation/bibliography.html#id1343" title="W Rippl. The capacity of storage-reservoirs for water-slpply. (including plate). Minutes of the Proceedings of the Institution of Civil Engineers, 71(1883):270–278, January 1883. Publisher: ICE Publishing. URL: https://www.icevirtuallibrary.com/doi/10.1680/imotp.1883.21797 (visited on 2021-06-07), doi:10.1680/imotp.1883.21797.">Rip83</a>]</span> is a decades-old procedure for determining the necessary seasonal storage volume based on a storage volume curve (<em><strong>SD curve</strong></em>). The below figure shows an exemplary <span class="math notranslate nohighlight">\(SD\)</span> curve with volume peaks (local maxima) approximately every 6 months and local volume minima between the peaks. The volume between the last local maximum and the lowest following local minimum determines the required storage volume (see the bright-blue line in the figure).</p>
 <figure class="align-default" id="sequentpeak">
 <img alt="sequent peak algorithm" src="https://github.com/Ecohydraulics/media/raw/main/png/sequent_peak.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Scheme of the sequent peak algorithm.</span><a class="headerlink" href="#sequentpeak" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Scheme of the sequent peak algorithm.</span><a class="headerlink" href="#sequentpeak" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The sequent peak algorithm repeats this calculation over multiple years and the highest volume observed determines the required volume.</p>
 <p>In this exercise, we use daily flow measurements from Vanilla River (in Vanilla-arid country with monsoon periods) and target outflow volumes to supply farmers and the population of Vanilla-arid country with sufficient water during the dry seasons. This exercise guides you through loading the daily discharge data, creating the monthly <span class="math notranslate nohighlight">\(SD\)</span> (storage) curve, and calculating the required storage volume.</p>
 </section>
 <section id="pre-processing-of-flow-data">
-<h2>Pre-processing of Flow Data<a class="headerlink" href="#pre-processing-of-flow-data" title="Permalink to this headline">#</a></h2>
+<h2>Pre-processing of Flow Data<a class="headerlink" href="#pre-processing-of-flow-data" title="Link to this heading">#</a></h2>
 <p>The daily flow data of the Vanilla River are available from 1979 through 2001 in the form of <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files (<a class="reference external" href="https://github.com/Ecohydraulics/Exercise-SequentPeak/tree/master/flows"><code class="docutils literal notranslate"><span class="pre">flows</span></code> folder</a>).</p>
 <section id="write-a-function-to-read-flow-data">
-<h3>Write a Function to Read Flow Data<a class="headerlink" href="#write-a-function-to-read-flow-data" title="Permalink to this headline">#</a></h3>
+<h3>Write a Function to Read Flow Data<a class="headerlink" href="#write-a-function-to-read-flow-data" title="Link to this heading">#</a></h3>
 <p>The function will loop over the <em>csv</em> file names and append the file contents to a dictionary of <em>numpy</em> arrays. Make sure to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">os</span></code>, and <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">glob</span></code>.</p>
 <ul class="simple">
 <li><p>Choose a function name (e.g., <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">read_data(args):</span></code>) and use the following input arguments:</p>
@@ -705,7 +728,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 </div>
 </section>
 <section id="convert-daily-flows-to-monthly-volumes">
-<h3>Convert Daily Flows to Monthly Volumes<a class="headerlink" href="#convert-daily-flows-to-monthly-volumes" title="Permalink to this headline">#</a></h3>
+<h3>Convert Daily Flows to Monthly Volumes<a class="headerlink" href="#convert-daily-flows-to-monthly-volumes" title="Link to this heading">#</a></h3>
 <p>The sequent peak algorithm takes monthly flow volumes, which corresponds to the sum of daily average discharge multiplied with the duration of one day (e.g, 11.0 m<span class="math notranslate nohighlight">\(^3\)</span>/s <span class="math notranslate nohighlight">\(\cdot\)</span> 24 h/d <span class="math notranslate nohighlight">\(\cdot\)</span> 3600 s/h). Reading the flow data as above shown results in annual flow tables (average daily flows in m<span class="math notranslate nohighlight">\(^3\)</span>/s) with the <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>s of the shape 31x12 arrays (matrices) for every year. We want to get the column sums and multiply the sum with 24 h/d <span class="math notranslate nohighlight">\(\cdot\)</span> 3600 s/h. Because the monthly volumes are in the order of million cubic meters (CMS), dividing the monthly sums by <code class="docutils literal notranslate"><span class="pre">10**6</span></code> will simplify the representation of numbers.</p>
 <p>Write a function (e.g., <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">daily2monthly(daily_flow_series)</span></code>) to perform the conversion of daily average flow series to monthly volumes in 10<span class="math notranslate nohighlight">\(^{6}\)</span>m<span class="math notranslate nohighlight">\(^3\)</span>:</p>
 <ul class="simple">
@@ -753,9 +776,9 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 </section>
 </section>
 <section id="sequent-peak-algorithm">
-<h2>Sequent Peak Algorithm<a class="headerlink" href="#sequent-peak-algorithm" title="Permalink to this headline">#</a></h2>
+<h2>Sequent Peak Algorithm<a class="headerlink" href="#sequent-peak-algorithm" title="Link to this heading">#</a></h2>
 <p>With the above routines for reading the flow data, we derived monthly inflow volumes <span class="math notranslate nohighlight">\(In_{m}\)</span> in million m<span class="math notranslate nohighlight">\(^3\)</span> (stored in <code class="docutils literal notranslate"><span class="pre">monthly_vol_dict</span></code>). For irrigation and drinking water supply, Vanilla-arid country wants to withdraw the following annual volume from the reservoir:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><em><strong>Month</strong></em></p></th>
 <th class="head"><p>Jan</p></th>
@@ -794,7 +817,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 </pre></div>
 </div>
 <section id="storage-volume-and-difference-sd-line-curves">
-<h3>Storage Volume and Difference (SD-line) Curves<a class="headerlink" href="#storage-volume-and-difference-sd-line-curves" title="Permalink to this headline">#</a></h3>
+<h3>Storage Volume and Difference (SD-line) Curves<a class="headerlink" href="#storage-volume-and-difference-sd-line-curves" title="Link to this heading">#</a></h3>
 <p>The storage volume of the present month <span class="math notranslate nohighlight">\(S_{m}\)</span> is calculated as the result of the water balance from the last month, for example:<br></p>
 <p><span class="math notranslate nohighlight">\(S_{2}\)</span> = <span class="math notranslate nohighlight">\(S_{1}\)</span> + <span class="math notranslate nohighlight">\(In_{1}\)</span> - <span class="math notranslate nohighlight">\(Out_{1}\)</span><br>
 <span class="math notranslate nohighlight">\(S_{3}\)</span> = <span class="math notranslate nohighlight">\(S_{2}\)</span> + <span class="math notranslate nohighlight">\(In_{2}\)</span> - <span class="math notranslate nohighlight">\(Out_{2}\)</span> = <span class="math notranslate nohighlight">\(S_{1}\)</span> + <span class="math notranslate nohighlight">\(In_{1}\)</span> + <span class="math notranslate nohighlight">\(In_{2}\)</span> - <span class="math notranslate nohighlight">\(Out_{1}\)</span> - <span class="math notranslate nohighlight">\(Out_{2}\)</span><br></p>
@@ -857,12 +880,12 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 <figure class="align-default" id="sdline">
 <img alt="sequent peak storage difference sd curve" src="https://github.com/Ecohydraulics/media/raw/main/png/storage_curve.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Storage Difference (SD) curve.</span><a class="headerlink" href="#sdline" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Storage Difference (SD) curve.</span><a class="headerlink" href="#sdline" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="calculate-required-storage-volume">
-<h3>Calculate Required Storage Volume<a class="headerlink" href="#calculate-required-storage-volume" title="Permalink to this headline">#</a></h3>
+<h3>Calculate Required Storage Volume<a class="headerlink" href="#calculate-required-storage-volume" title="Link to this heading">#</a></h3>
 <p>The required storage volume corresponds to the largest difference between a local maximum and its consecutive lowest local minimum. Therefore, add the following lines to the <code class="docutils literal notranslate"><span class="pre">sequent_peak</span></code> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">required_volume</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">vol</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">seas_max_vol</span><span class="p">):</span>
@@ -876,7 +899,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 <p>Close the <code class="docutils literal notranslate"><span class="pre">sequent_peak</span></code> function with <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">required_volume</span></code></p>
 </section>
 <section id="call-sequent-peak-algorithm">
-<h3>Call Sequent Peak Algorithm<a class="headerlink" href="#call-sequent-peak-algorithm" title="Permalink to this headline">#</a></h3>
+<h3>Call Sequent Peak Algorithm<a class="headerlink" href="#call-sequent-peak-algorithm" title="Link to this heading">#</a></h3>
 <p>With all required functions written, the last task is to call the functions in the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> statement:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">...</span>
 
@@ -907,7 +930,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 </section>
 </section>
 <section id="closing-remarks">
-<h2>Closing Remarks<a class="headerlink" href="#closing-remarks" title="Permalink to this headline">#</a></h2>
+<h2>Closing Remarks<a class="headerlink" href="#closing-remarks" title="Link to this heading">#</a></h2>
 <p>The usage of the sequent peak algorithm (also known as <em>Rippl’s method</em>, owing to its original author) has evolved and was implemented in sophisticated storage volume control algorithms with predictor models (statistical and/or numerical).</p>
 <p>In the end, there are several algorithms and ways to code them. Many factors (e.g. terrain or climate zone) determine whether seasonal storage is possible or necessary. When determining the storage volume, social and environmental aspects must not be neglected. Every grain of sediment retained is missing in downstream sections of the river, every fish that is no longer able to migrate suffers a loss in habitat, and more than anything else, every inhabitant who suffers economic losses or is even forced to resettle because of the dam must be avoided or adequately compensated.</p>
 <div class="admonition-homework admonition">
@@ -942,11 +965,10 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ex-ms.html"
@@ -966,10 +988,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -977,6 +996,7 @@ The sequent peak algorithm <span id="id1">[<a class="reference internal" href=".
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1018,6 +1038,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1044,8 +1065,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

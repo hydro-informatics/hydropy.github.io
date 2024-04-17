@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Boundary Conditions &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/telemac/boundaries';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/telemac/boundaries.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Convergence (Quantitative)" href="convergence.html" />
     <link rel="prev" title="Boundaries &amp; Mass Convergence" href="mass-balance-bc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -537,10 +560,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="boundary-conditions">
-<span id="tm-foc-bc"></span><h1>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">#</a></h1>
+<span id="tm-foc-bc"></span><h1>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h1>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
 <p>This tutorial does not require running code, but we recommend to at least setting up a Telemac model, such as described in the <a class="reference internal" href="telemac2d-steady.html#telemac2d-steady"><span class="std std-ref">steady 2d tutorial</span></a>, which eases the understanding of concepts and terms.</p>
@@ -552,7 +575,7 @@ document.write(`
 <p>The workflows and tips shown in this chapter primarily refer to the numerical modeling of rivers with Telemac. Similar conditions might apply to lake estuaries, but other environments, such as coastal regions, will require different considerations for defining boundary conditions.</p>
 </div>
 <section id="draw-liquid-boundaries">
-<span id="tm-foc-draw-bc"></span><h2>Draw Liquid Boundaries<a class="headerlink" href="#draw-liquid-boundaries" title="Permalink to this headline">#</a></h2>
+<span id="tm-foc-draw-bc"></span><h2>Draw Liquid Boundaries<a class="headerlink" href="#draw-liquid-boundaries" title="Link to this heading">#</a></h2>
 <p>When drawing liquid boundaries, for example, in BlueKenue, a couple of geometric characteristics will help to improve the stability and mass balance of the later simulation:</p>
 <ul class="simple">
 <li><p>Liquid boundaries should have at least 5-10 nodes.</p></li>
@@ -563,12 +586,12 @@ document.write(`
 <figure class="align-default" id="draw-inflow">
 <img alt="draw bluekenue liquid boundary conditions conlim upstream inflow" src="../../_images/cross-section-sx.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 197 </span><span class="caption-text">The red highlighted part of this qualitative cross section should be defined as the inflow (upstream) boundary condition. Mesh nodes at the riverbanks and on the floodplains should not be included.</span><a class="headerlink" href="#draw-inflow" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 197 </span><span class="caption-text">The red highlighted part of this qualitative cross section should be defined as the inflow (upstream) boundary condition. Mesh nodes at the riverbanks and on the floodplains should not be included.</span><a class="headerlink" href="#draw-inflow" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="the-structure-of-boundaries-cli">
-<span id="tm-foc-unpack-bc"></span><h2>The Structure of Boundaries.Cli<a class="headerlink" href="#the-structure-of-boundaries-cli" title="Permalink to this headline">#</a></h2>
+<span id="tm-foc-unpack-bc"></span><h2>The Structure of Boundaries.Cli<a class="headerlink" href="#the-structure-of-boundaries-cli" title="Link to this heading">#</a></h2>
 <p>The steady 2d, unsteady 2d, and tutorials showcase the different types of boundaries using prescribed discharge (<code class="docutils literal notranslate"><span class="pre">Q</span></code>) and/or water depth (<code class="docutils literal notranslate"><span class="pre">H</span></code>), which are implemented into a boundaries <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file consisting of 13 space (tab) - separated colons:</p>
 <div class="note admonition">
 <p class="admonition-title">Example of a hydrodynamics boundaries.cli file (first 3 rows)</p>
@@ -581,13 +604,7 @@ document.write(`
 </div>
 <p>The 13 space (tab) - separated colons correspond to 13 boundary variables, which are listed in <a class="reference internal" href="#tab-bc-overview"><span class="std std-numref">Table 11</span></a> for a hydrodynamic Telemac2d/3d (see <a class="reference external" href="https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/boundaries.cli">boundaries.cli</a>) and a Gaia boundary conditions file.</p>
 <table class="table" id="tab-bc-overview">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Meaning of columns in a Boundary.Cli file for Telemac2d/3d and Gaia.</span><a class="headerlink" href="#tab-bc-overview" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Meaning of columns in a Boundary.Cli file for Telemac2d/3d and Gaia.</span><a class="headerlink" href="#tab-bc-overview" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column no.<br></p></th>
 <th class="head"><p>Flag<br></p></th>
@@ -699,12 +716,7 @@ document.write(`
 </ul>
 <p>Also, these values can be assigned to column 8 (LITBOR/LIEBOR) of the <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file. Note that in a hydrodynamic simulation, the combination of columns 2 and 3 (LIUBOR and LIVBOR) is effectively a discharge boundary. All other columns are <em>Prescriptions</em> and <em>Node IDs</em>. The <em>Prescriptions</em> may be used to impose, for example, a flow velocity value (not recommended). The <em>Node IDs</em> were written by BlueKenue (or whatever mesh generator was used) and should not be modified. Thus, regarding the mass balance of water, the first three columns are important and they can get assigned the (common) value combinations listed in <a class="reference internal" href="#bc-defs-tm"><span class="std std-numref">Tab. 12</span></a> below. For the mass balance of tracers, column 8 can be defined analogously. Additionally, a <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file for sediment transport can be similarly defined with the first three columns, as described in the <a class="reference internal" href="gaia-basics.html#gaia-bc"><span class="std std-ref">Gaia tutorial</span></a>.</p>
 <table class="table" id="bc-defs-tm">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">Value combinations for the first three columns of a hydrodynamic boundaries.cli file affecting the mass balance of water.</span><a class="headerlink" href="#bc-defs-tm" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Value combinations for the first three columns of a hydrodynamic boundaries.cli file affecting the mass balance of water.</span><a class="headerlink" href="#bc-defs-tm" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Type</strong></p></th>
 <th class="head"><p>Number code</p></th>
@@ -732,7 +744,7 @@ document.write(`
 </table>
 </section>
 <section id="edit-boundary-cli-to-change-conditions">
-<span id="tm-edit-bc"></span><h2>Edit Boundary.Cli to Change Conditions<a class="headerlink" href="#edit-boundary-cli-to-change-conditions" title="Permalink to this headline">#</a></h2>
+<span id="tm-edit-bc"></span><h2>Edit Boundary.Cli to Change Conditions<a class="headerlink" href="#edit-boundary-cli-to-change-conditions" title="Link to this heading">#</a></h2>
 <p>To view or edit the type of boundary conditions, open the <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file with a text editor (read more about <a class="reference internal" href="../../get-started/others.html#npp"><span class="std std-ref">text editors</span></a>). Typically, most of the rows will hold the value combination <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">2</span> <span class="pre">2</span></code> in columns 1-3, that is, they are solid boundaries. The liquid boundary rows start with <code class="docutils literal notranslate"><span class="pre">4</span></code> or <code class="docutils literal notranslate"><span class="pre">5</span></code> as listed in <a class="reference internal" href="#bc-defs-tm"><span class="std std-numref">Tab. 12</span></a>. Every row in the <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file represents a node of the mesh, and neighboring rows represent neighboring mesh nodes. For instance, the node described in row (line) 435 of a <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file is geospatially located directly between the boundary nodes described in lines 434 and 436 of the <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file. Since the definitions in the <code class="docutils literal notranslate"><span class="pre">.cli</span></code> file are purely geometric or geometric attributes, additional hydraulic attributes must be prescribed or linked in the steering (<code class="docutils literal notranslate"><span class="pre">.cas</span></code>) file. Thus, the Telemac steering file controls how much water is flowing through the liquid boundaries, and/or the water depth/surface elevation with the following keywords:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="w"> </span><span class="n">Keywords</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">.</span><span class="n">cas</span><span class="w"> </span><span class="n">steering</span><span class="w"> </span><span class="k">file</span>
 <span class="n">PRESCRIBED</span><span class="w"> </span><span class="n">ELEVATIONS</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">51</span><span class="mf">8.20</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="mi">0</span>
@@ -758,7 +770,7 @@ document.write(`
 </div>
 </section>
 <section id="boundaries-convergence">
-<h2>Boundaries &amp; Convergence<a class="headerlink" href="#boundaries-convergence" title="Permalink to this headline">#</a></h2>
+<h2>Boundaries &amp; Convergence<a class="headerlink" href="#boundaries-convergence" title="Link to this heading">#</a></h2>
 <p>The prescription of <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">4</span> <span class="pre">4</span></code> (H only), <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">5</span> <span class="pre">5</span></code> (Q only), or <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">5</span> <span class="pre">5</span></code> (Q and H) boundary conditions in the <a class="reference internal" href="#cli-example"><span class="std std-ref">above example</span></a> may result in numerical instabilities of a dry-initialized simulation, or unbalanced inflows and outflows.</p>
 <p>To verify mass conservation, refer to the next section on <a class="reference internal" href="convergence.html#tm-convergence"><span class="std std-ref">quantitative convergence</span></a> analysis of fluxes across (or through) the liquid boundaries.</p>
 <p>To troubleshoot mass convergence issues, have a look at our <a class="reference internal" href="mass-optimization.html#tm-foc-mass-workflow"><span class="std std-ref">workflow for mass conservation</span></a>.</p>
@@ -790,11 +802,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="mass-balance-bc.html"
@@ -814,10 +825,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -825,6 +833,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -857,6 +866,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -883,8 +893,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

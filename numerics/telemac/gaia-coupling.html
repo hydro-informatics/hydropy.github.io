@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Introduction and Coupling &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/telemac/gaia-coupling';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/telemac/gaia-coupling.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Basic Setup of Gaia" href="gaia-basics.html" />
     <link rel="prev" title="Gaia (Morphodynamics)" href="telemac-gaia.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -545,10 +568,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-and-coupling">
-<h1>Introduction and Coupling<a class="headerlink" href="#introduction-and-coupling" title="Permalink to this headline">#</a></h1>
+<h1>Introduction and Coupling<a class="headerlink" href="#introduction-and-coupling" title="Link to this heading">#</a></h1>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
 <p>This tutorial is designed for <strong>advanced modelers</strong> and before diving into this tutorial make sure to <strong>complete the <a class="reference internal" href="../pre-slf-tm.html#slf-prepro-tm"><span class="std std-ref">TELEMAC pre-processing</span></a> and <a class="reference internal" href="telemac2d-steady.html#telemac2d-steady"><span class="std std-ref">Telemac2d steady hydrodynamic modeling</span></a> tutorials</strong>.</p>
@@ -561,30 +584,30 @@ document.write(`
 </ul>
 </div>
 <section id="terminology">
-<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">#</a></h2>
+<h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h2>
 <p>A hydro-morphodynamic simulation implies modeling runoff-driven <strong><a class="reference internal" href="../../documentation/glossary.html#term-Sediment-transport"><span class="xref std std-term">Sediment transport</span></a></strong> processes. The previous sections in this eBook focus on hydrodynamics defined as <em>the study of liquids in motion</em> and this section focuses on <strong>morphodynamics</strong> defined as <strong>the study of time-dependent changes in the forms of alluvial beds and their underlying processes</strong>.</p>
 </section>
 <section id="sediment-transport-modes">
-<span id="gaia-seditrans"></span><h2>Sediment Transport Modes<a class="headerlink" href="#sediment-transport-modes" title="Permalink to this headline">#</a></h2>
+<span id="gaia-seditrans"></span><h2>Sediment Transport Modes<a class="headerlink" href="#sediment-transport-modes" title="Link to this heading">#</a></h2>
 <p>TELEMAC has a dedicated module called Gaia for modeling morphodynamics. Gaia enables modeling sediment transport and morphological evolution (i.e., <a class="reference internal" href="../../documentation/glossary.html#term-Topographic-change"><span class="xref std std-term">Topographic change</span></a>) in rivers, lakes, and estuaries. It comes with particular routines to consider a spatio-temporal variation of grain sizes, grading curves, and riverbed layering for simulating sediment transport in the form of <strong><a class="reference internal" href="../../documentation/glossary.html#term-Bedload"><span class="xref std std-term">Bedload</span></a> (coarse sediment)</strong> and/or <strong><a class="reference internal" href="../../documentation/glossary.html#term-Suspended-load"><span class="xref std std-term">Suspended load</span></a> (fine sediment)</strong>. <a class="reference internal" href="../../documentation/glossary.html#term-Bedload"><span class="xref std std-term">Bedload</span></a> is calculated by solving semi-empiric equations, such as the <span id="id1">Meyer-Peter and Müller [<a class="reference internal" href="../../documentation/bibliography.html#id391" title="E Meyer-Peter and R Müller. Formulas for Bed-Load transport. IAHSR, appendix 2, 2nd meeting:39–65, 1948. URL: http://resolver.tudelft.nl/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7.">MPM48</a>]</span> formula (read more later in this tutorial). <a class="reference internal" href="../../documentation/glossary.html#term-Suspended-load"><span class="xref std std-term">Suspended load</span></a> is modeled by solving the <a class="reference internal" href="../../documentation/glossary.html#term-Advection"><span class="xref std std-term">Advection</span></a>-<a class="reference internal" href="../../documentation/glossary.html#term-Diffusion"><span class="xref std std-term">Diffusion</span></a> equations (typically, the <a class="reference internal" href="../../documentation/glossary.html#term-RANS"><span class="xref std std-term">RANS</span></a> form), require closures for sediment erosion and deposition fluxes. <a class="reference internal" href="#bl-vs-sl"><span class="std std-numref">Figure 190</span></a> qualitatively illustrates the two basic modes of sediment transport in the form of suspended load and bedload. Whether a particle is transported in suspension or as bedload can also be determined by calculating of the <a class="reference internal" href="../../documentation/glossary.html#term-Rouse-number"><span class="xref std std-term">Rouse number</span></a>.</p>
 <figure class="align-default" id="bl-vs-sl">
 <img alt="sediment transport bedload suspended load" src="https://github.com/Ecohydraulics/media/raw/main/png/sediment-transport.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 190 </span><span class="caption-text">Qualitative representation of two modes of sediment transport. On the left: suspended load in the form of fine particles moving with the bulk flow; on the right: bedload in the form of particles rolling, jumping, or sliding on the riverbed.</span><a class="headerlink" href="#bl-vs-sl" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 190 </span><span class="caption-text">Qualitative representation of two modes of sediment transport. On the left: suspended load in the form of fine particles moving with the bulk flow; on the right: bedload in the form of particles rolling, jumping, or sliding on the riverbed.</span><a class="headerlink" href="#bl-vs-sl" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Sediment is further distinguished between very fine, <strong>cohesive</strong> sediment and coarser, <strong>non-cohesive</strong> sediment. In addition, Gaia accounts for bed evolution through an iterative solution of the <a class="reference internal" href="../../documentation/glossary.html#term-Exner-equation"><span class="xref std std-term">Exner equation</span></a> <span id="id2">[<a class="reference internal" href="../../documentation/bibliography.html#id186" title="Felix M Exner. Über die Wechselwirkung zwischen Wasser und Geschiebe in Flüssen [About the Interdependency of Water and Bed load in Rivers]. Akademie der Wissenschaften in Wien, math.-naturw. Klasse, Sitzungsberichte, Abt. IIa, 134:165–203, 1925.">Exn25</a>]</span> for mass conversation.</p>
 <p>The recruitment of sediment for both suspended load and bedload transport requires a detailed look at the riverbed, which will be provided later in the section on the definition of <a class="reference internal" href="gaia-basics.html#gaia-active-lyr"><span class="std std-ref">the riverbed composition and the active layer</span></a>.</p>
 </section>
 <section id="coupling-telemac-and-gaia">
-<span id="tm-coupling"></span><h2>Coupling TELEMAC and Gaia<a class="headerlink" href="#coupling-telemac-and-gaia" title="Permalink to this headline">#</a></h2>
+<span id="tm-coupling"></span><h2>Coupling TELEMAC and Gaia<a class="headerlink" href="#coupling-telemac-and-gaia" title="Link to this heading">#</a></h2>
 <p>The morphodynamics module Gaia can be internally <strong>coupled</strong> with the hydrodynamic models Telemac2d (solving the <a class="reference internal" href="../../documentation/glossary.html#term-Shallow-water-equations"><span class="xref std std-term">Shallow water equations</span></a>) or Telemac3d (solving the Reynolds-averaged <a class="reference internal" href="../../documentation/glossary.html#term-Navier-Stokes-equations"><span class="xref std std-term">Navier-Stokes (RANS) equations</span></a>). This section explains types of coupling Telemac2d/Telemac3d (hydrodynamics) with Gaia (morphodynamics).</p>
 <section id="from-sisyphe-to-gaia">
-<h3>From Sisyphe to Gaia<a class="headerlink" href="#from-sisyphe-to-gaia" title="Permalink to this headline">#</a></h3>
+<h3>From Sisyphe to Gaia<a class="headerlink" href="#from-sisyphe-to-gaia" title="Link to this heading">#</a></h3>
 <p>Sisyphe is the traditional sediment transport module in TELEMAC, which has already largely been replaced by the more logical Gaia module. To get specifications beyond the features presented here in the TELEMAC documentation and the TELEMAC forum, it is useful to know that there has been a predecessor module of Gaia called SISYPHE. SISYPHE and its routines are still available in recent TELEMAC versions in addition to and through Gaia. Although the use of SISYPHE routines through Gaia with functional enhancements require adjustments of some keywords. Read more in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/gaia/user/gaia_user_v8p4.pdf">Gaia manual</a> in Appendix 8.1 and in the <a class="reference external" href="http://svn.opentelemac.org/svn/opentelemac/tags/v8p2r1/sources/gaia/gaia.dico">gaia.dico</a> file (lives in the TELEMAC installation directory: <code class="docutils literal notranslate"><span class="pre">telemac/v8p2/sources/gaia/gaia.dico</span></code>).</p>
 </section>
 <section id="coupling-hydrodynamics-telemac2d-3d-and-morphodynamics-gaia">
-<h3>Coupling Hydrodynamics (Telemac2d/3d) and Morphodynamics (Gaia)<a class="headerlink" href="#coupling-hydrodynamics-telemac2d-3d-and-morphodynamics-gaia" title="Permalink to this headline">#</a></h3>
+<h3>Coupling Hydrodynamics (Telemac2d/3d) and Morphodynamics (Gaia)<a class="headerlink" href="#coupling-hydrodynamics-telemac2d-3d-and-morphodynamics-gaia" title="Link to this heading">#</a></h3>
 <p>A hydro-morphodynamic numerical model can be either <strong>fully coupled</strong> or <strong>decoupled</strong>.</p>
 <dl class="simple myst">
 <dt>Fully coupled model</dt><dd><p>A fully coupled model solves the hydrodynamic <a class="reference internal" href="../../documentation/glossary.html#term-Navier-Stokes-equations"><span class="xref std std-term">Navier-Stokes equations</span></a> simultaneously with sediment transport equations (i.e., erosion and deposition fluxes from and to the riverbed through the <a class="reference internal" href="../../documentation/glossary.html#term-Exner-equation"><span class="xref std std-term">Exner equation</span></a>). Bed elevation (i.e., <a class="reference internal" href="../../documentation/glossary.html#term-Topographic-change"><span class="xref std std-term">Topographic change</span></a>) is calculated for every timestep, which leads to <strong>long computation</strong> times. In addition to the coupling of gravity-driven hydrodynamics (i.e., bulk flow along valley slopes), <a class="reference internal" href="../../documentation/glossary.html#term-Sediment-transport"><span class="xref std std-term">Sediment transport</span></a>, and <a class="reference internal" href="../../documentation/glossary.html#term-Topographic-change"><span class="xref std std-term">Topographic change</span></a>, a model can also be coupled with (surface) wave hydrodynamics.</p>
@@ -603,7 +626,7 @@ document.write(`
 <p>To get updates on the coupling period and modes of Gaia, follow the <a class="reference external" href="http://www.opentelemac.org/index.php/kunena/17-sisyphe/13413-coupling-period-for-gaia#38974">discussion in the TELEMAC Forum</a>.</p>
 </section>
 <section id="file-requirements-for-coupling-gaia">
-<h3>File Requirements for Coupling Gaia<a class="headerlink" href="#file-requirements-for-coupling-gaia" title="Permalink to this headline">#</a></h3>
+<h3>File Requirements for Coupling Gaia<a class="headerlink" href="#file-requirements-for-coupling-gaia" title="Link to this heading">#</a></h3>
 <p>In addition to the standard Telemac2d steering, boundaries, and geometry mesh files, coupling hydrodynamics with Gaia requires a new steering (<code class="docutils literal notranslate"><span class="pre">*.cas</span></code>) file that needs to be referenced in the main steering file of the simulation. To this end, <strong>create a new folder for the Gaia tutorial</strong> (e.g., called <code class="docutils literal notranslate"><span class="pre">/gaia2d-tutorial/</span></code>), copy the <a class="reference internal" href="telemac2d-steady.html#tm2d-init-dry"><span class="std std-ref">dry-initialized steady2d simulation and results files</span></a> (or clone the <a class="reference external" href="https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/">gaia2d-tutorial repository</a>), and <strong>create a new Gaia steering file</strong> (e.g., called <code class="docutils literal notranslate"><span class="pre">gaia-morphodynamics.cas</span></code>). Thus, the following files should live in the modeling folder for this tutorial:</p>
 <ul class="simple">
 <li><p>The computational mesh in the form of <a class="reference external" href="https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/qgismesh.slf">qgismesh.slf</a>.</p></li>
@@ -618,7 +641,7 @@ document.write(`
 </div>
 </section>
 <section id="couple-gaia-in-the-hydrodynamics-steering-file">
-<h3>Couple Gaia in the Hydrodynamics Steering File<a class="headerlink" href="#couple-gaia-in-the-hydrodynamics-steering-file" title="Permalink to this headline">#</a></h3>
+<h3>Couple Gaia in the Hydrodynamics Steering File<a class="headerlink" href="#couple-gaia-in-the-hydrodynamics-steering-file" title="Link to this heading">#</a></h3>
 <p>To programmatically implement the coupling of Gaia with a Telemac2d/Telemac3d simulation, a couple of new keywords need to be defined in addition to the keywords explained in the <a class="reference internal" href="telemac2d-steady.html#telemac2d-steady"><span class="std std-ref">steady2d chapter</span></a>. The first additional keyword is the baseline for any coupling with Telemac2d or Telemac3d steering file:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="w"> </span><span class="n">steady2d</span><span class="o">-</span><span class="n">gaia</span><span class="p">.</span><span class="n">cas</span>
 <span class="n">COUPLING</span><span class="w"> </span><span class="n">WITH</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;GAIA&#39;</span>
@@ -636,7 +659,7 @@ document.write(`
 </div>
 </section>
 <section id="hotstart">
-<span id="gaia-hotstart"></span><h3>Hotstart<a class="headerlink" href="#hotstart" title="Permalink to this headline">#</a></h3>
+<span id="gaia-hotstart"></span><h3>Hotstart<a class="headerlink" href="#hotstart" title="Link to this heading">#</a></h3>
 <p>This tutorial builds on the results of the <a class="reference internal" href="telemac2d-steady.html#tm2d-init-dry"><span class="std std-ref">dry-initialized steady2d model</span></a> because Gaia is designed as a decoupled model (see the <a class="reference internal" href="#tm-coupling"><span class="std std-ref">above definitions</span></a>). Using a former simulation result for model initialization is called <strong>hotstart</strong> for which TELEMAC requires, of course, a results file from a previous simulation. For this purpose, make sure that the dry-initialized steady2d results file in the simulation folder (<a class="reference external" href="https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/r2dsteady.slf">download r2dsteady.slf</a>). Then <strong>define the hotstart in the Telemac2d steering file</strong> with the following keywords:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="w"> </span><span class="n">steady2d</span><span class="o">-</span><span class="n">gaia</span><span class="p">.</span><span class="n">cas</span>
 <span class="o">/</span><span class="w"> </span><span class="p">...</span>
@@ -668,7 +691,7 @@ document.write(`
 </div>
 </section>
 <section id="control-sections">
-<h3>Control Sections<a class="headerlink" href="#control-sections" title="Permalink to this headline">#</a></h3>
+<h3>Control Sections<a class="headerlink" href="#control-sections" title="Link to this heading">#</a></h3>
 <p>Control sections are sequences of node numbers (or node coordinates) at which TELEMAC sums up fluxes, for instance, to verify inflow and outflow mass balances. The unsteady simulation section provides detailed instructions for <a class="reference internal" href="telemac2d-unsteady.html#tm-control-sections"><span class="std std-ref">defining control sections</span></a> and this tutorial re-uses the control sections file from the unsteady simulation (<strong><a class="reference external" href="https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/control-sections.txt">download control-sections.txt</a></strong>).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -696,7 +719,7 @@ Expand to view the file <em>control-sections.txt</em><div class="sd-summary-down
 <p>Thus, re-running the simulation will write the fluxes across the two defined control sections to a file called <em>r-control-flows.txt</em>.</p>
 </section>
 <section id="hydrodynamic-steering-summary">
-<h3>Hydrodynamic Steering Summary<a class="headerlink" href="#hydrodynamic-steering-summary" title="Permalink to this headline">#</a></h3>
+<h3>Hydrodynamic Steering Summary<a class="headerlink" href="#hydrodynamic-steering-summary" title="Link to this heading">#</a></h3>
 <p>With the above adaptions and using a simulation length of <code class="docutils literal notranslate"><span class="pre">30000</span></code> timesteps (to observed morphodynamic evolution) with a graphical printout period of every <code class="docutils literal notranslate"><span class="pre">5000</span></code> timesteps (to reduce the output file size), the final hydrodynamic steering file should look like this:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="w"> </span><span class="n">steady2d</span><span class="o">-</span><span class="n">gaia</span><span class="p">.</span><span class="n">cas</span>
 <span class="o">/</span>
@@ -833,11 +856,10 @@ Expand to view the file <em>control-sections.txt</em><div class="sd-summary-down
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="telemac-gaia.html"
@@ -857,10 +879,7 @@ Expand to view the file <em>control-sections.txt</em><div class="sd-summary-down
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -868,6 +887,7 @@ Expand to view the file <em>control-sections.txt</em><div class="sd-summary-down
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -908,6 +928,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -934,8 +955,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

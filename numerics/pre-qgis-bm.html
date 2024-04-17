@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Pre-processing with QGIS &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/pre-qgis-bm';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/pre-qgis-bm.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Run and Check a Steady 2d Simulation" href="basement/basement2d.html" />
     <link rel="prev" title="BASEMENT" href="basement/basement.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -482,20 +503,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -546,10 +569,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pre-processing-with-qgis">
-<span id="qgis-prepro-bm"></span><h1>Pre-processing with QGIS<a class="headerlink" href="#pre-processing-with-qgis" title="Permalink to this headline">#</a></h1>
+<span id="qgis-prepro-bm"></span><h1>Pre-processing with QGIS<a class="headerlink" href="#pre-processing-with-qgis" title="Link to this heading">#</a></h1>
 <div class="attention admonition">
 <p class="admonition-title">Requirements</p>
 <p>This tutorial is designed for <strong>beginners</strong> and before diving into this tutorial make sure to:</p>
@@ -568,9 +591,9 @@ document.write(`
 <p>BASEMENT version 2 (v2) was developed with complex structures and a broad range of capacities, yet little focus was drawn on computing time. BASEMENT version 3 (v3) considerably simplified the modeling process for users and came with highly efficient computing options, including massive parallelization on GPUs. However, the simplified v3 lacks many relevant modules, such as multi-layer riverbeds for calculating topographic change as a function of multi-grain size bedload transport formulae. Now, BASEMENT version 4 (v4) provides both the manifold capacities of v2 in the form of BASEMD setups, and the computing efficiency of v3 in the form of BASEHPC setups. This tutorial explains the setup of a BASEHPC model.</p>
 </div>
 <section id="qgis-setup">
-<span id="start-qgis"></span><h2>QGIS Setup<a class="headerlink" href="#qgis-setup" title="Permalink to this headline">#</a></h2>
+<span id="start-qgis"></span><h2>QGIS Setup<a class="headerlink" href="#qgis-setup" title="Link to this heading">#</a></h2>
 <section id="coordinate-reference-system-crs">
-<h3>Coordinate Reference System (CRS)<a class="headerlink" href="#coordinate-reference-system-crs" title="Permalink to this headline">#</a></h3>
+<h3>Coordinate Reference System (CRS)<a class="headerlink" href="#coordinate-reference-system-crs" title="Link to this heading">#</a></h3>
 <p>Launch QGIS and <a class="reference internal" href="../geopy/use-qgis.html#qgis-project"><span class="std std-ref">create a new QGIS project</span></a> to get started with this tutorial.
 As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qgis-tutorial"><span class="std std-ref">QGIS Tutorial</span></a>, set up a coordinate reference system (CRS) for the project. This example uses data of a river in Bavaria (Germany zone 4), which requires the following CRS:</p>
 <ul class="simple">
@@ -582,7 +605,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-crs">
 <img alt="qgis set coordinate reference system crs germany zone_4 Inn river" src="../_images/inn-crs.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Define Germany_Zone_4 as project CRS.</span><a class="headerlink" href="#qgis-crs" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Define Germany_Zone_4 as project CRS.</span><a class="headerlink" href="#qgis-crs" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="tip admonition">
@@ -591,7 +614,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 </div>
 </section>
 <section id="get-the-basemesh-plugin">
-<span id="get-basemesh"></span><h3>Get the BASEmesh Plugin<a class="headerlink" href="#get-the-basemesh-plugin" title="Permalink to this headline">#</a></h3>
+<span id="get-basemesh"></span><h3>Get the BASEmesh Plugin<a class="headerlink" href="#get-the-basemesh-plugin" title="Link to this heading">#</a></h3>
 <p>Install <em>BASEMENT</em>’s <em>BASEmesh</em> Plugin (instructions from the <em>BASEMENT</em> System Manual):</p>
 <ul class="simple">
 <li><p>Load the <em>QGIS</em> plugin manager: <strong>Plugins</strong> menu &gt; <strong>Manage and Install Plugins</strong>.</p></li>
@@ -609,7 +632,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-plugins">
 <img alt="qgis basement plugins" src="../_images/bm-plugin.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 68 </span><span class="caption-text">Add the BASEMENT repository to QGIS’ Plugins Manager.</span><a class="headerlink" href="#qgis-plugins" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 68 </span><span class="caption-text">Add the BASEMENT repository to QGIS’ Plugins Manager.</span><a class="headerlink" href="#qgis-plugins" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -621,13 +644,13 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-pluggedin">
 <img alt="qgis basement plugins" src="../_images/bm-pluggedin.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 69 </span><span class="caption-text">The BASEmesh 2 plugin is available in QGIS’ Plugins menu after the successful installation.</span><a class="headerlink" href="#qgis-pluggedin" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 69 </span><span class="caption-text">The BASEmesh 2 plugin is available in QGIS’ Plugins menu after the successful installation.</span><a class="headerlink" href="#qgis-pluggedin" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="load-dem">
-<span id="get-dem"></span><h2>Load DEM<a class="headerlink" href="#load-dem" title="Permalink to this headline">#</a></h2>
+<span id="get-dem"></span><h2>Load DEM<a class="headerlink" href="#load-dem" title="Link to this heading">#</a></h2>
 <p>This tutorial uses an application-ready <a class="reference internal" href="../documentation/glossary.html#term-DEM"><span class="xref std std-term">DEM</span></a> in <a class="reference internal" href="../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a> <a class="reference internal" href="../geopy/geospatial-data.html#raster"><span class="std std-ref">Gridded Cell (Raster) Data</span></a> format that stems from a <a class="reference internal" href="../documentation/glossary.html#term-Lidar"><span class="xref std std-term">Lidar</span></a> point cloud. The <a class="reference internal" href="../documentation/glossary.html#term-DEM"><span class="xref std std-term">DEM</span></a> raster provides height (Z) information from a section of a gravel-cobble bed river in South-East Germany, which constitutes the baseline for the computational grids featured in the next sections. To get the provided DEM in the <em>QGIS</em> project:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/hydro-informatics/materials-bm/raw/main/rasters/dem.tif"><strong>Download the example DEM GeoTIFF</strong></a> and save it in the same folder (<code class="docutils literal notranslate"><span class="pre">/Project</span> <span class="pre">Home/</span></code> or a sub-directory) as the above-create <strong>qgz</strong> project.</p></li>
@@ -647,12 +670,12 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-dem-basemap">
 <img alt="qgis import raster DEM basemap" src="../_images/dem-basemap.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 70 </span><span class="caption-text">The imported DEM on a Google Satellite imagery basemap (source: Google / GeoBasis-DEBKG 2019). The flow direction is from left to right following the <strong>Q</strong> arrow.</span><a class="headerlink" href="#qgis-dem-basemap" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">The imported DEM on a Google Satellite imagery basemap (source: Google / GeoBasis-DEBKG 2019). The flow direction is from left to right following the <strong>Q</strong> arrow.</span><a class="headerlink" href="#qgis-dem-basemap" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="create-2dm-mesh">
-<span id="make-2dm"></span><h2>Create 2dm Mesh<a class="headerlink" href="#create-2dm-mesh" title="Permalink to this headline">#</a></h2>
+<span id="make-2dm"></span><h2>Create 2dm Mesh<a class="headerlink" href="#create-2dm-mesh" title="Link to this heading">#</a></h2>
 <p>The generation of a <a class="reference internal" href="../documentation/glossary.html#term-SMS-2dm"><span class="xref std std-term">SMS 2dm</span></a> uses the <a class="reference internal" href="#get-basemesh"><span class="std std-ref">QGIS BASEmesh plugin</span></a> and requires drawing a</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../geopy/use-qgis.html#create-line-shp"><span class="std std-ref">Line Shapefile</span></a> containing model boundaries and internal breaklines between model regions with different characteristics (section on <a class="reference internal" href="#boundary"><span class="std std-ref">Model Boundary and Breaklines</span></a>);</p></li>
@@ -661,12 +684,12 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 </ul>
 <p>These shapefiles enable to generate a <a class="reference internal" href="#qualm"><span class="std std-ref">Quality Mesh</span></a>. Ultimately, height information is <a class="reference internal" href="#qualm-interp"><span class="std std-ref">interpolated to the quality mesh</span></a> and the resulting mesh is saved as <a class="reference internal" href="../documentation/glossary.html#term-SMS-2dm"><span class="xref std std-term">SMS 2dm</span></a> file. The next sections walk through the procedure step by step with detailed explanations. Additional materials and intermediate data products are provided in the supplemental data repository (<a class="reference external" href="https://github.com/hydro-informatics/materials-bm">materials-bm</a>) for this tutorial.</p>
 <section id="model-boundary-and-breaklines">
-<span id="boundary"></span><h3>Model Boundary and Breaklines<a class="headerlink" href="#model-boundary-and-breaklines" title="Permalink to this headline">#</a></h3>
+<span id="boundary"></span><h3>Model Boundary and Breaklines<a class="headerlink" href="#model-boundary-and-breaklines" title="Link to this heading">#</a></h3>
 <p>The model boundary defines the model extent and can be divided into regions with different characteristics (e.g., roughness values) through breaklines. Breaklines indicate, for instance, channel banks and the riverbed (main channel), and need to be inside the DEM extents. Boundary lines and breaklines are stored in a <a class="reference internal" href="../geopy/use-qgis.html#create-line-shp"><span class="std std-ref">Line Shapefile</span></a> that BASEmesh uses to find both model boundaries and internal breaklines between model regions. For this purpose, <a class="reference internal" href="../geopy/use-qgis.html#create-line-shp"><span class="std std-ref">Create a Line Shapefile</span></a> with <strong>one Text Field</strong> called <strong>LineType</strong> and call it <strong>breaklines.shp</strong> (<strong>Layer</strong> &gt; <strong>Create Layer</strong> &gt; <strong>New Shapefile Layer</strong>). Click on QGIS’ <strong>Layers</strong> menu &gt; <strong>Create Layer</strong> &gt; <strong>New Shapefile Layer…</strong> (see <a class="reference internal" href="#qgis-new-lyr"><span class="std std-numref">Fig. 71</span></a>). Make sure to select <code class="docutils literal notranslate"><span class="pre">ESRI:</span> <span class="pre">31494</span> <span class="pre">-</span> <span class="pre">Germany_Zone_4</span></code> as <a class="reference internal" href="../documentation/glossary.html#term-CRS"><span class="xref std std-term">CRS</span></a> <img alt="../_images/sym-crs.png" src="../_images/sym-crs.png" />.</p>
 <figure class="align-default" id="qgis-new-lyr">
 <img alt="qgis new layer basemesh" src="../_images/create-shp-layer.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Create a new shapefile from QGIS’ Layers menu.</span><a class="headerlink" href="#qgis-new-lyr" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Create a new shapefile from QGIS’ Layers menu.</span><a class="headerlink" href="#qgis-new-lyr" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>It is important that the lines do not overlap to avoid ambiguous or missing definitions of regions and to ensure that all boundary lines form closed regions (areas). Therefore, activate snapping:</p>
@@ -729,7 +752,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="breaklines">
 <img alt="qgis basement basemesh draw breaklines boundaries" src="../_images/breaklines.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Boundary and breaklines to draw in <strong>breaklines.shp</strong>. Left and right banks and floodplains are orientated in the flow direction (<strong>Q</strong> arrow).</span><a class="headerlink" href="#breaklines" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Boundary and breaklines to draw in <strong>breaklines.shp</strong>. Left and right banks and floodplains are orientated in the flow direction (<strong>Q</strong> arrow).</span><a class="headerlink" href="#breaklines" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="tip admonition">
@@ -745,7 +768,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 </div>
 </section>
 <section id="liquid-hydraulic-boundaries">
-<span id="liquid-boundary"></span><h3>Liquid (Hydraulic) Boundaries<a class="headerlink" href="#liquid-hydraulic-boundaries" title="Permalink to this headline">#</a></h3>
+<span id="liquid-boundary"></span><h3>Liquid (Hydraulic) Boundaries<a class="headerlink" href="#liquid-hydraulic-boundaries" title="Link to this heading">#</a></h3>
 <p>The liquid boundaries define where hydraulic conditions, such as a given discharge or stage-discharge relationship, apply at the model inflow (upstream) and outflow (downstream) limits. Thus, a functional river model requires at least one inflow boundary (line) where mass flow into the model and one outflow boundary (line) where mass fluxes leave the model. For this purpose, <a class="reference internal" href="../geopy/use-qgis.html#create-line-shp"><span class="std std-ref">Create a Line Shapefile</span></a> called <strong>liquid-boundaries.shp</strong> and define <strong>two text data fields</strong> named <strong>type</strong> and <strong>stringdef</strong>. Make sure that <strong>snapping</strong> is still <strong>enabled</strong> (as above explained in the <a class="reference internal" href="#boundary"><span class="std std-ref">Model Boundary and Breaklines</span></a> section) and <strong>Toggle (Start) Editing</strong> <img alt="../_images/yellow-pen.png" src="../_images/yellow-pen.png" /> the new <strong>liquid-boundaries.shp</strong>. Then draw two lines:</p>
 <ul class="simple">
 <li><p>Activate <strong>Add Line Feature</strong> <img alt="../_images/sym-add-line.png" src="../_images/sym-add-line.png" />.</p></li>
@@ -763,7 +786,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="inflow-boundary">
 <img alt="qgis basemesh draw inflow boundary line" src="../_images/inflow-boundary.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 73 </span><span class="caption-text">The inflow boundary line is drawn from the left to the right (i.e., the upstream flow is coming from the right-hand side of the inflow boundary line). The sequence of buttons to use is highlighted by the red boxes.</span><a class="headerlink" href="#inflow-boundary" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">The inflow boundary line is drawn from the left to the right (i.e., the upstream flow is coming from the right-hand side of the inflow boundary line). The sequence of buttons to use is highlighted by the red boxes.</span><a class="headerlink" href="#inflow-boundary" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -781,7 +804,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="outflow-boundary">
 <img alt="qgis basemesh draw outflow boundary line" src="../_images/outflow-boundary.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 74 </span><span class="caption-text">The outflow boundary line is drawn from the top to the bottom (i.e., the upstream flow is coming from the right hand-side of the outflow boundary line).</span><a class="headerlink" href="#outflow-boundary" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">The outflow boundary line is drawn from the top to the bottom (i.e., the upstream flow is coming from the right hand-side of the outflow boundary line).</span><a class="headerlink" href="#outflow-boundary" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="important admonition">
@@ -799,7 +822,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 </div>
 </section>
 <section id="region-markers">
-<span id="regions"></span><h3>Region Markers<a class="headerlink" href="#region-markers" title="Permalink to this headline">#</a></h3>
+<span id="regions"></span><h3>Region Markers<a class="headerlink" href="#region-markers" title="Link to this heading">#</a></h3>
 <p>Region markers are placed inside regions defined by boundary lines and breaklines. Every region marker (i.e., a point somewhere in the region area) assigns, for instance, a material identifier (MATIDs) and a maximum mesh cell area. The latter option enables to define small mesh cells (mesh areas) in the active channel bed and can larger cell areas in the floodplain regions. <a class="reference internal" href="../geopy/use-qgis.html#create-point-shp"><span class="std std-ref">Create a Point Shapefile</span></a> named <strong>raster-points.shp</strong> with the following definitions (see also <a class="reference internal" href="#qgis-reg-lyr"><span class="std std-numref">Fig. 75</span></a>):</p>
 <ul class="simple">
 <li><p>Define the <strong>File name</strong> as <strong>region-points.shp</strong> (or similar)</p></li>
@@ -817,20 +840,12 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-reg-lyr">
 <img alt="basement mesh qgis region layer points" src="../_images/bm-region-pts-create.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Definitions and fields to be added to the region-points shapefile.</span><a class="headerlink" href="#qgis-reg-lyr" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Definitions and fields to be added to the region-points shapefile.</span><a class="headerlink" href="#qgis-reg-lyr" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider to <strong>deactivate snapping</strong> for drawing the region markers to avoid that region markers coincide with any line. Then, <strong>Toggle (Start) Editing</strong> <img alt="../_images/yellow-pen.png" src="../_images/yellow-pen.png" /> the new <strong>region-points.shp</strong> file and activate <strong>Add Point Feature</strong> <img alt="../_images/sym-add-point.png" src="../_images/sym-add-point.png" />. Draw one point in every area section that is enclosed by breaklines and (liquid) boundary lines. Depending on the apparent area type from the satellite imagery basemap, assign one of the five regions listed in <a class="reference internal" href="#region-defs"><span class="std std-numref">Tab. 4</span></a> to every point.</p>
 <table class="table" id="region-defs">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Region names and their <strong>max_area</strong>, <strong>MATID</strong>, and <strong>type</strong> field values.</span><a class="headerlink" href="#region-defs" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Region names and their <strong>max_area</strong>, <strong>MATID</strong>, and <strong>type</strong> field values.</span><a class="headerlink" href="#region-defs" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Region</p></th>
 <th class="head"><p>Riverbed</p></th>
@@ -868,7 +883,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-reg-pts">
 <img alt="basemesh region points" src="../_images/bm-region-pts-map.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Example for region point markers in the project boundaries.</span><a class="headerlink" href="#qgis-reg-pts" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Example for region point markers in the project boundaries.</span><a class="headerlink" href="#qgis-reg-pts" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="tip admonition">
@@ -877,7 +892,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 </div>
 </section>
 <section id="create-a-quality-mesh">
-<span id="qualm"></span><h3>Create a Quality Mesh<a class="headerlink" href="#create-a-quality-mesh" title="Permalink to this headline">#</a></h3>
+<span id="qualm"></span><h3>Create a Quality Mesh<a class="headerlink" href="#create-a-quality-mesh" title="Link to this heading">#</a></h3>
 <p><em>BASEmesh</em>’s quality mesh tool creates a computationally efficient triangular mesh based on <span id="id1">Shewchuk [<a class="reference internal" href="../documentation/bibliography.html#id1341" title="Jonathan Richard Shewchuk. Triangle: Engineering a 2D quality mesh generator and Delaunay triangulator. In Ming C. Lin and Dinesh Manocha, editors, Applied Computational Geometry Towards Geometric Engineering, Lecture Notes in Computer Science, 203–222. Berlin, Heidelberg, 1996. Springer. URL: https://link.springer.com/chapter/10.1007/BFb0014497, doi:10.1007/BFb0014497.">She96</a>]</span> and within the above-defined model boundaries. The tool associates mesh properties with the regions shapefile ([see above section on <a class="reference internal" href="#regions"><span class="std std-ref">Region Markers</span></a>), but it does not include elevation data. Thus, after generating a quality mesh, elevation information needs to be added. This section explains the quality mesh generation and the next section features the interpolation of bottom elevations.</p>
 <p>In QGIS’ <strong>Plugins</strong> menu, click on <strong>BASEmesh 2</strong> &gt; <strong>QUALITY MESHING</strong> to open the quality mesh tool. Make the following settings in the popup window (see also <a class="reference internal" href="#qgis-qualm"><span class="std std-numref">Fig. 77</span></a>):</p>
 <ul class="simple">
@@ -916,13 +931,13 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-qualm">
 <img alt="basement qgis quality mesh tin" src="../_images/bm-quality-meshing-success.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Definitions to be made in BASEmesh’s Quality meshing tool.</span><a class="headerlink" href="#qgis-qualm" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Definitions to be made in BASEmesh’s Quality meshing tool.</span><a class="headerlink" href="#qgis-qualm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Quality meshing may take time. After a successful mesh generation the file <strong>prepro-tutorial_quality-mesh-interp.2dm</strong> will have been generated.</p>
 </section>
 <section id="interpolate-bottom-elevation-to-quality-mesh">
-<span id="qualm-interp"></span><h3>Interpolate Bottom Elevation to Quality Mesh<a class="headerlink" href="#interpolate-bottom-elevation-to-quality-mesh" title="Permalink to this headline">#</a></h3>
+<span id="qualm-interp"></span><h3>Interpolate Bottom Elevation to Quality Mesh<a class="headerlink" href="#interpolate-bottom-elevation-to-quality-mesh" title="Link to this heading">#</a></h3>
 <p>The <em>BASEmesh</em> plugin’s <strong>Interpolation</strong> tool projects bottom elevation data onto the quality mesh by interpolation from another mesh or a <a class="reference internal" href="../documentation/glossary.html#term-DEM"><span class="xref std std-term">DEM</span></a> <a class="reference internal" href="../geopy/geospatial-data.html#raster"><span class="std std-ref">Gridded Cell (Raster) Data</span></a>. Here, we use the <a class="reference internal" href="#get-dem"><span class="std std-ref">above-introduced DEM GeoTIFF</span></a>. To run the interpolation, open <em>BASEmesh</em>’s <strong>Interpolation</strong> tool (<em>QGIS</em> <strong>Plugins</strong> menu &gt; <strong>BASEmesh 2</strong> &gt; <strong>Interpolation</strong>) and make the following settings (see also <a class="reference internal" href="#qgis-qualm-interp"><span class="std std-numref">Fig. 78</span></a>):</p>
 <ul class="simple">
 <li><p>In the <strong>Mesh layer to interpolate</strong> frame, select <strong>prepro-tutorial_quality-mesh</strong>.</p></li>
@@ -945,20 +960,20 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 <figure class="align-default" id="qgis-qualm-interp">
 <img alt="qgis quality mesh interpolation basement" src="../_images/bm-mesh-interpolation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 78 </span><span class="caption-text">BASEmesh’s Z-value (height) interpolation tool and setup to assign bottom elevation values to the quality mesh.</span><a class="headerlink" href="#qgis-qualm-interp" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">BASEmesh’s Z-value (height) interpolation tool and setup to assign bottom elevation values to the quality mesh.</span><a class="headerlink" href="#qgis-qualm-interp" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>After the elevation interpolation, verify that the elevations are correctly assigned (i.e., the <strong>Bed Elevation</strong> should have taken values between <strong>367</strong> and <strong>387</strong> m a.s.l.). To modify the layer visualization (symbology) double-click on the new <strong>prepro-tutorial_quality-mesh-interp</strong> and go to the <strong>Symbology</strong> ribbon. Select <strong>Graduated</strong> at the very top of the window, set the <strong>Value</strong> to Z, <strong>Method</strong> to COLOR, choose a color ramp, and click on the <strong>classify</strong> bottom (lower part of the window). Click on <strong>Apply</strong> and <strong>OK</strong> to close the symbology settings. <a class="reference internal" href="#qgis-verify-qualm"><span class="std std-numref">Figure 79</span></a> shows an example visualization of the height-interpolated mesh.</p>
 <figure class="align-default" id="qgis-verify-qualm">
 <img alt="basemesh verify interpolated quality mesh" src="../_images/bm-mesh-interp-success.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Verify elevation interpolation using graduated color ramps.</span><a class="headerlink" href="#qgis-verify-qualm" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Verify elevation interpolation using graduated color ramps.</span><a class="headerlink" href="#qgis-verify-qualm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="usage-with-basement">
-<span id="qgis4bm"></span><h2>Usage with BASEMENT<a class="headerlink" href="#usage-with-basement" title="Permalink to this headline">#</a></h2>
+<span id="qgis4bm"></span><h2>Usage with BASEMENT<a class="headerlink" href="#usage-with-basement" title="Link to this heading">#</a></h2>
 <p>The 2dm mesh file produced in this tutorial can be directly used with <a class="reference internal" href="basement/basement.html#chpt-basement"><span class="std std-ref">BASEMENT</span></a>, where only the definition of properties of the geometric (e.g., roughness coefficients) and liquid (e.g., discharges) are required as explained later.</p>
 </section>
 </section>
@@ -988,11 +1003,10 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="basement/basement.html"
@@ -1012,10 +1026,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1023,6 +1034,7 @@ As featured in the <a class="reference internal" href="../geopy/use-qgis.html#qg
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1066,6 +1078,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1092,8 +1105,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

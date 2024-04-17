@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Virtual Machines and Linux &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'get-started/vm';</script>
     <link rel="canonical" href="https://hydro-informatics.com/get-started/vm.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integrated Development Environments (IDEs)" href="ide.html" />
     <link rel="prev" title="Software Resources" href="software.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="current nav bd-sidenav">
@@ -482,20 +503,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -575,19 +598,19 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="virtual-machines-and-linux">
-<span id="chpt-vm-linux"></span><h1>Virtual Machines and Linux<a class="headerlink" href="#virtual-machines-and-linux" title="Permalink to this headline">#</a></h1>
+<span id="chpt-vm-linux"></span><h1>Virtual Machines and Linux<a class="headerlink" href="#virtual-machines-and-linux" title="Link to this heading">#</a></h1>
 <p>Your computer is one of your most important educational companions. So you want to protect the health of your computer and avoid problems caused by redundant or even malicious software. For this reason, it is recommended to install all software used on this website on a so-called Virtual Machine (VM). This page explains what VMs are, what advantages they have exactly, and how you can install <a class="reference external" href="https://www.debian.org/">Debian Linux</a>, one of the most stable and secure operating systems. It does not matter if you use Apple’s <em>mac OS</em> or Microsoft’s <em>Windows</em>, or if you already use Linux: The VM will look the same at the end.</p>
 <section id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
+<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
 <section id="what-is-a-virtual-machine-vm">
-<h3>What is a Virtual Machine (VM)?<a class="headerlink" href="#what-is-a-virtual-machine-vm" title="Permalink to this headline">#</a></h3>
+<h3>What is a Virtual Machine (VM)?<a class="headerlink" href="#what-is-a-virtual-machine-vm" title="Link to this heading">#</a></h3>
 <p>A Virtual Machine (VM) represents a virtual operating system (OS) running on a host system that directly runs on a physical computer. The physical computer (hardware) resources of the host system are allocated via so-called hypervisors. For this reason, the virtual machine is referred to as a <em>guest machine</em> and the hypervisor as a <em>host machine</em>. Thus, a <em>guest machine</em> is an isolated, virtualized environment that runs independently on the host operating system.</p>
 </section>
 <section id="why-use-a-vm">
-<h3>Why use a VM?<a class="headerlink" href="#why-use-a-vm" title="Permalink to this headline">#</a></h3>
+<h3>Why use a VM?<a class="headerlink" href="#why-use-a-vm" title="Link to this heading">#</a></h3>
 <p>Free resources on a computer represent, from an economic point of view, dead storage space that causes costs without generating income. This is why system administrators often create multiple virtual servers to better allocate physical resources and save energy. A VM is also useful for smart end-users such as researchers and engineers. Here are some advantages of a VM:</p>
 <ul class="simple">
 <li><p>Applications and services of multiple VMs do not interfere with each other.</p></li>
@@ -601,14 +624,14 @@ document.write(`
 <p>In the context of hydro-informatics for water resources management, a VM can serve to execute various <em>Python</em> scripts with different dependencies or, most importantly, to set up a clean and efficient environment for the execution of numerical models such as <a class="reference external" href="http://www.opentelemac.org/">open TELEMAC-MASCARET</a>.</p>
 </section>
 <section id="contents-and-debian-linux">
-<h3>Contents and Debian Linux<a class="headerlink" href="#contents-and-debian-linux" title="Permalink to this headline">#</a></h3>
+<h3>Contents and Debian Linux<a class="headerlink" href="#contents-and-debian-linux" title="Link to this heading">#</a></h3>
 <p>This page guides through the installation of a <a class="reference external" href="https://www.debian.org/">Debian Linux</a> virtual machine. The host hypervisor is assumed to be Oracle’s <a class="reference external" href="https://www.virtualbox.org/">VirtualBox</a> on <em>Windows 10</em>. If you are not using <em>Windows 10</em>, just download the <em>VirtualBox</em> installer that suits your system.</p>
 <p>The guest machine will run Debian Linux, which is one of the most stable Linux distributions, and it is freely available. Because of its stability, Debian is an ideal baseline for running numerical simulations that may last for days or even weeks. Of course, there are other options, and Debian is rather one of the best options than <em>the best option</em>.</p>
 <p>There are a couple of Debian Linux spin-offs, such as <a class="reference external" href="https://ubuntu.com"><em>Ubuntu</em></a> with some other derivatives that are more lightweight (and faster). New Linux users will have an easy start with the <em>Ubuntu</em> variants <a class="reference external" href="https://www.linuxmint.com"><em>Linux Mint</em> (<em>Xfce</em>)</a> or <a class="reference external" href="https://lubuntu.me/downloads/"><em>Lubuntu</em></a>. Most versions <em>Ubuntu</em> can be used instead of the Debian Linux presented here to complete the tutorials on this website.</p>
 </section>
 </section>
 <section id="get-prerequisites-required-software">
-<span id="vm-requirements"></span><h2>Get prerequisites (required software)<a class="headerlink" href="#get-prerequisites-required-software" title="Permalink to this headline">#</a></h2>
+<span id="vm-requirements"></span><h2>Get prerequisites (required software)<a class="headerlink" href="#get-prerequisites-required-software" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 5-30 minutes (depends on connection speed).</strong></em></p>
 <ul class="simple">
 <li><p>Download and install the latest version of <a class="reference external" href="https://www.virtualbox.org/">VirtualBox</a>.</p>
@@ -635,10 +658,10 @@ document.write(`
 <p>Remember where the downloaded Linux <em>.ISO</em> file is stored.</p>
 </section>
 <section id="special-feature-the-mint-hyfo-vm">
-<span id="hyfo-vm"></span><h2>Special feature: The Mint Hyfo VM<a class="headerlink" href="#special-feature-the-mint-hyfo-vm" title="Permalink to this headline">#</a></h2>
+<span id="hyfo-vm"></span><h2>Special feature: The Mint Hyfo VM<a class="headerlink" href="#special-feature-the-mint-hyfo-vm" title="Link to this heading">#</a></h2>
 <p>The Linux <strong>Mint</strong> Hydro-informatics (<strong>Hyfo</strong>) VM facilitates working with the contents of this eBook and it is available upon email request. Read more in the next paragraphs OR <a class="reference internal" href="#vm-create"><span class="std std-ref">create your own VM and jump over this section</span></a>.</p>
 <section id="about-the-mint-hyfo-vm">
-<h3>About the Mint Hyfo VM<a class="headerlink" href="#about-the-mint-hyfo-vm" title="Permalink to this headline">#</a></h3>
+<h3>About the Mint Hyfo VM<a class="headerlink" href="#about-the-mint-hyfo-vm" title="Link to this heading">#</a></h3>
 <p>To shorten the long path of installing many hydroinformatics applications, many tutorials in this eBook can be leveraged with a tailored virtual Linux Mint 20.3 (last updated on February, 2022) machine that is available upon email request. The Linux Mint VM comes with the following pre-installed software:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="ide.html#install-jupyter-linux"><span class="std std-ref">JupyterLab</span></a> (start in Terminal with <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>)</p></li>
@@ -648,7 +671,7 @@ document.write(`
 <p>Note that Python, LibreOffice, and Firefox are pre-installed in Linux Mint. To get the download link for the Linux Mint VM appliance (<code class="docutils literal notranslate"><span class="pre">MintHyfo.ova</span></code>), <a href="mailto:sebastian.schwindt[AT]iws.uni-stuttgart.de?subject=Please%20Send%20Hydroinformatics%20VM%20download%20link">email Sebastian</a>. Note that the <a class="reference external" href="http://hydro-informatics.com">hydro-informatics.com</a> <a class="reference internal" href="../terms/license.html#license"><span class="std std-ref">License</span></a> and <a class="reference internal" href="../terms/disclaimer.html#disclaimer"><span class="std std-ref">Disclaimer</span></a> apply in addition and on top of any software that comes with the virtual disk image.</p>
 </section>
 <section id="get-started-with-the-mint-hyfo-vm">
-<h3>Get Started with the Mint Hyfo VM<a class="headerlink" href="#get-started-with-the-mint-hyfo-vm" title="Permalink to this headline">#</a></h3>
+<h3>Get Started with the Mint Hyfo VM<a class="headerlink" href="#get-started-with-the-mint-hyfo-vm" title="Link to this heading">#</a></h3>
 <p>All you need is an installation of VirtualBox (see <a class="reference internal" href="#vm-requirements"><span class="std std-ref">above</span></a>) and the downloaded Linux Mint VM appliance (<code class="docutils literal notranslate"><span class="pre">MintHyfo.ova</span></code>). After downloading the appliance, open VirtualBox and:</p>
 <ul class="simple">
 <li><p>Go to <strong>File</strong> &gt; <strong>Import Appliance…</strong></p></li>
@@ -659,7 +682,7 @@ document.write(`
 <p>Now, the virtual machine called <strong>Mint Hyfo</strong> should be visible in the list of virtual machines in VirtualBox.</p>
 </section>
 <section id="start-and-manage-the-mint-hyfo-vm">
-<h3>Start and Manage the Mint Hyfo VM<a class="headerlink" href="#start-and-manage-the-mint-hyfo-vm" title="Permalink to this headline">#</a></h3>
+<h3>Start and Manage the Mint Hyfo VM<a class="headerlink" href="#start-and-manage-the-mint-hyfo-vm" title="Link to this heading">#</a></h3>
 <p>Once imported, start the <strong>Mint Hyfo</strong> VM and familiarize yourself with the Mint Desktop. There are a few things you should know about the Mint Hyfo VM:</p>
 <ul class="simple">
 <li><p>The keyboard layout is <strong>English (US)</strong>, which makes, for example, that when you press the <code class="docutils literal notranslate"><span class="pre">Z</span></code> key on a German keyboard, the VM understands <code class="docutils literal notranslate"><span class="pre">Y</span></code>. There are a couple more important differences and the VM provides an overview of the English (US) keyboard layout with the <strong>English-US-Keyboard.png</strong> picture on the Desktop.</p></li>
@@ -690,7 +713,7 @@ document.write(`
 </div>
 </section>
 <section id="capacities-of-the-mint-hyfo-vm">
-<h3>Capacities of the Mint Hyfo VM<a class="headerlink" href="#capacities-of-the-mint-hyfo-vm" title="Permalink to this headline">#</a></h3>
+<h3>Capacities of the Mint Hyfo VM<a class="headerlink" href="#capacities-of-the-mint-hyfo-vm" title="Link to this heading">#</a></h3>
 <p>The VM provides essentials for most tutorials in this eBook:</p>
 <ul class="simple">
 <li><p>the Python tutorials (<a class="reference internal" href="../python-basics/python.html#about-python"><span class="std std-ref">Python basics</span></a> and <a class="reference internal" href="../geopy/geo-python.html#sec-geo-python"><span class="std std-ref">Geospatial Python</span></a> tutorials) where the additional installation of <a class="reference external" href="https://flusstools.readthedocs.io">flusstools</a> is recommended in a virtual environment (<a class="reference internal" href="../python-basics/pyinstall.html#pip-env"><span class="std std-ref">read the installation instructions</span></a>),</p></li>
@@ -701,7 +724,7 @@ document.write(`
 </section>
 </section>
 <section id="create-a-vm-with-virtualbox">
-<span id="vm-create"></span><h2>Create a VM with VirtualBox<a class="headerlink" href="#create-a-vm-with-virtualbox" title="Permalink to this headline">#</a></h2>
+<span id="vm-create"></span><h2>Create a VM with VirtualBox<a class="headerlink" href="#create-a-vm-with-virtualbox" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 5-8 minutes.</strong></em></p>
 <p>In your host system (e.g., <em>Windows 10</em>), click on <em>Start</em>, type <em>Oracle VM VirtualBox</em>, and hit enter. In the opened <em>VirtualBox</em> manager window:</p>
 <ul class="simple">
@@ -737,7 +760,7 @@ document.write(`
 </ul>
 </section>
 <section id="install-debian-linux">
-<h2>Install Debian Linux<a class="headerlink" href="#install-debian-linux" title="Permalink to this headline">#</a></h2>
+<h2>Install Debian Linux<a class="headerlink" href="#install-debian-linux" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 30 minutes.</strong></em></p>
 <p>To install Debian Linux to the VM, start the before-created <em>Debian Linux VM</em> in the <em>VirtualBox</em> manager window (click on the <em>Debian Linux</em> VM and then on the green <em>Start</em> arrow). The <em>VirtualBox VM</em> window will ask for the <em>.iso</em> file to use (confirm the selected one), and start navigating through the installation:</p>
 <ul class="simple">
@@ -761,7 +784,7 @@ document.write(`
 <p>Once the VM is shut down, re-open the VM <em>Settings</em> (from <em>VirtualBox Manager</em> window) and go to the <em>Storage</em> tab. Verify that there is again an <em>Empty</em> disk symbol in the <em>Controller: IDE</em> field.</p>
 </section>
 <section id="re-use-transfer-or-copy-a-vm-on-another-host">
-<h2>Re-use (Transfer or Copy) a VM on another Host<a class="headerlink" href="#re-use-transfer-or-copy-a-vm-on-another-host" title="Permalink to this headline">#</a></h2>
+<h2>Re-use (Transfer or Copy) a VM on another Host<a class="headerlink" href="#re-use-transfer-or-copy-a-vm-on-another-host" title="Link to this heading">#</a></h2>
 <p>Once you have created a VM on a virtual hard disk (the <code class="docutils literal notranslate"><span class="pre">*.vdi</span></code> file), you can always transfer it to another <em>host</em> system with its ecosystem. To copy (or transport) the VM:</p>
 <ul class="simple">
 <li><p>On the original host:</p>
@@ -786,9 +809,9 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="debian-linux">
-<span id="linux-install"></span><h1>Debian Linux<a class="headerlink" href="#debian-linux" title="Permalink to this headline">#</a></h1>
+<span id="linux-install"></span><h1>Debian Linux<a class="headerlink" href="#debian-linux" title="Link to this heading">#</a></h1>
 <section id="setup-linux">
-<span id="setup-debian"></span><h2>Setup Linux<a class="headerlink" href="#setup-linux" title="Permalink to this headline">#</a></h2>
+<span id="setup-debian"></span><h2>Setup Linux<a class="headerlink" href="#setup-linux" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 15 minutes.</strong></em></p>
 <p>Start the <em>Debian Linux</em> VM from the <em>VirtualBox</em> manager window. Once Debian Linux has started, log on with your user credentials.</p>
 <p>To enable the full functionality of the system, open the Linux Terminal (<code class="docutils literal notranslate"><span class="pre">CTRL</span></code> + <code class="docutils literal notranslate"><span class="pre">Alt</span></code> + <code class="docutils literal notranslate"><span class="pre">T</span></code> or go to <em>Activities</em> &gt; <em>Files</em> (filing cabinet symbol), right-click in any folder and select <em>Open in Terminal</em>). In <em>Terminal</em> type:</p>
@@ -850,7 +873,7 @@ apt install build-essential dkms linux-headers-$(uname -r)
 </ul>
 </section>
 <section id="linux-terminal">
-<span id="id1"></span><h2>Linux Terminal<a class="headerlink" href="#linux-terminal" title="Permalink to this headline">#</a></h2>
+<span id="id1"></span><h2>Linux Terminal<a class="headerlink" href="#linux-terminal" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 60 minutes.</strong></em></p>
 <p>To get familiar with Debian Linux, go to the <em>Activities</em> menu and find the applications <em>LibreOffice-Writer</em>, <em>Firefox</em>, the <em>Software</em> application (shopping bag symbol), and the <em>File</em> manager (filing container symbol).
 Find more applications by clicking on the four dots on the left of the menu bar - can you find the Text Editor?
@@ -863,7 +886,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 <p><em>Terminal</em> runs many powerful native Linux (UNIX) commands, which is the most robust way to install and execute features. There are a couple of tutorials for learning to use <em>Terminal</em> and one of the most comprehensive is provided on the <em>Linux Ubuntu</em> website (Ubuntu is based on Debian Linux). It is highly recommended to go through the <a class="reference external" href="https://ubuntu.com/tutorials/command-line-for-beginners">tutorial provided by the Ubuntu community</a> (<em>estimated duration: 51 minutes</em>), for better understanding some contents of this eBook. In particular, memorize the commands <code class="docutils literal notranslate"><span class="pre">cd</span></code> (change directory), <code class="docutils literal notranslate"><span class="pre">su</span></code>/<code class="docutils literal notranslate"><span class="pre">sudo</span></code> (superuser), <code class="docutils literal notranslate"><span class="pre">ls</span></code> (listen) and <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (make directory).</p>
 </section>
 <section id="user-rights">
-<span id="id2"></span><h2>User Rights<a class="headerlink" href="#user-rights" title="Permalink to this headline">#</a></h2>
+<span id="id2"></span><h2>User Rights<a class="headerlink" href="#user-rights" title="Link to this heading">#</a></h2>
 <p>When installing software later, it is good practice to install it for your user account and not for <code class="docutils literal notranslate"><span class="pre">root</span></code>. Such system-relevant actions require <em>superuser</em> (<code class="docutils literal notranslate"><span class="pre">su</span></code>) rights. However, your default user name is not on the so-called <em>sudoers</em> list, which is essentially a file where all user accounts are listed that are authorized to use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> in front of any command. So add your user account to the <em>su-doers</em> list by opening <em>Terminal</em> and typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">su</span>
     <span class="n">password</span><span class="p">:</span> <span class="o">...</span>
@@ -877,9 +900,9 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 <p>If visually nothing happens, you are good to go. Otherwise, if you get a message like <code class="docutils literal notranslate"><span class="pre">Sorry,</span> <span class="pre">user</span> <span class="pre">[username]</span> <span class="pre">may</span> <span class="pre">not</span> <span class="pre">run</span> <span class="pre">sudo</span> <span class="pre">on</span> <span class="pre">[hostname].</span></code>, verify that you correctly typed the above command and <em>YOUR-USER-NAME</em> (with correct cases).</p>
 </section>
 <section id="vm-settings">
-<span id="linux-as-vm"></span><h2>VM Settings<a class="headerlink" href="#vm-settings" title="Permalink to this headline">#</a></h2>
+<span id="linux-as-vm"></span><h2>VM Settings<a class="headerlink" href="#vm-settings" title="Link to this heading">#</a></h2>
 <section id="enable-folder-sharing-between-host-and-guest">
-<span id="vm-share"></span><h3>Enable Folder Sharing between Host and Guest<a class="headerlink" href="#enable-folder-sharing-between-host-and-guest" title="Permalink to this headline">#</a></h3>
+<span id="vm-share"></span><h3>Enable Folder Sharing between Host and Guest<a class="headerlink" href="#enable-folder-sharing-between-host-and-guest" title="Link to this heading">#</a></h3>
 <p><em><strong>Estimated duration: 5-10 minutes.</strong></em></p>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
@@ -912,7 +935,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 <hr class="docutils" />
 </section>
 <section id="enable-opengl">
-<span id="opengl"></span><h3>Enable OpenGL<a class="headerlink" href="#enable-opengl" title="Permalink to this headline">#</a></h3>
+<span id="opengl"></span><h3>Enable OpenGL<a class="headerlink" href="#enable-opengl" title="Link to this heading">#</a></h3>
 <p><em>VirtualBox</em> experimentally enables <a class="reference external" href="https://www.opengl.org"><em>OpenGL</em></a>, which is used by many graphical user interfaces. To make <em>OpenGL</em> work on a virtual machine, the install <a class="reference external" href="https://www.x.org/"><em>X.Org X Window System</em></a> (xserver):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">xorg</span>
 </pre></div>
@@ -943,10 +966,10 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 </section>
 </section>
 <section id="software-management">
-<h2>Software Management<a class="headerlink" href="#software-management" title="Permalink to this headline">#</a></h2>
+<h2>Software Management<a class="headerlink" href="#software-management" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: Variable.</strong></em></p>
 <section id="install-software">
-<h3>Install Software<a class="headerlink" href="#install-software" title="Permalink to this headline">#</a></h3>
+<h3>Install Software<a class="headerlink" href="#install-software" title="Link to this heading">#</a></h3>
 <p>To install other software, preferably use the built-in software manager (<em>Activities</em> &gt; <em>Shopping bag</em> symbol). The <em>Software</em> manager uses official releases in the stable Debian repository (read more about <a class="reference external" href="https://wiki.debian.org/SourcesList">lists of sources</a>).</p>
 <p>The last command removes files that are not needed anymore and reduces system garbage.</p>
 <div class="note admonition">
@@ -966,9 +989,9 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 <p>The most popular software manager of Debian-based Linux distributions is called <a class="reference external" href="https://salsa.debian.org/apt-team/apt">aptitude</a>, which is the thing that you invoke when typing <code class="docutils literal notranslate"><span class="pre">[sudo]</span> <span class="pre">apt</span> <span class="pre">[something]</span></code>. There are more standard package managers, such as <code class="docutils literal notranslate"><span class="pre">dpkg</span></code> or <code class="docutils literal notranslate"><span class="pre">synaptic</span></code> (see the full list in the <a class="reference external" href="https://www.debian.org/doc/manuals/debian-faq/pkgtools.en.html">Debian package management faqs</a>). To install a wide range of proprietary software (e.g., video conferencing tools), package management tools like <a class="reference external" href="https://github.com/snapcore/snapd">snapd</a> or <a class="reference external" href="https://flatpak.org/">flatpak</a> can be useful. However, such third-party package managers are debated, and a more <strong>robust approach</strong> is to <strong>use <code class="docutils literal notranslate"><span class="pre">apt</span></code> whenever possible</strong>, <strong>or</strong>, if the software is not available through apt, look for <a class="reference external" href="https://appimage.org/"><strong>AppImages</strong></a>.</p>
 </section>
 <section id="useful-software">
-<h3>Useful Software<a class="headerlink" href="#useful-software" title="Permalink to this headline">#</a></h3>
+<h3>Useful Software<a class="headerlink" href="#useful-software" title="Link to this heading">#</a></h3>
 <section id="system-monitoring">
-<span id="install-htop"></span><h4>System Monitoring<a class="headerlink" href="#system-monitoring" title="Permalink to this headline">#</a></h4>
+<span id="install-htop"></span><h4>System Monitoring<a class="headerlink" href="#system-monitoring" title="Link to this heading">#</a></h4>
 <p>There are multiple options to monitor system resource of a Debian distro, and this section presents two of them, namely, <code class="docutils literal notranslate"><span class="pre">htop</span></code> and <code class="docutils literal notranslate"><span class="pre">stacer</span></code>. <a class="reference external" href="https://htop.dev/"><code class="docutils literal notranslate"><span class="pre">htop</span></code></a> is a minimalistic tool that runs in Terminal. <a class="reference external" href="https://github.com/oguzhaninan/Stacer"><code class="docutils literal notranslate"><span class="pre">stacer</span></code></a> is a graphical user interface providing more options, including optimization of battery life or system performance.</p>
 <p>To install <strong>htop</strong> for visualizing <em>CPU</em> usage, type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
@@ -988,7 +1011,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 </section>
 </section>
 <section id="add-package-repositories">
-<h3>Add Package Repositories<a class="headerlink" href="#add-package-repositories" title="Permalink to this headline">#</a></h3>
+<h3>Add Package Repositories<a class="headerlink" href="#add-package-repositories" title="Link to this heading">#</a></h3>
 <p>For adding (trusted) software (package) repositories use <em>software-properties-common</em>, which provides the <code class="docutils literal notranslate"><span class="pre">add-apt-repository</span></code> command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span>
 <span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">contrib</span>
@@ -998,7 +1021,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 </div>
 </section>
 <section id="find-packages">
-<h3>Find Packages<a class="headerlink" href="#find-packages" title="Permalink to this headline">#</a></h3>
+<h3>Find Packages<a class="headerlink" href="#find-packages" title="Link to this heading">#</a></h3>
 <p>Some software will run into errors because of missing library files (e.g., <code class="docutils literal notranslate"><span class="pre">libGLX.so.0:</span> <span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code>). To find out what package needs to be installed for getting the missing library file, install <em>apt-file</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">file</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">file</span> <span class="n">update</span>
@@ -1018,7 +1041,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 </div>
 </section>
 <section id="update-software">
-<h3>Update Software<a class="headerlink" href="#update-software" title="Permalink to this headline">#</a></h3>
+<h3>Update Software<a class="headerlink" href="#update-software" title="Link to this heading">#</a></h3>
 <p>To update repositories and upgrade installed packages through <code class="docutils literal notranslate"><span class="pre">apt</span></code>, that is the standard Debian package manager <a class="reference external" href="https://salsa.debian.org/apt-team/apt">aptitude</a>, open <em>Terminal</em> and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">full</span><span class="o">-</span><span class="n">upgrade</span>
@@ -1030,7 +1053,7 @@ To shutdown Debian Linux (i.e., the VM), click on the top-right corner arrow and
 </section>
 </section>
 <section id="windows-apps-on-linux">
-<span id="wine"></span><h2>Windows Apps on Linux<a class="headerlink" href="#windows-apps-on-linux" title="Permalink to this headline">#</a></h2>
+<span id="wine"></span><h2>Windows Apps on Linux<a class="headerlink" href="#windows-apps-on-linux" title="Link to this heading">#</a></h2>
 <p><em><strong>Estimated duration: 10-15 minutes.</strong></em></p>
 <p>The <a class="reference external" href="https://wiki.debian.org/Wine">Wine</a> application provides a Windows-like environment on any <em>Linux</em> system, which enables installing and running Windows applications. Wine can be either used through the convenient PlayOnLinux app or directly installed on Linux.</p>
 <aside class="margin sidebar">
@@ -1132,11 +1155,10 @@ More information is available in the <a class="reference external" href="https:/
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="software.html"
@@ -1156,10 +1178,7 @@ More information is available in the <a class="reference external" href="https:/
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1167,6 +1186,7 @@ More information is available in the <a class="reference external" href="https:/
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1239,6 +1259,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1265,8 +1286,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

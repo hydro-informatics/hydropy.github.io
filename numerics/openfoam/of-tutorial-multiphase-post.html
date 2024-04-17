@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Post-processing &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/openfoam/of-tutorial-multiphase-post';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/openfoam/of-tutorial-multiphase-post.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introduction" href="../../datascience/machinelearning.html" />
     <link rel="prev" title="Run OpenFOAM" href="of-tutorial-multiphase-run.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -482,20 +503,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -522,14 +545,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="tip admonition">
 <p class="admonition-title">Contributor</p>
 <p>This chapter was written and developed by <a class="reference external" href="https://www.iws.uni-stuttgart.de/institut/team/Scolari/">Federica Scolari</a> <a class="reference internal" href="../../_images/federica.jpg"><img alt="Federica Scolari" src="../../_images/federica.jpg" style="width: 50px; height: 50px;" /></a></p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="post-processing">
-<h1>Post-processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">#</a></h1>
+<h1>Post-processing<a class="headerlink" href="#post-processing" title="Link to this heading">#</a></h1>
 <p>In the case in which the simulations were run in parallel, before post-processing the data, the first step consists in reconstructing (i.e., reassembling) all solution steps of the analyzed case. This can either be done for all time steps or only for a specific one. The commands that need to be typed in the terminal window are shown below:</p>
 <ul class="simple">
 <li><p>To reconstruct all solution steps:</p></li>
@@ -551,56 +574,56 @@ document.write(`
 <figure class="align-default" id="of-channelopenfoam">
 <img alt="openfoam" src="../../_images/channelOpenFOAM.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 241 </span><span class="caption-text">Visualization of the case results in ParaView.</span><a class="headerlink" href="#of-channelopenfoam" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 241 </span><span class="caption-text">Visualization of the case results in ParaView.</span><a class="headerlink" href="#of-channelopenfoam" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In order to visualize the air and water phases, <em>alpha.water</em> should then be selected in the drop-down menu as shown in the image below.</p>
 <figure class="align-default" id="of-view-alphawater">
 <img alt="openfoam" src="../../_images/view-alpha-water.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 242 </span><span class="caption-text">Enabling the setting for viewing the air and water phases in ParaView.</span><a class="headerlink" href="#of-view-alphawater" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 242 </span><span class="caption-text">Enabling the setting for viewing the air and water phases in ParaView.</span><a class="headerlink" href="#of-view-alphawater" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To change the shown time step, the arrows that can be seen in the area highlighted in red can be used.</p>
 <figure class="align-default" id="of-final-time-step">
 <img alt="openfoam timestep time step" src="../../_images/final-time-step.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 243 </span><span class="caption-text">Options for changing the time step to be visualized.</span><a class="headerlink" href="#of-final-time-step" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 243 </span><span class="caption-text">Options for changing the time step to be visualized.</span><a class="headerlink" href="#of-final-time-step" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Next, to visualize only the water phase, the <em>Clip</em> filter is used. This can either be found in the <em>Filters</em> section in the menu, or alternatively, the shortcut can be used. The <em>Clip Type</em> should be set to <em>Scalar</em>, selecting <em>alpha.water</em> as scalar and setting the value to 0.5, which represents the interface between air and water. To view the air phase, the <em>Invert</em> option should be selected whereas for the water phase it should be deselected.</p>
 <figure class="align-default" id="of-clip-water">
 <img alt="openfoam clip water interFoam" src="../../_images/clip-water.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 244 </span><span class="caption-text">Clip filter used for viewing the water phase in ParaView.</span><a class="headerlink" href="#of-clip-water" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 244 </span><span class="caption-text">Clip filter used for viewing the water phase in ParaView.</span><a class="headerlink" href="#of-clip-water" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Finally, to also add the walls and patches to the view, the <em>Extract Block</em> filter can be implemented (click on the <em>channel.OpenFOAM</em> file before applying it).</p>
 <figure class="align-default" id="of-extract-block">
 <img alt="openfoam" src="../../_images/extract-block.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 245 </span><span class="caption-text">List of filters available in ParaView, highlighting ExtractBlock.</span><a class="headerlink" href="#of-extract-block" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 245 </span><span class="caption-text">List of filters available in ParaView, highlighting ExtractBlock.</span><a class="headerlink" href="#of-extract-block" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The patches of interest can then be either selected or deselected, and the <em>Coloring</em> can be set to Solid Color.</p>
 <figure class="align-default" id="of-choose-patches">
 <img alt="openfoam" src="../../_images/choose-patches.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 246 </span><span class="caption-text">Available options for selecting the patches and changing the color.</span><a class="headerlink" href="#of-choose-patches" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 246 </span><span class="caption-text">Available options for selecting the patches and changing the color.</span><a class="headerlink" href="#of-choose-patches" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The resulting view of the water phase and block extraction is shown below:</p>
 <figure class="align-default" id="of-alpha-water">
 <img alt="openfoam" src="../../_images/alpha-water.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 247 </span><span class="caption-text">Simulation results highlighting the water phase.</span><a class="headerlink" href="#of-alpha-water" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 247 </span><span class="caption-text">Simulation results highlighting the water phase.</span><a class="headerlink" href="#of-alpha-water" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Different parameters can also be viewed, such as the flow velocity, and this can be done in the <em>Coloring</em> section by selecting <em>U</em>. The <em>preset</em> can be modified to better view the results by selecting the corresponding icon (highlighted in green).</p>
 <figure class="align-default" id="of-flow-velocity">
 <img alt="openfoam" src="../../_images/flow-velocity.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 248 </span><span class="caption-text">Simulation results highlighting the flow velocity.</span><a class="headerlink" href="#of-flow-velocity" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 248 </span><span class="caption-text">Simulation results highlighting the flow velocity.</span><a class="headerlink" href="#of-flow-velocity" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -630,11 +653,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="of-tutorial-multiphase-run.html"
@@ -654,15 +676,14 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -680,6 +701,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -706,8 +728,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

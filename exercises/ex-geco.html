@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Script a Habitat Suitability Map &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/ex-geco';</script>
     <link rel="canonical" href="https://hydro-informatics.com/exercises/ex-geco.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Principles" href="../numerics/numerical-modeling.html" />
     <link rel="prev" title="Exercises" href="geo-exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -554,10 +577,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="script-a-habitat-suitability-map">
-<span id="ex-geco"></span><h1>Script a Habitat Suitability Map<a class="headerlink" href="#script-a-habitat-suitability-map" title="Permalink to this headline">#</a></h1>
+<span id="ex-geco"></span><h1>Script a Habitat Suitability Map<a class="headerlink" href="#script-a-habitat-suitability-map" title="Link to this heading">#</a></h1>
 <div class="admonition-goals admonition">
 <p class="admonition-title">Goals</p>
 <p>This exercise guides through the creation of rasters (<code class="docutils literal notranslate"><span class="pre">osgeo.gdal.Dataset</span></code>), the usage of georeferences, raster array calculations, as well as the conversion of a raster to a polygon shapefile and modifications to the shapefile’s <em>Attribute Table</em> to calculate usable (physical) habitat area. For this purpose, a <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class is written, which enables mathematical operations between its instances through the implementation of magic methods. The exercise also shows how <a class="reference external" href="https://flusstools.readthedocs.io">flusstools</a> can be used to leverage complex challenges with just a few lines of code.</p>
@@ -573,12 +596,12 @@ document.write(`
 <iframe width="701" height="394" src="https://www.youtube-nocookie.com/embed/8LO1KeYNSXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Sacramento suckers in the South Yuba River (source: Sebastian Schwindt <a href="https://www.youtube.com/@hydroinformatics">@hydroinformatics on YouTube</a>).</p>
 <section id="what-is-habitat-suitability">
-<span id="hsi-def-ex"></span><h2>What is Habitat Suitability?<a class="headerlink" href="#what-is-habitat-suitability" title="Permalink to this headline">#</a></h2>
+<span id="hsi-def-ex"></span><h2>What is Habitat Suitability?<a class="headerlink" href="#what-is-habitat-suitability" title="Link to this heading">#</a></h2>
 <p>Fish and other aquatic species rest, orient, and reproduce in a fluvial environment that represents their physical habitat. Throughout their different life stages, different fish have specific physical habitat preferences which are defined, for instance, as a function of water depth, flow velocity, and grain size of the riverbed. The so-called <em>Habitat Suitability Index</em> <span class="math notranslate nohighlight">\(HSI\)</span> can be calculated for hydraulic (water depth or flow velocity) and morphological (e.g., grain size or cover in the form of large wood) parameters individually to describe the quality of physical habitat for a fish and at a specific life stage. The figure below shows exemplary <span class="math notranslate nohighlight">\(HSI\)</span> curves for the fry, juvenile, and adult life stages of rainbow trout as a function of water depth. The <span class="math notranslate nohighlight">\(HSI\)</span> curves look different in every river and should be established individually by an aquatic ecologist.</p>
 <figure class="align-default" id="hsi-image">
 <img alt="HSI curves examples trout" src="https://github.com/Ecohydraulics/media/raw/main/png/hsi-curves.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Habitat Suitability Index <span class="math notranslate nohighlight">\(HSI\)</span> curves for the fry, juvenile, and adult life stages of rainbow trout in a cobble-bed river. Take care: HSI curves look different in any river and need to be established by an aquatic ecologist.</span><a class="headerlink" href="#hsi-image" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Habitat Suitability Index <span class="math notranslate nohighlight">\(HSI\)</span> curves for the fry, juvenile, and adult life stages of rainbow trout in a cobble-bed river. Take care: HSI curves look different in any river and need to be established by an aquatic ecologist.</span><a class="headerlink" href="#hsi-image" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <span class="math notranslate nohighlight">\(HSI\)</span> concept also accounts for the so-called cover habitat in the form of the <em>cover Habitat Suitability Index</em> <span class="math notranslate nohighlight">\(HSI_{cov}\)</span>. Cover habitat is the result of local turbulence caused by roughness elements such as wood, boulders, or bridge piers. However, in this exercise, we will only deal with hydraulic habitat characteristics (not cover habitat).</p>
@@ -625,26 +648,26 @@ document.write(`
 <p>This exercise demonstrates the use of 2d hydrodynamic modeling results to algorithmically evaluate usable habitat area based on the calculation of geospatially explicit <span class="math notranslate nohighlight">\(cHSI\)</span> values.</p>
 </section>
 <section id="available-data-and-code-structure">
-<h2>Available Data and Code Structure<a class="headerlink" href="#available-data-and-code-structure" title="Permalink to this headline">#</a></h2>
+<h2>Available Data and Code Structure<a class="headerlink" href="#available-data-and-code-structure" title="Link to this heading">#</a></h2>
 <p>The following flow chart illustrates the provided code and data. Functions, methods, and files to be created in this exercise are highlighted in bold, italic, <em>YELLOW</em>-ish font.</p>
 <figure class="align-default" id="uml">
 <img alt="HSI curves examples trout" src="https://github.com/Ecohydraulics/Exercise-geco/raw/main/graphs/geo_eco_uml.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Structure of the provided template file tree and their relations.</span><a class="headerlink" href="#uml" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Structure of the provided template file tree and their relations.</span><a class="headerlink" href="#uml" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The provided QGIS project file <code class="docutils literal notranslate"><span class="pre">visualize_with_QGIS.qgz</span></code> helps to verify input raster datasets and results.</p>
 <section id="two-dimensional-2d-hydrodynamic-modelling-folder-basement">
-<span id="ecox-2dm"></span><h3>Two-dimensional (2d) Hydrodynamic Modelling (Folder: <em>BASEMENT</em>)<a class="headerlink" href="#two-dimensional-2d-hydrodynamic-modelling-folder-basement" title="Permalink to this headline">#</a></h3>
+<span id="ecox-2dm"></span><h3>Two-dimensional (2d) Hydrodynamic Modelling (Folder: <em>BASEMENT</em>)<a class="headerlink" href="#two-dimensional-2d-hydrodynamic-modelling-folder-basement" title="Link to this heading">#</a></h3>
 <p>This exercise uses (hydraulic) flow velocity and water depth rasters (<a class="reference internal" href="../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a>s) produced with the <a class="reference external" href="https://basement.ethz.ch/">ETH Zurich*s BASEMENT</a> software. Read more about hydrodynamic modeling with BASEMENT in the <a class="reference internal" href="../numerics/basement/basement.html#chpt-basement"><span class="std std-ref">BASEMENT</span></a> chapter. The hydraulic rasters were produced with the BASEMENT developer’s <a class="reference external" href="http://people.ee.ethz.ch/~basement/baseweb/download/tutorials/Flaz_2d_v3.zip">example data from the <em>Flaz River</em></a> in Switzerland (<a class="reference external" href="https://basement.ethz.ch/download/tutorials/tutorials3.html">read more on their website</a>).
 The water depth <code class="docutils literal notranslate"><span class="pre">water_depth.tif</span></code> and flow velocity <code class="docutils literal notranslate"><span class="pre">flow_velocity.tif</span></code> rasters are provided for this exercise in the folder <code class="docutils literal notranslate"><span class="pre">/basement/</span></code>.</p>
 </section>
 <section id="habitat-suitability-index-hsi-curves-folder-habitat">
-<span id="hsi-curves"></span><h3>Habitat Suitability Index HSI Curves (folder: <strong>habitat</strong>)<a class="headerlink" href="#habitat-suitability-index-hsi-curves-folder-habitat" title="Permalink to this headline">#</a></h3>
+<span id="hsi-curves"></span><h3>Habitat Suitability Index HSI Curves (folder: <strong>habitat</strong>)<a class="headerlink" href="#habitat-suitability-index-hsi-curves-folder-habitat" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">/habitat/</span></code> folder in the exercise repository contains <span class="math notranslate nohighlight">\(HSI\)</span> curves in the form of an <em>xlsx</em> workbook (<code class="docutils literal notranslate"><span class="pre">trout.xlsx</span></code>) and in the form of a <a class="reference internal" href="../jupyter/xml.html#json"><span class="std std-ref">JSON</span></a> file (<code class="docutils literal notranslate"><span class="pre">trout.json</span></code>). Both files contain the same data for rainbow trout of a hypothetical cobble-bed river and this exercise only uses the <a class="reference internal" href="../jupyter/xml.html#json"><span class="std std-ref">JSON</span></a> file (the workbook serves for visual verification only).</p>
 </section>
 <section id="code">
-<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h3>
+<h3>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">GEO_UTILS (Folder: geo_utils)</p>
 <p>A couple of <code class="docutils literal notranslate"><span class="pre">gdal</span></code>-based functions for processing rasters and shapefiles were introduced in the lecture. This exercise re-uses some of these functions, which are available in the geo-processing code repository specifically for this ebook. The repository contains a functional block from <a class="reference external" href="https://flusstools.readthedocs.io">flusstools</a>.geotools (in the <code class="docutils literal notranslate"><span class="pre">geo_utils</span></code> folder) that enables to better understand and modify the behavior of <a class="reference external" href="https://flusstools.readthedocs.io">flusstools</a>.
@@ -711,9 +734,9 @@ The <code class="docutils literal notranslate"><span class="pre">HSIRaster</span
 </section>
 </section>
 <section id="create-and-combine-hsi-rasters">
-<span id="py-raster-calculator"></span><h2>Create and Combine HSI Rasters<a class="headerlink" href="#create-and-combine-hsi-rasters" title="Permalink to this headline">#</a></h2>
+<span id="py-raster-calculator"></span><h2>Create and Combine HSI Rasters<a class="headerlink" href="#create-and-combine-hsi-rasters" title="Link to this heading">#</a></h2>
 <section id="complete-the-init-method-of-the-raster-class-raster-py">
-<span id="raster-class"></span><h3>Complete the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> Class (<code class="docutils literal notranslate"><span class="pre">raster.py</span></code>)<a class="headerlink" href="#complete-the-init-method-of-the-raster-class-raster-py" title="Permalink to this headline">#</a></h3>
+<span id="raster-class"></span><h3>Complete the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> Class (<code class="docutils literal notranslate"><span class="pre">raster.py</span></code>)<a class="headerlink" href="#complete-the-init-method-of-the-raster-class-raster-py" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">raster.py</span></code> script imports the functions and libraries loaded in the <code class="docutils literal notranslate"><span class="pre">fun.py</span></code> script, and therefore, also the <code class="docutils literal notranslate"><span class="pre">config.py</span></code> script. For this reason, the <a class="reference internal" href="../jupyter/pynum.html#numpy"><span class="std std-ref">NumPy</span></a> and <a class="reference internal" href="../jupyter/pynum.html#pandas"><span class="std std-ref">Pandas</span></a> libraries are already available (<code class="docutils literal notranslate"><span class="pre">as</span></code> <code class="docutils literal notranslate"><span class="pre">np</span></code> and <code class="docutils literal notranslate"><span class="pre">pd</span></code>, respectively), and the <em>geo_utils</em> package is already imported as <code class="docutils literal notranslate"><span class="pre">geo</span></code> (<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">geo_utils</span> <span class="pre">as</span> <span class="pre">geo</span></code> in <code class="docutils literal notranslate"><span class="pre">config.py</span></code>).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class will load any <em>GeoTIFF</em> file name as a geo-referenced array object that can be used with mathematical operators. First, we will complement the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method by a <code class="docutils literal notranslate"><span class="pre">Raster.name</span></code> (extract from the <code class="docutils literal notranslate"><span class="pre">file_name</span></code> argument), as well as georeferences and array datasets:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># __init__(...) of Raster class in raster.py</span>
@@ -735,7 +758,7 @@ Next, load the <code class="docutils literal notranslate"><span class="pre">osge
 <p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class is complete.</p>
 </section>
 <section id="complete-magic-methods-of-the-raster-class-raster-py">
-<h3>Complete Magic Methods of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> Class (<code class="docutils literal notranslate"><span class="pre">raster.py</span></code>)<a class="headerlink" href="#complete-magic-methods-of-the-raster-class-raster-py" title="Permalink to this headline">#</a></h3>
+<h3>Complete Magic Methods of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> Class (<code class="docutils literal notranslate"><span class="pre">raster.py</span></code>)<a class="headerlink" href="#complete-magic-methods-of-the-raster-class-raster-py" title="Link to this heading">#</a></h3>
 <p>To enable mathematical operations between multiple instances of the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> class, implement <a class="reference internal" href="../jupyter/classes.html#magic"><span class="std std-ref">Overloading and Magic Methods</span></a> that tell the class what to do when two <code class="docutils literal notranslate"><span class="pre">Raster</span></code> instances are for example added (<code class="docutils literal notranslate"><span class="pre">+</span></code> sign), multiplied (<code class="docutils literal notranslate"><span class="pre">*</span></code> sign), or subtracted (<code class="docutils literal notranslate"><span class="pre">-</span></code> sign). For instance, implementing the magic methods <code class="docutils literal notranslate"><span class="pre">__truediv__</span></code> (for using the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator), <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> (for using the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator), and <code class="docutils literal notranslate"><span class="pre">__pow__</span></code> (for using the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator) will enable the usage of <code class="docutils literal notranslate"><span class="pre">Raster</span></code> instances like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># example for Raster instances, when operators are defined through magic methods</span>
 
@@ -854,7 +877,7 @@ Next, load the <code class="docutils literal notranslate"><span class="pre">osge
 <p>Why do we need the <code class="docutils literal notranslate"><span class="pre">save_status</span></code> variable? First, it states if saving the raster was successful (<code class="docutils literal notranslate"><span class="pre">save_status=0</span></code>), and second, this information could be used to delete the raster from the <code class="docutils literal notranslate"><span class="pre">__cache__</span></code> folder and flush the memory (feel free to do so for speeding up the code).</p>
 </section>
 <section id="write-hsi-and-chsi-raster-creation-script">
-<h3>Write HSI and cHSI Raster Creation Script<a class="headerlink" href="#write-hsi-and-chsi-raster-creation-script" title="Permalink to this headline">#</a></h3>
+<h3>Write HSI and cHSI Raster Creation Script<a class="headerlink" href="#write-hsi-and-chsi-raster-creation-script" title="Link to this heading">#</a></h3>
 <p>The provided <code class="docutils literal notranslate"><span class="pre">create_hsi_rasters.py</span></code> script already contains required package imports, an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> stand-alone statement as well as the void <code class="docutils literal notranslate"><span class="pre">main</span></code>, <code class="docutils literal notranslate"><span class="pre">get_hsi_curve</span></code>, <code class="docutils literal notranslate"><span class="pre">get_hsi_raster</span></code>, and <code class="docutils literal notranslate"><span class="pre">combine_hsi_rasters</span></code> functions:</p>
 <div class="admonition-chsi-template-script admonition" id="chsi-template">
 <p class="admonition-title">cHSI Template script</p>
@@ -1079,31 +1102,31 @@ Next, load the <code class="docutils literal notranslate"><span class="pre">osge
 </div>
 </section>
 <section id="run-the-hsi-and-chsi-code">
-<h3>Run the HSI and cHSI Code<a class="headerlink" href="#run-the-hsi-and-chsi-code" title="Permalink to this headline">#</a></h3>
+<h3>Run the HSI and cHSI Code<a class="headerlink" href="#run-the-hsi-and-chsi-code" title="Link to this heading">#</a></h3>
 <p>A successful run of the script <code class="docutils literal notranslate"><span class="pre">create_hsi_rasters.py</span></code> should look like this (in <em>PyCharm</em>):</p>
 <figure class="align-default" id="run-chsi">
 <img alt="run execute script calculation combined habitat suitability index raster map" src="https://github.com/Ecohydraulics/Exercise-geco/raw/main/graphs/run_create_chsi_rasters.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 63 </span><span class="caption-text">A Windows Python console running the above-created scripts.</span><a class="headerlink" href="#run-chsi" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">A Windows Python console running the above-created scripts.</span><a class="headerlink" href="#run-chsi" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Plotted in QGIS, the <span class="math notranslate nohighlight">\(cHSI\)</span> <a class="reference internal" href="../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a> raster should look like this:</p>
 <figure class="align-default" id="chsi-results">
 <img alt="chsi calculation" src="https://github.com/Ecohydraulics/Exercise-geco/raw/main/graphs/ex-chsi.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">The cHSI raster plotted in QGIS, where poor physical habitat quality (cHSI close to 0.0) is colored in red and high physical habitat quality (cHSI close to 1.0) is colored in green.</span><a class="headerlink" href="#chsi-results" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">The cHSI raster plotted in QGIS, where poor physical habitat quality (cHSI close to 0.0) is colored in red and high physical habitat quality (cHSI close to 1.0) is colored in green.</span><a class="headerlink" href="#chsi-results" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="result-interpretation">
-<h3>Result Interpretation<a class="headerlink" href="#result-interpretation" title="Permalink to this headline">#</a></h3>
+<h3>Result Interpretation<a class="headerlink" href="#result-interpretation" title="Link to this heading">#</a></h3>
 <p>The presentation of the <span class="math notranslate nohighlight">\(cHSI\)</span> raster shows that preferred habitat areas for juvenile trout exist only close to the banks. Also, numerical artifacts of the triangular mesh used by <a class="reference internal" href="../numerics/basement/basement.html#chpt-basement"><span class="std std-ref">BASEMENT</span></a> are visible. Therefore, the question arises whether the calculated flow velocities and water depths, and in consequence also the <span class="math notranslate nohighlight">\(cHSI\)</span> values, close to the banks can be considered representative.</p>
 </section>
 </section>
 <section id="calculate-usable-habitat-area-uha">
-<h2>Calculate Usable Habitat Area UHA<a class="headerlink" href="#calculate-usable-habitat-area-uha" title="Permalink to this headline">#</a></h2>
+<h2>Calculate Usable Habitat Area UHA<a class="headerlink" href="#calculate-usable-habitat-area-uha" title="Link to this heading">#</a></h2>
 <section id="write-the-code">
-<h3>Write the Code<a class="headerlink" href="#write-the-code" title="Permalink to this headline">#</a></h3>
+<h3>Write the Code<a class="headerlink" href="#write-the-code" title="Link to this heading">#</a></h3>
 <p>The <span class="math notranslate nohighlight">\(cHSI\)</span> rasters enable the calculation of the available usable habitat area. The previous section featured examples using the fish species <em>trout</em> and its <em>juvenile</em> life stage, for which we will determine here the usable habitat area <span class="math notranslate nohighlight">\(UHA\)</span> (in m<span class="math notranslate nohighlight">\(^2\)</span>) using a <span class="math notranslate nohighlight">\(cHSI\)</span> threshold value (rather than the pixel area weighting approach). So we follow the <a class="reference internal" href="#uha-methods"><span class="std std-ref">threshold formula described above</span></a>, using a threshold value of <span class="math notranslate nohighlight">\(cHSI_{crit} = 0.4\)</span>. Thus, every pixel that has a <span class="math notranslate nohighlight">\(cHSI\)</span> value of 0.4 or greater counts as usable habitat area.</p>
 <p>From a technical point of view, this part of the exercise is about converting a raster into a polygon shapefile as well as accessing and modifying the <em>Attribute Table</em> of the shapefile.</p>
 <p>Similar to the creation of the <span class="math notranslate nohighlight">\(cHSI\)</span> raster, there is a template script available for this part of the exercise, called <code class="docutils literal notranslate"><span class="pre">calculate_habitat_area.py</span></code>, which contains package and module imports, an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> stand-alone statement, as well as the void <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">calculate_habitat_area</span></code> functions. The template script looks like this:<a name="uha-template"></a></p>
@@ -1228,24 +1251,24 @@ Then, create a void <a class="reference internal" href="../jupyter/pybase.html#l
 </div>
 </section>
 <section id="run-the-usable-habitat-area-calculation-code">
-<h3>Run the Usable Habitat Area Calculation Code<a class="headerlink" href="#run-the-usable-habitat-area-calculation-code" title="Permalink to this headline">#</a></h3>
+<h3>Run the Usable Habitat Area Calculation Code<a class="headerlink" href="#run-the-usable-habitat-area-calculation-code" title="Link to this heading">#</a></h3>
 <p>A successful run of the script <code class="docutils literal notranslate"><span class="pre">calculate_habitat_area.py</span></code> should look like this (in <em>PyCharm</em>):</p>
 <figure class="align-default" id="ran-chsi">
 <img alt="calculate usable habitat area Python gdal" src="https://github.com/Ecohydraulics/Exercise-geco/raw/main/graphs/run_habitat_area.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Successful run of the <em>calculate_habitat_area.py</em> script.</span><a class="headerlink" href="#ran-chsi" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Successful run of the <em>calculate_habitat_area.py</em> script.</span><a class="headerlink" href="#ran-chsi" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Plotted in QGIS, the <em>habitat-area</em> shapefile looks like this (use <em>Categorized</em> symbology):</p>
 <figure class="align-default" id="uha-results">
 <img alt="calculate usable habitat area Python gdal map raster QGIS" src="https://github.com/Ecohydraulics/Exercise-geco/raw/main/graphs/ex-uha.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 66 </span><span class="caption-text">The habitat-area shapefile plotted in QGIS with Categorized symbology, where the usable habitat area <span class="math notranslate nohighlight">\(UHA\)</span> (<span class="math notranslate nohighlight">\(cHSI &gt;\)</span> 0.4) is delineated by the hatched purple patches and their dashed outlines.</span><a class="headerlink" href="#uha-results" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">The habitat-area shapefile plotted in QGIS with Categorized symbology, where the usable habitat area <span class="math notranslate nohighlight">\(UHA\)</span> (<span class="math notranslate nohighlight">\(cHSI &gt;\)</span> 0.4) is delineated by the hatched purple patches and their dashed outlines.</span><a class="headerlink" href="#uha-results" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="id8">
-<h3>Result Interpretation<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<h3>Result Interpretation<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>The <span class="math notranslate nohighlight">\(UHA\)</span> of the analyzed river section represents a very small share of the total wetted area, which can be interpreted as an ecologically poor status of the river. However, a glance at a map and the simulation files of the Flaz example of BASEMENT suggests that at a discharge of 50 m<span class="math notranslate nohighlight">\(^3\)</span>/s, a flood situation can be assumed. As during floods, there are generally higher flow velocities, which are out-of-favor of juvenile fish, the small usable habitat area is finally not surprising.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -1285,11 +1308,10 @@ Then, create a void <a class="reference internal" href="../jupyter/pybase.html#l
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="geo-exercises.html"
@@ -1309,10 +1331,7 @@ Then, create a void <a class="reference internal" href="../jupyter/pybase.html#l
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1320,6 +1339,7 @@ Then, create a void <a class="reference internal" href="../jupyter/pybase.html#l
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1369,6 +1389,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1395,8 +1416,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

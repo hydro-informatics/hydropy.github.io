@@ -1,3 +1,0 @@
-# Model Validation
-
-Lorem ipsum

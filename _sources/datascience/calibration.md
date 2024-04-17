@@ -1,3 +1,0 @@
-# Model Calibration
-
-Lorem ipsum

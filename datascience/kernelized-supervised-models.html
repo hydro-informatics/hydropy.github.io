@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Kernels &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'datascience/kernelized-supervised-models';</script>
     <link rel="canonical" href="https://hydro-informatics.com/datascience/kernelized-supervised-models.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Support Vector Machine (SVM)" href="morphology-predictor-svm.html" />
     <link rel="prev" title="Non-linear models" href="non-linear-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -535,14 +558,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="tip admonition">
 <p class="admonition-title">Contributor</p>
 <p>This chapter was written and developed by <a class="reference external" href="https://beatriznegreiros.com/">Beatriz Negreiros</a> <a class="reference internal" href="../_images/beatriz.jpg"><img alt="Beatriz Negreiros" src="../_images/beatriz.jpg" style="width: 50px; height: 50px;" /></a></p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="kernels">
-<span id="nonlinearclassification"></span><h1>Kernels<a class="headerlink" href="#kernels" title="Permalink to this headline">#</a></h1>
+<span id="nonlinearclassification"></span><h1>Kernels<a class="headerlink" href="#kernels" title="Link to this heading">#</a></h1>
 <p>In this section, we will cover fundamental concepts of non-linear classification by introducing the concept of kernels. First, let us recall what we have seen so far in our section about <a class="reference internal" href="linear-classification.html#linearclassification"><span class="std std-ref">Linear Classification</span></a>. In linear classification, our task consisted of classifying data points through a hyperplane that could linearly separate the dataset in the features coordinate space. For instance, in a 3d feature space, thus a feature vector such as <span class="math notranslate nohighlight">\((x_1, x_2, x_3) \in \mathbb{R}^3 \)</span>, recall that our data is considered linearly separable if there is at least one plane (not line) who can split the points. Unlike linear classification, which assumes a linear relationship between input features and class labels, non-linear classification algorithms use various techniques to capture complex patterns and decision boundaries in the data. In particular, we will look at how we can transform our data into a new coordinate space of higher dimension through <em>kernels</em>, which help us turning the non-linear problem into a linear one.</p>
 <p>Kernels allow us to transform data into a higher-dimensional feature space where linear separation becomes possible. One example of ML algorithm that relies on kernels for finding complex pattern and decision boundaries in the data is Support Vector Machine (SVM).</p>
 <div class="admonition note">
@@ -550,7 +573,7 @@ document.write(`
 <p>Other non-linear classification algorithms include decision trees, random forests, k-nearest neighbors (KNN), and neural networks. These algorithms employ different techniques different from kernelization to model and capture non-linear relationships between input features and class labels, enabling them to handle complex classification tasks.</p>
 </div>
 <section id="feature-transformation">
-<h2>Feature transformation<a class="headerlink" href="#feature-transformation" title="Permalink to this headline">#</a></h2>
+<h2>Feature transformation<a class="headerlink" href="#feature-transformation" title="Link to this heading">#</a></h2>
 <p>We will now see how feature transformation works through a 1d example, that is, we have one feature <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>. The figure below illustrates the training points (<span class="math notranslate nohighlight">\(n=3\)</span>).</p>
 <p>Note from the figure that the dataset is not linearly-separable, at least not in the given feature space in 1 dimension. To turn this problem into a linear-problem, we can perform a feature transformation (<span class="math notranslate nohighlight">\(\phi (x)\)</span>) to look for a decision boundary in a higher-dimensional space. In this particular example, note that we can transform the 1d feature into a new 2d feature vector, where the additional dimension can be seen as a sort of new feature.</p>
 <div class="math notranslate nohighlight">
@@ -560,11 +583,11 @@ document.write(`
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-Original feature space </label><div class="sd-tab-content docutils">
+Original feature space</label><div class="sd-tab-content docutils">
 <figure class="align-default" id="feat-transform-1">
 <a class="reference internal image-reference" href="../_images/feat-transform-1.JPG"><img alt="initial problem before feature transformation" src="../_images/feat-transform-1.JPG" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 254 </span><span class="caption-text">1: Training datase in the initial feature space.</span><a class="headerlink" href="#feat-transform-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 254 </span><span class="caption-text">1: Training datase in the initial feature space.</span><a class="headerlink" href="#feat-transform-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -574,7 +597,7 @@ New feature space</label><div class="sd-tab-content docutils">
 <figure class="align-default" id="feat-transform-2">
 <a class="with-shadow reference internal image-reference" href="../_images/feat-transform-2.JPG"><img alt="problem after feature transformation" class="with-shadow" src="../_images/feat-transform-2.JPG" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 255 </span><span class="caption-text">2: Training dataset in the new feature space <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.</span><a class="headerlink" href="#feat-transform-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 255 </span><span class="caption-text">2: Training dataset in the new feature space <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.</span><a class="headerlink" href="#feat-transform-2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -584,7 +607,7 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
 <figure class="align-default" id="feat-transform-3">
 <a class="reference internal image-reference" href="../_images/feat-transform-3.JPG"><img alt="decision boundary linearly separating the dataset in the new feature space" src="../_images/feat-transform-3.JPG" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 256 </span><span class="caption-text">3: Training dataset and decision boundary in the new feature space <span class="math notranslate nohighlight">\(\Phi(x)\)</span></span><a class="headerlink" href="#feat-transform-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 256 </span><span class="caption-text">3: Training dataset and decision boundary in the new feature space <span class="math notranslate nohighlight">\(\Phi(x)\)</span></span><a class="headerlink" href="#feat-transform-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -601,7 +624,7 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
 <figure class="align-default" id="exercise-kernels-1">
 <a class="reference internal image-reference" href="../_images/exercise-1-kernels.jpg"><img alt="ex-kernels-1" src="../_images/exercise-1-kernels.jpg" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 257 </span><span class="caption-text">Exercise 1 on kernels</span><a class="headerlink" href="#exercise-kernels-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 257 </span><span class="caption-text">Exercise 1 on kernels</span><a class="headerlink" href="#exercise-kernels-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="dropdown important admonition">
@@ -640,7 +663,7 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
 </div>
 </section>
 <section id="more-coming-soon">
-<h2>More coming soon…<a class="headerlink" href="#more-coming-soon" title="Permalink to this headline">#</a></h2>
+<h2>More coming soon…<a class="headerlink" href="#more-coming-soon" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -669,11 +692,10 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="non-linear-models.html"
@@ -693,10 +715,7 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -704,6 +723,7 @@ Decision boundary in the new feature space</label><div class="sd-tab-content doc
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -734,6 +754,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -760,8 +781,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The Commercial arcpy Library &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter/geo-arcpy';</script>
     <link rel="canonical" href="https://hydro-informatics.com/jupyter/geo-arcpy.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Exercises" href="../exercises/geo-exercises.html" />
     <link rel="prev" title="Vectorize and Rasterize" href="geo-convert.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -551,20 +572,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -617,13 +640,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-commercial-arcpy-library">
-<span id="chpt-arcpy"></span><h1>The Commercial arcpy Library<a class="headerlink" href="#the-commercial-arcpy-library" title="Permalink to this headline">#</a></h1>
+<span id="chpt-arcpy"></span><h1>The Commercial arcpy Library<a class="headerlink" href="#the-commercial-arcpy-library" title="Link to this heading">#</a></h1>
 <p>Geospatial analyses with ESRI’s commercial ArcGIS software and arcpy package. This notebook cannot be run in Jupyter and code blocks require the commercial arcpy library from ESRI.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p><em>ESRI</em>’s <em>ArcGIS Pro</em> software comes with its own conda environment that enables working with the commercial <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> library. <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> is accessible either directly in <code class="docutils literal notranslate"><span class="pre">ArcGIS</span> <span class="pre">Pro</span></code> or by using ESRI’s conda environment, which can be managed through ArcGIS Pro. Since <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> is tied to the use of a commercial environment, it can only be accessed in jupyter notebooks directly hosted at <a class="reference external" href="https://notebooks.esri.com/">esri.com</a> (however, these will not work with the examples in this section). This page explains the basic usage of <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> in external <a class="reference internal" href="../get-started/ide.html#sec-ide"><span class="std std-ref">IDEs</span></a> (e.g., PyCharm, Atom, or Spyder), the integration of licenses, and basic functionality of <code class="docutils literal notranslate"><span class="pre">arcpy</span></code>.</p>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
@@ -639,15 +662,15 @@ document.write(`
 </div>
 </section>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
 <p><em><strong>Why can working with <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> in Python still be a powerful tool even though there are many license and platform restrictions?</strong></em></p>
 <p>If you are working for a company with engineering services, the company likely uses ArcGIS because of its popularity and commercial support service. In this case, a company (or research institution) covers the license fees and it is equally likely that a Windows operating system is used for similar reasons. Among the popular functionalities of ArcGIS software are <em>Raster Calculator</em>, <em>Shapefile Feature</em> manager, or tools for statistical analysis of geo-databases. Thanks to <code class="docutils literal notranslate"><span class="pre">arcpy</span></code>, such popular ArcGIS tools can be embedded in Python scripts, thus enabling workflows to be automated and efficiency to be significantly increased.</p>
 <p>This page shows the basics for manipulating raster and shapefile data in Python with <code class="docutils literal notranslate"><span class="pre">arcpy</span></code>. There are many more methods implemented in <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> and only the fundamentals are explained here.</p>
 </section>
 <section id="use-arcpy-with-external-ides">
-<h2>Use <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> with External IDEs<a class="headerlink" href="#use-arcpy-with-external-ides" title="Permalink to this headline">#</a></h2>
+<h2>Use <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> with External IDEs<a class="headerlink" href="#use-arcpy-with-external-ides" title="Link to this heading">#</a></h2>
 <section id="setup-interpreter">
-<h3>Setup Interpreter<a class="headerlink" href="#setup-interpreter" title="Permalink to this headline">#</a></h3>
+<h3>Setup Interpreter<a class="headerlink" href="#setup-interpreter" title="Link to this heading">#</a></h3>
 <p>The Python installation section explains <a class="reference internal" href="../python-basics/pyinstall.html#ide-setup"><span class="std std-ref">how to set up PyCharm IDE</span></a> with a conda environment. To create a new conda environment in PyCharm with ESRI’s conda environment, the <strong>Location</strong> must be defined differently (see the <a class="reference external" href="https://raw.githubusercontent.com/sschwindt/hydroinformatics/main/docs/img/pyc-prj-setup.png">original screenshot</a>):</p>
 <ul class="simple">
 <li><p>If <em>ArcGIS</em> Pro was globally installed by the system administrator, use: <code class="docutils literal notranslate"><span class="pre">%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy</span></code></p></li>
@@ -661,7 +684,7 @@ document.write(`
 </div>
 </section>
 <section id="import-arcpy-and-its-modules">
-<h3>Import arcpy and its Modules<a class="headerlink" href="#import-arcpy-and-its-modules" title="Permalink to this headline">#</a></h3>
+<h3>Import arcpy and its Modules<a class="headerlink" href="#import-arcpy-and-its-modules" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">arcpy</span></code> comes with own classes for geospatial data objects (e.g., <code class="docutils literal notranslate"><span class="pre">arcpy.Raster</span></code> for gridded data) and modules for mapping (<code class="docutils literal notranslate"><span class="pre">arcpy.mp</span></code>), emulation of the <em>Spatial Analyst</em> (<code class="docutils literal notranslate"><span class="pre">arcpy.sa</span></code>), or accessing data (<code class="docutils literal notranslate"><span class="pre">arcpy.da</span></code>). A full list is provided on the <a class="reference external" href="https://pro.arcgis.com/en/pro-app/arcpy/get-started/importing-arcpy.htm">developer’s website</a>. This page features code blocks using <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> and <code class="docutils literal notranslate"><span class="pre">arcpy.sa</span></code>, where <em>Spatial Analyst</em> objects are imported using <code class="docutils literal notranslate"><span class="pre">*</span></code> to enable direct access to, for example, <code class="docutils literal notranslate"><span class="pre">Con()</span></code> (instead of <code class="docutils literal notranslate"><span class="pre">arcpy.sa.Con()</span></code>), which corresponds to <code class="docutils literal notranslate"><span class="pre">arcpy</span></code>’s conditional statement for rasters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,7 +696,7 @@ document.write(`
 </div>
 </section>
 <section id="setup-arcpy-workspace">
-<h3>Setup arcpy Workspace<a class="headerlink" href="#setup-arcpy-workspace" title="Permalink to this headline">#</a></h3>
+<h3>Setup arcpy Workspace<a class="headerlink" href="#setup-arcpy-workspace" title="Link to this heading">#</a></h3>
 <p>Geospatial calculations may produce many side products, which can be heavy in size. To better control which data is generated by <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> and where it is a good idea to define a workspace for each arcpy script with:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -697,7 +720,7 @@ document.write(`
 </div>
 </section>
 <section id="set-spatial-extents">
-<h3>Set Spatial Extents<a class="headerlink" href="#set-spatial-extents" title="Permalink to this headline">#</a></h3>
+<h3>Set Spatial Extents<a class="headerlink" href="#set-spatial-extents" title="Link to this heading">#</a></h3>
 <p>Geospatial datasets may have large extents without any data written to large parts. Processing void data cells may lead to unnecessarily long calculation time. Therefore, it is advisable to limit the calculation extent with:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -711,7 +734,7 @@ document.write(`
 </div>
 </section>
 <section id="checkout-licenses">
-<span id="licenses"></span><h3>Checkout Licenses<a class="headerlink" href="#checkout-licenses" title="Permalink to this headline">#</a></h3>
+<span id="licenses"></span><h3>Checkout Licenses<a class="headerlink" href="#checkout-licenses" title="Link to this heading">#</a></h3>
 <p>Many <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> methods need licenses such as <em>Spatial Analyst</em> or <em>3D</em>. In stand-alone scripts, licenses can be activate (<em>checked out</em>) with <code class="docutils literal notranslate"><span class="pre">arcpy.CheckOutExtension('NAME')</span></code> and deactivated (<em>checked in</em>) with <code class="docutils literal notranslate"><span class="pre">arcpy.CheckInExtension('NAME')</span></code>. In light of the object orientation, <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> operations should be embedded in functions or methods of classes. Therefore, it is recommended to wrap functions or methods using <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> with <a class="reference internal" href="pyfun.html#wrappers"><span class="std std-ref">decorators</span></a> that activate necessary licenses. The following code block provides a wrapper to activate a <em>Spatial Analyst</em> license for a function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -727,7 +750,7 @@ document.write(`
 </div>
 </section>
 <section id="track-errors">
-<span id="arcpy-errors"></span><h3>Track Errors<a class="headerlink" href="#track-errors" title="Permalink to this headline">#</a></h3>
+<span id="arcpy-errors"></span><h3>Track Errors<a class="headerlink" href="#track-errors" title="Link to this heading">#</a></h3>
 <p>The <a class="reference internal" href="pyerror.html#sec-pyerror"><span class="std std-ref">Python Errors, Logging, and Debugging</span></a> section provides useful instructions for troubleshooting errors in code or code usage. To identify problems in object-oriented <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> scripts, an additional wrapper function is recommended, which writes <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> errors to a log file (<code class="docutils literal notranslate"><span class="pre">logger</span></code>). The <code class="docutils literal notranslate"><span class="pre">logger.*(MESSAGE)</span></code> expressions can also be replaced with <code class="docutils literal notranslate"><span class="pre">print(MESSAGE)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -753,9 +776,9 @@ document.write(`
 </section>
 </section>
 <section id="spatial-analyst-raster-operations">
-<h2>Spatial Analyst &amp; Raster Operations<a class="headerlink" href="#spatial-analyst-raster-operations" title="Permalink to this headline">#</a></h2>
+<h2>Spatial Analyst &amp; Raster Operations<a class="headerlink" href="#spatial-analyst-raster-operations" title="Link to this heading">#</a></h2>
 <section id="basics">
-<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h3>
+<h3>Basics<a class="headerlink" href="#basics" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">arcpy</span></code> provides different options to load geospatial <a class="reference external" href="https://pro.arcgis.com/en/pro-app/arcpy/classes/raster-object.htm">rasters</a> (gridded data), which may have different formats such as <em>Esri Grid</em> (no ending, the raster is a folder with other files), <a class="reference internal" href="../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a>, <em>DAT</em>, and many more. The following script loads a flow depth Grid raster <code class="docutils literal notranslate"><span class="pre">h</span></code> and a flow velocity Grid raster <code class="docutils literal notranslate"><span class="pre">u</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -799,7 +822,7 @@ In addition, we need a Spatial Analyst license to run this script. Therefore, it
 </div>
 </section>
 <section id="cell-statistics">
-<h3>Cell Statistics<a class="headerlink" href="#cell-statistics" title="Permalink to this headline">#</a></h3>
+<h3>Cell Statistics<a class="headerlink" href="#cell-statistics" title="Link to this heading">#</a></h3>
 <p>The evaluation of numerical model data often involves calculating statistical values (e.g., minimum or maximum) of one or more rasters. The comparison of several similar rasters is useful, for example, if the same parameter was calculated with two different models or at different dates (e.g., to assess the morphodynamic evolution of rivers). <code class="docutils literal notranslate"><span class="pre">arcpy.sa.CellStatistics([Raster1,</span> <span class="pre">Raster2,</span> <span class="pre">...</span> <span class="pre">RasterN],</span> <span class="pre">TYPE,</span> <span class="pre">...)</span></code> enables such statistical evaluations. The following code block illustrates the comparison of flow velocities calculated with two different hydrodynamic numerical models through the calculation of the <code class="docutils literal notranslate"><span class="pre">MEAN</span></code> (average) and standard deviation (<code class="docutils literal notranslate"><span class="pre">STD</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -820,7 +843,7 @@ In addition, we need a Spatial Analyst license to run this script. Therefore, it
 </section>
 </section>
 <section id="shapefile-operations">
-<h2>Shapefile Operations<a class="headerlink" href="#shapefile-operations" title="Permalink to this headline">#</a></h2>
+<h2>Shapefile Operations<a class="headerlink" href="#shapefile-operations" title="Link to this heading">#</a></h2>
 <p>The geospatial <a class="reference internal" href="geo-shp.html#chpt-shp"><span class="std std-ref">shapefile</span></a> vector format is an Esri invention. No wonder, <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> is good at handling this vector data format. In hydraulic engineering, however, we usually create (draw) shapefiles manually either directly with ArcGIS or its open-source competitor <a class="reference external" href="https://www.qgis.org/">QGIS</a> to delineate, for example, particular flow regions. Examples can be found <a class="reference internal" href="../numerics/basement/basement.html#chpt-basement"><span class="std std-ref">in the BASEMENT tutorial</span></a> (explore the creation of elevation point, boundary polygon, and breakline polyline shapefiles). In codes, the processing of shapefiles only becomes important in the analysis of the output of numerical models (e.g., to classify morphological unit features, exactly calculate patch areas, or automatically place reinforcements in construction plans). At this stage, raster data (output of numerical models) must first be converted into shapefiles. This is why this tutorial starts with the conversion of raster data to shapefiles along with the illustration of other functions such as calculating patch area and accessing shapefile attribute tables.</p>
 <p>Rasters can be converted to polygon and other shapefile types (e.g., point). The following example features the conversion of a raster to a polygon shapefile. It uses an integer raster of all pixels where the flow depth and velocity are smaller than 1.4 m and 0.15 m/s, respectively. Such shallow and slow-flow regions are called <em>slackwater</em> (according to <span id="id1">Wyrick and Pasternack [<a class="reference internal" href="../documentation/bibliography.html#id963" title="J. R. Wyrick and G. B. Pasternack. Geospatial organization of fluvial landforms in a gravel-cobble river: Beyond the riffle-pool couplet. Geomorphology, 213(Supplement C):48–65, 2014. URL: http://www.sciencedirect.com/science/article/pii/S0169555X14000099, doi:10.1016/j.geomorph.2013.12.040.">WP14</a>]</span>). Because slackwater is designated preferred habitat of some aquatic species, we are wondering now how much slackwater area the numerical model predicts in the simulated river section. For this purpose, we convert the slackwater raster to a shapefile and calculate the surface area of the shapefile with the following <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> methods:</p>
 <ul class="simple">
@@ -913,11 +936,10 @@ In addition, we need a Spatial Analyst license to run this script. Therefore, it
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="geo-convert.html"
@@ -937,10 +959,7 @@ In addition, we need a Spatial Analyst license to run this script. Therefore, it
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -948,6 +967,7 @@ In addition, we need a Spatial Analyst license to run this script. Therefore, it
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -993,6 +1013,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1019,8 +1040,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

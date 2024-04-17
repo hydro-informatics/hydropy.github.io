@@ -1,3 +1,0 @@
-# Python Requirements
-
-Lorem ipsum

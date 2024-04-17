@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Flood Return Periods &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/ex-floods';</script>
     <link rel="canonical" href="https://hydro-informatics.com/exercises/ex-floods.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1d Sediment Transport" href="ex-sediment.html" />
     <link rel="prev" title="Reservoir Volume (Sequent Peak Algorithm)" href="ex-sp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -546,10 +569,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="flood-return-periods">
-<span id="ex-floods"></span><h1>Flood Return Periods<a class="headerlink" href="#flood-return-periods" title="Permalink to this headline">#</a></h1>
+<span id="ex-floods"></span><h1>Flood Return Periods<a class="headerlink" href="#flood-return-periods" title="Link to this heading">#</a></h1>
 <div class="admonition-goals admonition">
 <p class="admonition-title">Goals</p>
 <p>Load custom modules and functions in a script. Open comma-type delimited files and manipulate files with <a class="reference internal" href="../jupyter/pynum.html#pandas"><span class="std std-ref">Pandas</span></a>.</p>
@@ -565,11 +588,11 @@ document.write(`
 <figure class="align-default" id="flood-image">
 <img alt="floods Mangfall Bad Aibling Hochwasser" src="../_images/hw-aibling.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Flood at the Mangfall River in Bavaria (source: KSS 2020).</span><a class="headerlink" href="#flood-image" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Flood at the Mangfall River in Bavaria (source: KSS 2020).</span><a class="headerlink" href="#flood-image" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="terminology">
-<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">#</a></h2>
+<h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h2>
 <p>Flood frequency analysis uses a series of discharge data (e.g., from a gauging station) and evaluates the occurrence probability of a particular discharge. Thus, the occurrence probability defines the frequency of a discharge, which is important for two reasons:</p>
 <ol class="arabic simple">
 <li><p><strong>Flood safety</strong>: Many legal frames use a <strong>recurrence interval</strong> (i.e., a return period or frequency in units of years) to define safety levels that buildings and infrastructure must meet.</p></li>
@@ -583,19 +606,12 @@ document.write(`
 <p>The calculation concept of the return period makes two elementary assumptions. First, it is assumed that the individual flow events have a stationary peak. Second, statistical independence of individual events is assumed. The assumption of statistical independence means that this year a 100-year flood occurs with the same probability as next year, regardless of whether or not a 100-year flood actually occurred this year. Thus, for any given year, the probability of a 100-year flood occurring is 1/100 (or 1/50 for a 50-year flood and so on).</p>
 </section>
 <section id="the-probability-of-a-100-year-flood-occurring-in-100-years-is-63">
-<h2>The Probability of a 100-year Flood Occurring in 100 Years is 63%<a class="headerlink" href="#the-probability-of-a-100-year-flood-occurring-in-100-years-is-63" title="Permalink to this headline">#</a></h2>
+<h2>The Probability of a 100-year Flood Occurring in 100 Years is 63%<a class="headerlink" href="#the-probability-of-a-100-year-flood-occurring-in-100-years-is-63" title="Link to this heading">#</a></h2>
 <p>As engineers we often want to know how likely it is that a 100-year flood will occur within the next 2, 5, 10, … or 100 years (i.e., what are the likely costs of flood damage associated with a 100-year flood?). The answer to that question is <em>“the opposite likelihood of no 100-year flood occurring in the next 2, 5, or 10 years”</em>. Mathematically that means the annual occurrence probability <span class="math notranslate nohighlight">\(Pr\)</span> of an event with a recurrence interval <span class="math notranslate nohighlight">\(T=100\)</span> years over an observation period of <span class="math notranslate nohighlight">\(\Delta t \in [2, 5, 10, 100]\)</span> years is:</p>
 <p><span class="math notranslate nohighlight">\(Pr(T=100, \Delta t=2, 5, 10, 100) = (1 - (1-1/T)^{\Delta t})\)</span></p>
 <p><a class="reference internal" href="#tab-pr-floods"><span class="std std-numref">Table 1</span></a> shows solutions to the probability <span class="math notranslate nohighlight">\(Pr(T, \Delta t)\)</span> function for observation periods <span class="math notranslate nohighlight">\(\Delta t\)</span> of 2, 5, 10, and 100 years, as well as recurrence intervals <span class="math notranslate nohighlight">\(T\)</span> of 10, 50, and 100 years.</p>
 <table class="table" id="tab-pr-floods">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Solutions to the probability function <span class="math notranslate nohighlight">\(Pr(T, \Delta t)\)</span> for selected observation periods <span class="math notranslate nohighlight">\(\Delta t\)</span>.</span><a class="headerlink" href="#tab-pr-floods" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Solutions to the probability function <span class="math notranslate nohighlight">\(Pr(T, \Delta t)\)</span> for selected observation periods <span class="math notranslate nohighlight">\(\Delta t\)</span>.</span><a class="headerlink" href="#tab-pr-floods" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Pr(T, \Delta t)\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(\Delta t\)</span> = 2</p></th>
@@ -628,9 +644,9 @@ document.write(`
 <p>Visit the <a class="reference external" href="https://www.usgs.gov/special-topic/water-science-school/science/100-year-flood?qt-science_center_objects=0#qt-science_center_objects"><em>USGS</em> water science school</a> to learn more about flood (and drought) recurrence interval.</p>
 </section>
 <section id="get-discharge-data">
-<h2>Get Discharge Data<a class="headerlink" href="#get-discharge-data" title="Permalink to this headline">#</a></h2>
+<h2>Get Discharge Data<a class="headerlink" href="#get-discharge-data" title="Link to this heading">#</a></h2>
 <section id="discharge-data-sources">
-<h3>Discharge Data Sources<a class="headerlink" href="#discharge-data-sources" title="Permalink to this headline">#</a></h3>
+<h3>Discharge Data Sources<a class="headerlink" href="#discharge-data-sources" title="Link to this heading">#</a></h3>
 <p>Flow data can be retrieved from gauging stations. In Germany, the <a class="reference external" href="http://www.dgj.de/">“Gewässerkundliches Jahrbuch”</a> provides a compound overview of statistic data from gauging stations. Note that many gauging stations are, as in many other countries, too, managed by state authorities and only a small share of data is available from federal institutions. For example, gauge data for Baden-Württemberg are available at the State Institute for the Environment, Survey and Nature Conservation’s (LUBW) <a class="reference external" href="https://hvz.lubw.baden-wuerttemberg.de/">geo portal</a>. The following list provides more sources for discharge data around the globe.</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://www.bafg.de">Bundesanstalt für Gewässerkunde <em>BfG</em></a> runs the <a class="reference external" href="https://www.bafg.de/GRDC/EN/Home/homepage_node.html">Global Runoff Data Centre <em>GRDC</em></a> for the World Meteorological Organization <em>WMO</em> to provide river discharge data worldwide. The <em>GRDC</em>’s download platform is available in the form of an <a class="reference external" href="https://portal.grdc.bafg.de/applications/public.html?publicuser=PublicUser#dataDownload/Home">interactive web-GIS</a>. To get the data, go to their <a class="reference external" href="https://portal.grdc.bafg.de/applications/public.html?publicuser=PublicUser#dataDownload/Stations">download interface</a>, select the desired station, switch to <em>Table</em> view (third row in the top left of the window), check the station, click <strong>download</strong>, and fill the form to send the request. You will receive an email with a download link for the requested data (wait a couple of minutes before clicking on the link - the preparation may take more time than the email).</p></li>
@@ -650,7 +666,7 @@ hf.draw_map()` # only runs in JupyterLab
 </section>
 </section>
 <section id="load-data-with-pandas">
-<h2>Load Data with <em>pandas</em><a class="headerlink" href="#load-data-with-pandas" title="Permalink to this headline">#</a></h2>
+<h2>Load Data with <em>pandas</em><a class="headerlink" href="#load-data-with-pandas" title="Link to this heading">#</a></h2>
 <p>Create a new <em>Python</em> file (e.g., <code class="docutils literal notranslate"><span class="pre">discharge_analysis.py</span></code>) and import <em>pandas</em> as <code class="docutils literal notranslate"><span class="pre">pd</span></code> at the beginning. Read the provided flow data series file <code class="docutils literal notranslate"><span class="pre">&quot;daily-flow-series.csv&quot;</span></code> with <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>.
 The header (column names) is in row 36, but we do not use the column names from the <em>csv</em> file and overwrite them with the <code class="docutils literal notranslate"><span class="pre">names</span></code> argument (<code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Q</span> <span class="pre">(CMS)&quot;</span></code> (for Cubic Meters per Second)). Alternatively, we could use the <code class="docutils literal notranslate"><span class="pre">skiprows</span></code> argument to indicate where the data content starts in the file.
 With <code class="docutils literal notranslate"><span class="pre">sep=&quot;;&quot;</span></code>, we indicate that columns are separated by a semicolon. The <code class="docutils literal notranslate"><span class="pre">usecols=[0,</span> <span class="pre">2]</span></code> argument specifies that we only want to read columns 0 (date) and 2 (discharge) because the information content of column 1 (time) is not relevant for daily discharge. The <code class="docutils literal notranslate"><span class="pre">parse_dates=[0]</span></code> argument lets <em>pandas</em> know that column 0 contains date-formatted values. Alternatively, we could use a <code class="docutils literal notranslate"><span class="pre">dtype={&quot;Date&quot;:</span> <span class="pre">...</span> <span class="pre">}</span></code> dictionary to specify the data formats of columns. However, using <code class="docutils literal notranslate"><span class="pre">dtype</span></code> would require importing <code class="docutils literal notranslate"><span class="pre">datetime</span></code> and induce unnecessary complexity. In addition, the <code class="docutils literal notranslate"><span class="pre">index_col</span></code> argument defines the column indices, which need to have a date format for the later analyses. In addition, use the optional keyword argument <code class="docutils literal notranslate"><span class="pre">encoding=&quot;latin1&quot;</span></code> because the provided data file contains some special characters that cannot be recognized with the standard <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> encoding.</p>
@@ -667,7 +683,7 @@ With <code class="docutils literal notranslate"><span class="pre">sep=&quot;;&qu
 <p>Did everything work? Verify the loaded <code class="docutils literal notranslate"><span class="pre">data_series</span></code> with <code class="docutils literal notranslate"><span class="pre">print(data_series.head())</span></code></p>
 <p>If your CSV file has special characters (e.g. <sup>3</sup>), you may need to use the optional keyword argument <code class="docutils literal notranslate"><span class="pre">encoding=&quot;latin1&quot;</span></code> because some special characters cannot be recognized with the standard <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> encoding.</p>
 <section id="plot-the-data">
-<h3>Plot the Data<a class="headerlink" href="#plot-the-data" title="Permalink to this headline">#</a></h3>
+<h3>Plot the Data<a class="headerlink" href="#plot-the-data" title="Link to this heading">#</a></h3>
 <p>Plotting data is not the focus of this exercise and for this reason, there is a ready-to-use function available in the <code class="docutils literal notranslate"><span class="pre">plot_discharge.py</span></code> script. Make sure that the <code class="docutils literal notranslate"><span class="pre">plot_discharge.py</span></code> is in the same directory as the above <code class="docutils literal notranslate"><span class="pre">discharge_analysis.py</span></code> <em>Python</em> script (recall how to load <a class="reference internal" href="../jupyter/pypckg.html#sec-pypckg"><span class="std std-ref">Packages, Modules and Libraries</span></a>). Use the <code class="docutils literal notranslate"><span class="pre">plot_discharge</span></code> function in <code class="docutils literal notranslate"><span class="pre">plot_discharge.py</span></code> as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plot_discharge</span> <span class="kn">import</span> <span class="n">plot_discharge</span>
 <span class="n">plot_discharge</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Q (CMS)&quot;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Daily Flows 1826 - 2016&quot;</span><span class="p">)</span>
@@ -677,7 +693,7 @@ With <code class="docutils literal notranslate"><span class="pre">sep=&quot;;&qu
 </section>
 </section>
 <section id="construct-series-of-annual-maximum-discharge">
-<h2>Construct Series of Annual Maximum Discharge<a class="headerlink" href="#construct-series-of-annual-maximum-discharge" title="Permalink to this headline">#</a></h2>
+<h2>Construct Series of Annual Maximum Discharge<a class="headerlink" href="#construct-series-of-annual-maximum-discharge" title="Link to this heading">#</a></h2>
 <p>Flood event recurrence intervals result from statistics of the annual maximum discharge. Therefore, use <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html"><em>pandas</em>’ resample</a> function to find annual maximum values. The resample function requires the definition of a <code class="docutils literal notranslate"><span class="pre">DateTimeIndex</span></code>, which we already implemented by using the <code class="docutils literal notranslate"><span class="pre">index_col</span></code> argument when we loaded the data. The first (and only required) argument for the <code class="docutils literal notranslate"><span class="pre">resample</span></code> function is the rule defining the length of the time frame to which re-sampling applies. Here, we use <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code> for annual statistics. For using bi-annual or 5-year periods, we could use the rule <code class="docutils literal notranslate"><span class="pre">&quot;5A&quot;</span></code>. More rules can be found at the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases"><em>pandas</em> docs</a>.
 In addition, we use the argument <code class="docutils literal notranslate"><span class="pre">kind=period</span></code>, because we are only interested in the year in which the discharge occurred. Finally, we apply <code class="docutils literal notranslate"><span class="pre">.max()</span></code> to run <em>maximum</em> statistics on the data frame. Since the re-sampled dataframe is again a dataframe, all dataframe methods can also be applied to it. That is, instead of <code class="docutils literal notranslate"><span class="pre">max()</span></code> we can as well use <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">median()</span></code>, <code class="docutils literal notranslate"><span class="pre">mean()</span></code> and so on (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/frame.html">see pandas dataframe methods</a>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">annual_max_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">rule</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;period&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -699,7 +715,7 @@ In addition, we use the argument <code class="docutils literal notranslate"><spa
 </div>
 </section>
 <section id="calculate-exceedance-probability-and-recurrence-intervals">
-<h2>Calculate Exceedance Probability and Recurrence Intervals<a class="headerlink" href="#calculate-exceedance-probability-and-recurrence-intervals" title="Permalink to this headline">#</a></h2>
+<h2>Calculate Exceedance Probability and Recurrence Intervals<a class="headerlink" href="#calculate-exceedance-probability-and-recurrence-intervals" title="Link to this heading">#</a></h2>
 <p>The exceedance probability <span class="math notranslate nohighlight">\(Pr\)</span> of a particular event within the observation period is:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -742,7 +758,7 @@ Pr(i) = (N - i + 1) / (N + 1)
 </div>
 </section>
 <section id="outside-the-box">
-<h2>Outside the Box<a class="headerlink" href="#outside-the-box" title="Permalink to this headline">#</a></h2>
+<h2>Outside the Box<a class="headerlink" href="#outside-the-box" title="Link to this heading">#</a></h2>
 <p>The here shown method is only an interpolation. For extrapolating return periods beyond the length of the observation period (e.g., for extreme events such as a 1000-year flood), a prediction model is necessary (e.g., Gumbel distributed-extrapolation).</p>
 <p>After all, there is already software that calculates return periods, freely available at the U.S. Army Corps of Engineers Hydrologic Engineering Center (<em>HEC</em>) <span id="id1">[<a class="reference internal" href="../documentation/bibliography.html#id582" title="U.S. Army Corps of Engineeers. Hydrologic Engineering Centers River Analysis System (HEC-RAS). U.S. Army Corps of Engineeers (USACE), Davis, CA, USA, 2016. URL: http://www.hec.usace.army.mil/software/hec-ras/.">USACoEngineeers16</a>]</span>: <a class="reference external" href="https://www.hec.usace.army.mil/software/hec-ssp/">HEC-SPP</a>. HEC-SPP enables the calculation of flow event frequencies and return periods according to US standards. So if you are not working in or for the United States, you still may want to have your code ready. Moreover, <em>HEC-SPP</em> requires pre-processing of discharge data (i.e., it only works with annual maxima).</p>
 <div class="admonition-homework admonition">
@@ -777,11 +793,10 @@ Pr(i) = (N - i + 1) / (N + 1)
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="ex-sp.html"
@@ -801,10 +816,7 @@ Pr(i) = (N - i + 1) / (N + 1)
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -812,6 +824,7 @@ Pr(i) = (N - i + 1) / (N + 1)
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -853,6 +866,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -879,8 +893,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

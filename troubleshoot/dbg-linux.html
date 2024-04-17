@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Debugging Debian Linux &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'troubleshoot/dbg-linux';</script>
     <link rel="canonical" href="https://hydro-informatics.com/troubleshoot/dbg-linux.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Debugging Virtual Machines" href="dbg-vm.html" />
     <link rel="prev" title="Operating Systems (Linux and VMs)" href="dbg-os.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -482,20 +503,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -553,15 +576,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="debugging-debian-linux">
-<h1>Debugging Debian Linux<a class="headerlink" href="#debugging-debian-linux" title="Permalink to this headline">#</a></h1>
+<h1>Debugging Debian Linux<a class="headerlink" href="#debugging-debian-linux" title="Link to this heading">#</a></h1>
 <p>Debian Linux is documented in a comprehensive <a class="reference external" href="https://wiki.debian.org/">wiki</a> with descriptions for setting up the system, installing software (packages), and tutorials for trouble shooting. This page provides guidance for problems that may occur in particular when Debian Linux is installed on a Virtual Machine (VM).</p>
 <section id="particular-problems">
-<h2>Particular Problems<a class="headerlink" href="#particular-problems" title="Permalink to this headline">#</a></h2>
+<h2>Particular Problems<a class="headerlink" href="#particular-problems" title="Link to this heading">#</a></h2>
 <section id="root-drive-is-running-out-of-disk-space">
-<h3>Root Drive Is Running Out of Disk Space<a class="headerlink" href="#root-drive-is-running-out-of-disk-space" title="Permalink to this headline">#</a></h3>
+<h3>Root Drive Is Running Out of Disk Space<a class="headerlink" href="#root-drive-is-running-out-of-disk-space" title="Link to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Read this entire section before taking action. Otherwise, you risk to unnecessarily allocate disk space.</p>
@@ -609,11 +632,11 @@ document.write(`
 </div>
 </section>
 <section id="keep-system-and-software-up-to-date">
-<h3>Keep System and Software up to Date<a class="headerlink" href="#keep-system-and-software-up-to-date" title="Permalink to this headline">#</a></h3>
+<h3>Keep System and Software up to Date<a class="headerlink" href="#keep-system-and-software-up-to-date" title="Link to this heading">#</a></h3>
 <p>Read more on the <a class="reference external" href="https://www.debian.org/doc/manuals/debian-faq/uptodate.en.html">developer’s website</a>.</p>
 </section>
 <section id="permission-denied-messages">
-<span id="dbg-permissions"></span><h3>Permission Denied Messages<a class="headerlink" href="#permission-denied-messages" title="Permalink to this headline">#</a></h3>
+<span id="dbg-permissions"></span><h3>Permission Denied Messages<a class="headerlink" href="#permission-denied-messages" title="Link to this heading">#</a></h3>
 <p><strong>Permission denied</strong> messages may occur because of the fail-safe design of Debian, but denied read and write rights may quickly become annoying, in particular if you need to switch between normal and superuser accounts for installing software packages.</p>
 <div class="warning admonition">
 <p class="admonition-title">Potentially harmful operation</p>
@@ -642,9 +665,9 @@ document.write(`
 </section>
 </section>
 <section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
+<h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
 <section id="tkinter-imports-fail-no-module-named-tkinter">
-<h3>tkinter Imports Fail (No Module Named Tkinter)<a class="headerlink" href="#tkinter-imports-fail-no-module-named-tkinter" title="Permalink to this headline">#</a></h3>
+<h3>tkinter Imports Fail (No Module Named Tkinter)<a class="headerlink" href="#tkinter-imports-fail-no-module-named-tkinter" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">tkinter</span></code> is sometimes still only installed for <em>Python2</em> on <em>Linux</em>, while we want to use it with <em>Python3</em>. To ensure that <code class="docutils literal notranslate"><span class="pre">tkinter</span></code> for <em>Python3</em> is installed, install via <em>Terminal</em>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-tk</span></code>  or</p></li>
@@ -655,9 +678,9 @@ document.write(`
 </section>
 </section>
 <section id="wine">
-<h2>Wine<a class="headerlink" href="#wine" title="Permalink to this headline">#</a></h2>
+<h2>Wine<a class="headerlink" href="#wine" title="Link to this heading">#</a></h2>
 <section id="general-wine-issues">
-<h3>General wine issues<a class="headerlink" href="#general-wine-issues" title="Permalink to this headline">#</a></h3>
+<h3>General wine issues<a class="headerlink" href="#general-wine-issues" title="Link to this heading">#</a></h3>
 <p>If <em>wine</em> does not work as desired, remove the current installation via <em>Terminal</em>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">remove</span> <span class="n">wine</span> <span class="n">wine32</span> <span class="n">wine64</span> <span class="n">libwine</span> <span class="n">libwine</span><span class="p">:</span><span class="n">i386</span> <span class="n">fonts</span><span class="o">-</span><span class="n">wine</span>
 </pre></div>
@@ -685,7 +708,7 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
 </div>
 </section>
 <section id="bit-application-not-working">
-<h3>64-bit Application Not Working<a class="headerlink" href="#bit-application-not-working" title="Permalink to this headline">#</a></h3>
+<h3>64-bit Application Not Working<a class="headerlink" href="#bit-application-not-working" title="Link to this heading">#</a></h3>
 <p>If a 64-bit <em>msi</em> or other installer / application is not working as desired, try to adapt the <code class="docutils literal notranslate"><span class="pre">WINEPREFIX</span></code> for your user (note: this is not an elegant solution):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WINEARCH</span><span class="o">=</span><span class="n">win64</span> <span class="n">WINEPREFIX</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">YOUR</span><span class="o">-</span><span class="n">USER</span><span class="o">-</span><span class="n">NAME</span><span class="o">/.</span><span class="n">wine64</span> <span class="n">wineboot</span> <span class="o">-</span><span class="n">u</span>
 </pre></div>
@@ -693,9 +716,9 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
 </section>
 </section>
 <section id="qgis">
-<h2>QGIS<a class="headerlink" href="#qgis" title="Permalink to this headline">#</a></h2>
+<h2>QGIS<a class="headerlink" href="#qgis" title="Link to this heading">#</a></h2>
 <section id="gpg-error-public-key-not-available-apt-update">
-<h3>GPG error - public key not available (APT UPDATE)<a class="headerlink" href="#gpg-error-public-key-not-available-apt-update" title="Permalink to this headline">#</a></h3>
+<h3>GPG error - public key not available (APT UPDATE)<a class="headerlink" href="#gpg-error-public-key-not-available-apt-update" title="Link to this heading">#</a></h3>
 <p>Occasionally (literally…), the GPG key of the QGIS repositories become invalid, which results in an error when using:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 
@@ -715,7 +738,7 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
 <p>To test if the key update worked, tap <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code></p>
 </section>
 <section id="no-module-named-opengl">
-<h3>No module named OpenGL<a class="headerlink" href="#no-module-named-opengl" title="Permalink to this headline">#</a></h3>
+<h3>No module named OpenGL<a class="headerlink" href="#no-module-named-opengl" title="Link to this heading">#</a></h3>
 <p>If QGIS throws the error message <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">'OpenGL'</span></code>, install <em>Mesa</em> as follows on Ubuntu (i.e., Debian Linux) based operating systems (including Mint and Lubuntu).</p>
 <p>Bring <code class="docutils literal notranslate"><span class="pre">apt</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> to up-to-date:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
@@ -737,7 +760,7 @@ sudo apt-add-repository https://dl.winehq.org/wine-builds/debian/
 <p>A system restart (or just reload the user environment with <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashsrc</span></code>) may be necessary for QGIS to work now without the OpenGL error.</p>
 </section>
 <section id="lastools">
-<h3>LAStools<a class="headerlink" href="#lastools" title="Permalink to this headline">#</a></h3>
+<h3>LAStools<a class="headerlink" href="#lastools" title="Link to this heading">#</a></h3>
 <p>To get LAStools working in QGIS on Ubuntu (make sure to have <a class="reference internal" href="../get-started/vm.html#wine"><span class="std std-ref">Windows Apps on Linux</span></a> installed):</p>
 <ul class="simple">
 <li><p>Download the LAStools (ZIP) from <a class="reference external" href="http://rapidlasso.com/LAStools">http://rapidlasso.com/LAStools</a> and extract the ZIP file</p></li>
@@ -757,7 +780,7 @@ line 188:         if (True):</p></li>
 </section>
 </section>
 <section id="d-graphics-drivers">
-<h2>3d Graphics Drivers<a class="headerlink" href="#d-graphics-drivers" title="Permalink to this headline">#</a></h2>
+<h2>3d Graphics Drivers<a class="headerlink" href="#d-graphics-drivers" title="Link to this heading">#</a></h2>
 <p>GPU intense software requiring strong graphics performance, such as the Unreal Engine, will require newest graphics cards and drivers. The default graphics drivers may not be able to satisfy the needs for such appliances. Latest releases of graphics drivers can be installed through proprietary drivers (e.g., nVidia’s proprietary drivers to replace nouveau drivers).</p>
 <p>Here is one option to update nVidia graphic drivers, though be aware that this action can substantially harm your system (it may not reboot) if you are not running an Ubuntu Linux (derivative) with an appropriate nVidia graphics card. So if you are OK with this warning:</p>
 <ul class="simple">
@@ -842,11 +865,10 @@ line 188:         if (True):</p></li>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="dbg-os.html"
@@ -866,10 +888,7 @@ line 188:         if (True):</p></li>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -877,6 +896,7 @@ line 188:         if (True):</p></li>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -927,6 +947,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -953,8 +974,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

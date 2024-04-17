@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Process Drone (UAV) Imagery &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geopy/drone-processing';</script>
     <link rel="canonical" href="https://hydro-informatics.com/geopy/drone-processing.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Geospatial Python" href="geo-python.html" />
     <link rel="prev" title="QGIS Tutorial" href="use-qgis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -543,16 +566,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="process-drone-uav-imagery">
-<h1>Process Drone (UAV) Imagery<a class="headerlink" href="#process-drone-uav-imagery" title="Permalink to this headline">#</a></h1>
+<h1>Process Drone (UAV) Imagery<a class="headerlink" href="#process-drone-uav-imagery" title="Link to this heading">#</a></h1>
 <div class="important admonition">
 <p class="admonition-title">This tutorial exceptionally requires proprietary software</p>
 <p>This section features data extraction with <em>Agisoft</em>’s proprietary <em>Metashape</em> software (Professional Edition). For educational test and trial purposes, <a class="reference external" href="https://www.agisoft.com/downloads/installer/">download Agisoft Metashape</a> with the 30-day trial license. The software works on Windows, macOS, and Linux. Note that this tutorial builds on Metashape version 1.8.3.</p>
 </div>
 <section id="acquire-aerial-drone-imagery">
-<h2>Acquire Aerial Drone Imagery<a class="headerlink" href="#acquire-aerial-drone-imagery" title="Permalink to this headline">#</a></h2>
+<h2>Acquire Aerial Drone Imagery<a class="headerlink" href="#acquire-aerial-drone-imagery" title="Link to this heading">#</a></h2>
 <p>Collecting aerial imagery has become amazingly easy thanks to autopilot-controlled drones. Today, most drones come with programs for shooting aerial imagery and Structure-from-Motion (SfM)-based digital elevation models (<a class="reference internal" href="../documentation/glossary.html#term-DEM"><span class="xref std std-term">DEM</span></a>s). Since drone control is model-dependent (e.g., we use a <a class="reference external" href="https://dl.djicdn.com/downloads/phantom_4_rtk/20200721/Phantom_4_RTK_User_Manual_v2.4_EN.pdf">dji Phantom 4 RTK</a> drone for aerial surveys), this tutorial only describes basic settings for shooting aerial imagery and focuses on image processing to create DEMs.</p>
 <p>Recommendations for survey flights with drones:</p>
 <ul class="simple">
@@ -564,16 +587,16 @@ document.write(`
 <p>In addition, an imagery-based DEM can also be built for shallow, clear waters (i.e., bathymetries) but other measurement techniques (e.g., <a class="reference internal" href="../documentation/glossary.html#term-Lidar"><span class="xref std std-term">Lidar</span></a> or <a class="reference internal" href="../documentation/glossary.html#term-Sonar"><span class="xref std std-term">Sonar</span></a>) are required for deeper waters (&gt; 0.5 m water depth). Also, imagery-based bathymetry should be validated or corrected with local DGPS or total station measurements.</p>
 </section>
 <section id="metashape">
-<h2>Metashape<a class="headerlink" href="#metashape" title="Permalink to this headline">#</a></h2>
+<h2>Metashape<a class="headerlink" href="#metashape" title="Link to this heading">#</a></h2>
 <p>The below figure shows the Metashape interface at program startup, ready for playing with drone imagery and SfM.</p>
 <figure class="align-default" id="meta-startup">
 <img alt="metashape agisoft gui interface" src="../_images/metashape-startup.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">The initial Metashape interface.</span><a class="headerlink" href="#meta-startup" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">The initial Metashape interface.</span><a class="headerlink" href="#meta-startup" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="create-a-new-project">
-<h3>Create a New Project<a class="headerlink" href="#create-a-new-project" title="Permalink to this headline">#</a></h3>
+<h3>Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading">#</a></h3>
 <p>To get started, <strong>create</strong> a <strong>new project</strong> and <strong>save</strong> it (as <code class="docutils literal notranslate"><span class="pre">.psx</span></code> file) preferably one folder level above the images directory. Next, familiarize with the interface and explore the numerous workflows provided in the <strong>Workflow</strong> menu.</p>
 <div class="tip admonition">
 <p class="admonition-title">Metashape workflows</p>
@@ -581,11 +604,11 @@ document.write(`
 </div>
 </section>
 <section id="load-images">
-<h3>Load Images<a class="headerlink" href="#load-images" title="Permalink to this headline">#</a></h3>
+<h3>Load Images<a class="headerlink" href="#load-images" title="Link to this heading">#</a></h3>
 <p>Images may be loaded file-by-file, or much easier, from an entire directory. To add a directory (i.e., folder) containing aerial imagery from a single-camera drone, go to the <strong>Workflow</strong> menu &gt; <strong>Add folder</strong> &gt; <strong>Select folder containing images</strong> &gt; <strong>Single cameras</strong>.</p>
 </section>
 <section id="align-images">
-<h3>Align Images<a class="headerlink" href="#align-images" title="Permalink to this headline">#</a></h3>
+<h3>Align Images<a class="headerlink" href="#align-images" title="Link to this heading">#</a></h3>
 <p>When the drone flies over terrains, it sometimes needs to change its direction or position, but it always <em>knows</em> where it is (absolutely or relative to a ground station) if RTK-GPS data is available. As a result, the images may have been taken at different angles and different positions. To merge the images into one big picture of the terrain, the images need to be aligned by matching points that are visible on multiple images. The big picture can be created with Metashape’s alignment tool: go to <strong>Workflow</strong> &gt; <strong>Align Fotos</strong> and consider the following settings in the popup window (see figure below) with the <strong>Advanced</strong> frame expanded:</p>
 <ul class="simple">
 <li><p>Set the <strong>Accuracy</strong> to <strong>high</strong> for an acceptable equilibrium of resolution and computing time. Note that any additional increase in accuracy results in one order of magnitude longer computations times.</p></li>
@@ -603,13 +626,13 @@ document.write(`
 <figure class="align-default" id="meta-align">
 <img alt="metashape align fotos images pictures" src="../_images/metashape-align.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 36 </span><span class="caption-text">The align fotos popup window in Metashape.</span><a class="headerlink" href="#meta-align" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">The align fotos popup window in Metashape.</span><a class="headerlink" href="#meta-align" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>When the alignment is accomplished, produce a <strong>coarse point cloud</strong> (select from the <strong>Tools</strong> menu). A qualitatively good coarse point cloud is characterized by at least 100 tie points per m<span class="math notranslate nohighlight">\(^2\)</span> or more than 50.000 tie points per 100 images (with a resolution of 4605x3227). In addition, <strong>verify errors</strong> with a click on the <strong>Reference</strong> ribbon (typically at the bottom left of the Metashape window). The longitude/latitude error should be <span class="math notranslate nohighlight">\(\leq\)</span> 2 cm.</p>
 </section>
 <section id="build-dense-point-cloud">
-<h3>Build Dense Point Cloud<a class="headerlink" href="#build-dense-point-cloud" title="Permalink to this headline">#</a></h3>
+<h3>Build Dense Point Cloud<a class="headerlink" href="#build-dense-point-cloud" title="Link to this heading">#</a></h3>
 <p>When the quality is sufficient and the error is acceptably low, proceed with building a <strong>dense point cloud</strong> (select from the <strong>Workflow</strong> menu). In the dense point cloud popup window (see also figure below), make the following settings:</p>
 <ul class="simple">
 <li><p>Set the <strong>quality</strong> to <strong>high</strong></p></li>
@@ -625,7 +648,7 @@ document.write(`
 <figure class="align-default" id="meta-dense-cloud">
 <img alt="metashape dense point cloud" src="../_images/metashape-dense-cloud.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 37 </span><span class="caption-text">The dense point cloud popup dialogue in Metashape.</span><a class="headerlink" href="#meta-dense-cloud" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">The dense point cloud popup dialogue in Metashape.</span><a class="headerlink" href="#meta-dense-cloud" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <strong>quality</strong> of the dense point cloud can be considered good if the process found:</p>
@@ -635,7 +658,7 @@ document.write(`
 </ul>
 </section>
 <section id="create-dem">
-<h3>Create DEM<a class="headerlink" href="#create-dem" title="Permalink to this headline">#</a></h3>
+<h3>Create DEM<a class="headerlink" href="#create-dem" title="Link to this heading">#</a></h3>
 <p>The dense or coarse point cloud can be used with many other workflows and the creation of a <a class="reference internal" href="../documentation/glossary.html#term-DEM"><span class="xref std std-term">DEM</span></a> is only one option. To create a DEM, go to <strong>Workflow</strong> &gt; <strong>Build DEM</strong> and consider the following aspects in the build DEM popup window (see figure below):</p>
 <ul class="simple">
 <li><p>Projection:</p>
@@ -657,18 +680,18 @@ document.write(`
 <figure class="align-default" id="meta-dem">
 <img alt="metashape dem dgm digital elevation model geotiff" src="../_images/metashape-dem.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">The DEM creation popup dialogue in Metashape.</span><a class="headerlink" href="#meta-dem" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">The DEM creation popup dialogue in Metashape.</span><a class="headerlink" href="#meta-dem" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Finally, export the DEM with a <strong>right-click</strong> on the <strong>DEM</strong> in the <strong>Workspace</strong> (if the DEM is not visible, expand the <strong>Chunk 1</strong> entry - or whatever name it has - in the Workspace) and select <strong>Export DEM…</strong>. We recommend to save the DEM in <a class="reference internal" href="../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a> (<strong>.tif</strong>) format, which is compatible with <a class="reference internal" href="use-qgis.html#qgis-tutorial"><span class="std std-ref">QGIS</span></a>. If <code class="docutils literal notranslate"><span class="pre">.tif</span></code> was selected, a popup window for exporting the DEM opens. In the popup window, check the <strong>export world file</strong> option and keep all other defaults (optionally, create a <code class="docutils literal notranslate"><span class="pre">.kml</span></code> file for working with <em>GoogleEarth</em>). The world file will be important for QGIS (and any other GIS software) to know where the DEM is geographically located with respect to the selected projection.</p>
 </section>
 <section id="create-a-mesh">
-<h3>Create a Mesh<a class="headerlink" href="#create-a-mesh" title="Permalink to this headline">#</a></h3>
+<h3>Create a Mesh<a class="headerlink" href="#create-a-mesh" title="Link to this heading">#</a></h3>
 <p>Similar to the DEM workflow, Metashape provides a workflow for creating a mesh (<strong>Workflow</strong> &gt; <strong>Build Mesh</strong>) in the form of a triangulated irregular network (<a class="reference internal" href="geospatial-data.html#tin"><span class="std std-ref">TIN</span></a>). The <strong>Source data</strong> options are similar to the ones in the DEM workflow, with an additional option of using the DEM for meshing. Also for a mesh, <strong>High</strong> quality and face counts result in the best representation of the terrain and high computing costs. If the goal of the mesh generation is its usage with a numerical model, lower quality and face counts might be a good choice to keep the time for running the numerical model low. The mesh generation takes again 5-30 minutes.</p>
 <figure class="align-default" id="meta-mesh">
 <img alt="metashape mesh creation stl numerical model" src="../_images/metashape-mesh.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">The mesh creation popup dialogue in Metashape.</span><a class="headerlink" href="#meta-mesh" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">The mesh creation popup dialogue in Metashape.</span><a class="headerlink" href="#meta-mesh" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Once the mesh creation is finished, it can be exported with a right-click on the <strong>3D Model</strong> entry in the <strong>Workspace</strong> and a left-click on <strong>Export Model…</strong>. If the 3D Model is not visible in the Workspace, expand the <strong>Chunk 1</strong> entry (or whatever name it has). For use with a numerical model (e.g., OpenFOAM), the STL (<code class="docutils literal notranslate"><span class="pre">.stl</span></code>) format is a good choice.</p>
@@ -705,11 +728,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="use-qgis.html"
@@ -729,10 +751,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -740,6 +759,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -778,6 +798,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -804,8 +825,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

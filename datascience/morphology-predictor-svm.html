@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Support Vector Machine (SVM) &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'datascience/morphology-predictor-svm';</script>
     <link rel="canonical" href="https://hydro-informatics.com/datascience/morphology-predictor-svm.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Three-based methods (Coming soon)" href="three-based-methods.html" />
     <link rel="prev" title="Kernels" href="kernelized-supervised-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -551,20 +572,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -629,14 +652,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="tip admonition">
 <p class="admonition-title">Contributor</p>
 <p>This chapter was written and developed by <a class="reference external" href="https://ricardovobarros.github.io/">Ricardo Barros</a> <a class="reference internal" href="../_images/ricardo.jpg"><img alt="Ricardo Barros" src="../_images/ricardo.jpg" style="width: 50px; height: 50px;" /></a></p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="support-vector-machine-svm">
-<h1>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Permalink to this headline">#</a></h1>
+<h1>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Link to this heading">#</a></h1>
 <p>This tutorial features the Support Vector Machine (SVM) technique for classifying riverbed morphology types as a function of hydraulic and sediment transport data.</p>
 <div class="admonition-goals admonition">
 <p class="admonition-title">Goals</p>
@@ -652,7 +675,7 @@ document.write(`
 </div>
 <p>Enable interactive reading and executing code blocks with <a class="reference external" href="https://mybinder.org/v2/gh/hydro-informatics/jupyter-python-course/main"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a> and find <em>morphology-predictor-svm.ipynb</em> Alternatively, install <a class="reference internal" href="../python-basics/pyinstall.html#install-python"><span class="std std-ref">Python</span></a> and <a class="reference internal" href="../get-started/ide.html#jupyter"><span class="std std-ref">JupyterLab</span></a> locally and <strong><a class="reference external" href="https://github.com/ricardovobarros/hydro-informatics/tree/main/morphology_predictor">download</a></strong> this Jupyter notebook.</p>
 <section id="theory">
-<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h2>
+<h2>Theory<a class="headerlink" href="#theory" title="Link to this heading">#</a></h2>
 <p>In the field of restoration science, the identification of river morphology provides essential insights, for instance, to guide target terraforming aiming at re-instating a near-census natural state of a fluvial landscape. In addition, morphological pattern may serve as a predictor for estimating fluvial <a class="reference internal" href="../documentation/glossary.html#term-Sediment-transport"><span class="xref std std-term">sediment transport</span></a> and vice versa. Thus, there is a bidirectional relationship between fluvial hydraulics, sediment transport, and morphological pattern, which represent physical habitat for aquatic species and may even affect energy production <span id="id2">[<a class="reference internal" href="../documentation/bibliography.html#id1402" title="Alain Recking, Guillaume Piton, Daniel Vazquez-Tarrio, and Gary Parker. Quantifying the morphological print of bedload transport. Earth Surface Processes and Landforms, 41(6):809–822, 2016.">RPVTP16</a>]</span>.</p>
 <p>Yet, classifying and predicting fluvial morphodynamics is challenging because of the complexity of river ecosystems and every river being a unique environment. However,there are repeating morphological units of rivers with similar characteristics. A basic set of repetitive morphological features was introduced by <span id="id3">Montgomery and Buffington [<a class="reference internal" href="../documentation/bibliography.html#id402" title="David R. Montgomery and J. Buffington. Channel-reach morphology in mountain drainage basins. Geological Society of America Bulletin, 109(5):596–611, 1997. doi:10.1130/0016-7606(1997)109$&lt;$0596:CRMIMD$&gt;$2.3.CO;2.">MB97</a>]</span>, and we will focus in this tutorial on the following five morphological units (click on the items to read more):</p>
 <ul class="simple">
@@ -666,16 +689,16 @@ document.write(`
 <figure class="align-default" id="fig-bed-morphology">
 <img alt="riverbed morphologies" src="../_images/morphology-overview.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 258 </span><span class="caption-text">a) A colluvial headwater stream (Furtschaglbach, Austria), b) a cascade stream (Torrent des Favrands, France), c) a bedrock stream (Anse St-Jean, Québec, Canada), d) a step-pool stream (Dessoubre, France), e) a plane-bed stream (Dranse, Switzerland), f) a riffle-pool stream (Le diable, Québec, Canada), g) a braided stream (Jenbach, Germany). Source: <span id="id5">Schwindt [<a class="reference internal" href="../documentation/bibliography.html#id523" title="Sebastian Schwindt. Hydro-morphological processes through permeable sediment traps. Thesis No. 7655, Laboratory of Hydraulic Constructions (LCH), Ecole Polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland, 2017. URL: https://infoscience.epfl.ch/record/231182, doi:10.5075/epfl-thesis-7655.">Sch17</a>]</span></span><a class="headerlink" href="#fig-bed-morphology" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 258 </span><span class="caption-text">a) A colluvial headwater stream (Furtschaglbach, Austria), b) a cascade stream (Torrent des Favrands, France), c) a bedrock stream (Anse St-Jean, Québec, Canada), d) a step-pool stream (Dessoubre, France), e) a plane-bed stream (Dranse, Switzerland), f) a riffle-pool stream (Le diable, Québec, Canada), g) a braided stream (Jenbach, Germany). Source: <span id="id5">Schwindt [<a class="reference internal" href="../documentation/bibliography.html#id523" title="Sebastian Schwindt. Hydro-morphological processes through permeable sediment traps. Thesis No. 7655, Laboratory of Hydraulic Constructions (LCH), Ecole Polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland, 2017. URL: https://infoscience.epfl.ch/record/231182, doi:10.5075/epfl-thesis-7655.">Sch17</a>]</span></span><a class="headerlink" href="#fig-bed-morphology" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To guide restoration actions, experts often visually classify morphology units on-site, though some of them may also be distinguishable on aerial imagery. On-site (<em>in-situ</em>) expert assessments may also serve as ground truth for machine learning models. In this exercise, we will use hydrodynamic parameters with expert-based ground truth from the database <a class="reference external" href="https://en.bedloadweb.com/">https://bedloadweb.com</a>. Thus, at the end of this tutorial, you may be able to reduce a necessary amount of fieldwork, just by using hydraulic parameters that can sometimes also be retrieved from gauging stations. To this end, we will train and test an SVM model that classifies morphological units as a function of data that can be collected <em>in-situ</em> or derived from aerial imagery.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="pre-processing">
-<h1>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">#</a></h1>
+<h1>Pre-processing<a class="headerlink" href="#pre-processing" title="Link to this heading">#</a></h1>
 <section id="load-data">
-<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">#</a></h2>
+<h2>Load Data<a class="headerlink" href="#load-data" title="Link to this heading">#</a></h2>
 <p>We downloaded a dataset from <a class="reference external" href="https://en.bedloadweb.com/">https://bedloadweb.com</a> (<a class="reference external" href="https://raw.githubusercontent.com/hydro-informatics/jupyter-python-course/main/data/bedload_dataset">download the <em>bedload_dataset</em></a> sample):</p>
 <ul class="simple">
 <li><p>Every sample is derived from the cross-sections of 146 different rivers around the globe.</p></li>
@@ -833,10 +856,10 @@ document.write(`
 </div>
 </section>
 <section id="clean-the-dataset">
-<h2>Clean the Dataset<a class="headerlink" href="#clean-the-dataset" title="Permalink to this headline">#</a></h2>
+<h2>Clean the Dataset<a class="headerlink" href="#clean-the-dataset" title="Link to this heading">#</a></h2>
 <p>To avoid the SVM model being affected by statics made based on nonsense entries (e.g., Not-a-Number <strong>NaN</strong>) values or extreme outliers, for instance, resulting from typos, we will make apply some cleaning methods.</p>
 <section id="remove-nan-values">
-<h3>Remove NaN Values<a class="headerlink" href="#remove-nan-values" title="Permalink to this headline">#</a></h3>
+<h3>Remove NaN Values<a class="headerlink" href="#remove-nan-values" title="Link to this heading">#</a></h3>
 <p>The first cleaning step is to remove <em>NaN</em>s that may lead the SVM model later to making bad conclusions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -885,7 +908,7 @@ Morphology : False
 </div>
 </section>
 <section id="search-outliers">
-<h3>Search Outliers<a class="headerlink" href="#search-outliers" title="Permalink to this headline">#</a></h3>
+<h3>Search Outliers<a class="headerlink" href="#search-outliers" title="Link to this heading">#</a></h3>
 <p>Outliers may occur in extreme environment or under extreme conditions (e.g., intense precipitation), but some of them also stem from equipment failures that will affect the performance of the SVM model. Thus, recognizing and removing such device-related outliers is an essential step.</p>
 <p>Visualizing the plotted features in a scatter plot can be helpful to spot outliers candidates. The following code block creates scatter plots of every feature, marks the expected value, and the distance of 2 standard deviations (assuming a Gaussian-like distribution) from it.</p>
 <div class="cell docutils container">
@@ -939,7 +962,7 @@ Morphology : False
 </div>
 </section>
 <section id="remove-outliers">
-<h3>Remove Outliers<a class="headerlink" href="#remove-outliers" title="Permalink to this headline">#</a></h3>
+<h3>Remove Outliers<a class="headerlink" href="#remove-outliers" title="Link to this heading">#</a></h3>
 <p>Outliers can be removed with two different methods:</p>
 <ol class="arabic simple">
 <li><p>Manual (i.e., expert judgment): identify outliers of the features and remove them by setting limits of their interval.</p></li>
@@ -1104,10 +1127,10 @@ Morphology : False
 </section>
 </section>
 <section id="verify-class-proportions">
-<h2>Verify Class Proportions<a class="headerlink" href="#verify-class-proportions" title="Permalink to this headline">#</a></h2>
+<h2>Verify Class Proportions<a class="headerlink" href="#verify-class-proportions" title="Link to this heading">#</a></h2>
 <p>A machine learning model requires the ground truth data to comply with some quality standard. Those involve (among others):</p>
 <ul class="simple">
-<li><p>Every combination of models needs a different minimum number of samples to have <a class="reference external" href="https://en.wikipedia.org/wiki/Statistical_significance">statistical significance</a>. It is not a trivial task to identify the minimum number of samples that yield a trustworthy model. However, to represent a class properly (whatever that means), the so-called <a class="reference external" href="https://www.investopedia.com/terms/f/frequencydistribution.asp#:~:text=A%20frequency%20distribution%20is%20a,observations%20within%20a%20given%20interval.&amp;text=The%20intervals%20must%20be%20mutually,used%20within%20a%20statistical%20context.">frequency distribution</a> of every feature must be similar to the <a class="reference external" href="https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/3-populations-and-samples">population</a> frequency distribution.</p></li>
+<li><p>Every combination of models needs a different minimum number of samples to have <a class="reference external" href="https://en.wikipedia.org/wiki/Statistical_significance">statistical significance</a>. It is not a trivial task to identify the minimum number of samples that yield a trustworthy model. However, to represent a class properly (whatever that means), the so-called <a class="reference external" href="https://www.investopedia.com/terms/f/frequencydistribution.asp#:~:text=A%20frequency%20distribution%20is%20a,observations%20within%20a%20given%20interval.&amp;amp;text=The%20intervals%20must%20be%20mutually,used%20within%20a%20statistical%20context.">frequency distribution</a> of every feature must be similar to the <a class="reference external" href="https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/3-populations-and-samples">population</a> frequency distribution.</p></li>
 <li><p>Having more than <a class="reference external" href="https://math.stackexchange.com/questions/1287990/estimating-population-standard-deviation-with-sample-standard-deviation">30 samples</a> when dealing with normally distributed variables is a good-practice rule of thumb.</p></li>
 <li><p>Ideally, the classes used for a classification problem should be represented by a similar quantity of samples. An unbalanced dataset may produce a model that gives preference to classifying correctly the class with a larger number of samples. This is a consequence of using accuracy as a performance metric. Accuracy is the ratio of correct and the total number of predictions (<span class="math notranslate nohighlight">\(accuracy =  n_{correct\_prediction}/ n_{of\_samples}\)</span>). By preferencing the total number of correct predictions over a balanced one, accuracy masks the importance of getting the under-represented classes correctly.</p></li>
 <li><p>Solutions for balancing unbalanced samples embrace:</p>
@@ -1137,7 +1160,7 @@ Name: Morphology, dtype: int64
 </div>
 </section>
 <section id="derive-new-predictors">
-<h2>Derive New Predictors<a class="headerlink" href="#derive-new-predictors" title="Permalink to this headline">#</a></h2>
+<h2>Derive New Predictors<a class="headerlink" href="#derive-new-predictors" title="Link to this heading">#</a></h2>
 <p>Sometimes it is possible to compute new meaningful features from the existing ones. For instance, known predictors for morphology are:</p>
 <ul class="simple">
 <li><p>the product of (energy) slope <span class="math notranslate nohighlight">\(S\)</span> (-), bulk flow velocity <span class="math notranslate nohighlight">\(U\)</span> (m/s), and water depth <span class="math notranslate nohighlight">\(H\)</span> (m), which basically represents <a class="reference internal" href="../documentation/glossary.html#term-Dimensionless-bed-shear-stress"><span class="xref std std-term">shear stress</span></a></p></li>
@@ -1318,7 +1341,7 @@ Name: Morphology, dtype: int64
 </div>
 </section>
 <section id="verify-multicolinearity">
-<h2>Verify Multicolinearity<a class="headerlink" href="#verify-multicolinearity" title="Permalink to this headline">#</a></h2>
+<h2>Verify Multicolinearity<a class="headerlink" href="#verify-multicolinearity" title="Link to this heading">#</a></h2>
 <p>Correlated features (i.e., statistically dependent measurement parameters) may result in unreliable models. For instance, consider a scientist who wants to use machine learning (ML) models to predict the number of tourists that get sun-burned in Brazil during their vacation. She wants to use solar radiation intensity and the number of icecream scoops sold as features. The scientist may find that both features are relevant to predict the number of sun-burned tourist, but the reason for this finding is that the number of icecream scoops sold, and sun intensity are correlated. Thus, the scientist has no way to know what is the real importance of each feature in predicting sun-burned tourists because the features grow and decrease simultaneously. By the way, icecream consumption and sun burns have no causality in common, but that is another subject.</p>
 <p>To this end, it is important to investigate the correlation among features and consider eliminating the correlated features to produce a more reliable model. One way to visually spot colinearity is plotting the combination of two variables in a scatter plot. For this purpose, the below figure aids in spotting the following aspects of the <code class="docutils literal notranslate"><span class="pre">bedload_dataset</span></code>:</p>
 <ul class="simple">
@@ -1365,7 +1388,7 @@ Name: Morphology, dtype: int64
 </div>
 </section>
 <section id="variance-inflation-factor-vif">
-<h2>Variance Inflation Factor (VIF)<a class="headerlink" href="#variance-inflation-factor-vif" title="Permalink to this headline">#</a></h2>
+<h2>Variance Inflation Factor (VIF)<a class="headerlink" href="#variance-inflation-factor-vif" title="Link to this heading">#</a></h2>
 <p>A straightforward method to evaluate <a class="reference external" href="https://towardsdatascience.com/statistics-in-python-collinearity-and-multicollinearity-4cc4dcd82b3f">multicollinerity</a> is computing the Variance Inflation Factor (<strong>VIF</strong>) for every feature, which quantifies the correlation among features.</p>
 <p>The first step to compute the VIF is treating a feature as a <a class="reference external" href="https://www.scribbr.com/methodology/independent-and-dependent-variables/#:~:text=The%20independent%20variable%20is%20the,changes%20in%20the%20independent%20variable.">dependent variable</a> and fit a <a class="reference external" href="https://www.youtube.com/watch?v=nk2CQITm_eo">linear regression model</a> using the other features as <a class="reference external" href="https://www.scribbr.com/methodology/independent-and-dependent-variables/#:~:text=The%20independent%20variable%20is%20the,changes%20in%20the%20independent%20variable.">independent variable</a>. Second, store the corresponding mean square errors <span class="math notranslate nohighlight">\(MSE\)</span> yielded by the linear model.</p>
 <p>Finally, VIF can be computed for each feature by the following equation:</p>
@@ -1379,7 +1402,7 @@ VIF_{feature(n)} = 1/(1-MSE^2_{feature(n)})
 </ul>
 <p>Note that the smaller the MSE (better linear regression model), the greater is the inflation. In other words, large VIF values indicate high correlation of the feature under consideration with <em>at least</em> one of the other features. Still, it is not possible to say based on VIF only, which <em>other feature</em> is causing VIF to inflate.</p>
 <p>As rule of thumb, a VIF greater than 10 (ten) indicates an unsuitable set of features to produce a reliable ML model. Ideally, the VIF should remain smaller than 5 (five), which is considered moderate correlation <span id="id6">[<a class="reference internal" href="../documentation/bibliography.html#id1404" title="George R Franke. Multicollinearity. Wiley international encyclopedia of marketing, 2010.">Fra10</a>]</span>. However, these reference values are not a generally and always applicable rule. VIF equal to or greater than 10 can still yield a good model.</p>
-<p>Further analysis to study the impact of a high VIF on correlated features can be carried out by removing each feature at a time and investigate how the feature removal affects the variation of the <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_error">standard error</a> and <a class="reference external" href="https://www.youtube.com/watch?v=Cba9LJ9lS8s&amp;t=53s">p-value</a> of the model.</p>
+<p>Further analysis to study the impact of a high VIF on correlated features can be carried out by removing each feature at a time and investigate how the feature removal affects the variation of the <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_error">standard error</a> and <a class="reference external" href="https://www.youtube.com/watch?v=Cba9LJ9lS8s&amp;amp;t=53s">p-value</a> of the model.</p>
 <p>In this tutorial, 2 features have a VIF <span class="math notranslate nohighlight">\(&gt; \)</span>10 (notably, <span class="math notranslate nohighlight">\(H\)</span> and <span class="math notranslate nohighlight">\(Q/W\)</span>), as the following code block shows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1465,7 +1488,7 @@ VIF_{feature(n)} = 1/(1-MSE^2_{feature(n)})
 </div>
 </section>
 <section id="remove-features-to-reduce-vif">
-<h2>Remove Features to Reduce VIF<a class="headerlink" href="#remove-features-to-reduce-vif" title="Permalink to this headline">#</a></h2>
+<h2>Remove Features to Reduce VIF<a class="headerlink" href="#remove-features-to-reduce-vif" title="Link to this heading">#</a></h2>
 <p>With the goal of reducing the feature VIFs to less than 5, we use a trial-and-error approach in this tutorial. Modifying the below code block shows that removing <span class="math notranslate nohighlight">\(H\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> is enough to reduce the VIFs of the remaining features to less than 5. In particular, these two removed variables also go into above-introduced features <span class="math notranslate nohighlight">\(Q/W\)</span> and <span class="math notranslate nohighlight">\(SUH\)</span>. Thus, although <span class="math notranslate nohighlight">\(H\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are removed, they still “contribute information” to the final model.</p>
 <p>Combining correlated features to procduce a new one, and later removing them, is a common approach to reduce VIFs. Since we yielded good VIF values by removing some of the features, no further analysis is necessary.</p>
 <div class="admonition-principal-component-analysis-pca admonition">
@@ -1536,7 +1559,7 @@ VIF_{feature(n)} = 1/(1-MSE^2_{feature(n)})
 </div>
 </section>
 <section id="split-test-and-training-datasets">
-<h2>Split Test and Training Datasets<a class="headerlink" href="#split-test-and-training-datasets" title="Permalink to this headline">#</a></h2>
+<h2>Split Test and Training Datasets<a class="headerlink" href="#split-test-and-training-datasets" title="Link to this heading">#</a></h2>
 <p>The last preparation step for building the SVM model is to derive a training and a testing dataset from the entire <code class="docutils literal notranslate"><span class="pre">bedload_dataset</span></code>. Choosing a share for data to compose a training and a testing dataset is commonly a heuristic choice. Here,  we use 33% of the data for testing a final hypothesis later. Note that inside the split datasets, the index of the samples (rows of the tabular data) have their corresponding class inside the <em>target datasets</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1630,14 +1653,14 @@ Vector size (312,)
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="build-the-svm-model">
-<h1>Build the SVM Model<a class="headerlink" href="#build-the-svm-model" title="Permalink to this headline">#</a></h1>
+<h1>Build the SVM Model<a class="headerlink" href="#build-the-svm-model" title="Link to this heading">#</a></h1>
 <section id="working-principle">
-<h2>Working Principle<a class="headerlink" href="#working-principle" title="Permalink to this headline">#</a></h2>
+<h2>Working Principle<a class="headerlink" href="#working-principle" title="Link to this heading">#</a></h2>
 <p>A Support Vector Machine (SVM) is a learning algorithm that searches for a so-called <strong>hyperplane</strong> that optimally separates feature classes. To find an optimal separation, the algorithm tries to maximize the distance (or margin) from the hyperplane to the nearest data points. The data points near to the limits of the margin are also denominated <strong>support vectors</strong> because they work as a reference to <em>draw</em> the hyperplane (see Fig. <a class="reference internal" href="#svm-margin-morphology"><span class="std std-numref">Fig. 259</span></a> below).</p>
 <figure class="align-default" id="svm-margin-morphology">
 <img alt="datascience" src="../_images/svm-margin.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 259 </span><span class="caption-text">Illustration of a hyperplane and margins of an SVM. Source: Ricardo Barros</span><a class="headerlink" href="#svm-margin-morphology" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 259 </span><span class="caption-text">Illustration of a hyperplane and margins of an SVM. Source: Ricardo Barros</span><a class="headerlink" href="#svm-margin-morphology" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For instance, assume that two of the above classes are linearly separable. We can define the regions that contain each class by means of the following hyperplane:</p>
@@ -1664,7 +1687,7 @@ Vector size (312,)
 </div>
 </section>
 <section id="k-fold-cross-validation">
-<h2>k-fold Cross Validation<a class="headerlink" href="#k-fold-cross-validation" title="Permalink to this headline">#</a></h2>
+<h2>k-fold Cross Validation<a class="headerlink" href="#k-fold-cross-validation" title="Link to this heading">#</a></h2>
 <p>SVMs composed by an RBF kernel can be validated by tuning two parameters:</p>
 <ol class="arabic simple">
 <li><p><strong>C</strong>: determines how much are the margins are permissive. It differentiates between a <strong>hard margin</strong> (i.e., a margin that enables little or no penetration of data points) and a <strong>soft margin</strong> (i.e., a margin that enables penetration of data points inside the margin). A higher <strong>C</strong> corresponds to a harder the margin.</p></li>
@@ -1750,7 +1773,7 @@ Vector size (312,)
 </div>
 </section>
 <section id="select-optimum-parameters">
-<h2>Select Optimum Parameters<a class="headerlink" href="#select-optimum-parameters" title="Permalink to this headline">#</a></h2>
+<h2>Select Optimum Parameters<a class="headerlink" href="#select-optimum-parameters" title="Link to this heading">#</a></h2>
 <p>The decision on optimum parameters for the SVM depends on your opinion. For the purpose of selecting optimum parameters in this tutorial, the below code block quantifies the above-shown plot (in particular, the blue curve) in tabular form and saves the gamma that yields the smallest error (<strong>gamma_opt</strong>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1793,7 +1816,7 @@ optimal gamma: 0.46415888336127725
 </div>
 </section>
 <section id="train-optimum-hypothesis-svm-model">
-<h2>Train Optimum Hypothesis SVM Model<a class="headerlink" href="#train-optimum-hypothesis-svm-model" title="Permalink to this headline">#</a></h2>
+<h2>Train Optimum Hypothesis SVM Model<a class="headerlink" href="#train-optimum-hypothesis-svm-model" title="Link to this heading">#</a></h2>
 <p>After defining a gamma yielding the smallest validation error (<strong>gamma_opt</strong>), we can train an optimal hypothesis (<strong>h_opt</strong>) model on the entire training dataset. In addition, we can evaluate the accuracy of the model by using it to classify the testing dataset. The below code block features the training procedure, fitting of the SVM (i.e., an optimum hypothesis), and prints the score of the optimum hypothesis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1815,7 +1838,7 @@ optimal gamma: 0.46415888336127725
 </div>
 </section>
 <section id="performance-evaluation-confusion-matrix">
-<h2>Performance Evaluation (Confusion Matrix)<a class="headerlink" href="#performance-evaluation-confusion-matrix" title="Permalink to this headline">#</a></h2>
+<h2>Performance Evaluation (Confusion Matrix)<a class="headerlink" href="#performance-evaluation-confusion-matrix" title="Link to this heading">#</a></h2>
 <p>Finally, the following code block generates the so-called <strong>confusion matrix</strong> to evaluate the optimum hypothesis model performance when classifying the samples with distinct morphologies. The confusion matrix uses the total number of samples and visualizes their true and predicted morphological units.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1864,11 +1887,10 @@ optimal gamma: 0.46415888336127725
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="kernelized-supervised-models.html"
@@ -1888,10 +1910,7 @@ optimal gamma: 0.46415888336127725
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1899,6 +1918,7 @@ optimal gamma: 0.46415888336127725
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1956,6 +1976,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1982,8 +2003,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

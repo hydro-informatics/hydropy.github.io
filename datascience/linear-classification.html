@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Linear Classification &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'datascience/linear-classification';</script>
     <link rel="canonical" href="https://hydro-informatics.com/datascience/linear-classification.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Linear Regression" href="linear-regression.html" />
     <link rel="prev" title="Linear Models" href="linear-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -543,14 +566,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="tip admonition">
 <p class="admonition-title">Contributor</p>
 <p>This chapter was written and developed by <a class="reference external" href="https://beatriznegreiros.com/">Beatriz Negreiros</a> <a class="reference internal" href="../_images/beatriz.jpg"><img alt="Beatriz Negreiros" src="../_images/beatriz.jpg" style="width: 50px; height: 50px;" /></a></p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="linear-classification">
-<span id="linearclassification"></span><h1>Linear Classification<a class="headerlink" href="#linear-classification" title="Permalink to this headline">#</a></h1>
+<span id="linearclassification"></span><h1>Linear Classification<a class="headerlink" href="#linear-classification" title="Link to this heading">#</a></h1>
 <p>In this section, we will cover the fundamentals of linear classification through a simple ML algorithm, the Perceptron. In addition, we will extend the concepts behind the Perceptron algorithm by considering aspects of <em>regularization</em> to build a margin linear classifier.</p>
 <div class="warning admonition">
 <p class="admonition-title">Requirements</p>
@@ -561,12 +584,12 @@ document.write(`
 </ul>
 </div>
 <section id="hyperplanes">
-<h2>Hyperplanes<a class="headerlink" href="#hyperplanes" title="Permalink to this headline">#</a></h2>
+<h2>Hyperplanes<a class="headerlink" href="#hyperplanes" title="Link to this heading">#</a></h2>
 <p>Suppose we wish to classify positive and negative objects from the training set of points below (figure on the left):</p>
 <figure class="align-default" id="cloud-points-ml">
 <img alt="decisionbound" src="../_images/decision-boundary.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 249 </span><span class="caption-text">Training set of points with binary labels (+1, -1) and two-dimensional <span class="math notranslate nohighlight">\((x_1, x_2)\)</span> features. The decision boundary (grey line) is defined by the parameter vector <span class="math notranslate nohighlight">\(\theta\)</span>, which is normal to the decision boundary, and offset parameter <span class="math notranslate nohighlight">\(\theta_0\)</span> that linearly separates the data.</span><a class="headerlink" href="#cloud-points-ml" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 249 </span><span class="caption-text">Training set of points with binary labels (+1, -1) and two-dimensional <span class="math notranslate nohighlight">\((x_1, x_2)\)</span> features. The decision boundary (grey line) is defined by the parameter vector <span class="math notranslate nohighlight">\(\theta\)</span>, which is normal to the decision boundary, and offset parameter <span class="math notranslate nohighlight">\(\theta_0\)</span> that linearly separates the data.</span><a class="headerlink" href="#cloud-points-ml" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The dataset above is considered linearly separable because it exists at least one linear decision boundary capable of splitting the entire dataset correctly. For instance, we could pass a decision boundary like the grey line above (figure on the right)</p>
@@ -587,20 +610,13 @@ document.write(`
 <figure class="align-default" id="exercise-db">
 <img alt="ex-decision-bound" src="../_images/exercise-decision-bound.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 250 </span><span class="caption-text">Exercise 1 on linearly separable pair of examples.</span><a class="headerlink" href="#exercise-db" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 250 </span><span class="caption-text">Exercise 1 on linearly separable pair of examples.</span><a class="headerlink" href="#exercise-db" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <table class="table" id="tab-ml-ex1-solution">
-<caption><span class="caption-number">Table 14 </span><span class="caption-text">Solution to the Machine Learning Exercise 1.</span><a class="headerlink" href="#tab-ml-ex1-solution" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Solution to the Machine Learning Exercise 1.</span><a class="headerlink" href="#tab-ml-ex1-solution" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Dataset</p></th>
 <th class="head"><p>a</p></th>
@@ -628,7 +644,7 @@ document.write(`
 </div>
 </section>
 <section id="perceptron-algorithm">
-<h2>Perceptron algorithm<a class="headerlink" href="#perceptron-algorithm" title="Permalink to this headline">#</a></h2>
+<h2>Perceptron algorithm<a class="headerlink" href="#perceptron-algorithm" title="Link to this heading">#</a></h2>
 <p>In the perceptron algorithm, we typically initialize <span class="math notranslate nohighlight">\(\theta\)</span> as zero (zero vector) and loop through the pair of training examples. At every iteration, we will check if the classifier makes a mistake classifying that training example (i-th example), and if so, then we update the parameters of <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p>Assume that <span class="math notranslate nohighlight">\(\theta_0 =0\)</span> for simplicity (the decision boundary must pass through the origin). Our perceptron classifier will make a mistake <code class="docutils literal notranslate"><span class="pre">if</span></code> <span class="math notranslate nohighlight">\(y^{(i)}(\theta \cdot x^{(i)}) \leq 0\)</span>. We will then update our <span class="math notranslate nohighlight">\(\theta\)</span> to no longer misclassify that training example. The way to do this is by adding <span class="math notranslate nohighlight">\(y^{(i)}x^{(i)}\)</span> to the previous <span class="math notranslate nohighlight">\(\theta\)</span>. Thus, the update would look like:</p>
 <div class="math notranslate nohighlight">
@@ -711,20 +727,20 @@ document.write(`
 </div>
 </section>
 <section id="margin-boundaries-and-hinge-loss">
-<h2>Margin boundaries and hinge loss<a class="headerlink" href="#margin-boundaries-and-hinge-loss" title="Permalink to this headline">#</a></h2>
+<h2>Margin boundaries and hinge loss<a class="headerlink" href="#margin-boundaries-and-hinge-loss" title="Link to this heading">#</a></h2>
 <p>As you may have noticed, the perceptron algorithm features no regularization term. The goal was simply to find any decision boundary that can split the data correctly. Here, we will introduce the concept of <em>hinge loss</em> and <em>margin boundaries</em> to transform the problem of learning a decision boundary into an optimization problem considering regularization.</p>
 <section id="motivation-behind-margin-boundaries">
-<h3>Motivation behind margin boundaries<a class="headerlink" href="#motivation-behind-margin-boundaries" title="Permalink to this headline">#</a></h3>
+<h3>Motivation behind margin boundaries<a class="headerlink" href="#motivation-behind-margin-boundaries" title="Link to this heading">#</a></h3>
 <p>Let’s take a look at our previously presented training dataset (figure below). Any decision boundary within the dashed grey lines correctly splits the training examples. However, intuitively, we would like to favor a decision boundary that can maximize the distances between the decision boundary and the training points. The reason to do so is because it’s likely that the points we wish to classify in the future have statistical noise, such that a decision boundary located too close to the training examples is more likely to misclassify slightly changed (noisier) versions of the training examples. In contrast, a classifier that holds a relatively higher margin between the decision boundary and the examples will be probably more successful in classifying future, unseen data.</p>
 <figure class="align-default" id="margin-bound">
 <img alt="marginbound" src="../_images/margin-bound.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 251 </span><span class="caption-text">Training set of points with binary labels (+1, -1) in the two-dimensional feature space <span class="math notranslate nohighlight">\((x_1, x_2)\)</span>.  Any decision boundary within the dashed grey lines can correctly split the data.</span><a class="headerlink" href="#margin-bound" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 251 </span><span class="caption-text">Training set of points with binary labels (+1, -1) in the two-dimensional feature space <span class="math notranslate nohighlight">\((x_1, x_2)\)</span>.  Any decision boundary within the dashed grey lines can correctly split the data.</span><a class="headerlink" href="#margin-bound" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="optimization-problem">
-<h3>Optimization problem<a class="headerlink" href="#optimization-problem" title="Permalink to this headline">#</a></h3>
+<h3>Optimization problem<a class="headerlink" href="#optimization-problem" title="Link to this heading">#</a></h3>
 <p>Recall that our goal is to find a linear classifier that maximizes the distances between the decision boundary and the training points (margin linear classifier), but also minimizes the training error. Thus, this constitutes an optimization problem that needs to counterbalance these two factors, which we can state as:</p>
 <ul class="simple">
 <li><p>The margins (distances between the decision boundary and the training points) should be maximized.</p></li>
@@ -732,7 +748,7 @@ document.write(`
 </ul>
 </section>
 <section id="margin-boundaries">
-<h3>Margin boundaries<a class="headerlink" href="#margin-boundaries" title="Permalink to this headline">#</a></h3>
+<h3>Margin boundaries<a class="headerlink" href="#margin-boundaries" title="Link to this heading">#</a></h3>
 <p>Previously, we saw that the equation defining a decision boundary satisfies <span class="math notranslate nohighlight">\(\theta \cdot X + \theta_0 =0\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -761,7 +777,7 @@ document.write(`
   \]</div>
 </section>
 <section id="hinge-loss">
-<h3>Hinge loss<a class="headerlink" href="#hinge-loss" title="Permalink to this headline">#</a></h3>
+<h3>Hinge loss<a class="headerlink" href="#hinge-loss" title="Link to this heading">#</a></h3>
 <p>We so far know that <span class="math notranslate nohighlight">\(sign(\theta \cdot x^{(i)} + \theta_0 )\)</span> will classify the i-th example. The way to know if the classification agrees with the label is by multiplying it by <span class="math notranslate nohighlight">\(y^{(i)}\)</span>. We can express this agreement also in a slightly modified version, using the hinge loss:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -772,7 +788,7 @@ document.write(`
 <a class="bg-primary mb-1 reference internal image-reference" href="https://www.researchgate.net/publication/341468721/figure/fig5/AS:963539095257091&#64;1606737030212/The-margin-based-Hinge-loss-function.png"><img alt="hinge-loss-function" class="bg-primary mb-1" src="https://www.researchgate.net/publication/341468721/figure/fig5/AS:963539095257091&#64;1606737030212/The-margin-based-Hinge-loss-function.png" style="width: 400px;" /></a>
 </section>
 <section id="objective-function">
-<h3>Objective function<a class="headerlink" href="#objective-function" title="Permalink to this headline">#</a></h3>
+<h3>Objective function<a class="headerlink" href="#objective-function" title="Link to this heading">#</a></h3>
 <p>So now we can create an objective function that (1) minimizes the average hinge loss over the training examples, and (2) maximizes <span class="math notranslate nohighlight">\(\frac{1}{\| \theta \|}\)</span>. Expression (2) can be also reformulated towards minimizing <span class="math notranslate nohighlight">\(\frac{1}{2}\| \theta \|^2\)</span>. Thus we define the objective function as:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -789,19 +805,13 @@ document.write(`
 <figure class="align-default" id="lambda-influence">
 <img alt="lambdainfluence" src="../_images/exercise-lambda.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 252 </span><span class="caption-text">Effect of the regularization parameter <span class="math notranslate nohighlight">\(\lambda\)</span> on the optimization solution.</span><a class="headerlink" href="#lambda-influence" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 252 </span><span class="caption-text">Effect of the regularization parameter <span class="math notranslate nohighlight">\(\lambda\)</span> on the optimization solution.</span><a class="headerlink" href="#lambda-influence" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution</p>
 <table class="table" id="tab-ml-ex1-solution3">
-<caption><span class="caption-number">Table 15 </span><span class="caption-text">Solution to the Machine Learning Exercise 3.</span><a class="headerlink" href="#tab-ml-ex1-solution3" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Solution to the Machine Learning Exercise 3.</span><a class="headerlink" href="#tab-ml-ex1-solution3" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Plot</p></th>
 <th class="head"><p>a</p></th>
@@ -848,11 +858,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="linear-models.html"
@@ -872,10 +881,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -883,6 +889,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -921,6 +928,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -947,8 +955,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

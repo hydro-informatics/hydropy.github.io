@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Code Style and Conventions &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter/pystyle';</script>
     <link rel="canonical" href="https://hydro-informatics.com/jupyter/pystyle.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Graphical User Interfaces (GUIs)" href="gui.html" />
     <link rel="prev" title="Plotting" href="pyplot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -549,20 +570,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -629,10 +652,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="code-style-and-conventions">
-<span id="chpt-style"></span><h1>Code Style and Conventions<a class="headerlink" href="#code-style-and-conventions" title="Permalink to this headline">#</a></h1>
+<span id="chpt-style"></span><h1>Code Style and Conventions<a class="headerlink" href="#code-style-and-conventions" title="Link to this heading">#</a></h1>
 <p>Make your code consistent through style conventions. For interactive reading and executing code blocks <a class="reference external" href="https://mybinder.org/v2/gh/hydro-informatics/jupyter-python-course/main"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a> and find <em>b08-pystyle.ipynb</em>, or install <a class="reference internal" href="../python-basics/pyinstall.html#install-python"><span class="std std-ref">Python</span></a> and <a class="reference internal" href="../get-started/ide.html#jupyter"><span class="std std-ref">JupyterLab</span></a> locally.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Watch this section as a video</p>
@@ -644,13 +667,13 @@ document.write(`
 <img alt="incubinate to solve Python programming problems" src="../_images/style-loop.png" />
 </figure>
 <section id="background-and-pep">
-<h2>Background and PEP<a class="headerlink" href="#background-and-pep" title="Permalink to this headline">#</a></h2>
+<h2>Background and PEP<a class="headerlink" href="#background-and-pep" title="Link to this heading">#</a></h2>
 <p>This style guide highlights parts of the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8 - Style Guide for Python Code</a> by Guido van Rossum, Barry Warsaw, and Nick Coghlan. The full document is available at <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">python.org</a> and only aspects with relevance for the applications shown in this eBook are featured in this chapter.</p>
 <p><strong>What is <em>PEP</em>?</strong> <em>PEP</em> stands for <em><strong>P</strong>ython <strong>E</strong>nhancement <strong>P</strong>roposals</em>, in which Python developers communicate features and developments of Python. At the time of writing these lines, there are twelve (minus two) PEPs dedicated to the development of Python modules, bug fix releases, and style guides (read the full and current list of PEPs at <a class="reference external" href="https://www.python.org/dev/peps/#id6">python.org</a>). This section features recommendations stated in <em>PEP</em> 8, the style guide for Python code.</p>
 <p>Many IDEs, including PyCharm or Atom, provide auto-completion and tooltips with <em>PEP</em> style guidance to aid consistent programming. Thus, when your IDE underlines anything in your script, check the reason for that and consider modifying the code accordingly.</p>
 </section>
 <section id="the-zen-of-python">
-<h2>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this headline">#</a></h2>
+<h2>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Link to this heading">#</a></h2>
 <p>Are we getting spiritual? Far from it. <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> is an informational <em>PEP</em> (20) by Tim Peters to guide programmers. It is a couple of lines summarizing good practice in coding. Python’s <em>Easter Egg</em> <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">this</span></code> prints the Zen of Python in any Python interpreter:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -686,13 +709,13 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 </div>
 </section>
 <section id="code-layout">
-<h2>Code Layout<a class="headerlink" href="#code-layout" title="Permalink to this headline">#</a></h2>
+<h2>Code Layout<a class="headerlink" href="#code-layout" title="Link to this heading">#</a></h2>
 <section id="maximum-line-length">
-<h3>Maximum Line Length<a class="headerlink" href="#maximum-line-length" title="Permalink to this headline">#</a></h3>
+<h3>Maximum Line Length<a class="headerlink" href="#maximum-line-length" title="Link to this heading">#</a></h3>
 <p>The maximum length of a line is 79 characters and in-line comments, including <a class="reference internal" href="#docstrings"><span class="std std-ref">docstrings</span></a>, should not exceed 72 characters.</p>
 </section>
 <section id="indentation">
-<span id="py-indent-style"></span><h3>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">#</a></h3>
+<span id="py-indent-style"></span><h3>Indentation<a class="headerlink" href="#indentation" title="Link to this heading">#</a></h3>
 <p>Indentation designates the sifting of code (blocks) to the right. Indentation is necessary, for example, in loops or functions to assign code blocks to a <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">def</span></code> statement. In a broader sense, indentations represent namespaces, where <em>local</em> variables defined in the indented region are valid only here. Multiple levels of indentation occur when nested statements are used (e.g., an <code class="docutils literal notranslate"><span class="pre">if</span></code> condition nested in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop). One level of indentation corresponds to 4 spaces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -731,7 +754,7 @@ I&#39;m two levels indented.
 <p><strong>Recall: PyCharm, Atom, and many other IDEs automatically layout indentation.</strong></p>
 </section>
 <section id="line-breaks-of-expressions-with-binary-operators">
-<h3>Line Breaks of Expressions with Binary Operators<a class="headerlink" href="#line-breaks-of-expressions-with-binary-operators" title="Permalink to this headline">#</a></h3>
+<h3>Line Breaks of Expressions with Binary Operators<a class="headerlink" href="#line-breaks-of-expressions-with-binary-operators" title="Link to this heading">#</a></h3>
 <p>When binary operators are part of an expression that exceeds the maximum line length of 79 characters, the line break should be before the binary operators.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -755,7 +778,7 @@ I&#39;m two levels indented.
 </div>
 </section>
 <section id="blank-lines">
-<h3>Blank Lines<a class="headerlink" href="#blank-lines" title="Permalink to this headline">#</a></h3>
+<h3>Blank Lines<a class="headerlink" href="#blank-lines" title="Link to this heading">#</a></h3>
 <p>To separate code blocks, hitting the <em>Enter</em> key many times is a very inviting option. However, the random and mood-driven use of blank lines results in unstructured code. This is why <em>PEP</em> 8 authors provide guidance also on the use of blank lines:</p>
 <ul class="simple">
 <li><p>Surround class definitions and top-level functions (i.e., functions where the <code class="docutils literal notranslate"><span class="pre">def</span></code>-line is not indented) with two blank lines.</p></li>
@@ -776,7 +799,7 @@ I&#39;m two levels indented.
 </div>
 </section>
 <section id="blanks-whitespaces">
-<h3>Blanks (Whitespaces)<a class="headerlink" href="#blanks-whitespaces" title="Permalink to this headline">#</a></h3>
+<h3>Blanks (Whitespaces)<a class="headerlink" href="#blanks-whitespaces" title="Link to this heading">#</a></h3>
 <p>Whitespaces aid to relax the code layout, but too many <strong>whitespaces should be avoided</strong> as for example:</p>
 <ul class="simple">
 <li><p>In parentheses, brackets or braces (no: <code class="docutils literal notranslate"><span class="pre">list(</span> <span class="pre">e1,</span> <span class="pre">e2</span> <span class="pre">)</span></code> vs. yes: <code class="docutils literal notranslate"><span class="pre">list(e1,</span> <span class="pre">e2)</span></code>)</p></li>
@@ -794,9 +817,9 @@ I&#39;m two levels indented.
 </section>
 </section>
 <section id="packages-and-modules">
-<span id="libs"></span><h2>Packages and Modules<a class="headerlink" href="#packages-and-modules" title="Permalink to this headline">#</a></h2>
+<span id="libs"></span><h2>Packages and Modules<a class="headerlink" href="#packages-and-modules" title="Link to this heading">#</a></h2>
 <section id="imports">
-<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
+<h3>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h3>
 <p>Imports are at the top of the script, right after any <a class="reference internal" href="#docstrings"><span class="std std-ref">docstrings</span></a> or other module comments. Import libraries first, then third-party packages, and lastly locally stored (own) modules. Preferably use absolute imports (e.g., <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">package.module</span></code> or <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">package</span> <span class="pre">import</span> <span class="pre">module</span></code>) and avoid wildcard imports (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">*</span></code>). Every import should have its own line and avoid using the comma sign for multiple imports:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -811,7 +834,7 @@ I&#39;m two levels indented.
 </div>
 </section>
 <section id="naming-packages-and-script">
-<h3>Naming Packages and Script<a class="headerlink" href="#naming-packages-and-script" title="Permalink to this headline">#</a></h3>
+<h3>Naming Packages and Script<a class="headerlink" href="#naming-packages-and-script" title="Link to this heading">#</a></h3>
 <p>New, custom packages or modules should have short and all-lowercase names, where underscores may be used to improve readability (discouraged for packages).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -820,14 +843,14 @@ I&#39;m two levels indented.
 </section>
 </section>
 <section id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h2>
 <section id="block-and-inline-comments">
-<h3>Block and Inline Comments<a class="headerlink" href="#block-and-inline-comments" title="Permalink to this headline">#</a></h3>
+<h3>Block and Inline Comments<a class="headerlink" href="#block-and-inline-comments" title="Link to this heading">#</a></h3>
 <p>Block comments start with a single <code class="docutils literal notranslate"><span class="pre">#</span></code> at the first place of a line, followed by a whitespace and the comment text.</p>
 <p>Inline comments follow an expression and are indented with two whitespaces. However, the usage of inline comments is deprecated (i.e., do not use them or be sparse on their usage).</p>
 </section>
 <section id="docstrings">
-<span id="id1"></span><h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">#</a></h3>
+<span id="id1"></span><h3>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">#</a></h3>
 <p>Docstrings are short text descriptions within a module, function, class, or method with specifications of arguments, usage, and output. When instantiating a standard object, or referencing a class method, the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> attribute will print the object’s docstring information. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -876,9 +899,9 @@ The argument must be an iterable if specified.
 </section>
 </section>
 <section id="name-conventions">
-<h2>Name Conventions<a class="headerlink" href="#name-conventions" title="Permalink to this headline">#</a></h2>
+<h2>Name Conventions<a class="headerlink" href="#name-conventions" title="Link to this heading">#</a></h2>
 <section id="definition-of-name-styles">
-<h3>Definition of Name Styles<a class="headerlink" href="#definition-of-name-styles" title="Permalink to this headline">#</a></h3>
+<h3>Definition of Name Styles<a class="headerlink" href="#definition-of-name-styles" title="Link to this heading">#</a></h3>
 <p>The naming conventions use the following styles (source: <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#naming-conventions">python.org</a>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> (single lowercase letter)</p></li>
@@ -900,7 +923,7 @@ The argument must be an iterable if specified.
 </ul>
 </section>
 <section id="object-names">
-<span id="object-styles"></span><h3>Object Names<a class="headerlink" href="#object-names" title="Permalink to this headline">#</a></h3>
+<span id="object-styles"></span><h3>Object Names<a class="headerlink" href="#object-names" title="Link to this heading">#</a></h3>
 <p>Use the above-defined styles for naming Python items as follows:</p>
 <ul class="simple">
 <li><p>Classes: <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code> (<code class="docutils literal notranslate"><span class="pre">CapWords</span></code>) letters only such as <code class="docutils literal notranslate"><span class="pre">MyClass</span></code></p></li>
@@ -921,7 +944,7 @@ The argument must be an iterable if specified.
 </section>
 </section>
 <section id="more-code-style-recommendations">
-<h2>More Code Style Recommendations<a class="headerlink" href="#more-code-style-recommendations" title="Permalink to this headline">#</a></h2>
+<h2>More Code Style Recommendations<a class="headerlink" href="#more-code-style-recommendations" title="Link to this heading">#</a></h2>
 <p>To ensure code compatibility and program efficiency, the <em>PEP 8</em> style guide provides other general recommendations (read more in the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations">Python docs</a>):</p>
 <ul class="simple">
 <li><p>When defining a function, prefer <code class="docutils literal notranslate"><span class="pre">def</span></code> statements over <code class="docutils literal notranslate"><span class="pre">lambda</span></code> expressions, which are reasonable for one-time usage only</p></li>
@@ -942,7 +965,7 @@ The argument must be an iterable if specified.
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="learning-success-check-up">
-<h1>Learning Success Check-up<a class="headerlink" href="#learning-success-check-up" title="Permalink to this headline">#</a></h1>
+<h1>Learning Success Check-up<a class="headerlink" href="#learning-success-check-up" title="Link to this heading">#</a></h1>
 <p>Take the <a class="reference external" href="https://forms.gle/jf2VrZVnJNFAJ5319">learning success test for this Jupyter notebook</a>.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Unfold QR Code</p>
@@ -975,11 +998,10 @@ The argument must be an iterable if specified.
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="pyplot.html"
@@ -999,10 +1021,7 @@ The argument must be an iterable if specified.
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1010,6 +1029,7 @@ The argument must be an iterable if specified.
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1069,6 +1089,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1095,8 +1116,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

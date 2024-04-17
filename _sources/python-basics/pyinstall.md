@@ -212,10 +212,10 @@ To use the new *vflussenv* in {ref}`Jupyter Lab <jupyter>`, a new *ipykernel* ne
 
 ***
 
-(pip-install-pckg)=
-### Manage Modules and Packages
 
-**Install a package**
+
+(pip-install-pckg)=
+### Install Modules and Packages
 
 More than 300,000 projects live on [pypi.org](https://pypi.org/) and there are packages available for many purposes. To find suitable packages visit [https://pypi.org/search/](https://pypi.org/search/). To install (i.e., add) one of these `pip`/`pip3` packages use:
 
@@ -253,29 +253,7 @@ To install all-in-one, tap: `pip3 install -U fitter missingno seaborn scikit-lea
 
 ***
 
-**Update (upgrade) packages and environments**
-
-First, make sure pip is up-to-date:
-
-```
-python3 -m pip install --upgrade pip
-```
-
-Second, write (freeze) the current package installations and the versions to a requirements file:
-
-```
-pip freeze > requirements.txt
-```
-
-Finally, use the requirements file to upgrade all packages in the current environment:
-
-```
-pip install -r requirements.txt --upgrade
-```
-
-***
-
-**Remove a package**
+### Remove a package
 
 To remove (i.e., uninstall) a `pip`/`pip3`-installed package use:
 
@@ -293,7 +271,36 @@ python -m pip uninstall PACKAGE_NAME
 ````
 `````
 
-To upgrade (update) a package that lives in a local user environment use:
+### Update (upgrade) packages and environments
+
+For a general upgrade (update) of an **entire envirionment**, first, make sure pip is up-to-date:
+
+```
+python3 -m pip install --upgrade pip
+```
+
+Second, write (freeze) the current package installations and the versions to a requirements file:
+
+```
+pip freeze > requirements.txt
+```
+
+**Open *requirements.txt* in a text editor and replace all `==` with `>=`**. Finally, use the modified requirements file to upgrade all packages in the current environment:
+
+```
+pip install -r requirements.txt --upgrade
+```
+
+```{admonition} ERROR: ResolutionImpossible
+:class: error
+
+If the required dependencies are conflicting, re-open *requirements.txt* in a text editor and delete all version specifications. That is, delete  all `>=...` tags in each line.
+
+```
+
+
+
+To **upgrade (update) a single package** that lives in a local user environment use:
 
 `````{tab-set}
 ````{tab-item} Linux Terminal
@@ -318,6 +325,7 @@ deactivate
 Read more about virtual environments and pip at [https://packaging.python.org](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
 ***
+
 
 (conda-env)=
 ## conda env (Windows Preference)

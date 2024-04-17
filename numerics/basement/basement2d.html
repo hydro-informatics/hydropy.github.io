@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Run and Check a Steady 2d Simulation &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/basement/basement2d';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/basement/basement2d.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="TELEMAC" href="../telemac/telemac.html" />
     <link rel="prev" title="Pre-processing with QGIS" href="../pre-qgis-bm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -484,20 +505,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -561,10 +584,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="run-and-check-a-steady-2d-simulation">
-<span id="basement2d"></span><h1>Run and Check a Steady 2d Simulation<a class="headerlink" href="#run-and-check-a-steady-2d-simulation" title="Permalink to this headline">#</a></h1>
+<span id="basement2d"></span><h1>Run and Check a Steady 2d Simulation<a class="headerlink" href="#run-and-check-a-steady-2d-simulation" title="Link to this heading">#</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Recall BASEMENT versions, BASEMD, and BASEHPC</p>
 <p>BASEMENT version 2 (v2) was developed with complex structures and a broad range of capacities, yet little focus was drawn on computing time. BASEMENT version 3 (v3) considerably simplified the modeling process for users and came with highly efficient computing options, including massive parallelization on GPUs. However, the simplified v3 lacks many relevant modules, such as multi-layer riverbeds for calculating topographic change as a function of multi-grain size bedload transport formulae. Now, BASEMENT version 4 (v4) provides both the manifold capacities of v2 in the form of BASEMD setups, and the computing efficiency of v3 in the form of BASEHPC setups. This tutorial explains the setup of a BASEHPC model.</p>
@@ -581,12 +604,12 @@ document.write(`
 <li><p>A steady discharge inflow file (flat hydrograph) for the upstream boundary condition can be downloaded <a class="reference external" href="https://github.com/hydro-informatics/materials-bm/raw/main/flows/steady-inflow.txt">here</a> (if necessary copy the file contents locally into a text editor and save the file as <strong>steady-inflow.txt</strong> in the project directory).</p></li>
 </ul>
 <section id="initiate-the-model">
-<h2>Initiate the Model<a class="headerlink" href="#initiate-the-model" title="Permalink to this headline">#</a></h2>
+<h2>Initiate the Model<a class="headerlink" href="#initiate-the-model" title="Link to this heading">#</a></h2>
 <p>This section guides through the model setup, which is saved in a file called <strong>model.json</strong> (here: in the folder <code class="docutils literal notranslate"><span class="pre">/steady2d-tutorial/</span></code>). <strong>Start BASEMENT</strong> and <strong>select the folder created above</strong> as the <strong>Scenario Directory</strong> (see <a class="reference internal" href="#bm-setup-start"><span class="std std-numref">Fig. 80</span></a>).</p>
 <figure class="align-default" id="bm-setup-start">
 <img alt="basement new project setup launch start" src="../../_images/setup-start.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 80 </span><span class="caption-text">BASEMENT’s welcome screen after selecting a <em>Scenario Directory</em> with the <em>Save Project</em> button in the top-right corner. The directory references may look different on other platforms (e.g., start with <strong>“C:/…</strong> on Windows).</span><a class="headerlink" href="#bm-setup-start" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">BASEMENT’s welcome screen after selecting a <em>Scenario Directory</em> with the <em>Save Project</em> button in the top-right corner. The directory references may look different on other platforms (e.g., start with <strong>“C:/…</strong> on Windows).</span><a class="headerlink" href="#bm-setup-start" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Next, <strong>left-click</strong> on <strong>SETUP</strong>, then <strong>right-click</strong> and select <strong>Add item BASEHPC</strong>. A new tab called <strong>Define Scenario Parameters</strong> opens. For the moment, ignore the warning and error messages (red tags) and define a <strong>simulation_name</strong>:</p>
@@ -597,7 +620,7 @@ document.write(`
 <p><strong>Scroll back</strong> to the <strong>top</strong>, and <strong>save the project</strong>, to proceed with the next sections.</p>
 </section>
 <section id="geometry-and-regions">
-<span id="bm-geometry"></span><h2>Geometry and Regions<a class="headerlink" href="#geometry-and-regions" title="Permalink to this headline">#</a></h2>
+<span id="bm-geometry"></span><h2>Geometry and Regions<a class="headerlink" href="#geometry-and-regions" title="Link to this heading">#</a></h2>
 <p>The <strong>GEOMETRY</strong> group in the <strong>Define Scenario Parameters</strong> tab tells the model, which <a class="reference internal" href="../../documentation/glossary.html#term-SMS-2dm"><span class="xref std std-term">SMS 2dm</span></a> mesh file to use and enables the definition of region and liquid boundary properties. To this end, make the following settings:</p>
 <ul class="simple">
 <li><p><strong>Double-click</strong> on the <strong>Value</strong> field of the <strong>mesh_file</strong> row and click on the folder symbol <br> <img alt="../../_images/select-meshfile.png" src="../../_images/select-meshfile.png" /></p></li>
@@ -616,15 +639,7 @@ document.write(`
 </ul>
 <p><a class="reference internal" href="#region-defs-bm"><span class="std std-numref">Table 5</span></a> summarizes the required region definitions. With the regions and the mesh file defined, the GEOMETRY group should resemble <a class="reference internal" href="#bm-regions"><span class="std std-numref">Fig. 81</span></a>.</p>
 <table class="table" id="region-defs-bm">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">REGIONDEF items and their definitions to be defined in BASEMENT’s model setup.</span><a class="headerlink" href="#region-defs-bm" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">REGIONDEF items and their definitions to be defined in BASEMENT’s model setup.</span><a class="headerlink" href="#region-defs-bm" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>REGIONDEF</strong></p></th>
 <th class="head"><p>[0]</p></th>
@@ -654,7 +669,7 @@ document.write(`
 <figure class="align-default" id="bm-regions">
 <img alt="region mesh file definitions basement" src="../../_images/setup-geometry.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 81 </span><span class="caption-text">The GEOMETRY group with REGIONDEFs and the reference to the height-interpolated mesh file (prepro-tutorial_quality-mesh-interp.2dm).</span><a class="headerlink" href="#bm-regions" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">The GEOMETRY group with REGIONDEFs and the reference to the height-interpolated mesh file (prepro-tutorial_quality-mesh-interp.2dm).</span><a class="headerlink" href="#bm-regions" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-save-the-project admonition">
@@ -682,12 +697,12 @@ document.write(`
 <figure class="align-default" id="bm-geo-fin">
 <img alt="region mesh file definitions basement" src="../../_images/setup-geometry-final.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 82 </span><span class="caption-text">The GEOMETRY group with STRINGDEFs using the provided liquid boundaries shapefile in the computational mesh.</span><a class="headerlink" href="#bm-geo-fin" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">The GEOMETRY group with STRINGDEFs using the provided liquid boundaries shapefile in the computational mesh.</span><a class="headerlink" href="#bm-geo-fin" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="hydraulics">
-<span id="bm-hydraulics"></span><h2>Hydraulics<a class="headerlink" href="#hydraulics" title="Permalink to this headline">#</a></h2>
+<span id="bm-hydraulics"></span><h2>Hydraulics<a class="headerlink" href="#hydraulics" title="Link to this heading">#</a></h2>
 <p>Hydraulic model characteristics that apply to the above-defined geometry setup are defined in the <strong>HYDRAULICS</strong> group of BASEMENT’s model setup. This tutorial uses the <strong>default</strong> for <strong>INITIAL</strong> conditions, which is <strong>“dry”</strong>. Also <strong>keep the default PARAMETERS</strong> for <strong><a class="reference internal" href="../../documentation/glossary.html#term-CFL"><span class="xref std std-term">CFL</span></a></strong> = <code class="docutils literal notranslate"><span class="pre">0.9</span></code>, <strong>fluid_density</strong> = <code class="docutils literal notranslate"><span class="pre">1000.0</span></code>, <strong>max_time_step</strong> = <code class="docutils literal notranslate"><span class="pre">100.0</span></code>, and <strong>minimum_water_depth</strong> =<code class="docutils literal notranslate"> <span class="pre">0.01</span></code>.</p>
 <p>Hydraulic quantities, such as water depth and discharge, must be assigned to the liquid boundaries defined above so that the numerical model knows how much water it must make running through the model. Therefore, add the following boundary definitions in the HYDRAULICS group:</p>
 <ul class="simple">
@@ -723,7 +738,7 @@ document.write(`
 <figure class="align-default" id="bm-hy-standard">
 <img alt="basement standard hydraulic boundary conditions" src="../../_images/setup-hydraulics-standard.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 83 </span><span class="caption-text">The HYDRAULIC entry with BOUNDARY &gt; STANDARD definitions for the upstream (inflow) and downstream (outflow) liquid model boundaries.</span><a class="headerlink" href="#bm-hy-standard" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 83 </span><span class="caption-text">The HYDRAULIC entry with BOUNDARY &gt; STANDARD definitions for the upstream (inflow) and downstream (outflow) liquid model boundaries.</span><a class="headerlink" href="#bm-hy-standard" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Every surface has imperfections that cause turbulence when fluids such as water flow over it. The turbulences caused by surface imperfections result in decelerated flows near the surface. Since the water in rivers is almost always very close to the Earth’s surface in the form of the riverbed relative to the imperfections of a riverbed, the influence of friction-induced turbulence is considerable. In hydrodynamic models, the friction-induced turbulence of the rough surface of riverbeds is accounted for by a <strong>friction coefficient</strong>, such as the <strong>Strickler <span class="math notranslate nohighlight">\(k_{st}\)</span></strong> coefficient <strong>or</strong> its <strong>inverse</strong> value called <strong>Manning’s <span class="math notranslate nohighlight">\(n\)</span></strong>. The exercise on <a class="reference internal" href="../../exercises/ex-ms.html#ex-1d-hydraulics"><span class="std std-ref">1d Hydraulics (Manning-Strickler Formula)</span></a> in the <em>Python</em> chapter explains both roughness coefficients in more detail. This tutorial uses a global Strickler coefficient of <span class="math notranslate nohighlight">\(k_{st}\)</span>=30 (fictive units of m<span class="math notranslate nohighlight">\(^{1/3}\)</span>/s), which accounts for the characteristics of a meandering gravel-cobble riverbed <span id="id1">[<a class="reference internal" href="../../documentation/bibliography.html#id561" title="Albert Strickler. Beiträge zur Frage der Geschwindigkeitsformel und der Rauhigkeitszahlen für Ströme, Kanäle und geschlossene Leitungen [Contributions to the question of the velocity formula and the roughness figures for streams, channels and closed pipes]. Mitteilungen des Eidgenössischen Amtes für Wasserwirtschaft, Switzerland, 16:357, 1923.">Str23</a>]</span>. To this end, <strong>right-click</strong> on the <strong>HYDRAULICS</strong> group and select <strong>Add item FRICTION</strong>. Define the new  <strong>FRICTION</strong> item with:</p>
@@ -738,15 +753,7 @@ document.write(`
 <li><p>Assign the <strong>friction</strong> and <strong>region_name</strong> values listed in <a class="reference internal" href="#region-kst"><span class="std std-numref">Tab. 6</span></a> to the <strong>five regions items</strong>.</p></li>
 </ul>
 <table class="table" id="region-kst">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Strickler values for HYDRAULIC FRICTION regions.</span><a class="headerlink" href="#region-kst" title="Permalink to this table">#</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Strickler values for HYDRAULIC FRICTION regions.</span><a class="headerlink" href="#region-kst" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Region</p></th>
 <th class="head"><p>Riverbed</p></th>
@@ -777,21 +784,21 @@ document.write(`
 <figure class="align-default" id="bm-hy-friction">
 <img alt="basement friction hydraulic boundary conditions strickler" src="../../_images/setup-hydraulics-friction.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 84 </span><span class="caption-text">The HYDRAULICS group with FRICTION definitions for the model and its regions.</span><a class="headerlink" href="#bm-hy-friction" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 84 </span><span class="caption-text">The HYDRAULICS group with FRICTION definitions for the model and its regions.</span><a class="headerlink" href="#bm-hy-friction" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="physical-properties">
-<span id="bm-physical-props"></span><h2>Physical Properties<a class="headerlink" href="#physical-properties" title="Permalink to this headline">#</a></h2>
+<span id="bm-physical-props"></span><h2>Physical Properties<a class="headerlink" href="#physical-properties" title="Link to this heading">#</a></h2>
 <p>The definition of the <strong>PHYSICAL_PROPERTIES</strong> group is mandatory for BASEPLANE_2D. This tutorial uses the <strong>default</strong> physical properties (i.e., <em>gravity</em> is <code class="docutils literal notranslate"><span class="pre">9.81</span></code>).</p>
 </section>
 <section id="write-setup-file">
-<span id="bm-export-setup"></span><h2>Write Setup File<a class="headerlink" href="#write-setup-file" title="Permalink to this headline">#</a></h2>
+<span id="bm-export-setup"></span><h2>Write Setup File<a class="headerlink" href="#write-setup-file" title="Link to this heading">#</a></h2>
 <p>Make sure that any potential warning or error message is resolved and that the model setup resembles <a class="reference internal" href="#ready2export-setup"><span class="std std-numref">Fig. 85</span></a>. Before exporting the project, save the simulation setup (click on the disk symbol in the top-right corner in <a class="reference internal" href="#ready2export-setup"><span class="std std-numref">Fig. 85</span></a>). Double-check that BASEMENT correctly wrote the files <strong>model.json</strong>, <strong>simulation.json</strong>, and <strong>results.json</strong> in the project directory (e.g., <code class="docutils literal notranslate"><span class="pre">/Basement/steady2d-tutorial/</span></code>). Export the model setup by clicking on the <strong>Write</strong> button (bottom-right corner in <a class="reference internal" href="#ready2export-setup"><span class="std std-numref">Fig. 85</span></a>).</p>
 <figure class="align-default" id="ready2export-setup">
 <img alt="basement export model setup h5" src="../../_images/setup-ready2export.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">The final model setup to export (write) to a setup (<code class="docutils literal notranslate"><span class="pre">*.h5</span></code> <a class="reference internal" href="../../documentation/glossary.html#term-HDF"><span class="xref std std-term">HDF</span></a>) file.</span><a class="headerlink" href="#ready2export-setup" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">The final model setup to export (write) to a setup (<code class="docutils literal notranslate"><span class="pre">*.h5</span></code> <a class="reference internal" href="../../documentation/glossary.html#term-HDF"><span class="xref std std-term">HDF</span></a>) file.</span><a class="headerlink" href="#ready2export-setup" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <strong>Console</strong> tab automatically activates and informs about the export progress. If the <strong>Error Output</strong> canvas is not empty, check the error messages and troubleshoot the causes.</p>
@@ -801,7 +808,7 @@ document.write(`
 </div>
 </section>
 <section id="setup-simulation-file">
-<span id="bm-sim-file"></span><h2>Setup Simulation File<a class="headerlink" href="#setup-simulation-file" title="Permalink to this headline">#</a></h2>
+<span id="bm-sim-file"></span><h2>Setup Simulation File<a class="headerlink" href="#setup-simulation-file" title="Link to this heading">#</a></h2>
 <p>After the successful export of the model setup, the <strong>Simulation</strong> ribbon (on the left in <a class="reference internal" href="#ready2export-setup"><span class="std std-numref">Fig. 85</span></a>) becomes available for setting up the <strong>simulation.json</strong> file in the project folder. Click on the <strong>Simulation</strong> ribbon to setup the <em>simulation.json</em> file:</p>
 <ul class="simple">
 <li><p><strong>Right-click</strong> on the <strong>SIMULATION</strong> group in the activated <strong>Define Simulation Run</strong> tab and select <strong>Add item ‘OUTPUT’</strong>.</p></li>
@@ -831,12 +838,12 @@ document.write(`
 <figure class="align-default" id="bm-sim-setup">
 <img alt="basement simulation setup" src="../../_images/setup-simulation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 86 </span><span class="caption-text">The setup of the Simulation ribbon with the definition of five output parameters and the simulation time.</span><a class="headerlink" href="#bm-sim-setup" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">The setup of the Simulation ribbon with the definition of five output parameters and the simulation time.</span><a class="headerlink" href="#bm-sim-setup" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="run-simulation-steady-2d">
-<span id="bm-run"></span><h2>Run Simulation (Steady 2d)<a class="headerlink" href="#run-simulation-steady-2d" title="Permalink to this headline">#</a></h2>
+<span id="bm-run"></span><h2>Run Simulation (Steady 2d)<a class="headerlink" href="#run-simulation-steady-2d" title="Link to this heading">#</a></h2>
 <p>The simulation can be run with different options that mainly affect the computing time (bottom of <a class="reference internal" href="#bm-sim-setup"><span class="std std-numref">Fig. 86</span></a>).</p>
 <ul class="simple">
 <li><p>The <strong>Standard Hardware</strong> frame enables to switch between single and multi-threaded CPU usage. The default option is multi-threaded, which is strongly recommended with contemporary computers.</p></li>
@@ -857,11 +864,11 @@ document.write(`
 <figure class="align-default" id="bm-sim-end">
 <img alt="basement simulation end" src="../../_images/simulation-end.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 87 </span><span class="caption-text">BASEMENT after successful simulation.</span><a class="headerlink" href="#bm-sim-end" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">BASEMENT after successful simulation.</span><a class="headerlink" href="#bm-sim-end" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="export-simulation-results">
-<h3>Export Simulation Results<a class="headerlink" href="#export-simulation-results" title="Permalink to this headline">#</a></h3>
+<h3>Export Simulation Results<a class="headerlink" href="#export-simulation-results" title="Link to this heading">#</a></h3>
 <p>Once the simulation successfully finished, go to BASEMENT’s <strong>Results</strong> ribbon. Find the <strong>RESULTS</strong> group in the <strong>Export Simulation Results</strong> tab and:</p>
 <ul class="simple">
 <li><p><strong>Right-click</strong> on the <strong>RESULTS</strong> group and select <strong>Add item ‘EXPORT’</strong>.</p></li>
@@ -872,14 +879,14 @@ document.write(`
 <figure class="align-default" id="bm-res-exp">
 <img alt="basement results export" src="../../_images/setup-results-export.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Setup of the Results ribbon after a successful simulation.</span><a class="headerlink" href="#bm-res-exp" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Setup of the Results ribbon after a successful simulation.</span><a class="headerlink" href="#bm-res-exp" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="post-processing-with-qgis">
-<h1>Post-processing with QGIS<a class="headerlink" href="#post-processing-with-qgis" title="Permalink to this headline">#</a></h1>
+<h1>Post-processing with QGIS<a class="headerlink" href="#post-processing-with-qgis" title="Link to this heading">#</a></h1>
 <p>Start QGIS and create a new project or re-use the project from the <a class="reference internal" href="../pre-qgis-bm.html#qgis-prepro-bm"><span class="std std-ref">Pre-processing with QGIS</span></a> tutorial. Save the new project with (a different) meaningful filename in the BASEMENT modeling folder (e.g., <code class="docutils literal notranslate"><span class="pre">/Basement/steady2d/</span></code><strong>postpro-tutorial.qgz</strong>). Setup the project similarly as in the pre-processing:</p>
 <ul class="simple">
 <li><p>Use the coordinate reference system <strong>Germany_Zone_4</strong>  (<a class="reference internal" href="../pre-qgis-bm.html#start-qgis"><span class="std std-ref">QGIS Setup</span></a> section).</p></li>
@@ -887,7 +894,7 @@ document.write(`
 <li><p>Import the height-interpolated quality mesh <a class="reference internal" href="../pre-qgis-bm.html#qualm-interp"><span class="std std-ref">prepro-tutorial_quality-mesh-interp.2dm</span></a> (<strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Mesh Layer…</strong>).</p></li>
 </ul>
 <section id="import-results-xdmf">
-<span id="qgis-imp-steps"></span><h2>Import results.xdmf<a class="headerlink" href="#import-results-xdmf" title="Permalink to this headline">#</a></h2>
+<span id="qgis-imp-steps"></span><h2>Import results.xdmf<a class="headerlink" href="#import-results-xdmf" title="Link to this heading">#</a></h2>
 <p>The simulation results file <strong>results.<a class="reference internal" href="../../documentation/glossary.html#term-xdmf"><span class="xref std std-term">xdmf</span></a></strong> can be loaded in QGIS as an additional data source of the height-interpolated quality mesh (<a class="reference internal" href="../pre-qgis-bm.html#qualm-interp"><span class="std std-ref">prepro-tutorial_quality-mesh-interp.2dm</span></a>) from the pre-processing tutorial:</p>
 <ul class="simple">
 <li><p>In the <strong>Layers</strong> panel, <strong>double-click</strong> on <strong>prepro-tutorial_quality-mesh-interp.2dm</strong> to open the <strong>Layer Properties</strong> window.</p></li>
@@ -906,7 +913,7 @@ document.write(`
 <figure class="align-default" id="qgis-assign-meshdata">
 <img alt="basement assign qgis metadata mesh" src="../../_images/bm-load-results.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Assign mesh data to the computational mesh.</span><a class="headerlink" href="#qgis-assign-meshdata" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Assign mesh data to the computational mesh.</span><a class="headerlink" href="#qgis-assign-meshdata" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To improve the visualization of the results, re-open the <strong>Layer Properties</strong> of the mesh layer and go to the <strong>Symbology</strong> ribbon. Visualize a simulation output parameter, such as <strong>flow_velocity</strong>, as follows:</p>
@@ -919,24 +926,24 @@ document.write(`
 <figure class="align-default" id="symbology4u">
 <img alt="basement qgis results velocity meshdata" src="../../_images/vis-flow-vel.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 90 </span><span class="caption-text">Visualize the flow_velocity parameter with the Symbology controls. The red boxes highlight relevant tabs and entries.</span><a class="headerlink" href="#symbology4u" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 90 </span><span class="caption-text">Visualize the flow_velocity parameter with the Symbology controls. The red boxes highlight relevant tabs and entries.</span><a class="headerlink" href="#symbology4u" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><a class="reference internal" href="#qgis-plot-metadata"><span class="std std-numref">Figure 91</span></a> illustrates a visualization of the flow velocity at the end of the simulation. The flow velocity results are also available as a video sequence (<a class="reference external" href="https://github.com/hydro-informatics/materials-bm/raw/main/exports/velocity-video-crayfish.avi">download</a>).</p>
 <figure class="align-default" id="qgis-plot-metadata">
 <img alt="plotted qgis basement results flow velocity" src="../../_images/bm-meshdata-u-plotted.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 91 </span><span class="caption-text">After application of the above Symbology settings: The flow velocity is illustrated in red shades.</span><a class="headerlink" href="#qgis-plot-metadata" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">After application of the above Symbology settings: The flow velocity is illustrated in red shades.</span><a class="headerlink" href="#qgis-plot-metadata" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="rasterize-outputs">
-<span id="bm-rasterize-output"></span><h2>Rasterize Outputs<a class="headerlink" href="#rasterize-outputs" title="Permalink to this headline">#</a></h2>
+<span id="bm-rasterize-output"></span><h2>Rasterize Outputs<a class="headerlink" href="#rasterize-outputs" title="Link to this heading">#</a></h2>
 <p>The <a class="reference internal" href="../../geopy/geospatial-data.html#raster"><span class="std std-ref">Gridded Cell (Raster) Data</span></a> format is useful for many post-processing tasks such as map algebra (e.g., for habitat analysis or the assessment of inundation area and depth). To this end, QGIS provides the <strong>Rasterize mesh dataset</strong> tool for converting mesh data at any simulation timestep to a <a class="reference internal" href="../../geopy/geospatial-data.html#raster"><span class="std std-ref">Raster</span></a> (e.g., as <a class="reference internal" href="../../documentation/glossary.html#term-GeoTIFF"><span class="xref std std-term">GeoTIFF</span></a>). To open the <em>Rasterize mesh dataset</em> tool, go to either <strong>Processing</strong> &gt; <strong>Toolbox</strong> or make sure that the <strong>View</strong> &gt; <strong>Panels</strong> &gt; <strong>Processing Toolbox</strong> is checked. In the <strong>Processing Toolbox</strong> click on the <strong>Mesh</strong> group and double click on <strong>Rasterize mesh dataset</strong> (see also <a class="reference internal" href="#qgis-rasterize-mesh-menu"><span class="std std-numref">Fig. 92</span></a>).</p>
 <figure class="align-default" id="qgis-rasterize-mesh-menu">
 <img alt="rasterize basement velocity water depth qgis" src="../../_images/rasterize-mesh-menu.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Open the Rasterize mesh tool in QGIS’ Processing Toolbox.</span><a class="headerlink" href="#qgis-rasterize-mesh-menu" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Open the Rasterize mesh tool in QGIS’ Processing Toolbox.</span><a class="headerlink" href="#qgis-rasterize-mesh-menu" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Make the following settings in the <code class="docutils literal notranslate"><span class="pre">Rasterize</span></code> window  (see also <a class="reference internal" href="#qgis-rasterize-mesh"><span class="std std-numref">Fig. 93</span></a>):</p>
@@ -954,14 +961,14 @@ document.write(`
 <figure class="align-default" id="qgis-rasterize-mesh">
 <img alt="setup rasterize mesh geotiff" src="../../_images/rasterize-mesh.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Settings to export simulation results with QGIS’s Rasterize tool.</span><a class="headerlink" href="#qgis-rasterize-mesh" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Settings to export simulation results with QGIS’s Rasterize tool.</span><a class="headerlink" href="#qgis-rasterize-mesh" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To enhance the visualization of the new (flow velocity) raster, double-click on the new raster in the <strong>Layers</strong> panel and switch to the <strong>Symbology</strong> tab. Select <strong>Singleband pseudocolor</strong> for <strong>Render type</strong> (in the top region of the window) and a <strong>Color ramp</strong>. To suppress zero-value pixels, double-click on the <strong>Color</strong> of the <strong>0</strong>-<strong>Value</strong> field, and in the <strong>Select color</strong> window reduce the <strong>Opacity</strong> to <strong>0<span class="math notranslate nohighlight">\(%\)</span></strong>. <a class="reference internal" href="#bm-exported-u-raster"><span class="std std-numref">Figure 94</span></a> shows an example visualization of the exported flow velocity raster.</p>
 <figure class="align-default" id="bm-exported-u-raster">
 <img alt="basement output rasterize mesh geotiff visualization singleband pseudocolor" src="../../_images/bm-exported-u.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 94 </span><span class="caption-text">A Singleband pseudocolor (Layer Properties &gt; Symbology) represents the exported GeoTIFF flow velocity raster with a <em>Reds</em> color ramp and zero-value pixels set to zero-opacity, superpositioned on google satellite imagery <span id="id2">[<a class="reference internal" href="../../documentation/bibliography.html#id1370" title="Google. Google Satellite imagery. nd. URL: https://mt1.google.com/vt/lyrs=s&amp;x={x}&amp;y={y}&amp;z={z}.">Goond</a>]</span>.</span><a class="headerlink" href="#bm-exported-u-raster" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">A Singleband pseudocolor (Layer Properties &gt; Symbology) represents the exported GeoTIFF flow velocity raster with a <em>Reds</em> color ramp and zero-value pixels set to zero-opacity, superpositioned on google satellite imagery <span id="id2">[<a class="reference internal" href="../../documentation/bibliography.html#id1370" title="Google. Google Satellite imagery. nd. URL: https://mt1.google.com/vt/lyrs=s&amp;x={x}&amp;y={y}&amp;z={z}.">Goond</a>]</span>.</span><a class="headerlink" href="#bm-exported-u-raster" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-analyze-geodata-results-with-python admonition">
@@ -970,7 +977,7 @@ document.write(`
 </div>
 </section>
 <section id="mesh-visualization-with-crayfish">
-<span id="bm-crayfish"></span><h2>Mesh Visualization with Crayfish<a class="headerlink" href="#mesh-visualization-with-crayfish" title="Permalink to this headline">#</a></h2>
+<span id="bm-crayfish"></span><h2>Mesh Visualization with Crayfish<a class="headerlink" href="#mesh-visualization-with-crayfish" title="Link to this heading">#</a></h2>
 <p>The open-source <a class="reference external" href="https://www.lutraconsulting.co.uk/projects/crayfish/">Crayfish</a> plugin enables the visualization of mesh values (e.g., change of node values over time) with many features, such as exporting video animations of model results. To create a video of, for instance, the flow velocity outputs at the 1+15 simulation timesteps, use the Crayfish plugin as follows:</p>
 <ul class="simple">
 <li><p>In QGIS, make sure the Crayfish plugin is installed (recall the <a class="reference internal" href="../../geopy/use-qgis.html#qgis-tbx-install"><span class="std std-ref">QGIS instructions</span></a>).</p></li>
@@ -991,25 +998,25 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="post-processing-with-paraview">
-<span id="bm-paraview"></span><h1>Post-processing with ParaView<a class="headerlink" href="#post-processing-with-paraview" title="Permalink to this headline">#</a></h1>
+<span id="bm-paraview"></span><h1>Post-processing with ParaView<a class="headerlink" href="#post-processing-with-paraview" title="Link to this heading">#</a></h1>
 <p><em>ParaView</em> is freely available visualization software, which enables plotting and processing BASEMENT’s <em>results.<a class="reference internal" href="../../documentation/glossary.html#term-xdmf"><span class="xref std std-term">xdmf</span></a></em> file for scientific purposes. Download and install (requires <strong>Admin</strong>/<strong>sudo</strong> rights) the latest version of <em>ParaView</em> from their <a class="reference external" href="https://www.paraview.org/download/">website</a> (if not yet done).</p>
 <section id="id3">
-<h2>Import results.xdmf<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2>Import results.xdmf<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Open <em>ParaView</em> and <strong>click on the folder icon</strong> (top-left of the window indicated in <a class="reference internal" href="#fig-pv-import"><span class="std std-numref">Fig. 95</span></a>) to load the simulation results file (<code class="docutils literal notranslate"><span class="pre">results.xdmf</span></code>). <em>ParaView</em> might ask to choose an appropriate XDMF read plugin: <strong>Select <code class="docutils literal notranslate"><span class="pre">XDMF</span> <span class="pre">Reader</span></code></strong> and click <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Now, the <code class="docutils literal notranslate"><span class="pre">results.xdmf</span></code> should be visible in the <strong>Pipeline Browser</strong> and the <strong>Apply</strong> button has turned green (click on it).</p>
 <figure class="align-default" id="fig-pv-import">
 <img alt="basement results paraview" src="../../_images/import-results.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 95 </span><span class="caption-text">ParaView after successful import of the model results (results.xdmf).</span><a class="headerlink" href="#fig-pv-import" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">ParaView after successful import of the model results (results.xdmf).</span><a class="headerlink" href="#fig-pv-import" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="visualize-parameters">
-<span id="pv-vis"></span><h2>Visualize Parameters<a class="headerlink" href="#visualize-parameters" title="Permalink to this headline">#</a></h2>
+<span id="pv-vis"></span><h2>Visualize Parameters<a class="headerlink" href="#visualize-parameters" title="Link to this heading">#</a></h2>
 <p>ParaView shows by default one of the result parameters at timestep 0 (i.e., bare, dry terrain). To explore other parameters, select them in the dropdown menu of the <strong>Active Variable Controls</strong> menu bar (red highlight box in <a class="reference internal" href="#fig-pv-vis"><span class="std std-numref">Fig. 96</span></a>). The <em>Active Variable Controls</em> menu bar also contains options for manipulating the color range and legend. Toggle through the timesteps by using the video control buttons in the <strong>VCR Controls</strong> toolbar (light blue highlight box in <a class="reference internal" href="#fig-pv-vis"><span class="std std-numref">Fig. 96</span></a>).</p>
 <figure class="align-default" id="fig-pv-vis">
 <img alt="basement results paraview" src="../../_images/vis-u.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 96 </span><span class="caption-text">The Active Variable Controls (red box) and VCR Controls (light blue box) in ParaView to visualize output parameters at different timesteps.</span><a class="headerlink" href="#fig-pv-vis" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">The Active Variable Controls (red box) and VCR Controls (light blue box) in ParaView to visualize output parameters at different timesteps.</span><a class="headerlink" href="#fig-pv-vis" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-familiarize-with-the-viewport admonition">
@@ -1019,7 +1026,7 @@ document.write(`
 <p>To <strong>export an animation of an output parameter</strong> over time as movie (e.g., <code class="docutils literal notranslate"><span class="pre">avi</span></code>) or image (e.g., <code class="docutils literal notranslate"><span class="pre">jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">tiff</span></code>) go to <strong>File</strong> &gt; <strong>Save Animation…</strong>.</p>
 </section>
 <section id="save-project-pipeline">
-<h2>Save Project Pipeline<a class="headerlink" href="#save-project-pipeline" title="Permalink to this headline">#</a></h2>
+<h2>Save Project Pipeline<a class="headerlink" href="#save-project-pipeline" title="Link to this heading">#</a></h2>
 <p>With its approach of sequences of programmable filter application, ParaView saves a <em>Current State</em> in the PVSM format rather than a project as in QGIS. The current state of a dataset in ParaView can be saved as <code class="docutils literal notranslate"><span class="pre">pvsm</span></code> file via <strong>File</strong> &gt; <strong>Save State File</strong>. <strong>Save</strong> the current state of the tutorial ParaView project, for instance, in the simulation folder as <strong>pv-project.pvsm</strong>. To load an existing ParaView state (i.e., project), go to <strong>File</strong> &gt; <strong>Load state</strong>.</p>
 <div class="admonition-automate-paraview-pipelines admonition">
 <p class="admonition-title">Automate ParaView Pipelines</p>
@@ -1027,7 +1034,7 @@ document.write(`
 </div>
 </section>
 <section id="export-data">
-<span id="pv-exp-data"></span><h2>Export Data<a class="headerlink" href="#export-data" title="Permalink to this headline">#</a></h2>
+<span id="pv-exp-data"></span><h2>Export Data<a class="headerlink" href="#export-data" title="Link to this heading">#</a></h2>
 <p>Similar to QGIS, output parameter datasets can be extracted, manipulated, or transformed in ParaView. For this purpose, programmable filters can be applied to the original dataset in ParaView to calculate (i.e., apply the <strong>Calculator</strong> <img alt="../../_images/sym-calc.png" src="../../_images/sym-calc.png" /> filter), for example, the Froude number from the water depth and flow velocity datasets (read more in the <a class="reference external" href="https://www.paraview.org/Wiki/Python_calculator_and_programmable_filter">ParaView Wiki</a>). This tutorial only features the export of mesh point data to a <a class="reference internal" href="../../documentation/glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file with programmable filters:</p>
 <ul class="simple">
 <li><p>Make sure that the <strong>Time</strong> in the <strong>Current Time Controls</strong> toolbar (light blue box in <a class="reference internal" href="#fig-pv-cell-centers"><span class="std std-numref">Fig. 97</span></a>) is set to 15000 (maximum timestep).</p></li>
@@ -1053,7 +1060,7 @@ document.write(`
 <figure class="align-default" id="fig-pv-cell-centers">
 <img alt="paraview basement export data" src="../../_images/cell-centers.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Application of the CellCenters programmable filter in ParaView, with the maximum timestep defined in the Current Time Controls toolbar (light blue box).</span><a class="headerlink" href="#fig-pv-cell-centers" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Application of the CellCenters programmable filter in ParaView, with the maximum timestep defined in the Current Time Controls toolbar (light blue box).</span><a class="headerlink" href="#fig-pv-cell-centers" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now, a <em>flow_velocity.</em><a class="reference internal" href="../../documentation/glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file has been written that contains point coordinates (x, y, and z coordinates) and flow_velocity in <em>x</em> (flow_velocity:0) and <em>y</em> (flow_velocity:1) directions. The flow_velocity:2 (<em>z</em>-direction) is always zero in this 2d simulation. The <em>flow_velocity.</em><a class="reference internal" href="../../documentation/glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> file can also be used with QGIS (for instance, in QGIS go to <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Delimited Text Layer…</strong> &gt; select <em>flow_velocity.csv</em>, assign the correct columns and separators &gt; click <strong>Add</strong>).</p>
@@ -1064,7 +1071,7 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-simulation-verification">
-<span id="bm-python"></span><h1>Python Simulation Verification<a class="headerlink" href="#python-simulation-verification" title="Permalink to this headline">#</a></h1>
+<span id="bm-python"></span><h1>Python Simulation Verification<a class="headerlink" href="#python-simulation-verification" title="Link to this heading">#</a></h1>
 <p>BASEMENT’s developers at the ETH Zurich provide a suite of <a class="reference external" href="http://people.ee.ethz.ch/~basement/baseweb/download/tools/python-scripts/">Python scripts</a> for post-processing the simulation results. For the here used BASEMENT v3, download the Python script <a class="reference external" href="http://people.ee.ethz.ch/~basement/baseweb/download/tools/python-scripts/BMv3NodestringResults.py">BMv3NodestringResults.py</a>, which exports defined output parameters at the user-defined <a class="reference internal" href="#bm-geo-fin"><span class="std std-ref">STRINGDEFs</span></a>.</p>
 <p>To run the Python script, <a class="reference internal" href="../../python-basics/pyinstall.html#install-python"><span class="std std-ref">install Python</span></a> for your platform along with the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">h5py</span></code> packages.</p>
 <div class="admonition-guidance-for-installing-python admonition">
@@ -1106,7 +1113,7 @@ Linux / pip</label><div class="sd-tab-content docutils">
 <figure class="align-default" id="export-py">
 <img alt="export nodestring python script basement BMv3NodestringResults" src="../../_images/export-ns-py.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 98 </span><span class="caption-text">A Python Anaconda Prompt window running <a class="reference external" href="http://BMv3NodestringResults.py">BMv3NodestringResults.py</a></span><a class="headerlink" href="#export-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 98 </span><span class="caption-text">A Python Anaconda Prompt window running <a class="reference external" href="http://BMv3NodestringResults.py">BMv3NodestringResults.py</a></span><a class="headerlink" href="#export-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Running the <em>Python</em> script generates three <a class="reference internal" href="../../documentation/glossary.html#term-CSV"><span class="xref std std-term">CSV</span></a> files that contain values at the user-defined <a class="reference internal" href="#bm-geo-fin"><span class="std std-ref">STRINGDEFs</span></a>:</p>
@@ -1119,7 +1126,7 @@ Linux / pip</label><div class="sd-tab-content docutils">
 <figure class="align-default" id="convergence-diagram-bm">
 <img alt="basement convergence model simulation discharge verification validation" src="../../_images/convergence-diagram.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Convergence of inflow and outflow at the model boundaries.</span><a class="headerlink" href="#convergence-diagram-bm" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Convergence of inflow and outflow at the model boundaries.</span><a class="headerlink" href="#convergence-diagram-bm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition-checkup-discharge-convergence admonition">
@@ -1162,11 +1169,10 @@ Linux / pip</label><div class="sd-tab-content docutils">
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../pre-qgis-bm.html"
@@ -1186,10 +1192,7 @@ Linux / pip</label><div class="sd-tab-content docutils">
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1197,6 +1200,7 @@ Linux / pip</label><div class="sd-tab-content docutils">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1253,6 +1257,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1279,8 +1284,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

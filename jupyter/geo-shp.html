@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Shapefile (Vector) Handling &#8212; Hydro-Informatics</title>
   
@@ -19,60 +18,58 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter/geo-shp';</script>
     <link rel="canonical" href="https://hydro-informatics.com/jupyter/geo-shp.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Raster (Grid) Handling" href="geo-raster.html" />
     <link rel="prev" title="Geospatial Open Source Python Libraries" href="../geopy/geo-pckg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -80,7 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -115,11 +120,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -134,9 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -146,12 +156,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -551,20 +572,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -614,10 +637,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="shapefile-vector-handling">
-<span id="chpt-shp"></span><h1>Shapefile (Vector) Handling<a class="headerlink" href="#shapefile-vector-handling" title="Permalink to this headline">#</a></h1>
+<span id="chpt-shp"></span><h1>Shapefile (Vector) Handling<a class="headerlink" href="#shapefile-vector-handling" title="Link to this heading">#</a></h1>
 <p>This section introduces geospatial analysis of shapefiles with gdal, ogr, and osr. For interactive reading and executing code blocks <a class="reference external" href="https://mybinder.org/v2/gh/hydro-informatics/jupyter-python-course/main?filepath=jupyter"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a> and find <em>geo01-shp.ipynb</em>, or install <a class="reference internal" href="../python-basics/pyinstall.html#install-python"><span class="std std-ref">Python</span></a> and <a class="reference internal" href="../get-started/ide.html#jupyter"><span class="std std-ref">JupyterLab</span></a> locally.</p>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
@@ -636,7 +659,7 @@ document.write(`
 <p>Watch this section as a video on the <a href="https://www.youtube.com/@hydroinformatics">@Hydro-Morphodynamics channel on YouTube</a>.</p>
 </div>
 <section id="load-an-existing-shapefile">
-<h2>Load an Existing Shapefile<a class="headerlink" href="#load-an-existing-shapefile" title="Permalink to this headline">#</a></h2>
+<h2>Load an Existing Shapefile<a class="headerlink" href="#load-an-existing-shapefile" title="Link to this heading">#</a></h2>
 <p>OSGeo’s <code class="docutils literal notranslate"><span class="pre">ogr</span></code> module is an excellent source for handling shapefiles. After importing the libraries, the correct driver for handling shapefiles (<code class="docutils literal notranslate"><span class="pre">&quot;ESRI</span> <span class="pre">Shapefile&quot;</span></code>) with Python needs to be called. Next, with the driver object (<code class="docutils literal notranslate"><span class="pre">ogr.GetDriverByName(&quot;SHAPEFILE&quot;)</span></code>), we can open (instantiate) a shapefile (object with <code class="docutils literal notranslate"><span class="pre">shp_driver.Open(&quot;SHAPEFILE&quot;)</span></code>), which contains layer information. It is precisely the layer information (i.e., references to shapefile attributes) that we want to work with. Therefore we have to instantiate a shapefile layer object with <code class="docutils literal notranslate"><span class="pre">shp_dataset.GetLayer()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -658,7 +681,7 @@ document.write(`
 </div>
 </section>
 <section id="create-a-new-shapefile">
-<span id="create-shp"></span><h2>Create a New Shapefile<a class="headerlink" href="#create-a-new-shapefile" title="Permalink to this headline">#</a></h2>
+<span id="create-shp"></span><h2>Create a New Shapefile<a class="headerlink" href="#create-a-new-shapefile" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ogr</span></code> also enables creating a new point, line, or polygon shapefile. The following code block defines a function for creating a shapefile, where the optional keyword argument <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> is used to control whether an existing shapefile with the same name should be overwritten (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>).
 The command <code class="docutils literal notranslate"><span class="pre">shp_driver.CreateDataSource(SHP-FILE-DIR)</span></code> creates a new shapefile and the rest of the function adds a layer to the shapefile if the optional keyword arguments <code class="docutils literal notranslate"><span class="pre">layer_name</span></code> and <code class="docutils literal notranslate"><span class="pre">layer_type</span></code> are provided. Both optional keywords must be <em>string</em>s, where <code class="docutils literal notranslate"><span class="pre">layer_name</span></code> can be any name for the new layer. <code class="docutils literal notranslate"><span class="pre">layer_type</span></code> must be either <code class="docutils literal notranslate"><span class="pre">&quot;point&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;polygon&quot;</span></code> to create a point, (poly)line, or polygon shapefile, respectively. The function uses the <code class="docutils literal notranslate"><span class="pre">geometry_dict</span></code> <em>dictionary</em> to assign the correct <code class="docutils literal notranslate"><span class="pre">ogr.SHP-TYPE</span></code> to the layer. There are more options for extending the <code class="docutils literal notranslate"><span class="pre">create_shp(...)</span></code> function listed on <a class="reference external" href="https://pcjericks.github.io/py-gdalogr-cookbook/geometry.html"><em>pcjerick</em>’s Github pages</a>.</p>
 <div class="cell docutils container">
@@ -725,30 +748,30 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 <figure class="align-default" id="qgis-create-shp-py">
 <img alt="qgis create new shapefile" src="../_images/qgis-create-shp.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">QGIS: Create Layer &gt; New Shapefile Layer…</span><a class="headerlink" href="#qgis-create-shp-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">QGIS: Create Layer &gt; New Shapefile Layer…</span><a class="headerlink" href="#qgis-create-shp-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="qgis-new-shp-py">
 <img alt="qgis define new shapefile" src="../_images/qgis-new-shp.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Define New Shapefile Layer</span><a class="headerlink" href="#qgis-new-shp-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Define New Shapefile Layer</span><a class="headerlink" href="#qgis-new-shp-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="qgis-toggle-editing-py">
 <img alt="qgis shapefile toggle-editing" src="../_images/qgis-toggle-editing.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Enable shapefile editing</span><a class="headerlink" href="#qgis-toggle-editing-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Enable shapefile editing</span><a class="headerlink" href="#qgis-toggle-editing-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="qgis-draw-polygon-py">
 <img alt="qgis draw polygon shapefile" src="../_images/qgis-draw-polygon.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Draw polygons in a shapefile in QGIS.</span><a class="headerlink" href="#qgis-draw-polygon-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Draw polygons in a shapefile in QGIS.</span><a class="headerlink" href="#qgis-draw-polygon-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="get-and-set-shapefile-projections">
-<span id="prj-shp"></span><h2>Get and Set Shapefile Projections<a class="headerlink" href="#get-and-set-shapefile-projections" title="Permalink to this headline">#</a></h2>
+<span id="prj-shp"></span><h2>Get and Set Shapefile Projections<a class="headerlink" href="#get-and-set-shapefile-projections" title="Link to this heading">#</a></h2>
 <p>The terminology used in the <code class="docutils literal notranslate"><span class="pre">.prj</span></code> files of a shapefile corresponds to the definitions in the <a class="reference internal" href="../geopy/geospatial-data.html#prj"><span class="std std-ref">geospatial data</span></a> section. In Python, information about the coordinate system is available through <code class="docutils literal notranslate"><span class="pre">shp_layer.GetSpatialRef()</span></code> of the <code class="docutils literal notranslate"><span class="pre">ogr</span></code> library:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -856,7 +879,7 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 </div>
 </section>
 <section id="transform-re-project-a-shapefile">
-<span id="reproject-shp"></span><h2>Transform (Re-project) a Shapefile<a class="headerlink" href="#transform-re-project-a-shapefile" title="Permalink to this headline">#</a></h2>
+<span id="reproject-shp"></span><h2>Transform (Re-project) a Shapefile<a class="headerlink" href="#transform-re-project-a-shapefile" title="Link to this heading">#</a></h2>
 <p>A re-projection may be needed, for instance, to use a shapefile in <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code> (e.g., created with QGIS) in a web-GIS application (e.g., open street maps) that typically uses <code class="docutils literal notranslate"><span class="pre">EPSG:3857</span></code>. To apply a different projection to geometric objects of a shapefile, it is not enough to simply rewrite the <code class="docutils literal notranslate"><span class="pre">.prj</span></code> file. Therefore, the following example shows the re-projection of the <code class="docutils literal notranslate"><span class="pre">countries.shp</span></code> shapefile from the <a class="reference external" href="http://naciscdn.org/naturalearth/packages/Natural_Earth_quick_start.zip">Natural Earth quick start kit</a>. The following workflow performs the reprojection:</p>
 <ul class="simple">
 <li><p>Save shapefile to transform is located in the subdirectory <code class="docutils literal notranslate"><span class="pre">geodata/shapefiles/countries.shp</span></code> and open it in the Python script as described above.</p></li>
@@ -983,7 +1006,7 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 </div>
 </section>
 <section id="add-fields-and-point-features-to-a-shapefile">
-<span id="add-field"></span><h2>Add Fields and Point Features to a Shapefile<a class="headerlink" href="#add-fields-and-point-features-to-a-shapefile" title="Permalink to this headline">#</a></h2>
+<span id="add-field"></span><h2>Add Fields and Point Features to a Shapefile<a class="headerlink" href="#add-fields-and-point-features-to-a-shapefile" title="Link to this heading">#</a></h2>
 <p>A shapefile feature can be a point, a line, or a polygon, which has field attributes (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;id&quot;=1</span></code> to describe that this is polygon number 1 or associated to an <code class="docutils literal notranslate"><span class="pre">id</span></code> block 1). Field attributes can be more than just an <em>ID</em>entifier and include, for example, the polygon area or city labels as in the above-shown example illustrating <em>cities.shp</em> (<code class="docutils literal notranslate"><span class="pre">shp_driver.Open(&quot;geodata/shapefiles/cities.shp&quot;)</span></code>).</p>
 <p>To <strong>create a point shapefile</strong>, we can use the above-introduced <code class="docutils literal notranslate"><span class="pre">create_shp</span></code> function (or <code class="docutils literal notranslate"><span class="pre">flusstools.geotools.create_shp(shp_file_dir=&quot;&quot;)</span></code>) and set the projection with the <code class="docutils literal notranslate"><span class="pre">get_wkt()</span></code> function (also above introduced). The following code block shows the usage of both functions to create a <em>river.shp</em> point shapefile that contains three points located at three rivers in central Europe. The code block also illustrates the creation of a field in the attribute table and the creation of three point features. Here is how the code works:</p>
 <ul class="simple">
@@ -1057,12 +1080,12 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 <figure class="align-default" id="qgis-rivers-py">
 <img alt="river map shapefile" src="../_images/qgis-rivers.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">The river names bound to points in a point shapefile shown in QGIS.</span><a class="headerlink" href="#qgis-rivers-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">The river names bound to points in a point shapefile shown in QGIS.</span><a class="headerlink" href="#qgis-rivers-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="multiline-polyline-shapefile">
-<span id="line-create"></span><h2>Multiline (Polyline) Shapefile<a class="headerlink" href="#multiline-polyline-shapefile" title="Permalink to this headline">#</a></h2>
+<span id="line-create"></span><h2>Multiline (Polyline) Shapefile<a class="headerlink" href="#multiline-polyline-shapefile" title="Link to this heading">#</a></h2>
 <p>Similar to the procedure for creating and adding points to a new point shapefile, a (multi) line (or polyline) can be added to a shapefile. The <code class="docutils literal notranslate"><span class="pre">create_shp</span></code> function creates a multi-line shapefile when the layer type is defined as <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code> (<code class="docutils literal notranslate"><span class="pre">flusstools.geotools.create_shp(shp_file_dir=&quot;&quot;,</span> <span class="pre">layer_type=&quot;line&quot;)</span></code>). The coordinate system is created with the above-defined <code class="docutils literal notranslate"><span class="pre">get_wkt()</span></code> function.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1115,12 +1138,12 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 <figure class="align-default" id="qgis-rhine-py">
 <img alt="rhine line shapefile" src="../_images/qgis-rhine.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">The line approximating the Rhine river in QGIS.</span><a class="headerlink" href="#qgis-rhine-py" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">The line approximating the Rhine river in QGIS.</span><a class="headerlink" href="#qgis-rhine-py" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="polygon-shapefile">
-<span id="poly-create"></span><h2>Polygon Shapefile<a class="headerlink" href="#polygon-shapefile" title="Permalink to this headline">#</a></h2>
+<span id="poly-create"></span><h2>Polygon Shapefile<a class="headerlink" href="#polygon-shapefile" title="Link to this heading">#</a></h2>
 <p>Polygons are surface patches that can be created point-by-point, line-by-line, or from a <code class="docutils literal notranslate"><span class="pre">&quot;Multipolygon&quot;</span></code> WKB definition. When creating polygons from points or lines, we want to create a surface and this is why the corresponding geometry type is called <code class="docutils literal notranslate"><span class="pre">wkbLinearRing</span></code> for building polygons from both points or lines (rather than <code class="docutils literal notranslate"><span class="pre">wkbPoint</span></code> or <code class="docutils literal notranslate"><span class="pre">wkbLine</span></code>, respectively). The following code block features an example for building a polygon shapefile delineating the hydraulic laboratory of the University of Stuttgart. The difference between the above example for creating a line shapefile are:</p>
 <ul class="simple">
 <li><p>The projection is <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>.</p></li>
@@ -1170,7 +1193,7 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 </div>
 </section>
 <section id="build-shapefile-from-json">
-<span id="json-create"></span><h2>Build Shapefile from JSON<a class="headerlink" href="#build-shapefile-from-json" title="Permalink to this headline">#</a></h2>
+<span id="json-create"></span><h2>Build Shapefile from JSON<a class="headerlink" href="#build-shapefile-from-json" title="Link to this heading">#</a></h2>
 <p>Loading geometry data from in-line defined variables is cumbersome in practice, where geospatial data are often provided on public platforms (e.g., land use or cover).  The following example uses a JSON file generated with map service data from the <a class="reference external" href="https://udo.lubw.baden-wuerttemberg.de/">Baden-Württemberg State Institute for the Environment, Survey and Nature Conservation (LUBW)</a>, where polygon nodes are stored in WKB polygon geometry format  (<code class="docutils literal notranslate"><span class="pre">&quot;MultiPolygon</span> <span class="pre">(((node1_x</span> <span class="pre">node1_y,</span> <span class="pre">nodej_x,</span> <span class="pre">nodej_y,</span> <span class="pre">...</span> <span class="pre">...)))&quot;</span></code>):</p>
 <ul class="simple">
 <li><p>The JSON file (<a class="reference external" href="https://raw.githubusercontent.com/hydro-informatics/jupyter-python-course/main/geodata/json/hq100-dreisam.json">download hq100-dreisam.json</a> and save it to a subdirectory called <code class="docutils literal notranslate"><span class="pre">/geodata/json/</span></code>)is read with <a class="reference internal" href="pynum.html#pandas"><span class="std std-ref">Pandas</span></a> and the shapefile is created, as before, with the <code class="docutils literal notranslate"><span class="pre">create_shp</span></code> function.</p></li>
@@ -1247,7 +1270,7 @@ The command <code class="docutils literal notranslate"><span class="pre">shp_dri
 </div>
 </section>
 <section id="calculate-geometric-attributes">
-<span id="calc"></span><h2>Calculate Geometric Attributes<a class="headerlink" href="#calculate-geometric-attributes" title="Permalink to this headline">#</a></h2>
+<span id="calc"></span><h2>Calculate Geometric Attributes<a class="headerlink" href="#calculate-geometric-attributes" title="Link to this heading">#</a></h2>
 <p>The above code block illustrates the usage of <code class="docutils literal notranslate"><span class="pre">polygon.GetArea()</span></code> to calculate the polygon area in m<span class="math notranslate nohighlight">\(^2\)</span>. The <code class="docutils literal notranslate"><span class="pre">ogr</span></code> library provides many more functions to calculate geometric attributes of features and here is a summary:</p>
 <ul class="simple">
 <li><p>Unify multiple polygons <br>
@@ -1279,10 +1302,10 @@ Tip: To create a tight hull (e.g., of a point cloud), look for <code class="docu
 </div>
 </section>
 <section id="export-to-other-formats">
-<span id="export"></span><h2>Export to Other Formats<a class="headerlink" href="#export-to-other-formats" title="Permalink to this headline">#</a></h2>
+<span id="export"></span><h2>Export to Other Formats<a class="headerlink" href="#export-to-other-formats" title="Link to this heading">#</a></h2>
 <p>The above examples deal with <code class="docutils literal notranslate"><span class="pre">.shp</span></code> files only, but other formats can be useful (e.g., to create web applications or export to <em>Google Earth</em>). To this end, the following paragraphs illustrate the creation of GeoJSON and KML files. Several other conversions can be performed, not only between file formats but also between feature types. For instance, polygons can be created from point clouds (among others with the <code class="docutils literal notranslate"><span class="pre">ConvexHull</span></code> method mentioned above). Interested students can learn more about conversions in <a class="reference external" href="https://github.com/mdiener21/python-geospatial-analysis-cookbook">Michael Diener’s <em>Python Geospatial Analysis Cookbook</em></a>.</p>
 <section id="geojson">
-<h3>GeoJSON<a class="headerlink" href="#geojson" title="Permalink to this headline">#</a></h3>
+<h3>GeoJSON<a class="headerlink" href="#geojson" title="Link to this heading">#</a></h3>
 <p>GeoJSON files can be easily created as before, even without activating a driver:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1331,7 +1354,7 @@ Tip: To create a tight hull (e.g., of a point cloud), look for <code class="docu
 </div>
 </section>
 <section id="kml-google-earth">
-<h3>KML (Google Earth)<a class="headerlink" href="#kml-google-earth" title="Permalink to this headline">#</a></h3>
+<h3>KML (Google Earth)<a class="headerlink" href="#kml-google-earth" title="Link to this heading">#</a></h3>
 <p>To display point, line, or polygon features in Google Earth, features can be plugged into Google’s <a class="reference external" href="https://developers.google.com/kml/documentation/kml_tut">KML</a> (Keyhole Markup Language), similar to the creation of a GeoJSON file, and with the function <code class="docutils literal notranslate"><span class="pre">geometry.ExportToKML</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1384,11 +1407,10 @@ Tip: To create a tight hull (e.g., of a point cloud), look for <code class="docu
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../geopy/geo-pckg.html"
@@ -1408,10 +1430,7 @@ Tip: To create a tight hull (e.g., of a point cloud), look for <code class="docu
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1419,6 +1438,7 @@ Tip: To create a tight hull (e.g., of a point cloud), look for <code class="docu
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1461,6 +1481,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -1487,8 +1508,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

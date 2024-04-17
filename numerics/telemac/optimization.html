@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Optimization &#8212; Hydro-Informatics</title>
   
@@ -19,58 +18,56 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'numerics/telemac/optimization';</script>
     <link rel="canonical" href="https://hydro-informatics.com/numerics/telemac/optimization.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="OpenFOAM" href="../openfoam/of-intro.html" />
     <link rel="prev" title="Friction (Roughness) Zones" href="roughness.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -78,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -113,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
+  
   
   
   
@@ -144,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/icon.jpg" class="logo__image only-light" alt="Hydro-Informatics - Home"/>
+    <script>document.write(`<img src="../../_static/icon.jpg" class="logo__image only-dark" alt="Hydro-Informatics - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -482,20 +503,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -545,17 +568,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="optimization">
-<span id="telemac-opti"></span><h1>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">#</a></h1>
+<span id="telemac-opti"></span><h1>Optimization<a class="headerlink" href="#optimization" title="Link to this heading">#</a></h1>
 <p>A numerical model calibration should yield a computationally functional, and physically, at least a reasonably accurate model. Model calibration has already been covered in the <a class="reference internal" href="telemac2d-steady.html#tm2d-post-export"><span class="std std-ref">results analysis section</span></a> of the steady Telemac2d tutorial. This chapter first provides more tips to increase the physical correctness of a model, especially regarding the conservation of mass, which can sometimes be challenging in Telemac. Additionally, advanced calibration methods that use supervised machine learning to improve physical model accuracy are presented.</p>
 <div class="admonition-goals-and-requirements admonition">
 <p class="admonition-title">Goals and requirements</p>
 <p>This tutorial explains how a Telemac model can be refined by improving its computational stability, and physical correctness. Thus, it is relevant after setting up a Telemac model, as explained for a simple case in the <a class="reference internal" href="telemac2d-steady.html#telemac2d-steady"><span class="std std-ref">steady 2d chapter</span></a>.</p>
 </div>
 <section id="computing-time">
-<h2>Computing Time<a class="headerlink" href="#computing-time" title="Permalink to this headline">#</a></h2>
+<h2>Computing Time<a class="headerlink" href="#computing-time" title="Link to this heading">#</a></h2>
 <p>Some of the keywords in TELEMAC’s steering (<code class="docutils literal notranslate"><span class="pre">*.cas</span></code>) file affect computation speed.</p>
 <ul class="simple">
 <li><p>Use the <a class="reference internal" href="telemac2d-steady.html#tm2d-accuracy"><span class="std std-ref">ACCURACY and MAXIMUM ITERATION</span></a> keywords to yield faster convergence.</p></li>
@@ -577,9 +600,9 @@ document.write(`
 </div>
 </section>
 <section id="stability-physical-correctness">
-<h2>Stability &amp; Physical Correctness<a class="headerlink" href="#stability-physical-correctness" title="Permalink to this headline">#</a></h2>
+<h2>Stability &amp; Physical Correctness<a class="headerlink" href="#stability-physical-correctness" title="Link to this heading">#</a></h2>
 <section id="accuracy">
-<h3>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this headline">#</a></h3>
+<h3>Accuracy<a class="headerlink" href="#accuracy" title="Link to this heading">#</a></h3>
 <p>When the accuracy keywords are improperly defined, TELEMAC may not be able to end the simulation. In this case, make sure to comment out the accuracy keywords and let TELEMAC use its default values:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="w"> </span><span class="n">SOLVER</span><span class="w"> </span><span class="n">ACCURACY</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1.E-4</span>
 <span class="o">/</span><span class="w"> </span><span class="n">ACCURACY</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="n">DIFFUSION</span><span class="w"> </span><span class="n">OF</span><span class="w"> </span><span class="n">TRACERS</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1.E-4</span>
@@ -590,7 +613,7 @@ document.write(`
 </div>
 </section>
 <section id="variable-time-steps-and-cfl-condition">
-<h3>Variable Time-Steps and CFL Condition<a class="headerlink" href="#variable-time-steps-and-cfl-condition" title="Permalink to this headline">#</a></h3>
+<h3>Variable Time-Steps and CFL Condition<a class="headerlink" href="#variable-time-steps-and-cfl-condition" title="Link to this heading">#</a></h3>
 <p>Unstable simulations may occur when the <a class="reference internal" href="../../documentation/glossary.html#term-CFL"><span class="xref std std-term">CFL</span></a> condition is insufficiently fulfilled. To ensure that the <a class="reference internal" href="../../documentation/glossary.html#term-CFL"><span class="xref std std-term">CFL</span></a> condition is respected, enable variable timestep calculation and use the <strong>DESIRED COURANT NUMBER</strong> keyword (default value <code class="docutils literal notranslate"><span class="pre">1</span></code>), for example:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="nb">TIME </span><span class="n">STEP</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
 <span class="n">VARIABLE</span><span class="w"> </span><span class="nb">TIME</span><span class="o">-</span><span class="n">STEP</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">YES</span>
@@ -605,7 +628,7 @@ document.write(`
 </div>
 </section>
 <section id="implicitation">
-<h3>Implicitation<a class="headerlink" href="#implicitation" title="Permalink to this headline">#</a></h3>
+<h3>Implicitation<a class="headerlink" href="#implicitation" title="Link to this heading">#</a></h3>
 <p>To increase model stability, modify the following variables or make sure that the variables are within reasonable ranges in the <em>CAS</em> file:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">IMPLICITATION</span> <span class="pre">FOR</span> <span class="pre">DEPTH</span></code> should be between <code class="docutils literal notranslate"><span class="pre">0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.6</span></code>.</p></li>
@@ -614,7 +637,7 @@ document.write(`
 </ul>
 </section>
 <section id="surface-oscillations-wiggles">
-<h3>Surface Oscillations (Wiggles)<a class="headerlink" href="#surface-oscillations-wiggles" title="Permalink to this headline">#</a></h3>
+<h3>Surface Oscillations (Wiggles)<a class="headerlink" href="#surface-oscillations-wiggles" title="Link to this heading">#</a></h3>
 <p>When physically non-meaningful gradients or oscillations occur at the water surface or the bathymetry has steep slopes, the following keyword settings may help:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">FREE</span> <span class="pre">SURFACE</span> <span class="pre">GRADIENT</span></code> - default is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, but it can be reduced to <code class="docutils literal notranslate"><span class="pre">0.1</span></code> to achieve stability (nevertheless, start with going incrementally down, such as a value of <code class="docutils literal notranslate"><span class="pre">0.9</span></code>).</p></li>
@@ -622,14 +645,14 @@ document.write(`
 </ul>
 </section>
 <section id="residual-mass-errors">
-<h3>Residual Mass Errors<a class="headerlink" href="#residual-mass-errors" title="Permalink to this headline">#</a></h3>
+<h3>Residual Mass Errors<a class="headerlink" href="#residual-mass-errors" title="Link to this heading">#</a></h3>
 <p>To reduce residual mass errors use in the steering file:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">CONTINUITY</span><span class="w"> </span><span class="n">CORRECTION</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">YES</span>
 </pre></div>
 </div>
 </section>
 <section id="divergence">
-<h3>Divergence<a class="headerlink" href="#divergence" title="Permalink to this headline">#</a></h3>
+<h3>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h3>
 <p>To limit divergence issues, use the <code class="docutils literal notranslate"><span class="pre">CONTROL</span> <span class="pre">OF</span> <span class="pre">LIMITS</span></code> and <code class="docutils literal notranslate"><span class="pre">LIMIT</span> <span class="pre">VALUES</span></code> keywords. The <code class="docutils literal notranslate"><span class="pre">LIMIT</span> <span class="pre">VALUES</span></code> keyword is a list of 8 integers for minimum and maximum values for H, U, V, and T (tracers). The implementation in the steering file looks like this:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">CONTROL</span><span class="w"> </span><span class="n">OF</span><span class="w"> </span><span class="n">LIMITS</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">YES</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="k">is </span><span class="n">NO</span>
 <span class="n">LIMIT</span><span class="w"> </span><span class="n">VALUES</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1000</span><span class="p">;</span><span class="mi">9000</span><span class="p">;</span><span class="o">-</span><span class="mi">1000</span><span class="p">;</span><span class="mi">1000</span><span class="p">;</span><span class="o">-</span><span class="mi">1000</span><span class="p">;</span><span class="mi">1000</span><span class="p">;</span><span class="o">-</span><span class="mi">1000</span><span class="p">;</span><span class="mi">1000</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">mins</span><span class="w"> </span><span class="nb">and max </span><span class="n">for</span><span class="w"> </span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">tracer</span>
@@ -637,7 +660,7 @@ document.write(`
 </div>
 </section>
 <section id="tidal-flats">
-<h3>Tidal Flats<a class="headerlink" href="#tidal-flats" title="Permalink to this headline">#</a></h3>
+<h3>Tidal Flats<a class="headerlink" href="#tidal-flats" title="Link to this heading">#</a></h3>
 <p>Wetting and drying of grid cells, for instance, during a simulation of dam breaks or flood hydrographs, may lead to model instability. While the <a class="reference internal" href="telemac2d-steady.html#tm2d-tidal"><span class="std std-ref">Tidal Flats</span></a> section in the Telemac2d steady modeling tutorial suggests physically and computationally meaningful keyword option combinations, section 16.5 in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac2d/user/telemac2d_user_v8p4.pdf">Telemac2d manual</a> recommends using the following settings in the steering file as conservative choices from the BAW’s Wesel example.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">VELOCITY</span><span class="w"> </span><span class="n">PROFILES</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="mi">0</span>
 <span class="n">TURBULENCE</span><span class="w"> </span><span class="n">MODEL</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
@@ -665,11 +688,11 @@ document.write(`
 </div>
 </section>
 <section id="discretization-scheme">
-<h3>Discretization Scheme<a class="headerlink" href="#discretization-scheme" title="Permalink to this headline">#</a></h3>
+<h3>Discretization Scheme<a class="headerlink" href="#discretization-scheme" title="Link to this heading">#</a></h3>
 <p>The default setting of <code class="docutils literal notranslate"><span class="pre">DISCRETIZATIONS</span> <span class="pre">IN</span> <span class="pre">SPACE</span> <span class="pre">:</span> <span class="pre">11;11</span></code> assigns a linear discretization for velocity and water depth, which is computationally fast but potentially unstable (read more in the section on <a class="reference internal" href="telemac2d-steady.html#tm2d-numerical"><span class="std std-ref">general Telemac2d parameters</span></a>). To overcome stability issues related to the discretization scheme, consider using <code class="docutils literal notranslate"><span class="pre">DISCRETIZATIONS</span> <span class="pre">IN</span> <span class="pre">SPACE</span> <span class="pre">:</span> <span class="pre">12;11</span></code>. In addition, setting <code class="docutils literal notranslate"><span class="pre">FREE</span> <span class="pre">SURFACE</span> <span class="pre">GRADIENT</span> <span class="pre">COMPATIBILITY</span> <span class="pre">:</span> <span class="pre">0.01</span></code> (i.e., close to zero) may aid in troubleshooting stability issues related to the discretization of velocity and depth.</p>
 </section>
 <section id="exceeding-maximum-iterations">
-<h3>Exceeding Maximum Iterations<a class="headerlink" href="#exceeding-maximum-iterations" title="Permalink to this headline">#</a></h3>
+<h3>Exceeding Maximum Iterations<a class="headerlink" href="#exceeding-maximum-iterations" title="Link to this heading">#</a></h3>
 <p><em>This section is co-authored by <a class="reference external" href="https://www.iws.uni-stuttgart.de/institut/team/Scolari/">Federica Scolari</a></em>.</p>
 <p>A simulation may print <code class="docutils literal notranslate"><span class="pre">EXCEEDING</span> <span class="pre">MAXIMUM</span> <span class="pre">ITERATIONS</span></code> warnings in the <em>Terminal</em>:</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">GRACJG</span><span class="w"> </span><span class="p">(</span><span class="n">BIEF</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EXCEEDING</span><span class="w"> </span><span class="n">MAXIMUM</span><span class="w"> </span><span class="n">ITERATIONS</span><span class="p">:</span><span class="w">    </span><span class="mi">50</span><span class="w"> </span><span class="n">RELATIVE</span><span class="w"> </span><span class="nb">PRECISION</span><span class="p">:</span><span class="w">  </span><span class="mf">0.7234532E-01</span>
@@ -698,7 +721,7 @@ document.write(`
 </section>
 </section>
 <section id="bayesian-calibration">
-<h2>Bayesian Calibration<a class="headerlink" href="#bayesian-calibration" title="Permalink to this headline">#</a></h2>
+<h2>Bayesian Calibration<a class="headerlink" href="#bayesian-calibration" title="Link to this heading">#</a></h2>
 <div class="admonition-requirements admonition">
 <p class="admonition-title">Requirements</p>
 <p>Be comfortable with <a class="reference internal" href="../../datascience/supervised-learning.html#supervisedlearning"><span class="std std-ref">supervised learning concepts (read on hydro-informatics.com)</span></a>, and familiarize with the required vocabulary.</p>
@@ -735,11 +758,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="roughness.html"
@@ -759,10 +781,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -770,6 +789,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -812,6 +832,7 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -838,8 +859,8 @@ By Sebastian Schwindt, Beatriz Negreiros, Federica Scolari, Ricardo Barros
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
