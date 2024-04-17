@@ -39,6 +39,9 @@ Bedload
 
   *French: Charriage <br>German: Geschiebtransport*
 
+Benthos
+   The betnhos is composed of organisms inhabiting the bottom of aquatic environments, including oceans, lakes, and rivers. Benthic organisms reside in close proximity to the substrate and comprise various species like invertebrates (e.g., worms, mollusks, crustaceans, and insects), certain fish, and amphibians. The benthos plays a crucial role in nutrient cycling, organic matter decomposition, and it serves as a food source for higher trophic levels {cite:p}`flint1975effects, costello2009distinguishing`.
+
 Boussinesq approximation
   The Boussinesq approximation of the {term}`continuity equation <Continuity equation>` assumes that density variations can be neglected except for the gravity term (i.e., in the vertical momentum equations). In addition, the Boussinesq approximation assumes that a fluid is incompressible and that wave motion is inviscid {cite:p}`boussinesq_essai_1877,spiegel1960`. Caution: not to be confused with the {term}`Boussinesq hypothesis`.
 
@@ -267,12 +270,15 @@ Neumann boundary condition
   *French: Condition aux limites de Neumann <br>German: Neumann-Randbedingung*
 
 Oceanodromous
-  Oceanodromous {term}`fish guilds <Guild>` exclusively live in oceans. while oceanodromous fish may encounter {term}`diadromous fish <Diadromous>` (migrate from the sea to freshwaters), they will very likely never meet {term}`potamodromous <Potamodromous>` fish {cite:p}`myers_fish_1949`. Examples for oceanmodromous fish are Atlantic mackerels (*Scomber scombrus*) or Atlantic herring (*Clupea harengus*).
+  Oceanodromous {term}`fish guilds <Guild>` exclusively live in oceans. While oceanodromous fish may encounter {term}`diadromous fish <Diadromous>` (migrate from the sea to freshwaters), they will very likely never meet {term}`potamodromous <Potamodromous>` fish {cite:p}`myers_fish_1949`. Examples for oceanmodromous fish are Atlantic mackerels (*Scomber scombrus*) or Atlantic herring (*Clupea harengus*).
 
 Operating System
   An Operating System (OS) manages the hardware of a computer, software (resources), and services for any program you want to install.
 
   *French: Système d'exploitation <br>German: Betriebssystem*
+
+Pelagic zone
+  The pelagic zone encompasses the open water column in oceans, seas, and (large) lakes, excluding the bottom and coastal areas. The pelagic zone is divided into subzones based on depth and light penetration, including the epipelagic (surface layer), mesopelagic (twilight zone), bathypelagic (midnight zone), and abyssopelagic (abyssal zone). This zone is inhabited by pelagic organisms, such as fish, marine mammals, and plankton, which are adapted to life in the water column (away from the seafloor, that is, {term}`benthos <Benthos>`) {cite:p}`costello2009distinguishing`.
 
 Plane bed
   A plane bed refers to a type of riverbed that is characterized by irregular bedforms with distant, varying confinement, often in transition between transport capacity-limited and sediment supply-limited river sections {cite:p}`schwindt_hydro-morphological_2017`.
