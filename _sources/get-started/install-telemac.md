@@ -800,6 +800,9 @@ The plugin requires at least QGIS version 3.26. If your QGIS version is older, t
 
 After the installation, Q4TS enables MED to SLF conversion (and vice versa), mesh refinements, boundary creation, friction table editing, and many more options (in the QGIS Toolbox).
 
+```{admonition} Other (stale) plugins
+:class: note, dropown
+
 Older, partially non-working TELEMAC plugins for QGIS are: 
 
 * [Telemac Tools](https://plugins.qgis.org/plugins/telemac_tools/) is an experimental mesh generator plugin for `*.slf` files developed by *Artelia*. Make sure to check the **experimental plugins** box in the **Settings** of QGIS' plugins window.
@@ -808,6 +811,7 @@ Older, partially non-working TELEMAC plugins for QGIS are:
 * *DEMto3D* enables to export *STL* geometry files for working with *SALOME* and creating 3D meshes.
 
 Note that *DEMto3D* will be available in the *Raster* menu: *DEMto3D* > *DEM 3D printing*.
+```
 
 (bluekenue)=
 ### BlueKenue (Windows or Linux+Wine)
