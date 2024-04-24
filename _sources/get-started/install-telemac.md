@@ -187,25 +187,109 @@ git clone -b upwind_gaia --single-branch https://gitlab.pam-retd.fr/otm/telemac-
 Read more about cloning single TELEMAC branches in the [TELEMAC wiki](http://wiki.opentelemac.org/doku.php?id=telemac-mascaret_git_repository).
 ````
 
-After downloading (cloning) the TELEMAC repository, switch to (check out) the latest version:
+After downloading (cloning) the TELEMAC repository, verify which is the latest version:
 
 ```
 cd telemac-mascaret
-git checkout tags/v8p4r0
+git branch --list
+```
+
+At the time of writing these lines, the latest version is `v8p5r0`. Check out the last version as follows:
+
+```
+git checkout tags/v8p5r0
 ```
 
 
 ## Optional Requirements (Parallelism and Others)
 
-This section guides through the installation of additional packages required for parallelism. Make sure that Terminal recognizes `gcc`, which should be included in the *Debian* base installation (verify with `gcc --help`). This section includes installation for:
+This section guides through the installation of additional packages required for parallelism. Make sure that Terminal recognizes `gcc`, which should be included in the *Debian* base installation (verify with `gcc --help`). This section includes installation for packages enabling parallelism, which provides substantial acceleration of simulations:
 
-* Install packages for parallelism to enable a substantial acceleration of simulations:
-    + MPI distribution
-    + Metis 5.1.0
-* For the MED file format (input mesh and computation results):
-    + Hdf5
-    + MEDFichier 3.2.0
+* Message Passing Interface (MPI)
+* Metis
 
+In addition, the MED file format for input meshes (e.g., created with {ref}` SALOME <salome-install>`) and computation results can be installed with TELEMAC, but versioning is tricky, which is why we do not update the installation instructions for MED anymore in this eBook. The better option is to use the {ref}`Q4TS QGIS plugin<qgis-telemac>` for conversion between SLF and MED file formats. Curious users still find the deprecated MED installation instructions in the dropdown box below.
+
+`````{admonition} Hdf5 and MED Format Handlers (Deprecated)
+:name: med-hdf
+:class: warning, dropdown
+
+***Estimated duration: 15-25 minutes (building libraries takes time).***
+
+**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/).
+
+Note that the [Telemac installation wiki](http://wiki.opentelemac.org/doku.php?id=installation_on_linux) suggests using version `1.10.7`, which, however, will cause an error when compiling the medfile library.
+
+
+We will install here version `1.10.3`. Do not try to use any other *hdf5* version because those will not work with the *med file* library (next step). The following code block downloads and unzips the *hdf-5-1.10.3* archive in the above-created (metis) `temp/` folder (run in Terminal as normal user - not as root):
+
+```
+cd ~/telemac/optionals/temp
+wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.3/src/hdf5-1.10.3.tar.gz
+gunzip hdf5-1.10.3.tar.gz
+tar -xvf hdf5-1.10.3.tar
+cd hdf5-1.10.3
+```
+
+Configure and compile *hdf5* (enter every command one-by-one):
+
+```
+./configure --prefix=/home/USERNAME/telemac/optionals/hdf5 --enable-parallel
+make
+make install
+```
+
+The flag `--prefix=/home/USERNAME/telemac/optionals/hdf5` determines the installation directory for the *hdf5* library, which we will need in the next step for installing the *med file* library. The absolute path `/home/USERNAME/` is required because `--prefix` does not accept a relative path.
+The installation of *hdf5* on Linux is also documented in the [Telemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_hdf5).
+
+***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and we need to use the file ([med-4.0.0.tar.gz](http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with the *hdf5* file library. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
+
+```
+sudo apt-cache search zlib | grep -i zlib
+sudo apt install zlib1g zlib1g-dev
+```
+
+The following command block, switches to the above-created `temp` folder, downloads, and unzips the *med-4.0.0* archive (run in Terminal as ***normal user*** - ***not as root***):
+
+
+```
+cd ~/telemac/optionals/temp
+wget http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz
+gunzip med-4.0.0.tar.gz
+tar -xvf med-4.0.0.tar
+cd med-4.0.0
+```
+
+To compile the *med file* library type:
+
+```
+./configure --prefix=/home/USERNAME/telemac/optionals/med-4.0.0 --with-hdf5=/home/USERNAME/telemac/optionals/hdf5 --disable-python
+make
+make install
+```
+
+The flag `--prefix` sets the installation directory and `--width-hdf5` tells the med library where it can find the *hdf5* library. Thus, adapt `/home/USERNAME/telemac/optionals/hdf5` to your local `<install_path>` of the *hdf5* library. Both flags do not accept relative paths (`~/telemac/...`), and therefore, we need to use the absolute paths (`home/USERNAME/telemac/...`) here.
+
+```{admonition} Why *--disable-python*?
+:class: note, dropdown
+We need to disable Python for the *med file* library because this feature would require *SWIG* version 2.0 and it is not compatible with the current versions of *SWIG* (4.x). Because *SWIG* has no full backward compatibility, the only option is to disable Python integrity for the *med file* library. Otherwise, Python integrity could be implemented by installing Python developer kits ( `sudo apt install python3-dev`  and  `sudo apt install python3.7-dev` ) and using the configuration `./configure --with-hdf5=/home/USERNAME/Telemac/hdf5 PYTHON_LDFLAGS='-lpython3.7m' --with-swig=yes`. To find out what version of Python is installed, type `python -V`.
+```
+
+
+The installation of the *med file* library on Linux is also documented in the [opentelemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_med).
+
+```{admonition} Permission denied?
+:class: attention, dropdown
+If you consistently get ***permission denied*** messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the `telemac` directory with the following command: `sudo -R 777  /home/USERNAME/telemac` (replace `USERNAME` with the user for whom TELEMAC is installed).
+```
+
+Finally, **remove the `temp` folder** to avoid storing garbage:
+
+```
+cd ~/telemac/optionals
+sudo rm -r temp
+```
+`````
 
 (mpi)=
 ### Parallelism: Install MPI
@@ -228,6 +312,7 @@ The Terminal should prompt option flags for processing a *gfortran* file. The in
 
 ```{admonition}  How to use MPICH in lieu of Open MPI
 :class: note
+
 This tutorial uses the configuration file `systel.edfHy.cfg`, which includes parallelism compiling options that build on *Open MPI*. Other configuration files (e.g., `systel.cis-ubuntu.cfg`) use *MPICH* instead of *Open MPI*. To use those configuration files, install *MPICH* with `sudo apt install mpich`.
 ```
 
@@ -316,7 +401,7 @@ make install
 
 To verify the successful installation, make sure that the file `~/telemac/optionals/metis/build/lib/libmetis.a` exists (i.e., `<install_path>/lib/libmetis.a` ).
 
-````{admonition} Debian alternative: apt-install libmetis-dev
+````{admonition} Debian alternative: apt install libmetis-dev
 :class: tip, dropdown
 
 Alternatively, on Debian-based systems, install `libmetis-dev` with: 
@@ -328,86 +413,6 @@ sudo apt install libmetis-dev
 This package currently provides Metis v5.1.0, but verify the version on [https://packages.debian.org](https://packages.debian.org/sid/libmetis-dev) to be sure having a workable version of Metis available. However, we did not test the integration of Metis in the Telemac installation.
 ````
 
-
-(med-hdf)=
-### Hdf5 and MED Format Handlers
-
-***Estimated duration: 15-25 minutes (building libraries takes time).***
-
-**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/).
-
-```{margin}
-The [Telemac installation wiki](http://wiki.opentelemac.org/doku.php?id=installation_on_linux) suggests using version `1.10.7`, which, however, will cause an error when compiling the medfile library.
-```
-
-We will install here version `1.10.3`. Do not try to use any other *hdf5* version because those will not work with the *med file* library (next step). The following code block downloads and unzips the *hdf-5-1.10.3* archive in the above-created (metis) `temp/` folder (run in Terminal as normal user - not as root):
-
-```
-cd ~/telemac/optionals/temp
-wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.3/src/hdf5-1.10.3.tar.gz
-gunzip hdf5-1.10.3.tar.gz
-tar -xvf hdf5-1.10.3.tar
-cd hdf5-1.10.3
-```
-
-Configure and compile *hdf5* (enter every command one-by-one):
-
-```
-./configure --prefix=/home/USERNAME/telemac/optionals/hdf5 --enable-parallel
-make
-make install
-```
-
-The flag `--prefix=/home/USERNAME/telemac/optionals/hdf5` determines the installation directory for the *hdf5* library, which we will need in the next step for installing the *med file* library. The absolute path `/home/USERNAME/` is required because `--prefix` does not accept a relative path.
-The installation of *hdf5* on Linux is also documented in the [Telemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_hdf5).
-
-***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and we need to use the file ([med-4.0.0.tar.gz](http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with the *hdf5* file library. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
-
-```
-sudo apt-cache search zlib | grep -i zlib
-sudo apt install zlib1g zlib1g-dev
-```
-
-The following command block, switches to the above-created `temp` folder, downloads, and unzips the *med-4.0.0* archive (run in Terminal as ***normal user*** - ***not as root***):
-
-
-```
-cd ~/telemac/optionals/temp
-wget http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz
-gunzip med-4.0.0.tar.gz
-tar -xvf med-4.0.0.tar
-cd med-4.0.0
-```
-
-To compile the *med file* library type:
-
-```
-./configure --prefix=/home/USERNAME/telemac/optionals/med-4.0.0 --with-hdf5=/home/USERNAME/telemac/optionals/hdf5 --disable-python
-make
-make install
-```
-
-The flag `--prefix` sets the installation directory and `--width-hdf5` tells the med library where it can find the *hdf5* library. Thus, adapt `/home/USERNAME/telemac/optionals/hdf5` to your local `<install_path>` of the *hdf5* library. Both flags do not accept relative paths (`~/telemac/...`), and therefore, we need to use the absolute paths (`home/USERNAME/telemac/...`) here.
-
-```{admonition} Why *--disable-python*?
-:class: note, dropdown
-We need to disable Python for the *med file* library because this feature would require *SWIG* version 2.0 and it is not compatible with the current versions of *SWIG* (4.x). Because *SWIG* has no full backward compatibility, the only option is to disable Python integrity for the *med file* library. Otherwise, Python integrity could be implemented by installing Python developer kits ( `sudo apt install python3-dev`  and  `sudo apt install python3.7-dev` ) and using the configuration `./configure --with-hdf5=/home/USERNAME/Telemac/hdf5 PYTHON_LDFLAGS='-lpython3.7m' --with-swig=yes`. To find out what version of Python is installed, type `python -V`.
-```
-
-
-The installation of the *med file* library on Linux is also documented in the [opentelemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_med).
-
-```{admonition} Permission denied?
-:class: attention, dropdown
-If you consistently get ***permission denied*** messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the `telemac` directory with the following command: `sudo -R 777  /home/USERNAME/telemac` (replace `USERNAME` with the user for whom TELEMAC is installed).
-```
-
-Finally, **remove the `temp` folder** to avoid storing garbage:
-
-```
-cd ~/telemac/optionals
-sudo rm -r temp
-```
 
 ### AED2
 
@@ -480,7 +485,6 @@ libs_all:   /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so /home/telemac/metis/
 
 The configuration file contains other configurations such as a *scalar* or a *debug* configuration for compiling TELEMAC. Here, we only use the *Debian gfortran open MPI* section that has the configuration name `[debgfopenmpi]`. To verify if this section if correctly defined, check where the following libraries live on your system (use Terminal and `cd` + `ls` commands or Debian's *File* browser):
 
-* *Metis* is typically located in `~/telemac/optionals/metis/build` (if you used this directory for `<install_path>`), where `libmetis.a` typically lives in `~/telemac/optionals/metis/build/lib/libmetis.a`
 * *Open MPI*'s *include* folder is typically located in `/usr/lib/x86_64-linux-gnu/openmpi/include`
 * *Open MPI* library typically lives in `/usr/lib/x86_64-linux-gnu/openmpi/libmpi.so`<br>The number **40.20.3** may need to be added after **libmpi.so** when your system is based on Debian 10.
 * *mpiexec* is typically installed in `/usr/bin/mpiexec`
@@ -502,19 +506,18 @@ Make the following adaptations in *Debian gfortran open MPI* section to enable p
 * Find `libs_all` to add and adapt the following items:
     + *metis* (all *metis*-related directories to `/home/USERNAME/telemac/optionals/metis/build/lib/libmetis.a`).
     + *openmpi* (correct the library file to `/usr/lib/x86_64-linux-gnu/openmpi/libmpi.so` or wherever `libmpi.so.xx.xx.x` lives on your machine).
-    + *med* including *hdf5* (`~/telemac/optionals/`).
     + *aed2* (`~/telemac/optionals/aed2/libaed2.a`).
 
-`libs_all:    /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so /home/USERNAME/telemac/optionals/metis/build/lib/libmetis.a /home/USERNAME/telemac/optionals/aed2/libaed2.a /home/USERNAME/telemac/optionals/med-4.0.0/lib/libmed.so /home/USERNAME/telemac/optionals/hdf5/lib/libhdf5.so`
+`libs_all:    /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so /home/USERNAME/telemac/optionals/metis/build/lib/libmetis.a /home/USERNAME/telemac/optionals/aed2/libaed2.a`
 
-* Add the `incs_all` variable to point include *openmpi*, *med*, and *aed2*:
+* Add the `incs_all` variable to point include *openmpi* and *aed2*:
 
-`incs_all: -I /usr/lib/x86_64-linux-gnu/openmpi/include -I /home/USERNAME/telemac/optionals/aed2 -I /home/USERNAME/telemac/optionals/aed2/include  -I /home/USERNAME/telemac/optionals/med-4.0.0/include`
+`incs_all: -I /usr/lib/x86_64-linux-gnu/openmpi/include -I /home/USERNAME/telemac/optionals/aed2 -I /home/USERNAME/telemac/optionals/aed2/include`
 
 * Search for *openmpi* in `libs_all` and
-* Search for `cmd_obj:` definitions, add `-cpp` in front of the `-c` flags, `-DHAVE_AED2`, and `-DHAVE_MED`. For example:
+* Search for `cmd_obj:` definitions, add `-cpp` in front of the `-c` flags, and `-DHAVE_AED2`. For example:
 
-`cmd_obj:    /usr/bin/mpif90 -cpp -c -O3 -DHAVE_AED2 -DHAVE_MPI -DHAVE_MED -fconvert=big-endian -frecord-marker=4 <mods> <incs> <f95name>`
+`cmd_obj:    /usr/bin/mpif90 -cpp -c -O3 -DHAVE_AED2 -DHAVE_MPI -fconvert=big-endian -frecord-marker=4 <mods> <incs> <f95name>`
 
 An additional keyword in the configurations is `options:` that accepts multiple keywords including `mpi`, `api` (*TelApy* - *TELEMAC's Python API*), `hpc`, and `dyn` or `static`. The provided `cfg` file primarily uses the `mpi` keyword. To use other installation options (e.g., HPC or dynamic), read the instructions for HPC installation on [opentelemac.org](http://wiki.opentelemac.org/doku.php?id=installation_on_linux) and have a look at the most advanced default config file from EDF (`~/telemac/configs/systel.edf.cfg`).
 ```
@@ -537,7 +540,7 @@ To facilitate setting up the `pysource.gfortranHPC.sh` file, our template is des
 ### TELEMAC settings -----------------------------------------------------------
 ###
 # Path to telemac root dir
-export HOMETEL=/home/USER-NAME/telemac/v8p4r0
+export HOMETEL=/home/USER-NAME/telemac/v8p5r0
 # Adding python scripts to PATH
 export PATH=$HOMETEL/scripts/python3:.:$PATH
 # Configuration file
@@ -570,14 +573,6 @@ export LD_LIBRARY_PATH=$PATH/lib:$LD_LIBRARY_PATH
 ###
 ### EXTERNAL LIBRARIES -----------------------------------------------------------
 ###
-### HDF5 -----------------------------------------------------------
-export HDF5HOME=$SYSTEL/hdf5
-export LD_LIBRARY_PATH=$HDF5HOME/lib:$LD_LIBRARY_PATH
-export LD_RUN_PATH=$HDF5HOME/lib:$MEDHOME/lib:$LD_RUN_PATH
-### MED  -----------------------------------------------------------
-export MEDHOME=$SYSTEL/med-4.0.0
-export LD_LIBRARY_PATH=$MEDHOME/lib:$LD_LIBRARY_PATH
-export PATH=$MEDHOME/bin:$PATH
 ### MUMPS -------------------------------------------------------------
 #export MUMPSHOME=$SYSTEL/LIBRARY/mumps/gnu
 #export SCALAPACKHOME=$SYSTEL/LIBRARY/scalapack/gnu
@@ -587,7 +582,7 @@ export METISHOME=$SYSTEL/metis/build/
 export LD_LIBRARY_PATH=$METISHOME/lib:$LD_LIBRARY_PATH
 ```
 
-**Make sure do adapt the variable `HOMETEL=/home/USER-NAME/telemac/v8p4r0`.**
+**Make sure do adapt the variable `HOMETEL=/home/USER-NAME/telemac/v8p5r0`.**
 
 ```{admonition} AED2, MUMPS, and GOTM deactivated
 :class: note
@@ -636,14 +631,7 @@ export PATH=lib/x86_64-linux-gnu/openmpi:$PATH
 export LD_LIBRARY_PATH=$PATH/lib:$LD_LIBRARY_PATH
 ###
 ### EXTERNAL LIBRARIES ---------------------------------------------
-### HDF5 -----------------------------------------------------------
-export HDF5HOME=$SYSTEL/hdf5
-export LD_LIBRARY_PATH=$HDF5HOME/lib:$LD_LIBRARY_PATH
-export LD_RUN_PATH=$HDF5HOME/lib:$MEDHOME/lib:$LD_RUN_PATH
-### MED  -----------------------------------------------------------
-export MEDHOME=$SYSTEL/med-4.0.0
-export LD_LIBRARY_PATH=$MEDHOME/lib:$LD_LIBRARY_PATH
-export PATH=$MEDHOME/bin:$PATH
+###
 ### METIS ----------------------------------------------------------
 export METISHOME=$SYSTEL/metis/build/
 export LD_LIBRARY_PATH=$METISHOME/lib:$LD_LIBRARY_PATH
@@ -795,7 +783,24 @@ More software for dealing with Telemac pre- and post-processing is available in 
 
 ***Estimated duration: 5-10 minutes (depends on connection speed).***
 
-QGIS is a powerful tool for viewing, creating, and editing geospatial data that can be useful in pre- and post-processing. Detailed installation guidelines are provided in the {ref}`qgis-install` installation instructions and the {ref}`QGIS tutorial <qgis-tutorial>`in this eBook. For working with TELEMAC, consider installing the following **QGIS Plugins** (*Plugins* > *Manage and Install Plugins...*):
+QGIS is a powerful tool for viewing, creating, and editing geospatial data, which is useful for pre and post-processing. Detailed installation guidelines are provided in the {ref}`qgis-install` installation instructions and the {ref}`QGIS tutorial <qgis-tutorial>` in this eBook. The **Q4TS** plugin enables pre and post-processing of files for running simulations with TELEMAC, and it can also be linked with {ref}`SALOME <salome-install>` for running TELEMAC directly with a GUI.
+
+To get the Q4TS, follow the developer's instructions at [https://gitlab.pam-retd.fr/otm/q4ts](https://gitlab.pam-retd.fr/otm/q4ts):
+
+* In QGIS, open the **Plugin Manager** (*Plugins* > *Manage and Install Plugins...*).
+* Go to **Settings** > **Add...** and enter `https://otm.gitlab-pages.pam-retd.fr/q4ts/plugins.xml` in the URL field. Enter a **Name** (e.g., *q4ts*), and leave all other fields as they are. Click **OK**.
+* Click on **Reload all Repositories**.
+* Go to the **All** tab, enter `Q4TS` and install the plugin.
+
+```{admonition} Plugin not found?
+:class: warning, dropdown
+
+The plugin requires at least QGIS version 3.26. If your QGIS version is older, the Plugin Manager cannot find the Q4TS plugin. The robust workaround is to upgrade QGIS. A ramshackle, that is, not-recommended workaround is to download the plugin as a zip file from [https://otm.gitlab-pages.pam-retd.fr/q4ts/q4ts.0.7.0.zip](https://otm.gitlab-pages.pam-retd.fr/q4ts/q4ts.0.7.0.zip), and zip-install it in the Plugin Manager (**Install from ZIP**).
+```
+
+After the installation, Q4TS enables MED to SLF conversion (and vice versa), mesh refinements, boundary creation, friction table editing, and many more options (in the QGIS Toolbox).
+
+Older, partially non-working TELEMAC plugins for QGIS are: 
 
 * [Telemac Tools](https://plugins.qgis.org/plugins/telemac_tools/) is an experimental mesh generator plugin for `*.slf` files developed by *Artelia*. Make sure to check the **experimental plugins** box in the **Settings** of QGIS' plugins window.
 * {ref}`BASEmesh <get-basemesh>` enables to create a {term}`SMS 2dm` file that can be converted to a selafin geometry for TELEMAC (read more in the {ref}`QGIS pre-processing tutorial for TELEMAC <tm-qgis-prepro>`).
