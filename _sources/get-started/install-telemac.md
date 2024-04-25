@@ -801,7 +801,7 @@ The plugin requires at least QGIS version 3.26. If your QGIS version is older, t
 After the installation, Q4TS enables MED to SLF conversion (and vice versa), mesh refinements, boundary creation, friction table editing, and many more options (in the QGIS Toolbox).
 
 ```{admonition} Other (stale) plugins
-:class: note, dropown
+:class: note, dropdown
 
 Older, partially non-working TELEMAC plugins for QGIS are: 
 
