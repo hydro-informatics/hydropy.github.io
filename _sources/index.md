@@ -1,11 +1,6 @@
 # Welcome to Hydro-Informatics.com
 
-**<span style="color: #707070 "> The educational platform and eBook for data insights with Python programming, numerical modeling, and geospatial analysis in water resources engineering & research. </span>**
-
-```{image} img/icons/banner-logo.jpg
-:alt: hydro-informatics on github by sebastian schwindt beatriz negreiros federica scolari ricardo barros
-```
-*Image created with [OpenAI](https://openai.com/)'s [DALL·E3](https://openai.com/dall-e-3).*
+**<span style="color: #707070 "> The educational platform and eBook for data insights with Python programming, numerical modeling, software guidance, and geospatial analysis in water resources engineering & research. </span>**
 
 ## Preface
 

@@ -148,6 +148,11 @@ Echo sounder
 
   *French: Échosondeur / Sondeur acoustique <br>German: Echolot / Fächerecholot*
 
+Ethohydraulics
+  Ethohydraulics is the interdisciplinary study of aquatic animal behavior in response to hydraulic environments, particularly focusing on how organisms interact with water flow patterns in their natural habitats. The term is a blend of "ethology" and "hydraulics", coined to describe a scientific field merging behavioral ecology with fluid mechanics. Thus, ethohydraulics investigates how fish species adapt their swimming behavior to different water currents in rivers and streams {cite:p}`lehmann2022ethohydraulics`.
+
+  *French: ethohydraulique (f) <br>German: Ethohydraulik (w)*
+
 Exner equation
   The {cite:t}`exner_uber_1925` equation yields sediment mass conservation in a hydro-morphodynamic model (see also the {ref}`TELEMAC-Gaia tutorial <tm-gaia>`) and expresses that the time-dependent {term}`Topographic change` rate $\frac{\partial \eta}{\partial t}$ equals the unit sediment ({term}`bedload <Bedload>`) fluxes $q_b$ over the boundaries {cite:p}`hirano1971,blom2003`:
 
@@ -350,6 +355,12 @@ Reynolds number
   Where $\nu$ denotes the kinematic viscosity (10$^{-6}$ m$^{2}$ s$^{-1}$ for water at 20$^{\circ}$C). In gravel-cobble bed rivers, inertia forces are typically dominant compared with viscous forces; therefore $Re$ is generally larger than 2000 and the flow is turbulent {cite:p}`chow59,wohl_mountain_2000`.
 
   *French: Nombre de Reynolds <br>German: Reynolds-Zahl*
+
+
+Rheotaxis
+  Rheotaxis is a behavior exhibited by aquatic organisms in response to the flow direction of water, and aids fish in compensating for drift losses {cite:p}`elder2015influence`. It is characterized by two types: positive and negative rheotaxis. Positive rheotaxis involves orientation against the flow, commonly observed in salmonids. Negative rheotaxis involves movement with the flow, typical in eels or certain species of freshwater catfish, but this behavior is less common than positive rheotaxis.
+
+  *French: Rhéotaxie (f) <br>German: Rheotaxis (w)*
 
 Rich Text Format
   The proprietary Rich Text Format (RTF) wraps raw text in functional blocks that enable graphically flavored *Word*-like processors to identify document properties such as font size and type. Common RTFs are, for instance, *docx* or *odf* and enable exchanging text files between different *Word*-like processors on different operating systems.
