@@ -592,14 +592,16 @@ document.write(`
 <p>This tutorial guides through the installation of <a class="reference external" href="http://www.opentelemac.org/">open TELEMAC-MASCARET</a> on <a class="reference external" href="https://www.debian.org/">Debian Linux</a> based platforms (i.e., also works with Ubuntu and its derivatives, such as Mint or Lubuntu). <strong>Account for approximately 1-2 hours for installing TELEMAC and make sure to have a stable internet connection (&gt;1.4 GB file download).</strong></p>
 <hr class="docutils" />
 <p>This section only guides through the <strong>installation</strong> of TELEMAC. A tutorial for running hydro(-morpho)dynamic models with TELEMAC is currently under construction for this eBook.</p>
-<hr class="docutils" />
-<p>Before you start, note:</p>
+<div class="important admonition">
+<p class="admonition-title">Before you start</p>
 <ul class="simple">
+<li><p>This tutorial guides through the local installation of TELEMAC in a user folder on Debian Linux, which is <strong>OK for practicing, but not good for setting up a computing server</strong>. For installing TELEMAC on a server, or globally on a computer, check with your Admin: <strong>TELEMAC should be installed in the <code class="docutils literal notranslate"><span class="pre">ROOT/opt/</span></code> directory.</strong></p></li>
 <li><p>Installing TELEMAC on a <a class="reference internal" href="vm.html#chpt-vm-linux"><span class="std std-ref">Virtual Machine (VM)</span></a> is useful for getting started with TELEMAC and its sample cases, but not recommended for running a real-world numerical model (limited performance of VMs).</p></li>
 <li><p>Familiarize with the <a class="reference internal" href="vm.html#linux-terminal"><span class="std std-ref">Linux Terminal</span></a> to understand the underpinnings for compiling TELEMAC.</p></li>
 <li><p>This tutorial refers to the software package <em>open TELEMAC-MASCARET</em> as TELEMAC because <em>MASCARET</em> is a one-dimensional (1d) model and the numerical simulation schemes in this eBook focus on two-dimensional (2d) and three-dimensional (3d) modeling.</p></li>
-<li><p>A couple of installation options are available:</p></li>
 </ul>
+</div>
+<p>A couple of installation options are available:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">

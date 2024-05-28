@@ -12,14 +12,20 @@ This tutorial guides through the installation of [open TELEMAC-MASCARET](http://
 
 This section only guides through the **installation** of TELEMAC. A tutorial for running hydro(-morpho)dynamic models with TELEMAC is currently under construction for this eBook.
 
-***
+```{admonition} Before you start
+:class: important
 
-Before you start, note:
-
+* This tutorial guides through the local installation of TELEMAC in a user folder on Debian Linux, which is **OK for practicing, but not good for setting up a computing server**. For installing TELEMAC on a server, or globally on a computer, check with your Admin: **TELEMAC should be installed in the `ROOT/opt/` directory.**
 * Installing TELEMAC on a {ref}`Virtual Machine (VM) <chpt-vm-linux>` is useful for getting started with TELEMAC and its sample cases, but not recommended for running a real-world numerical model (limited performance of VMs).
 * Familiarize with the {ref}`Linux Terminal <linux-terminal>` to understand the underpinnings for compiling TELEMAC.
 * This tutorial refers to the software package *open TELEMAC-MASCARET* as TELEMAC because *MASCARET* is a one-dimensional (1d) model and the numerical simulation schemes in this eBook focus on two-dimensional (2d) and three-dimensional (3d) modeling.
-* A couple of installation options are available:
+
+```
+
+
+
+
+A couple of installation options are available:
 
 `````{tab-set}
 ````{tab-item} Custom Installation (Recommended)
