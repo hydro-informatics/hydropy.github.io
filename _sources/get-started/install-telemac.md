@@ -23,8 +23,6 @@ This section only guides through the **installation** of TELEMAC. A tutorial for
 ```
 
 
-
-
 A couple of installation options are available:
 
 `````{tab-set}
