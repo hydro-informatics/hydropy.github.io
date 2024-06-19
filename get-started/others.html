@@ -547,8 +547,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notepadplusplus-text-editor">NotepadPlusPlus (Text Editor)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#office-applications">Office Applications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#only-office">Only Office</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libre-office">Libre Office</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#only-office">Only Office</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnu-octave-matlab-alternative">GNU Octave (Matlab® alternative)</a></li>
@@ -567,11 +567,15 @@ document.write(`
 <h1>Other Software Resources<a class="headerlink" href="#other-software-resources" title="Link to this heading">#</a></h1>
 <section id="notepadplusplus-text-editor">
 <span id="npp"></span><h2>NotepadPlusPlus (Text Editor)<a class="headerlink" href="#notepadplusplus-text-editor" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://notepad-plus-plus.org/"><em>Notepad++</em></a> is an all-round text editor for basic coding (<em>R</em>, <em>Python</em>, <em>Java</em>, <em>C</em>, <em>Perl</em>, …), markdown/html editing and many many (not a typo) more. Linux alternatives for <em>Notepad++</em> are, for example, <a class="reference external" href="https://www.sublimetext.com/">Sublime text</a> (proprietary), <a class="reference external" href="https://kate-editor.org/">Kate</a> (cross-platform), or <a class="reference external" href="https://help.gnome.org/users/gedit/stable/">Gedit</a> (simplistic).</p>
+<p><a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> is an all-round text editor for basic coding (<em>R</em>, <em>Python</em>, <em>Java</em>, <em>C</em>, <em>Perl</em>, …), markdown/html editing and many many (not a typo) more. Linux alternatives for Notepad++ are, for example, <a class="reference external" href="https://www.sublimetext.com/">Sublime text</a> (proprietary), <a class="reference external" href="https://kate-editor.org/">Kate</a> (cross-platform), or <a class="reference external" href="https://help.gnome.org/users/gedit/stable/">Gedit</a> (simplistic).</p>
 </section>
 <section id="office-applications">
 <span id="lo"></span><h2>Office Applications<a class="headerlink" href="#office-applications" title="Link to this heading">#</a></h2>
-<p>Office applications greatly simplify everyday office life. However, the most popular application from Microsoft has a high price. Here are some free-to-use alternatives (for non-commercial use). Got no specific idea which software you want to use for non-commercial purposes? <strong>Try Only Office!</strong></p>
+<p>Office applications greatly simplify everyday office life. However, the most popular application from Microsoft has a high price. Here are some free-to-use alternatives.</p>
+<section id="libre-office">
+<h3>Libre Office<a class="headerlink" href="#libre-office" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.libreoffice.org/">LibreOffice</a> is completely free to use (see their <a class="reference external" href="https://www.libreoffice.org/about-us/licenses">license terms</a>) and works on most popular platforms. Recent versions offer greatly improved user interfaces, with the ability to organize menus into tabs, similar to other office suites.</p>
+</section>
 <section id="only-office">
 <h3>Only Office<a class="headerlink" href="#only-office" title="Link to this heading">#</a></h3>
 <p>Only Office resembles MS Office a lot, it is very intuitive and enables cloud-based collaboration. It is free to use for non-commercial purposes and comes at an OK price for commercial purposes. On any Ubuntu Linux-based platform (e.g., Ubuntu, Mint, or Lubuntu), it is available through the software manager (or snap, flathub, or whatever you use…). Mint users find more information at <a class="reference external" href="https://community.linuxmint.com/software/view/org.onlyoffice.desktopeditors">https://community.linuxmint.com</a>.</p>
@@ -581,17 +585,13 @@ document.write(`
 <p>Make sure to follow the non-commercial desktop-use installation instructions on <a class="reference external" href="https://www.onlyoffice.com/desktop.aspx">https://www.onlyoffice.com</a>. Other versions are not for free.</p>
 </div>
 <p>Many plugins for enriching Only Office are available on GitHub. To install them, download/clone the plugins (as zip file) from GitHub. Make sure to unzip the repository and package the following files and folders into one <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file: <code class="docutils literal notranslate"><span class="pre">config.json</span></code>, <code class="docutils literal notranslate"><span class="pre">scripts/</span></code>, <code class="docutils literal notranslate"><span class="pre">pluginCode.js</span></code>, <code class="docutils literal notranslate"><span class="pre">licenses/</span></code>, <code class="docutils literal notranslate"><span class="pre">resources/</span></code>, <code class="docutils literal notranslate"><span class="pre">translations/</span></code>, <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>. Some of these files or directories might not be available in all plugin repos, which you may want to omit in these cases. Also, the <code class="docutils literal notranslate"><span class="pre">pluginCode.js</span></code> file might be hidden in the <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> folder and if this is the case, copy the <code class="docutils literal notranslate"><span class="pre">.js</span></code> file (e.g., <code class="docutils literal notranslate"><span class="pre">scripts/pluginName.js</span></code>) into the head folder and rename it to <code class="docutils literal notranslate"><span class="pre">pluginCode.js</span></code>. Then rename the zip archive to <code class="docutils literal notranslate"><span class="pre">name.plugin</span></code> (replace the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the plugin), open Only Office, go to the <strong>Plugins</strong> tab, <strong>Settings</strong>, and use the <strong>Add</strong> button to locate and add the plugin.</p>
-<p>Here is a list of <a class="reference external" href="http://hydro-informatics.com">hydro-informatics.com</a>’s favorite plugins:</p>
+<p>Here is a list of useful plugins:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.onlyoffice.com/en/app-directory/word-counter">Word counter</a> helps to count the number of characters, words, spaces, etc. Get it at <a class="reference external" href="https://github.com/ONLYOFFICE/plugin-wordscounter">GitHub.com/ONLYOFFICE/plugin-wordscounter</a>. The plugin is now also part of the standard installation</p></li>
 <li><p><a class="reference external" href="https://www.onlyoffice.com/app-directory/languagetool">LanguageTool</a> checks your writing in many languages, including spell and grammar checks. The plugin is based on the <a class="reference external" href="https://languagetool.org/">LanguageTool</a> spell checker. Get it at <a class="reference external" href="https://github.com/ONLYOFFICE/plugin-languagetool">GitHub.com/ONLYOFFICE/plugin-languagetool</a>.</p></li>
 <li><p><a class="reference external" href="https://www.onlyoffice.com/blog/2022/03/onlyoffice-integrates-draw-io/">Draw.io</a> aids in creating professional diagrams and graphs for any Only Office document. Get it at <a class="reference external" href="https://github.com/ONLYOFFICE/plugin-drawio">GitHub.com/ONLYOFFICE/plugin-drawio</a>.</p></li>
 <li><p><a class="reference external" href="https://github.com/ONLYOFFICE/sdkjs-plugins">SDKJS</a> enables embedding (YouTube) videos, photo editing, graph generation with <a class="reference external" href="http://Draw.io">Draw.io</a>, organization of lessons, and tweaks into a couple of translators (<a class="reference external" href="https://www.onlyoffice.com/blog/2022/08/best-onlyoffice-plugins-for-online-educators/">read more</a>). Note: this plugin requires some more tweaking and you may prefer to install singular sdkjs plugins by searching them with your favorite search engine.</p></li>
 </ul>
-</section>
-<section id="libre-office">
-<h3>Libre Office<a class="headerlink" href="#libre-office" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://www.libreoffice.org/">LibreOffice</a> is completely free to use (see their <a class="reference external" href="https://www.libreoffice.org/about-us/licenses">license terms</a>) and works on most popular platforms. However, it is less intuitive to use than, for instance, Only Office.</p>
 </section>
 </section>
 <section id="gnu-octave-matlab-alternative">
@@ -603,14 +603,14 @@ If error messages occur by running a <code class="docutils literal notranslate">
 <span class="n">pkg</span> <span class="n">unload</span> <span class="n">io</span>
 </pre></div>
 </div>
-<p>All stable <em>GNU Octave</em> packages can be found on their <a class="reference external" href="https://octave.sourceforge.io/packages.php">website</a>. To install one of these packages, open <em>GNU Octave</em> and type in the command window:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="o">-</span><span class="n">forge</span> <span class="n">new_package</span>  <span class="c1"># installs the package</span>
-<span class="n">pkg</span> <span class="n">load</span> <span class="n">new_package</span>  <span class="c1"># loads the package in the active session</span>
+<p>All stable <em>GNU Octave</em> packages can be found at <a class="reference external" href="https://packages.octave.org">https://packages.octave.org</a>. To install one of these packages, open <em>GNU Octave</em> and type in the command window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="s2">&quot;&lt;package-link&gt;&quot;</span>  <span class="c1"># installs the package</span>
+<span class="n">pkg</span> <span class="n">load</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>  <span class="c1"># loads the package in the active session</span>
 </pre></div>
 </div>
-<p>Afterward, the new package can be loaded anytime by just typing in <code class="docutils literal notranslate"><span class="pre">pkg</span> <span class="pre">load</span> <span class="pre">new_package</span></code>. For example, the following code snippet installs and loads the <code class="docutils literal notranslate"><span class="pre">video</span></code> package:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="o">-</span><span class="n">forge</span> <span class="n">video</span>
-<span class="n">pkg</span> <span class="n">load</span> <span class="n">video</span>
+<p>Afterward, the new package can be loaded anytime by just typing in <code class="docutils literal notranslate"><span class="pre">pkg</span> <span class="pre">load</span> <span class="pre">&lt;package-name&gt;</span></code>. For example, the following code snippet installs and loads the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="s2">&quot;https://github.com/gnu-octave/statistics/archive/refs/tags/release-1.6.6.tar.gz&quot;</span>
+<span class="n">pkg</span> <span class="n">load</span> <span class="n">statistics</span>
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -688,8 +688,8 @@ If error messages occur by running a <code class="docutils literal notranslate">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notepadplusplus-text-editor">NotepadPlusPlus (Text Editor)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#office-applications">Office Applications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#only-office">Only Office</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libre-office">Libre Office</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#only-office">Only Office</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnu-octave-matlab-alternative">GNU Octave (Matlab® alternative)</a></li>

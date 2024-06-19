@@ -2,12 +2,16 @@
 
 (npp)=
 ## NotepadPlusPlus (Text Editor)
-[*Notepad++*](https://notepad-plus-plus.org/) is an all-round text editor for basic coding (*R*, *Python*, *Java*, *C*, *Perl*, ...), markdown/html editing and many many (not a typo) more. Linux alternatives for *Notepad++* are, for example, [Sublime text](https://www.sublimetext.com/) (proprietary), [Kate](https://kate-editor.org/) (cross-platform), or [Gedit](https://help.gnome.org/users/gedit/stable/) (simplistic).
+[Notepad++](https://notepad-plus-plus.org/) is an all-round text editor for basic coding (*R*, *Python*, *Java*, *C*, *Perl*, ...), markdown/html editing and many many (not a typo) more. Linux alternatives for Notepad++ are, for example, [Sublime text](https://www.sublimetext.com/) (proprietary), [Kate](https://kate-editor.org/) (cross-platform), or [Gedit](https://help.gnome.org/users/gedit/stable/) (simplistic).
 
 (lo)=
 ## Office Applications
 
-Office applications greatly simplify everyday office life. However, the most popular application from Microsoft has a high price. Here are some free-to-use alternatives (for non-commercial use). Got no specific idea which software you want to use for non-commercial purposes? **Try Only Office!**
+Office applications greatly simplify everyday office life. However, the most popular application from Microsoft has a high price. Here are some free-to-use alternatives.
+
+### Libre Office
+
+[LibreOffice][libreoffice] is completely free to use (see their [license terms](https://www.libreoffice.org/about-us/licenses)) and works on most popular platforms. Recent versions offer greatly improved user interfaces, with the ability to organize menus into tabs, similar to other office suites.
 
 ### Only Office
 
@@ -24,17 +28,13 @@ Make sure to follow the non-commercial desktop-use installation instructions on 
 Many plugins for enriching Only Office are available on GitHub. To install them, download/clone the plugins (as zip file) from GitHub. Make sure to unzip the repository and package the following files and folders into one `.zip` file: `config.json`, `scripts/`, `pluginCode.js`, `licenses/`, `resources/`, `translations/`, `LICENSE`. Some of these files or directories might not be available in all plugin repos, which you may want to omit in these cases. Also, the `pluginCode.js` file might be hidden in the `scripts/` folder and if this is the case, copy the `.js` file (e.g., `scripts/pluginName.js`) into the head folder and rename it to `pluginCode.js`. Then rename the zip archive to `name.plugin` (replace the `name` of the plugin), open Only Office, go to the **Plugins** tab, **Settings**, and use the **Add** button to locate and add the plugin.
 
 
-Here is a list of hydro-informatics.com's favorite plugins:
+Here is a list of useful plugins:
 
 * [Word counter](https://www.onlyoffice.com/en/app-directory/word-counter) helps to count the number of characters, words, spaces, etc. Get it at [GitHub.com/ONLYOFFICE/plugin-wordscounter](https://github.com/ONLYOFFICE/plugin-wordscounter). The plugin is now also part of the standard installation
 * [LanguageTool](https://www.onlyoffice.com/app-directory/languagetool) checks your writing in many languages, including spell and grammar checks. The plugin is based on the [LanguageTool](https://languagetool.org/) spell checker. Get it at [GitHub.com/ONLYOFFICE/plugin-languagetool](https://github.com/ONLYOFFICE/plugin-languagetool).
 * [Draw.io](https://www.onlyoffice.com/blog/2022/03/onlyoffice-integrates-draw-io/) aids in creating professional diagrams and graphs for any Only Office document. Get it at [GitHub.com/ONLYOFFICE/plugin-drawio](https://github.com/ONLYOFFICE/plugin-drawio).
 * [SDKJS](https://github.com/ONLYOFFICE/sdkjs-plugins) enables embedding (YouTube) videos, photo editing, graph generation with Draw.io, organization of lessons, and tweaks into a couple of translators ([read more](https://www.onlyoffice.com/blog/2022/08/best-onlyoffice-plugins-for-online-educators/)). Note: this plugin requires some more tweaking and you may prefer to install singular sdkjs plugins by searching them with your favorite search engine.
 
-
-### Libre Office
-
-[LibreOffice][libreoffice] is completely free to use (see their [license terms](https://www.libreoffice.org/about-us/licenses)) and works on most popular platforms. However, it is less intuitive to use than, for instance, Only Office.
 
 (octave)=
 ## GNU Octave (Matlab&reg; alternative)
@@ -47,18 +47,18 @@ pkg load io
 pkg unload io
 ```
 
-All stable *GNU Octave* packages can be found on their [website](https://octave.sourceforge.io/packages.php). To install one of these packages, open *GNU Octave* and type in the command window:
+All stable *GNU Octave* packages can be found at [https://packages.octave.org](https://packages.octave.org). To install one of these packages, open *GNU Octave* and type in the command window:
 
 ```
-pkg install -forge new_package  # installs the package
-pkg load new_package  # loads the package in the active session
+pkg install "<package-link>"  # installs the package
+pkg load <package-name>  # loads the package in the active session
 ```
 
- Afterward, the new package can be loaded anytime by just typing in `pkg load new_package`. For example, the following code snippet installs and loads the `video` package:
+ Afterward, the new package can be loaded anytime by just typing in `pkg load <package-name>`. For example, the following code snippet installs and loads the `statistics` package:
 
  ```
-pkg install -forge video
-pkg load video
+pkg install "https://github.com/gnu-octave/statistics/archive/refs/tags/release-1.6.6.tar.gz"
+pkg load statistics
 ```
 
 ```{tip}
