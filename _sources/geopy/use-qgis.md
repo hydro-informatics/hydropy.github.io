@@ -140,14 +140,16 @@ The following URL can be used for retrieving online XYZ tiles (more URLs can be 
 
 * - Provider (Layer Name)
   - URL
+* - Bing Satellite Imagery
+  - https://t0.tiles.virtualearth.net/tiles/a{q}.jpeg?g=685&mkt=en-us&n=z
 * - ESRI World Imagery
-  - https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+  - https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
 * - ESRI Street
-  - https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}
+  - https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}
 * - ESRI Topo
-  - https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
+  - https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
 * - Google Satellite
-  - https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}
+  - https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}
 * - Google Street
   - https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}
 * - OpenStreetMap (OSM)
