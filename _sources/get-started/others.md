@@ -35,6 +35,23 @@ Here is a list of useful plugins:
 * [Draw.io](https://www.onlyoffice.com/blog/2022/03/onlyoffice-integrates-draw-io/) aids in creating professional diagrams and graphs for any Only Office document. Get it at [GitHub.com/ONLYOFFICE/plugin-drawio](https://github.com/ONLYOFFICE/plugin-drawio).
 * [SDKJS](https://github.com/ONLYOFFICE/sdkjs-plugins) enables embedding (YouTube) videos, photo editing, graph generation with Draw.io, organization of lessons, and tweaks into a couple of translators ([read more](https://www.onlyoffice.com/blog/2022/08/best-onlyoffice-plugins-for-online-educators/)). Note: this plugin requires some more tweaking and you may prefer to install singular sdkjs plugins by searching them with your favorite search engine.
 
+## PDF Annotations (Editing) with Xournal++
+
+Xournal++ is a free note-taking software for annotating PDFs, sketching, and writing notes. It is a new version of the original Xournal project and has more features and a modern look. It can layer images, use different pens and highlighters, and import and export files in different formats. Its cross-platform compatibility makes it a powerful tool for students, researchers and professionals looking for a flexible digital note-taking solution. For example, Xournal++ facilitates note-taking on PDFs during meetings, lectures or conferences, and makes it easy to draw on pictures and make sketches.
+
+Windows and MacOS users can find installation instructions at [https://xournalpp.github.io](https://xournalpp.github.io/). Debian/Ubuntu/Mint/Lubuntu (and similar) Linux users can install Xournal++ using
+
+```
+sudo apt install xournalpp
+```
+
+```{figure} ../img/software/xournalapp.png
+:alt: xournal++ PDF image annotation editing
+:name: xournalapp
+
+Illustration of the Xournal++ app running on Linux Mint (dark scheme).
+```
+
 
 (octave)=
 ## GNU Octave (Matlab&reg; alternative)
