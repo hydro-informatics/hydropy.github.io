@@ -59,7 +59,7 @@ Braiding
   :alt: river geomorphology anabranch tresse zopfform
   :name: braided-channel
 
-  A braided-channel section of the Devolli River (Albania). Source: Sebastian Schwindt (2021)
+  A braided section of the Devolli River (Albania). Source: Sebastian Schwindt (2021)
   ```
 
   *French: en tresse <br>German: Geflecht- bzw. Zopfausbildung (?)*
