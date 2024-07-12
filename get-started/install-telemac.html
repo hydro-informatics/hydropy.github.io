@@ -558,7 +558,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-requirements-parallelism-and-others">Optional Requirements (Parallelism and Others)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelism-install-mpi">Parallelism: Install MPI</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelism-install-metis">Parallelism: Install Metis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aed2">AED2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdf5-and-med-format-handlers">Hdf5 and MED Format Handlers</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-telemac">Compile TELEMAC</a><ul class="nav section-nav flex-column">
@@ -751,63 +751,7 @@ To enable parallelism, a <em>C</em> compiler is required for recognition of the 
 <li><p>Message Passing Interface (MPI)</p></li>
 <li><p>Metis</p></li>
 </ul>
-<p>In addition, the MED file format for input meshes (e.g., created with <a class="reference internal" href="install-openfoam.html#salome-install"><span class="std std-ref"> SALOME</span></a>) and computation results can be installed with TELEMAC, but versioning is tricky, which is why we do not update the installation instructions for MED anymore in this eBook. The better option is to use the <a class="reference internal" href="#qgis-telemac"><span class="std std-ref">Q4TS QGIS plugin</span></a> for conversion between SLF and MED file formats. Curious users still find the deprecated MED installation instructions in the dropdown box below.</p>
-<div class="warning dropdown admonition" id="med-hdf">
-<p class="admonition-title">Hdf5 and MED Format Handlers (Deprecated)</p>
-<p><em><strong>Estimated duration: 15-25 minutes (building libraries takes time).</strong></em></p>
-<p><strong>HDF5</strong> is a portable file format that incorporates metadata and communicates efficiently with <em>C/C++</em> and <em>Fortran</em> on small laptops as well as massively parallel systems. The <em>hdf5</em> file library is provided by the <a class="reference external" href="https://portal.hdfgroup.org/">HDFgroup.org</a>.</p>
-<p>Note that the <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_on_linux">Telemac installation wiki</a> suggests using version <code class="docutils literal notranslate"><span class="pre">1.10.7</span></code>, which, however, will cause an error when compiling the medfile library.</p>
-<p>We will install here version <code class="docutils literal notranslate"><span class="pre">1.10.3</span></code>. Do not try to use any other <em>hdf5</em> version because those will not work with the <em>med file</em> library (next step). The following code block downloads and unzips the <em>hdf-5-1.10.3</em> archive in the above-created (metis) <code class="docutils literal notranslate"><span class="pre">temp/</span></code> folder (run in Terminal as normal user - not as root):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">temp</span>
-<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="o">.</span><span class="n">hdfgroup</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">HDF5</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.3</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">gunzip</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.3</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.3</span><span class="o">.</span><span class="n">tar</span>
-<span class="n">cd</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.3</span>
-</pre></div>
-</div>
-<p>Configure and compile <em>hdf5</em> (enter every command one-by-one):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">hdf5</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">parallel</span>
-<span class="n">make</span>
-<span class="n">make</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>The flag <code class="docutils literal notranslate"><span class="pre">--prefix=/home/USERNAME/telemac/optionals/hdf5</span></code> determines the installation directory for the <em>hdf5</em> library, which we will need in the next step for installing the <em>med file</em> library. The absolute path <code class="docutils literal notranslate"><span class="pre">/home/USERNAME/</span></code> is required because <code class="docutils literal notranslate"><span class="pre">--prefix</span></code> does not accept a relative path.
-The installation of <em>hdf5</em> on Linux is also documented in the <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_hdf5">Telemac wiki</a>.</p>
-<p><em><strong>MED FILE LIBRARY:</strong></em> The <em>med file</em> library is provided by <a class="reference external" href="https://salome-platform.org/">salome-platform.org</a> and we need to use the file (<a class="reference external" href="http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz">med-4.0.0.tar.gz</a> to ensure compatibility with <em>hdf5</em>. So do not try to use any other <em>med file</em> library version because those will not work properly with the <em>hdf5</em> file library. Moreover, the <em>med file</em> library requires that <em>zlib</em> is installed. To install <em>zlib</em> open Terminal and type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">cache</span> <span class="n">search</span> <span class="n">zlib</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">zlib</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">zlib1g</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span>
-</pre></div>
-</div>
-<p>The following command block, switches to the above-created <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder, downloads, and unzips the <em>med-4.0.0</em> archive (run in Terminal as <em><strong>normal user</strong></em> - <em><strong>not as root</strong></em>):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">temp</span>
-<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">files</span><span class="o">.</span><span class="n">salome</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">Salome</span><span class="o">/</span><span class="n">other</span><span class="o">/</span><span class="n">med</span><span class="o">-</span><span class="mf">4.0.0</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">gunzip</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.0.0</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.0.0</span><span class="o">.</span><span class="n">tar</span>
-<span class="n">cd</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.0.0</span>
-</pre></div>
-</div>
-<p>To compile the <em>med file</em> library type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">med</span><span class="o">-</span><span class="mf">4.0.0</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">hdf5</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">hdf5</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">python</span>
-<span class="n">make</span>
-<span class="n">make</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>The flag <code class="docutils literal notranslate"><span class="pre">--prefix</span></code> sets the installation directory and <code class="docutils literal notranslate"><span class="pre">--width-hdf5</span></code> tells the med library where it can find the <em>hdf5</em> library. Thus, adapt <code class="docutils literal notranslate"><span class="pre">/home/USERNAME/telemac/optionals/hdf5</span></code> to your local <code class="docutils literal notranslate"><span class="pre">&lt;install_path&gt;</span></code> of the <em>hdf5</em> library. Both flags do not accept relative paths (<code class="docutils literal notranslate"><span class="pre">~/telemac/...</span></code>), and therefore, we need to use the absolute paths (<code class="docutils literal notranslate"><span class="pre">home/USERNAME/telemac/...</span></code>) here.</p>
-<div class="note dropdown admonition">
-<p class="admonition-title">Why <em>–disable-python</em>?</p>
-<p>We need to disable Python for the <em>med file</em> library because this feature would require <em>SWIG</em> version 2.0 and it is not compatible with the current versions of <em>SWIG</em> (4.x). Because <em>SWIG</em> has no full backward compatibility, the only option is to disable Python integrity for the <em>med file</em> library. Otherwise, Python integrity could be implemented by installing Python developer kits ( <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-dev</span></code>  and  <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3.7-dev</span></code> ) and using the configuration <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--with-hdf5=/home/USERNAME/Telemac/hdf5</span> <span class="pre">PYTHON_LDFLAGS='-lpython3.7m'</span> <span class="pre">--with-swig=yes</span></code>. To find out what version of Python is installed, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-V</span></code>.</p>
-</div>
-<p>The installation of the <em>med file</em> library on Linux is also documented in the <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_med">opentelemac wiki</a>.</p>
-<div class="attention dropdown admonition">
-<p class="admonition-title">Permission denied?</p>
-<p>If you consistently get <em><strong>permission denied</strong></em> messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the <code class="docutils literal notranslate"><span class="pre">telemac</span></code> directory with the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-R</span> <span class="pre">777</span>&#160; <span class="pre">/home/USERNAME/telemac</span></code> (replace <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> with the user for whom TELEMAC is installed).</p>
-</div>
-<p>Finally, <strong>remove the <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder</strong> to avoid storing garbage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span>
-<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="n">temp</span>
-</pre></div>
-</div>
-</div>
+<p>In addition, the MED file format for input meshes (e.g., created with <a class="reference internal" href="install-openfoam.html#salome-install"><span class="std std-ref"> SALOME</span></a>) and computation results can be installed with TELEMAC, but versioning is tricky. To work with MED files, also check out the <a class="reference internal" href="#qgis-telemac"><span class="std std-ref">Q4TS QGIS plugin</span></a>. Also, AED2</p>
 <section id="parallelism-install-mpi">
 <span id="mpi"></span><h3>Parallelism: Install MPI<a class="headerlink" href="#parallelism-install-mpi" title="Link to this heading">#</a></h3>
 <p><em><strong>Estimated duration: 5 minutes.</strong></em></p>
@@ -899,17 +843,46 @@ VIM</label><div class="sd-tab-content docutils">
 <p>This package currently provides Metis v5.1.0, but verify the version on <a class="reference external" href="https://packages.debian.org/sid/libmetis-dev">https://packages.debian.org</a> to be sure having a workable version of Metis available. However, we did not test the integration of Metis in the Telemac installation.</p>
 </div>
 </section>
-<section id="aed2">
-<h3>AED2<a class="headerlink" href="#aed2" title="Link to this heading">#</a></h3>
-<p><em><strong>Estimated duration: &lt; 5 minutes.</strong></em></p>
-<p>To use TELEMAC’s water quality (<em><strong>waqtel</strong></em>) module, the <em>AED2</em> is (partially) required. In some versions of TELEMAC, the make files for installing <em>AED2</em> are provided with the <code class="docutils literal notranslate"><span class="pre">git</span></code> repository in the <em>optionals</em> folder. Otherwise, download and unpack the <em>aed2</em> folder from the manual installation sources on <a class="reference external" href="http://www.opentelemac.org/index.php/component/jdownloads/summary/39-manual-installation-sources/2126-aed2?Itemid=54">opentelemac.org</a>. Then, to install <em>AED2</em>, <em>cd</em> to the <em>aed2</em> folder and run <code class="docutils literal notranslate"><span class="pre">make</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">aed2</span>
-<span class="n">make</span>
+<section id="hdf5-and-med-format-handlers">
+<span id="med-hdf"></span><h3>Hdf5 and MED Format Handlers<a class="headerlink" href="#hdf5-and-med-format-handlers" title="Link to this heading">#</a></h3>
+<p><em><strong>Estimated duration: 15-25 minutes (building libraries takes time).</strong></em></p>
+<p><strong>HDF5</strong> is a portable file format that incorporates metadata and communicates efficiently with <em>C/C++</em> and <em>Fortran</em> on small laptops as well as massively parallel systems. The <em>hdf5</em> file library is provided by the <a class="reference external" href="https://portal.hdfgroup.org/">HDFgroup.org</a>. To install it, use the system pckage manger <code class="docutils literal notranslate"><span class="pre">apt</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libhdf5</span><span class="o">-</span><span class="n">dev</span> <span class="n">hdf5</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><em>AED2</em> is not needed for the tutorials on this website and the installation of this module can be skipped.</p>
+<p><em><strong>MED FILE LIBRARY:</strong></em> The <em>med file</em> library is provided by <a class="reference external" href="https://salome-platform.org/">salome-platform.org</a> and we need to use the file (<a class="reference external" href="http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz">med-4.1.1.tar.gz</a> to ensure compatibility with <em>hdf5</em>. So do not try to use any other <em>med file</em> library version because those will not work properly with hdf5. Moreover, the <em>med file</em> library requires that <em>zlib</em> is installed. To install <em>zlib</em> open Terminal and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">cache</span> <span class="n">search</span> <span class="n">zlib</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">zlib</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">zlib1g</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>The following command block, switches to the above-created <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder, downloads, and unzips the <em>med-4.1.1</em> archive (run in Terminal as <em><strong>normal user</strong></em> - <em><strong>not as root</strong></em>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">temp</span>
+<span class="n">wget</span> <span class="n">files</span><span class="o">.</span><span class="n">salome</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">Salome</span><span class="o">/</span><span class="n">medfile</span><span class="o">/</span><span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">gunzip</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span>
+<span class="n">cd</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span>
+</pre></div>
+</div>
+<p>To compile the <em>med file</em> library type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">python</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>The flag <code class="docutils literal notranslate"><span class="pre">--prefix</span></code> sets the installation directory defines where the med library should be installed.</p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Why <em>–disable-python</em>?</p>
+<p>We need to disable Python for the <em>med file</em> library because this feature would require <em>SWIG</em> version 2.0 and it is not compatible with the current versions of <em>SWIG</em> (4.x). Because <em>SWIG</em> has no full backward compatibility, the only option is to disable Python integrity for the <em>med file</em> library. Otherwise, Python integrity could be implemented by installing Python developer kits ( <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-dev</span></code>  and  <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3.7-dev</span></code> ) and using the configuration <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--with-hdf5=/home/USERNAME/Telemac/hdf5</span> <span class="pre">PYTHON_LDFLAGS='-lpython3.7m'</span> <span class="pre">--with-swig=yes</span></code>. To find out what version of Python is installed, type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-V</span></code>.</p>
+</div>
+<p>The installation of the <em>med file</em> library on Linux is also documented in the <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_med">opentelemac wiki</a>.</p>
+<div class="attention dropdown admonition">
+<p class="admonition-title">Permission denied?</p>
+<p>If you consistently get <em><strong>permission denied</strong></em> messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the <code class="docutils literal notranslate"><span class="pre">telemac</span></code> directory with the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-R</span> <span class="pre">777</span>&#160; <span class="pre">/home/USERNAME/telemac</span></code> (replace <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> with the user for whom TELEMAC is installed).</p>
+</div>
+<p>Finally, <strong>remove the <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder</strong> to avoid storing garbage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="n">temp</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -1360,7 +1333,7 @@ org.fudaa.fudaa.tr.TrSupervisor $1 $2 $3 $4 $5 $6 $7 $8 $9
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-requirements-parallelism-and-others">Optional Requirements (Parallelism and Others)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelism-install-mpi">Parallelism: Install MPI</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelism-install-metis">Parallelism: Install Metis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aed2">AED2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdf5-and-med-format-handlers">Hdf5 and MED Format Handlers</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-telemac">Compile TELEMAC</a><ul class="nav section-nav flex-column">

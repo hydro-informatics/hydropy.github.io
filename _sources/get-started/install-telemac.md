@@ -212,88 +212,8 @@ This section guides through the installation of additional packages required for
 * Message Passing Interface (MPI)
 * Metis
 
-In addition, the MED file format for input meshes (e.g., created with {ref}` SALOME <salome-install>`) and computation results can be installed with TELEMAC, but versioning is tricky, which is why we do not update the installation instructions for MED anymore in this eBook. The better option is to use the {ref}`Q4TS QGIS plugin<qgis-telemac>` for conversion between SLF and MED file formats. Curious users still find the deprecated MED installation instructions in the dropdown box below.
+In addition, the MED file format for input meshes (e.g., created with {ref}` SALOME <salome-install>`) and computation results can be installed with TELEMAC, but versioning is tricky. To work with MED files, also check out the {ref}`Q4TS QGIS plugin<qgis-telemac>`. Also, AED2
 
-`````{admonition} Hdf5 and MED Format Handlers (Deprecated)
-:name: med-hdf
-:class: warning, dropdown
-
-***Estimated duration: 15-25 minutes (building libraries takes time).***
-
-**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/).
-
-Note that the [Telemac installation wiki](http://wiki.opentelemac.org/doku.php?id=installation_on_linux) suggests using version `1.10.7`, which, however, will cause an error when compiling the medfile library.
-
-
-We will install here version `1.10.3`. Do not try to use any other *hdf5* version because those will not work with the *med file* library (next step). The following code block downloads and unzips the *hdf-5-1.10.3* archive in the above-created (metis) `temp/` folder (run in Terminal as normal user - not as root):
-
-```
-cd ~/telemac/optionals/temp
-wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.3/src/hdf5-1.10.3.tar.gz
-gunzip hdf5-1.10.3.tar.gz
-tar -xvf hdf5-1.10.3.tar
-cd hdf5-1.10.3
-```
-
-Configure and compile *hdf5* (enter every command one-by-one):
-
-```
-./configure --prefix=/home/USERNAME/telemac/optionals/hdf5 --enable-parallel
-make
-make install
-```
-
-The flag `--prefix=/home/USERNAME/telemac/optionals/hdf5` determines the installation directory for the *hdf5* library, which we will need in the next step for installing the *med file* library. The absolute path `/home/USERNAME/` is required because `--prefix` does not accept a relative path.
-The installation of *hdf5* on Linux is also documented in the [Telemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_hdf5).
-
-***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and we need to use the file ([med-4.0.0.tar.gz](http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with the *hdf5* file library. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
-
-```
-sudo apt-cache search zlib | grep -i zlib
-sudo apt install zlib1g zlib1g-dev
-```
-
-The following command block, switches to the above-created `temp` folder, downloads, and unzips the *med-4.0.0* archive (run in Terminal as ***normal user*** - ***not as root***):
-
-
-```
-cd ~/telemac/optionals/temp
-wget http://files.salome-platform.org/Salome/other/med-4.0.0.tar.gz
-gunzip med-4.0.0.tar.gz
-tar -xvf med-4.0.0.tar
-cd med-4.0.0
-```
-
-To compile the *med file* library type:
-
-```
-./configure --prefix=/home/USERNAME/telemac/optionals/med-4.0.0 --with-hdf5=/home/USERNAME/telemac/optionals/hdf5 --disable-python
-make
-make install
-```
-
-The flag `--prefix` sets the installation directory and `--width-hdf5` tells the med library where it can find the *hdf5* library. Thus, adapt `/home/USERNAME/telemac/optionals/hdf5` to your local `<install_path>` of the *hdf5* library. Both flags do not accept relative paths (`~/telemac/...`), and therefore, we need to use the absolute paths (`home/USERNAME/telemac/...`) here.
-
-```{admonition} Why *--disable-python*?
-:class: note, dropdown
-We need to disable Python for the *med file* library because this feature would require *SWIG* version 2.0 and it is not compatible with the current versions of *SWIG* (4.x). Because *SWIG* has no full backward compatibility, the only option is to disable Python integrity for the *med file* library. Otherwise, Python integrity could be implemented by installing Python developer kits ( `sudo apt install python3-dev`  and  `sudo apt install python3.7-dev` ) and using the configuration `./configure --with-hdf5=/home/USERNAME/Telemac/hdf5 PYTHON_LDFLAGS='-lpython3.7m' --with-swig=yes`. To find out what version of Python is installed, type `python -V`.
-```
-
-
-The installation of the *med file* library on Linux is also documented in the [opentelemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_med).
-
-```{admonition} Permission denied?
-:class: attention, dropdown
-If you consistently get ***permission denied*** messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the `telemac` directory with the following command: `sudo -R 777  /home/USERNAME/telemac` (replace `USERNAME` with the user for whom TELEMAC is installed).
-```
-
-Finally, **remove the `temp` folder** to avoid storing garbage:
-
-```
-cd ~/telemac/optionals
-sudo rm -r temp
-```
-`````
 
 (mpi)=
 ### Parallelism: Install MPI
@@ -418,19 +338,65 @@ This package currently provides Metis v5.1.0, but verify the version on [https:/
 ````
 
 
-### AED2
+(med-hdf)=
+### Hdf5 and MED Format Handlers
 
-***Estimated duration: < 5 minutes.***
+***Estimated duration: 15-25 minutes (building libraries takes time).***
 
-To use TELEMAC's water quality (***waqtel***) module, the *AED2* is (partially) required. In some versions of TELEMAC, the make files for installing *AED2* are provided with the `git` repository in the *optionals* folder. Otherwise, download and unpack the *aed2* folder from the manual installation sources on [opentelemac.org](http://www.opentelemac.org/index.php/component/jdownloads/summary/39-manual-installation-sources/2126-aed2?Itemid=54). Then, to install *AED2*, *cd* to the *aed2* folder and run `make`:
+**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/). To install it, use the system pckage manger `apt`: 
+
 
 ```
-cd ~/telemac/optionals/aed2
+sudo apt install libhdf5-dev hdf5-tools
+```
+
+***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and we need to use the file ([med-4.1.1.tar.gz](http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with hdf5. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
+
+```
+sudo apt-cache search zlib | grep -i zlib
+sudo apt install zlib1g zlib1g-dev
+```
+
+The following command block, switches to the above-created `temp` folder, downloads, and unzips the *med-4.1.1* archive (run in Terminal as ***normal user*** - ***not as root***):
+
+
+```
+cd ~/telemac/optionals/temp
+wget files.salome-platform.org/Salome/medfile/med-4.1.1.tar.gz
+gunzip med-4.1.1.tar.gz
+tar -xvf med-4.1.1.tar
+cd med-4.1.1
+```
+
+To compile the *med file* library type:
+
+```
+./configure --prefix=/home/USERNAME/telemac/optionals/med-4.1.1 --disable-python
 make
+make install
 ```
 
-```{note}
-*AED2* is not needed for the tutorials on this website and the installation of this module can be skipped.
+The flag `--prefix` sets the installation directory defines where the med library should be installed.
+
+
+```{admonition} Why *--disable-python*?
+:class: note, dropdown
+We need to disable Python for the *med file* library because this feature would require *SWIG* version 2.0 and it is not compatible with the current versions of *SWIG* (4.x). Because *SWIG* has no full backward compatibility, the only option is to disable Python integrity for the *med file* library. Otherwise, Python integrity could be implemented by installing Python developer kits ( `sudo apt install python3-dev`  and  `sudo apt install python3.7-dev` ) and using the configuration `./configure --with-hdf5=/home/USERNAME/Telemac/hdf5 PYTHON_LDFLAGS='-lpython3.7m' --with-swig=yes`. To find out what version of Python is installed, type `python -V`.
+```
+
+
+The installation of the *med file* library on Linux is also documented in the [opentelemac wiki](http://wiki.opentelemac.org/doku.php?id=installation_linux_med).
+
+```{admonition} Permission denied?
+:class: attention, dropdown
+If you consistently get ***permission denied*** messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the `telemac` directory with the following command: `sudo -R 777  /home/USERNAME/telemac` (replace `USERNAME` with the user for whom TELEMAC is installed).
+```
+
+Finally, **remove the `temp` folder** to avoid storing garbage:
+
+```
+cd ~/telemac/optionals
+sudo rm -r temp
 ```
 
 (compile-tm)=
