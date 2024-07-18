@@ -42,10 +42,21 @@ sudo apt install python3-pip python3-dev python3-tk tk8.6-dev
 python3 -m pip install --upgrade pip
 ```
 
+***
+
+For simple data analysis environments without the geospatial GDAL library, [download this requirements.txt file](https://github.com/sschwindt/sample-data/blob/main/python-env/requirements.txt), and install it into a new environment called `data-env' as follows. **Note that you should skip this step if you need to work with GDAL.**
+
+```
+python3 -m venv data-env
+source data-env/bin/activate
+pip3 install -r requirements.txt
+```
+***
+
+
 ```{admonition} python vs. python3
 :class: attention
-Python2 experienced its *sunset* in January 2020, but some systems still use Python2 as default for the `python` command and require a distinguished call of Python3 with the `python3` command.
-This behavior is more and more deprecated and most up-to-date systems will automatically refer to Python3 when typing `python`.
+Python2 was sunset in January 2020, but some systems still use Python2 as default for the `python` command and require a distinguished call of Python3 with the `python3` command. This behavior is more and more deprecated and most up-to-date systems will automatically refer to Python3 when typing `python`.
 
 **Thus, it might be possible that your system requires using `python` rather than `python3` (i.e., use `python -m pip install --upgrade pip` here and in the following command sequences).**
 ```
