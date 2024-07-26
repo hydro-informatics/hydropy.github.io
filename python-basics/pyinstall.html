@@ -624,11 +624,20 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Python2 was sunset in January 2020, but some systems still use Python2 as default for the <code class="docutils literal notranslate"><span class="pre">python</span></code> command and require a distinguished call of Python3 with the <code class="docutils literal notranslate"><span class="pre">python3</span></code> command. This behavior is more and more deprecated and most up-to-date systems will automatically refer to Python3 when typing <code class="docutils literal notranslate"><span class="pre">python</span></code>.</p>
 <p><strong>Thus, it might be possible that your system requires using <code class="docutils literal notranslate"><span class="pre">python</span></code> rather than <code class="docutils literal notranslate"><span class="pre">python3</span></code> (i.e., use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">pip</span></code> here and in the following command sequences).</strong></p>
 </div>
-<p>To check the installed version of Python tap:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">python</span>
+<p>If you do not want to work with geospatial libraries, you completed the installation now, ready to have fun with Python. However, if you aim to work with geospatial data, patiently follow the next steps in the workflow.</p>
+<hr class="docutils" />
+<p>Most important (and worrisome) for working with geospatial data is the installation of the GDAL library, which works best with the QGIS bindings. Therefore, before creating a virtual environment, install QGIS and GDAL for Linux system-wide (this should work on any <em>Debian</em> architecture):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">ubuntugis</span><span class="o">/</span><span class="n">ubuntugis</span><span class="o">-</span><span class="n">unstable</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgeos</span><span class="o">-</span><span class="n">dev</span> <span class="n">gdal</span><span class="o">-</span><span class="nb">bin</span> <span class="n">libgdal</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
-<p>Then go to the home directory (or wherever you want to install the virtual environment) and create a new virtual environment (e.g., called <em>vflussenv</em>):</p>
+<p>Export the <code class="docutils literal notranslate"><span class="pre">gdal</span></code> installation path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">CPLUS_INCLUDE_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">gdal</span>
+<span class="n">export</span> <span class="n">C_INCLUDE_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">gdal</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Now, you are ready to create a virtual environment that can handle geospatial data through GDAL. To do this, go to a target installation directory, for instance, the <code class="docutils literal notranslate"><span class="pre">home</span></code> directory, and create a new virtual environment (e.g., named <em>vflussenv</em>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">vflussenv</span>
 </pre></div>
@@ -644,16 +653,6 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Install <em>numpy</em> and <em>wheel</em> with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">numpy</span>
 <span class="n">pip3</span> <span class="n">install</span> <span class="n">wheel</span>
-</pre></div>
-</div>
-<p>Then, install <em>QGIS</em> and <em>GDAL</em> for <em>Linux</em> (this should work with any <em>Debian</em> architecture) and make sure to use the correct <code class="docutils literal notranslate"><span class="pre">pip</span></code> command at the end (i.e., it might be necessary to replace <code class="docutils literal notranslate"><span class="pre">pip3</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">ubuntugis</span><span class="o">/</span><span class="n">ubuntugis</span><span class="o">-</span><span class="n">unstable</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgeos</span><span class="o">-</span><span class="n">dev</span> <span class="n">gdal</span><span class="o">-</span><span class="nb">bin</span> <span class="n">libgdal</span><span class="o">-</span><span class="n">dev</span>
-</pre></div>
-</div>
-<p>Export the <code class="docutils literal notranslate"><span class="pre">gdal</span></code> installation path:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">CPLUS_INCLUDE_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">gdal</span>
-<span class="n">export</span> <span class="n">C_INCLUDE_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">gdal</span>
 </pre></div>
 </div>
 <p>Install gdal for the <em>vflussenv</em> Python environment:</p>

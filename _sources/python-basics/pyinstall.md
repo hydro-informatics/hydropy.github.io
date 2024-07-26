@@ -61,12 +61,27 @@ Python2 was sunset in January 2020, but some systems still use Python2 as defaul
 **Thus, it might be possible that your system requires using `python` rather than `python3` (i.e., use `python -m pip install --upgrade pip` here and in the following command sequences).**
 ```
 
-To check the installed version of Python tap:
+If you do not want to work with geospatial libraries, you completed the installation now, ready to have fun with Python. However, if you aim to work with geospatial data, patiently follow the next steps in the workflow.
+
+***
+
+Most important (and worrisome) for working with geospatial data is the installation of the GDAL library, which works best with the QGIS bindings. Therefore, before creating a virtual environment, install QGIS and GDAL for Linux system-wide (this should work on any *Debian* architecture):
+
 ```
-which python
+sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable && sudo apt update
+sudo apt install libgeos-dev gdal-bin libgdal-dev
 ```
 
-Then go to the home directory (or wherever you want to install the virtual environment) and create a new virtual environment (e.g., called *vflussenv*):
+Export the `gdal` installation path:
+
+```
+export CPLUS_INCLUDE_PATH=/usr/include/gdal
+export C_INCLUDE_PATH=/usr/include/gdal
+```
+
+***
+
+Now, you are ready to create a virtual environment that can handle geospatial data through GDAL. To do this, go to a target installation directory, for instance, the `home` directory, and create a new virtual environment (e.g., named *vflussenv*):
 
 ```
 cd ~
@@ -84,7 +99,6 @@ Double-check that the environment is activated:
 which python
 ```
 
-
 Install *numpy* and *wheel* with:
 
 ```
@@ -92,19 +106,6 @@ pip3 install numpy
 pip3 install wheel
 ```
 
-Then, install *QGIS* and *GDAL* for *Linux* (this should work with any *Debian* architecture) and make sure to use the correct `pip` command at the end (i.e., it might be necessary to replace `pip3` with `pip`):
-
-```
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable && sudo apt update
-sudo apt install libgeos-dev gdal-bin libgdal-dev
-```
-
-Export the `gdal` installation path:
-
-```
-export CPLUS_INCLUDE_PATH=/usr/include/gdal
-export C_INCLUDE_PATH=/usr/include/gdal
-```
 
 Install gdal for the *vflussenv* Python environment:
 
