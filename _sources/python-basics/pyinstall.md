@@ -68,7 +68,7 @@ If you do not want to work with geospatial libraries, you completed the installa
 Most important (and worrisome) for working with geospatial data is the installation of the GDAL library, which works best with the QGIS bindings. Therefore, before creating a virtual environment, install QGIS and GDAL for Linux system-wide (this should work on any *Debian* architecture):
 
 ```
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable && sudo apt update
+sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt update
 sudo apt install libgeos-dev gdal-bin libgdal-dev
 ```
 
@@ -93,19 +93,6 @@ Then activate the new environment:
 ```
 source vflussenv/bin/activate
 ```
-
-Double-check that the environment is activated:
-```
-which python
-```
-
-Install *numpy* and *wheel* with:
-
-```
-pip3 install numpy
-pip3 install wheel
-```
-
 
 Install gdal for the *vflussenv* Python environment:
 

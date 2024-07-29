@@ -627,7 +627,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>If you do not want to work with geospatial libraries, you completed the installation now, ready to have fun with Python. However, if you aim to work with geospatial data, patiently follow the next steps in the workflow.</p>
 <hr class="docutils" />
 <p>Most important (and worrisome) for working with geospatial data is the installation of the GDAL library, which works best with the QGIS bindings. Therefore, before creating a virtual environment, install QGIS and GDAL for Linux system-wide (this should work on any <em>Debian</em> architecture):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">ubuntugis</span><span class="o">/</span><span class="n">ubuntugis</span><span class="o">-</span><span class="n">unstable</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">ubuntugis</span><span class="o">/</span><span class="n">ppa</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgeos</span><span class="o">-</span><span class="n">dev</span> <span class="n">gdal</span><span class="o">-</span><span class="nb">bin</span> <span class="n">libgdal</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
@@ -644,15 +644,6 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 <p>Then activate the new environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">vflussenv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
-</pre></div>
-</div>
-<p>Double-check that the environment is activated:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">python</span>
-</pre></div>
-</div>
-<p>Install <em>numpy</em> and <em>wheel</em> with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">numpy</span>
-<span class="n">pip3</span> <span class="n">install</span> <span class="n">wheel</span>
 </pre></div>
 </div>
 <p>Install gdal for the <em>vflussenv</em> Python environment:</p>
