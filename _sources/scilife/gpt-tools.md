@@ -51,6 +51,9 @@ AI tools can make life a lot easier, and are particularly effective at improving
 * - Neuroflash
   - Text perfection tool for marketing and SEO. Builds on many OpenAI products.
   - [https://neuroflash.com](https://neuroflash.com/)
+* - perplexity
+  - Produces scientifically referenced GPT answers.
+  - [https://www.perplexity.ai](https://www.perplexity.ai/)
 * - ResearchRabbit
   - Literature research and alerts.
   - [https://www.researchrabbit.ai](https://www.researchrabbit.ai/)
