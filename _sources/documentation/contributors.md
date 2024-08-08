@@ -35,32 +35,6 @@ Website
 :columns: 4
 :class: sd-m-auto
 
-<img src="../img/authors/ricardo.jpg" />
-
-:::
-
-:::{grid-item-card} Ricardo Barros
-:columns: 8
-
-Ricardo is a data scientist with demonstrated mathematical and engineering skills. He conducted scientific studies with geospatial analysis and machine learning and contributed to advancing hydroinformatic tools. In hands of analytical thinking and the capacity to work well independently, Ricardo looks forward to developing innovative approaches and applying his acquired data skills on inspired projects.
-
-```{button-link} https://ricardovobarros.github.io/
-:ref-type: doc
-:color: primary
-:class: sd-rounded-pill float-left
-
-Website
-```
-:::
-::::
-
-::::{grid} 2
-:reverse:
-
-:::{grid-item}
-:columns: 4
-:class: sd-m-auto
-
 <img src="../img/authors/beatriz.jpg" />
 
 :::
