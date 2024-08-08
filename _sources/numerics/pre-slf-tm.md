@@ -64,7 +64,7 @@ In the **Plugins** window, add both plugins as follows:
 
 * BASEmesh requires to add the developer's plugin repository (more details are available in the {ref}`BASEMENT pre-processing <get-basemesh>` tutorial):
   * Go to the **Settings** tab.
-  * Scroll to the bottom (**Plugin Repositories** listbox in {numref}`Fig. %s <qgis-plugins>`), click on **Add...**.
+  * Scroll to the bottom (**Plugin Repositories** listbox in {numref}`Fig. %s <qgis-plugins2>`), click on **Add...**.
   * In the popup window enter:
     * a name for the new repository, for instance, `BASEmesh Plugin Repository`;
     * the repository address: [https://people.ee.ethz.ch/~basement/qgis_plugins/qgis_plugins.xml](https://people.ee.ethz.ch/~basement/qgis_plugins/qgis_plugins.xml).
