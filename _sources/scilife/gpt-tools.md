@@ -54,6 +54,9 @@ AI tools can make life a lot easier, and are particularly effective at improving
 * - perplexity
   - Produces scientifically referenced GPT answers.
   - [https://www.perplexity.ai](https://www.perplexity.ai/)
+* - Read
+  - Takes automated meeting notes (minutes). Commercial tool with free plan option (5 reports/month).
+  - [https://www.read.ai](https://www.read.ai/)
 * - ResearchRabbit
   - Literature research and alerts.
   - [https://www.researchrabbit.ai](https://www.researchrabbit.ai/)
