@@ -16,7 +16,7 @@ AI tools can make life a lot easier, and are particularly effective at improving
   - Purpose
   - Link
 * - ChatGPT
-  - General multi-purpose LLM
+  - General multi-purpose LLM.
   - [https://chatgpt.com](https://chatgpt.com/)
 * - Connected paper
   - Explore academic papers with visual graphs.
@@ -33,6 +33,9 @@ AI tools can make life a lot easier, and are particularly effective at improving
 * - Elicit
   - Academic analysis tool for generating research questions, hypotheses, and data syntheses.
   - [https://elicit.com](https://elicit.com/)
+* - Gemini
+  - General-purpose LLM, parallel to GPT, developed by Google DeepMind.
+  - [https://gemini.google.com](https://gemini.google.com)
 * - genei
   - Automatically summarize background reading and produce blogs, articles, and reports.
   - [https://www.genei.io](https://www.genei.io/)
