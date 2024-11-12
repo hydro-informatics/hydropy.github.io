@@ -434,7 +434,7 @@ user@user123:~/OpenFOAM-9/channel/Mesh$ snappyHexMesh
 * For parallel runs, use the `reconstructParMesh` command to reconstruct the geometry.
 
 ```
-user@user123:~/OpenFOAM-9/channel/Mesh$ reconstructparMesh -constant
+user@user123:~/OpenFOAM-9/channel/Mesh$ reconstructParMesh -constant
 ```
 
 * Finally, the quality of the generated mesh can be analyzed by typing `checkMesh`.
