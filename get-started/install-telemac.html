@@ -849,18 +849,61 @@ VIM</label><div class="sd-tab-content docutils">
 <section id="hdf5-and-med-format-handlers">
 <span id="med-hdf"></span><h3>Hdf5 and MED Format Handlers<a class="headerlink" href="#hdf5-and-med-format-handlers" title="Link to this heading">#</a></h3>
 <p><em><strong>Estimated duration: 15-25 minutes (building libraries takes time).</strong></em></p>
-<p><strong>HDF5</strong> is a portable file format that incorporates metadata and communicates efficiently with <em>C/C++</em> and <em>Fortran</em> on small laptops as well as massively parallel systems. The <em>hdf5</em> file library is provided by the <a class="reference external" href="https://portal.hdfgroup.org/">HDFgroup.org</a>. To install it, use the system pckage manger <code class="docutils literal notranslate"><span class="pre">apt</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libhdf5</span><span class="o">-</span><span class="n">dev</span> <span class="n">hdf5</span><span class="o">-</span><span class="n">tools</span>
+<p><strong>HDF5</strong> is a portable file format that incorporates metadata and communicates efficiently with <em>C/C++</em> and <em>Fortran</em> on small laptops as well as massively parallel systems. The <em>hdf5</em> file library is provided by the <a class="reference external" href="https://portal.hdfgroup.org/">HDFgroup.org</a>. To install it, the manual installation of v1.10.6 is recommended, as the installation with <code class="docutils literal notranslate"><span class="pre">apt</span></code>  installs an incompatible HDF version with Telemac
+use the system package manger <code class="docutils literal notranslate"><span class="pre">apt</span></code>:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+HDF installation from source</label><div class="sd-tab-content docutils">
+<p>Retrieve the package and install it (Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="o">.</span><span class="n">hdfgroup</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">HDF5</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.6</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.6</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.6</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">cd</span> <span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10.6</span>
+<span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">hdf5</span> 
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
 </pre></div>
 </div>
-<p><em><strong>MED FILE LIBRARY:</strong></em> The <em>med file</em> library is provided by <a class="reference external" href="https://salome-platform.org/">salome-platform.org</a> and we need to use the file (<a class="reference external" href="http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz">med-4.1.1.tar.gz</a> to ensure compatibility with <em>hdf5</em>. So do not try to use any other <em>med file</em> library version because those will not work properly with hdf5. Moreover, the <em>med file</em> library requires that <em>zlib</em> is installed. To install <em>zlib</em> open Terminal and type:</p>
+<p>To add this installation to the system paths, open your (hidden) user <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file (<code class="docutils literal notranslate"><span class="pre">/home/&lt;user&gt;/.bashrc</span></code>) and add the following (text editor):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/usr/local/hdf5-1.10.6/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/hdf5-1.10.6/lib:$LD_LIBRARY_PATH
+</pre></div>
+</div>
+<p>To use these paths immediately, enter (Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>Test with (Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h5cc</span> <span class="o">-</span><span class="n">showconfig</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+HDF installtion with apt (not tested)</label><div class="sd-tab-content docutils">
+<div class="warning admonition">
+<p class="admonition-title">Untested workflow!</p>
+<p>We could not yet verify the integrity of this installation step. So this might be incompatible with Telemac.</p>
+</div>
+<p>Install the following packages, binding them to v1.10.6 (Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libhdf5</span><span class="o">-</span><span class="n">dev</span><span class="o">=</span><span class="mf">1.10.6</span> <span class="n">hdf5</span><span class="o">-</span><span class="n">tools</span><span class="o">=</span><span class="mf">1.10.6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>MED FILE LIBRARY:</strong></em> The <em>med file</em> library is provided by <a class="reference external" href="https://salome-platform.org/">salome-platform.org</a> and since recently, there is an option install MED through <code class="docutils literal notranslate"><span class="pre">apt</span></code> although we could not yet test how this works with Telemac.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+MED installation from source</label><div class="sd-tab-content docutils">
+<p>and we need to use the file (<a class="reference external" href="http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz">med-4.1.1.tar.gz</a> to ensure compatibility with <em>hdf5</em>. So do not try to use any other <em>med file</em> library version because those will not work properly with hdf5. Moreover, the <em>med file</em> library requires that <em>zlib</em> is installed. To install <em>zlib</em> open Terminal and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">cache</span> <span class="n">search</span> <span class="n">zlib</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">zlib</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">zlib1g</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
 <p>The following command block, switches to the above-created <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder, downloads, and unzips the <em>med-4.1.1</em> archive (run in Terminal as <em><strong>normal user</strong></em> - <em><strong>not as root</strong></em>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span><span class="o">/</span><span class="n">temp</span>
-<span class="n">wget</span> <span class="n">files</span><span class="o">.</span><span class="n">salome</span><span class="o">-</span><span class="n">platform</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">Salome</span><span class="o">/</span><span class="n">medfile</span><span class="o">/</span><span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="o">--</span><span class="n">referer</span><span class="s1">&#39;https://www.salome-platform.org/?page_id=2768&#39;&#39;https://files.salome-platform.org/Salome/medfile/med-4.1.1.tar.gz&#39;</span>
 <span class="n">gunzip</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 <span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">.</span><span class="n">tar</span>
 <span class="n">cd</span> <span class="n">med</span><span class="o">-</span><span class="mf">4.1.1</span>
@@ -882,7 +925,27 @@ VIM</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Permission denied?</p>
 <p>If you consistently get <em><strong>permission denied</strong></em> messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the <code class="docutils literal notranslate"><span class="pre">telemac</span></code> directory with the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-R</span> <span class="pre">777</span>&#160; <span class="pre">/home/USERNAME/telemac</span></code> (replace <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> with the user for whom TELEMAC is installed).</p>
 </div>
-<p>Finally, <strong>remove the <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder</strong> to avoid storing garbage:</p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+MED installation with apt (not tested)</label><div class="sd-tab-content docutils">
+<div class="warning admonition">
+<p class="admonition-title">Untested workflow!</p>
+<p>We could not yet verify the integrity of this installation step. So this might be incompatible with Telemac.</p>
+</div>
+<p>The following packages are available through <code class="docutils literal notranslate"><span class="pre">apt</span></code>, and can potentiall work with Telemac:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">libmed1v5</span></code>: MED file library runtime</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libmed-dev</span></code>: development files for the MED library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libmedc1v5</span></code> and <code class="docutils literal notranslate"><span class="pre">libmedc-dev</span></code>: C bindings for the MED library</p></li>
+</ul>
+<p>To install them, enter (Terminal):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libmed1v5</span> <span class="n">libmed</span><span class="o">-</span><span class="n">dev</span> <span class="n">libmedc1v5</span> <span class="n">libmedc</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If created, <strong>remove the <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder</strong> to avoid storing garbage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">optionals</span>
 <span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="n">temp</span>
 </pre></div>
@@ -896,8 +959,8 @@ VIM</label><div class="sd-tab-content docutils">
 <p><em><strong>Estimated duration: 2-20 minutes.</strong></em></p>
 <p>Two options are described in this section for setting up a configuration file: (i) a modification (reduced module availability) of the default-available <code class="docutils literal notranslate"><span class="pre">~/telemac/configs/systel.edf.cgf</span></code> configuration file, and (ii) extended descriptions for setting up a custom configuration file. Option (i) provides a powerful HPC environment, but does not include the installation of the excludes <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_aed">AED2 (waqtel)</a>, <a class="reference external" href="http://mumps.enseeiht.fr/">MUMPS</a>, and <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_gotm">GOTM (general ocean)</a> modules.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-6">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
 EDF Template</label><div class="sd-tab-content docutils">
 <p>To facilitate setting up the <code class="docutils literal notranslate"><span class="pre">systel</span></code> file, use our edf-based template: right-click on <a class="reference external" href="https://raw.githubusercontent.com/Ecohydraulics/telemac-helpers/main/edf/systel.edfHy.cfg">this download of systel.edfHy.cfg</a> &gt; <em>Save Link As…</em> &gt; <code class="docutils literal notranslate"><span class="pre">~/telemac/configs/systel.edfHy.cfg</span></code>, which was tested on Debian 10, Debian 11, and Linux Mint 21.3.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">systel.edfHy.cfg</span></code> is designed to be used with the <code class="docutils literal notranslate"><span class="pre">S10.gfortran.dyn</span></code> configuration, for which we removed all dependencies of AED2, MUMPS, and GOTM. That is, none of the flags <code class="docutils literal notranslate"><span class="pre">[flags_mumps]</span> <span class="pre">[flags_aed]</span> <span class="pre">[flags_gotm]</span></code> is enabled and they were removed from the <code class="docutils literal notranslate"><span class="pre">S10.gfortran.dyn</span></code> configuration, which is fully sufficient for running the <a class="reference internal" href="../numerics/telemac/telemac.html#chpt-telemac"><span class="std std-ref">Telemac tutorials</span></a> in this eBook.</p>
@@ -906,8 +969,8 @@ EDF Template</label><div class="sd-tab-content docutils">
 <p>To add AED2, MUMPS, and GOTM functionality install the corresponding modules in the <code class="docutils literal notranslate"><span class="pre">optionals/</span></code> directory and use the default <code class="docutils literal notranslate"><span class="pre">systel.edf.cfg</span></code> configuration file. The installation of AED2, MUMPS, and GOTM is described in the <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_on_linux">Telemac installation wiki</a>, though not straight forward because multiple links and additional dependencies are outdated.</p>
 </div>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-11" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-11">
 Custom Setup</label><div class="sd-tab-content docutils">
 <div class="warning admonition">
 <p class="admonition-title">Python API Not Set Up</p>
@@ -978,8 +1041,8 @@ Custom Setup</label><div class="sd-tab-content docutils">
 <p><em><strong>Estimated duration: 4-20 minutes.</strong></em></p>
 <p>A Python source file lives in <code class="docutils literal notranslate"><span class="pre">~/telemac/configs</span></code>, where also a template called <code class="docutils literal notranslate"><span class="pre">pysource.template.sh</span></code> is available. This section guides through either using our <code class="docutils literal notranslate"><span class="pre">pysource.gfortranHPC.sh</span></code> (without AED2 and MUMPS), or a custom source file.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-8">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-12">
 Template Usage</label><div class="sd-tab-content docutils">
 <p>To facilitate setting up the <code class="docutils literal notranslate"><span class="pre">pysource.gfortranHPC.sh</span></code> file, our template is designed for use with the above-described <code class="docutils literal notranslate"><span class="pre">systel.edfHy.cfg</span></code> configuration file, and it is  based on the default-provided <code class="docutils literal notranslate"><span class="pre">pysource.template.sh</span></code>. Either <a class="reference external" href="https://raw.githubusercontent.com/Ecohydraulics/telemac-helpers/main/edf/pysource.gfortranHPC.sh">download pysource.gfortranHPC.sh</a> &gt; <em>Save Link As…</em> &gt; <code class="docutils literal notranslate"><span class="pre">~/telemac/configs/pysource.gfortranHPC.sh</span></code> or create a new pysource file with the following contents:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### TELEMAC settings -----------------------------------------------------------
@@ -1033,8 +1096,8 @@ export LD_LIBRARY_PATH=$METISHOME/lib:$LD_LIBRARY_PATH
 <p><a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_aed">AED2 (waqtel)</a>, <a class="reference external" href="http://mumps.enseeiht.fr/">MUMPS</a>, and <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_gotm">GOTM (general ocean)</a> are deactivated in our template. To activate them, uncomment (i.e., remove <code class="docutils literal notranslate"><span class="pre">#</span></code>) before the MUMPS variables, add AED2 and GOTM variables, and use the <code class="docutils literal notranslate"><span class="pre">systel.edf.cfg</span></code> configuration file.</p>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-9">
+<input id="sd-tab-item-13" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-13">
 Custom Bash File</label><div class="sd-tab-content docutils">
 <p>Here, we use the template to create our own Python source file called <code class="docutils literal notranslate"><span class="pre">pysource.gfortranHPC.sh</span></code> tailored for compiling the parallel version of TELEMAC on Debian Linux with the <em>Open MPI</em> library. The Python source file starts with the definition of the following variables:</p>
 <ul class="simple">

@@ -343,14 +343,67 @@ This package currently provides Metis v5.1.0, but verify the version on [https:/
 
 ***Estimated duration: 15-25 minutes (building libraries takes time).***
 
-**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/). To install it, use the system pckage manger `apt`: 
+**HDF5** is a portable file format that incorporates metadata and communicates efficiently with *C/C++* and *Fortran* on small laptops as well as massively parallel systems. The *hdf5* file library is provided by the [HDFgroup.org](https://portal.hdfgroup.org/). To install it, the manual installation of v1.10.6 is recommended, as the installation with `apt`  installs an incompatible HDF version with Telemac
+use the system package manger `apt`: 
 
+
+`````{tab-set}
+````{tab-item} HDF installation from source
+
+Retrieve the package and install it (Terminal):
 
 ```
-sudo apt install libhdf5-dev hdf5-tools
+wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.6/src/hdf5-1.10.6.tar.gz
+tar -xvf hdf5-1.10.6.tar.gz
+cd hdf5-1.10.6
+./configure --prefix=/usr/local/hdf5 
+make
+make install
 ```
 
-***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and we need to use the file ([med-4.1.1.tar.gz](http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with hdf5. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
+To add this installation to the system paths, open your (hidden) user `.bashrc` file (`/home/<user>/.bashrc`) and add the following (text editor):
+
+```
+export PATH=/usr/local/hdf5-1.10.6/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/hdf5-1.10.6/lib:$LD_LIBRARY_PATH
+```
+
+To use these paths immediately, enter (Terminal):
+
+```
+source ~/.bashrc
+```
+
+Test with (Terminal):
+
+```
+h5cc -showconfig
+```
+````
+
+````{tab-item} HDF installtion with apt (not tested)
+
+```{admonition} Untested workflow!
+:class: warning
+
+We could not yet verify the integrity of this installation step. So this might be incompatible with Telemac.
+```
+
+Install the following packages, binding them to v1.10.6 (Terminal):
+
+```
+sudo apt install libhdf5-dev=1.10.6 hdf5-tools=1.10.6
+```
+````
+`````
+
+***MED FILE LIBRARY:*** The *med file* library is provided by [salome-platform.org](https://salome-platform.org/) and since recently, there is an option install MED through `apt` although we could not yet test how this works with Telemac.
+
+
+`````{tab-set}
+
+````{tab-item} MED installation from source
+and we need to use the file ([med-4.1.1.tar.gz](http://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz) to ensure compatibility with *hdf5*. So do not try to use any other *med file* library version because those will not work properly with hdf5. Moreover, the *med file* library requires that *zlib* is installed. To install *zlib* open Terminal and type:
 
 ```
 sudo apt-cache search zlib | grep -i zlib
@@ -362,7 +415,7 @@ The following command block, switches to the above-created `temp` folder, downlo
 
 ```
 cd ~/telemac/optionals/temp
-wget files.salome-platform.org/Salome/medfile/med-4.1.1.tar.gz
+wget --referer'https://www.salome-platform.org/?page_id=2768''https://files.salome-platform.org/Salome/medfile/med-4.1.1.tar.gz'
 gunzip med-4.1.1.tar.gz
 tar -xvf med-4.1.1.tar
 cd med-4.1.1
@@ -392,7 +445,32 @@ The installation of the *med file* library on Linux is also documented in the [o
 If you consistently get ***permission denied*** messages, you are probably installing Telemac in a directory where you should not install it. If your are sure about the ownership of the installation directory, you may unlock all read and write rights for the `telemac` directory with the following command: `sudo -R 777  /home/USERNAME/telemac` (replace `USERNAME` with the user for whom TELEMAC is installed).
 ```
 
-Finally, **remove the `temp` folder** to avoid storing garbage:
+````
+
+````{tab-item} MED installation with apt (not tested)
+
+```{admonition} Untested workflow!
+:class: warning
+
+We could not yet verify the integrity of this installation step. So this might be incompatible with Telemac.
+```
+
+The following packages are available through `apt`, and can potentiall work with Telemac:
+
+* `libmed1v5`: MED file library runtime
+* `libmed-dev`: development files for the MED library
+* `libmedc1v5` and `libmedc-dev`: C bindings for the MED library
+
+To install them, enter (Terminal):
+
+```
+sudo apt install libmed1v5 libmed-dev libmedc1v5 libmedc-dev
+```
+````
+
+`````
+
+If created, **remove the `temp` folder** to avoid storing garbage:
 
 ```
 cd ~/telemac/optionals

@@ -226,10 +226,10 @@ tar xfz SALOME-9.6.0-UB20.04-SRC.tar.gz
 
 Install dependencies:
 ```
-sudo apt install net-tools libopengl0 libtbb-dev
+sudo apt install net-tools libopengl0 libtbb-dev libcdt5 libcgraph6 libgvc6 libgdal32 libnlopt-cxx-dev libcminpack1 libfreeimage3
 ```
 
-To run SALOME, `cd` to the directory where the unpacked package is located and typ `salome`:
+To run SALOME, `cd` to the directory where the unpacked package is located and type `salome`:
 
 ```
 cd SALOME-9.6.0-UB20.04-SRC.tar.gz

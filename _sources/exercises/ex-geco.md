@@ -7,7 +7,7 @@ This exercise guides through the creation of rasters (`osgeo.gdal.Dataset`), the
 
 ```{admonition} Requirements
 :class: attention
-*Python* libraries: {ref}`numpy`, {ref}`pandas`, {ref}`gdal`, *geopandas*, *alphashape*, *shapely*, and {ref}`json`. Understand how {ref}`ooc` work as well as {ref}`sec-geo-python`. To visualize results, make sure to install {ref}`qgis-install` and do the {ref}`qgis-tutorial`.
+Python libraries: {ref}`numpy`, {ref}`pandas`, {ref}`gdal`, *geopandas*, *alphashape*, *shapely*, and {ref}`json`. Understand how {ref}`ooc` work as well as {ref}`sec-geo-python`. To visualize results, make sure to install {ref}`qgis-install` and do the {ref}`qgis-tutorial`.
 ```
 
 Get ready by cloning the exercise repository:
