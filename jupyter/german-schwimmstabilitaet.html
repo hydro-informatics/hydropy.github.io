@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Debugging BASEMENT &#8212; Hydro-Informatics</title>
+    <title>Schwimmstabilität von Körpern &#8212; Hydro-Informatics</title>
   
   
   
@@ -59,13 +59,15 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'troubleshoot/dbg-basement';</script>
-    <link rel="canonical" href="https://hydro-informatics.com/troubleshoot/dbg-basement.html" />
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter/german-schwimmstabilitaet';</script>
+    <link rel="canonical" href="https://hydro-informatics.com/jupyter/german-schwimmstabilitaet.html" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Debugging TELEMAC" href="dbg-telemac.html" />
-    <link rel="prev" title="Numerical Models" href="dbg-numerical-models.html" />
+    <link rel="next" title="Geospatial Data" href="../geopy/geospatial-data.html" />
+    <link rel="prev" title="Create a GUI" href="../exercises/ex-gui.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -200,43 +202,43 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Basics</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python-basics/python.html">First Steps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pybase.html">Hello Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pyerror.html">Errors, Logging, and Debugging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pyloop.html">Loops and Conditional Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pybase.html">Hello Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyerror.html">Errors, Logging, and Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyloop.html">Loops and Conditional Statements</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python-basics/modularize.html">Object Orientation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pyfun.html">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pypckg.html">Packages, Modules and Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/classes.html">Object Orientation and Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyfun.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypckg.html">Packages, Modules and Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">Object Orientation and Classes</a></li>
 
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python-basics/data-handling.html">Data and File Handling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pynum.html">Data Files, NumPy &amp; Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pynum.html">Data Files, NumPy &amp; Pandas</a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/xml.html">Structured Data (XML, xlsx &amp; JSON)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xml.html">Structured Data (XML, xlsx &amp; JSON)</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/pyplot.html">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyplot.html">Plotting</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../jupyter/pystyle.html">Code Style and Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pystyle.html">Code Style and Conventions</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../jupyter/gui.html">Graphical User Interfaces (GUIs)</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../exercises/python-exercises.html">Python Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical User Interfaces (GUIs)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../exercises/python-exercises.html">Python Exercises</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../exercises/ex-ms.html">1d Hydraulics (Manning-Strickler Formula)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/ex-sp.html">Reservoir Volume (Sequent Peak Algorithm)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/ex-floods.html">Flood Return Periods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/ex-sediment.html">1d Sediment Transport</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/ex-gui.html">Create a GUI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/german-schwimmstabilitaet.html">Schwimmstabilität von Körpern</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Schwimmstabilität von Körpern</a></li>
 </ul>
 </details></li>
 </ul>
@@ -247,10 +249,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../geopy/drone-processing.html">Process Drone (UAV) Imagery</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../geopy/geo-python.html">Geospatial Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../geopy/geo-pckg.html">Geospatial Open Source Python Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/geo-shp.html">Shapefile (Vector) Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/geo-raster.html">Raster (Grid) Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/geo-convert.html">Vectorize and Rasterize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../jupyter/geo-arcpy.html">The Commercial arcpy Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geo-shp.html">Shapefile (Vector) Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geo-raster.html">Raster (Grid) Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geo-convert.html">Vectorize and Rasterize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geo-arcpy.html">The Commercial arcpy Library</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../exercises/geo-exercises.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -358,21 +360,21 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Troubleshoot</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="dbg-programming.html">Programming Tools and IDEs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="dbg-anaconda.html">Debugging Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dbg-python.html">Debugging Python Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dbg-jupyter.html">Debugging Jupyter</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../troubleshoot/dbg-programming.html">Programming Tools and IDEs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-anaconda.html">Debugging Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-python.html">Debugging Python Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-jupyter.html">Debugging Jupyter</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dbg-numerical-models.html">Numerical Models</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Debugging BASEMENT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dbg-telemac.html">Debugging TELEMAC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../troubleshoot/dbg-numerical-models.html">Numerical Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-basement.html">Debugging BASEMENT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-telemac.html">Debugging TELEMAC</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="dbg-linux.html">Debugging Debian Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dbg-vm.html">Debugging Virtual Machines</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../troubleshoot/dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-linux.html">Debugging Debian Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
 </ul>
@@ -430,6 +432,73 @@
 <div class="article-header-buttons">
 
 
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/hydro-informatics/jupyter-python-course/main/v2/gh/hydro-informatics/jupyter-python-course/main?urlpath=lab/tree/jupyter/german-schwimmstabilitaet.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/hydro-informatics/jupyter-python-course/blob/main/jupyter/german-schwimmstabilitaet.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 <a href="https://github.com/hydro-informatics/jupyter-python-course" target="_blank"
    class="btn btn-sm btn-source-repository-button"
    title="Source repository"
@@ -456,7 +525,7 @@
       
       
       
-      <li><a href="../_sources/troubleshoot/dbg-basement.md" target="_blank"
+      <li><a href="../_sources/jupyter/german-schwimmstabilitaet.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -466,7 +535,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -540,7 +609,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Debugging BASEMENT</h1>
+    <h1>Schwimmstabilität von Körpern</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -550,9 +619,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-of-xdmf-model-output-fails">Import of XDMF Model Output Fails</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xdmf-error-of-wrong-versions">XDMF error of wrong versions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xdmf-error-of-wrong-simulation-directories">XDMF error of wrong simulation directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freibord-und-eintauchtiefe">Freibord und Eintauchtiefe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schwimmstabilitat">Schwimmstabilität</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flachentragheitsmoment">Flächenträgheitsmoment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlagen">Höhenlagen</a></li>
 </ul>
 </li>
 </ul>
@@ -566,48 +636,179 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="debugging-basement">
-<h1>Debugging BASEMENT<a class="headerlink" href="#debugging-basement" title="Link to this heading">#</a></h1>
-<p>Since its early development, <em>BASEMENT</em> has become a robust an reliable tool for the numerically modelling of rivers. Yet there are a few little challenges and this page provides some answers (under development).</p>
-<section id="import-of-xdmf-model-output-fails">
-<span id="dbg-bm-xdmf"></span><h2>Import of XDMF Model Output Fails<a class="headerlink" href="#import-of-xdmf-model-output-fails" title="Link to this heading">#</a></h2>
-<section id="xdmf-error-of-wrong-versions">
-<h3>XDMF error of wrong versions<a class="headerlink" href="#xdmf-error-of-wrong-versions" title="Link to this heading">#</a></h3>
-<p>Depending on the system environment, the header of <code class="docutils literal notranslate"><span class="pre">results.xmdf</span></code> may not be readable for QGIS. The two below tabs show the wrong and correct header lines. To fix the issue, open <code class="docutils literal notranslate"><span class="pre">results.xmdf</span></code> in a text editor (e.g., <a class="reference internal" href="../get-started/others.html#npp"><span class="std std-ref">Notepad++</span></a> on Windows), replace the wrong with the correct header, and save the corrected <code class="docutils literal notranslate"><span class="pre">results.xmdf</span></code>.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Wrong header</label><div class="sd-tab-content docutils">
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-<span class="p">&lt;</span><span class="nt">Xdmf</span> <span class="na">Version</span><span class="o">=</span><span class="s">&quot;3.0&quot;</span><span class="p">&gt;</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="schwimmstabilitat-von-korpern">
+<h1>Schwimmstabilität von Körpern<a class="headerlink" href="#schwimmstabilitat-von-korpern" title="Link to this heading">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">About</p>
+<p>This is a special exercise on hydromechanics in German. The notebook can be downloaded <a class="reference external" href="https://drive.google.com/file/d/1Dq5j5claA2XLbXieV4MYeOHlynnscgWH/view?usp=sharing">here</a>.</p>
+</div>
+<section id="freibord-und-eintauchtiefe">
+<h2>Freibord und Eintauchtiefe<a class="headerlink" href="#freibord-und-eintauchtiefe" title="Link to this heading">#</a></h2>
+<p>Parameterdefinitionen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho_k</span> <span class="o">=</span> <span class="mf">7860.</span> <span class="c1"># kg /m3 - Stahl- bzw. Eisendichte (ca. 7860)</span>
+<span class="n">rho_f</span> <span class="o">=</span> <span class="mf">1000.</span> <span class="c1"># kg /m3 - Wasserdichte (ca.)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>      <span class="c1"># N / kg - Erdbeschleunigung</span>
+<span class="n">b_x</span> <span class="o">=</span> <span class="mf">1.5</span>     <span class="c1"># m - Kastenbreite</span>
+<span class="n">b_y</span> <span class="o">=</span> <span class="mf">2.0</span>     <span class="c1"># m - Kastenlänge</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">1.5</span>       <span class="c1"># m - Kastenhöhe</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">0.01</span>      <span class="c1"># m - Wandstärke</span>
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Correct header</label><div class="sd-tab-content docutils">
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
-<span class="cp">&lt;!DOCTYPE Xdmf SYSTEM &quot;Xdmf.dtd&quot; []&gt;</span>
-<span class="p">&lt;</span><span class="nt">Xdmf</span> <span class="na">Version</span><span class="o">=</span><span class="s">&quot;2.0&quot;</span><span class="p">&gt;</span>
+</div>
+<p>Berechnung der Gewichtskraft <span class="math notranslate nohighlight">\( F_g = \rho_k \cdot g \cdot V_k = \rho_k \cdot g \cdot \left[b_x \cdot b_y \cdot h - \left(h - w\right) \cdot  \left(b_x - 2 w\right) \cdot \left(b_y - 2 w\right)\right] \)</span> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_k</span> <span class="o">=</span> <span class="n">b_x</span> <span class="o">*</span> <span class="n">b_y</span> <span class="o">*</span> <span class="n">h</span> <span class="o">-</span> <span class="p">(</span><span class="n">b_x</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">b_y</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">F_g</span> <span class="o">=</span> <span class="n">V_k</span> <span class="o">*</span> <span class="n">rho_k</span> <span class="o">*</span> <span class="n">g</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Koerpervolumen V_k = </span><span class="si">{</span><span class="n">V_k</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m3</span><span class="se">\n</span><span class="s1">Gewichtskraft: </span><span class="si">{</span><span class="n">F_g</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Koerpervolumen V_k = 0.13 m3
+Gewichtskraft: 10309.46 N
+</pre></div>
+</div>
+</div>
+</div>
+<p>Berechnung des Verdrängungsvolumens <span class="math notranslate nohighlight">\( V_v = F_g / \left(\rho_f \cdot g \right) \)</span> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_v</span> <span class="o">=</span> <span class="n">F_g</span> <span class="o">/</span> <span class="p">(</span><span class="n">rho_f</span> <span class="o">*</span> <span class="n">g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Verdraengungsvolumen: </span><span class="si">{</span><span class="n">V_v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verdraengungsvolumen: 1.05 m3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Berechnung der Eintauchtiefe <span class="math notranslate nohighlight">\( d = V_v / \left(b_x \cdot b_y\right) \)</span> und des Freibords <span class="math notranslate nohighlight">\( f = h - d \)</span> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">V_v</span> <span class="o">/</span> <span class="n">b_x</span> <span class="o">*</span> <span class="n">b_y</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">h</span> <span class="o">-</span> <span class="n">d</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Eintauchtiefe d = </span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m</span><span class="se">\n</span><span class="s1">Freibord f = </span><span class="si">{</span><span class="n">f</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">f</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schwimmender Körper&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Der Körper geht unter.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eintauchtiefe d = 1.40 m
+Freibord f = 0.10 m
+Schwimmender Körper
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="xdmf-error-of-wrong-simulation-directories">
-<h3>XDMF error of wrong simulation directories<a class="headerlink" href="#xdmf-error-of-wrong-simulation-directories" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">results.xdmf</span></code> contains geospatially explicit data (e.g., of flow velocity and water depth), which can be theoretically directly imported in <em>QGIS</em> with the <em>Crayfish</em> plugin (read more in the <a class="reference internal" href="../numerics/basement/basement2d.html#qgis-imp-steps"><span class="std std-ref">BASEMENT post-processing</span></a> section). However, there is a little issue: QGIS may crash because of an invalid directory. To fix it:</p>
-<ol class="arabic simple">
-<li><p>Open <code class="docutils literal notranslate"><span class="pre">results.xdmf</span></code> in a text editor (e.g., <a class="reference internal" href="../get-started/others.html#npp"><span class="std std-ref">Notepad++</span></a> on Windows).</p></li>
-<li><p>Use the find-and-replace tool (<code class="docutils literal notranslate"><span class="pre">CTRL</span></code> + <code class="docutils literal notranslate"><span class="pre">H</span></code> keys in Notepad++) to remove file paths before <code class="docutils literal notranslate"><span class="pre">results_aux.h5</span></code>.</p>
-<ul class="simple">
-<li><p>Search the <code class="docutils literal notranslate"><span class="pre">results_aux.h5</span></code> string and identify the path written in front of it (e.g., <code class="docutils literal notranslate"><span class="pre">C:\temp\</span></code>).</p></li>
-<li><p>Find and replace that user path, for example: <code class="docutils literal notranslate"><span class="pre">Find</span></code> = <code class="docutils literal notranslate"><span class="pre">C:\temp\results_aux.h5</span></code> and <code class="docutils literal notranslate"><span class="pre">Replace</span> <span class="pre">with</span></code> = <code class="docutils literal notranslate"><span class="pre">results_aux.h5</span></code>.</p></li>
-</ul>
-</li>
-<li><p>After having removed all path occurrences in the document, save and close <code class="docutils literal notranslate"><span class="pre">results.xdmf</span></code>.</p></li>
-</ol>
-<p>This issue is also discussed in the <a class="reference external" href="http://people.ee.ethz.ch/~basement/forum/viewtopic.php?id=5261">BASEMENT User Forum</a>).</p>
+<section id="schwimmstabilitat">
+<h2>Schwimmstabilität<a class="headerlink" href="#schwimmstabilitat" title="Link to this heading">#</a></h2>
+<section id="flachentragheitsmoment">
+<h3>Flächenträgheitsmoment<a class="headerlink" href="#flachentragheitsmoment" title="Link to this heading">#</a></h3>
+<p>Berechnung des Flächenträgheitsmoments <span class="math notranslate nohighlight">\(I_0 = \frac{b_{\text{x}} ^3 \cdot b_{\text{y}} }{12}\)</span> bezüglich 0:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I_0</span> <span class="o">=</span> <span class="n">b_x</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">b_y</span> <span class="o">/</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Flaechentraegheitsmoment I_0 = </span><span class="si">{</span><span class="n">I_0</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Flaechentraegheitsmoment I_0 = 0.56 m4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hohenlagen">
+<h3>Höhenlagen<a class="headerlink" href="#hohenlagen" title="Link to this heading">#</a></h3>
+<p>Höhe <span class="math notranslate nohighlight">\(h_{fg}\)</span> zwischen Wasseroberfläche (hier: horizontale Bezugsachse) und Gewichtsschwerpunkt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_fg</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">b_x</span> <span class="o">*</span> <span class="n">b_y</span> <span class="o">*</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">w</span><span class="p">)</span> <span class="o">/</span> <span class="n">V_k</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;h_fg = </span><span class="si">{</span><span class="n">h_fg</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h_fg = 0.31 m
+</pre></div>
+</div>
+</div>
+</div>
+<p>Höhe <span class="math notranslate nohighlight">\(h_g\)</span> des Gewichtsschwerpunkts:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_g</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">h_fg</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hoehe des Gewichtsschwerpunkts h_g = </span><span class="si">{</span><span class="n">h_g</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Gewichtsschwerpunkts h_g = 1.09 m
+</pre></div>
+</div>
+</div>
+</div>
+<p>Höhe <span class="math notranslate nohighlight">\(h_v\)</span> des Verdrängungsschwerpunkts:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_v</span> <span class="o">=</span> <span class="n">d</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hoehe des Verdraengungsschwerpunkts h_v = </span><span class="si">{</span><span class="n">h_v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Verdraengungsschwerpunkts h_v = 0.70 m
+</pre></div>
+</div>
+</div>
+</div>
+<p>Höhendifferenz <span class="math notranslate nohighlight">\(h_{gv}\)</span> zwischen Gewichtsschwerpunkt und Verdrängungsschwerpunkt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_gv</span> <span class="o">=</span> <span class="n">h_g</span> <span class="o">-</span> <span class="n">h_v</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hoehendifferenz h_gv = </span><span class="si">{</span><span class="n">h_gv</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehendifferenz h_gv = 0.39 m
+</pre></div>
+</div>
+</div>
+</div>
+<p>Höhe <span class="math notranslate nohighlight">\(h_M\)</span> des Metazentrums und Schwimmstabilität:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_M</span> <span class="o">=</span> <span class="n">I_0</span> <span class="o">/</span> <span class="n">V_v</span> <span class="o">-</span> <span class="n">h_gv</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hoehe des Metazentrums h_M = </span><span class="si">{</span><span class="n">h_M</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">h_M</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stabile Lage.&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">h_M</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Labile Lage.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indifferente Lage.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Metazentrums h_M = 0.15 m
+Stabile Lage.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -625,7 +826,7 @@ Correct header</label><div class="sd-tab-content docutils">
         },
         kernelOptions: {
             name: "python3",
-            path: "./troubleshoot"
+            path: "./jupyter"
         },
         predefinedOutput: true
     }
@@ -643,20 +844,20 @@ Correct header</label><div class="sd-tab-content docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dbg-numerical-models.html"
+       href="../exercises/ex-gui.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Numerical Models</p>
+        <p class="prev-next-title">Create a GUI</p>
       </div>
     </a>
     <a class="right-next"
-       href="dbg-telemac.html"
+       href="../geopy/geospatial-data.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Debugging TELEMAC</p>
+        <p class="prev-next-title">Geospatial Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -676,9 +877,10 @@ Correct header</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-of-xdmf-model-output-fails">Import of XDMF Model Output Fails</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xdmf-error-of-wrong-versions">XDMF error of wrong versions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xdmf-error-of-wrong-simulation-directories">XDMF error of wrong simulation directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freibord-und-eintauchtiefe">Freibord und Eintauchtiefe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schwimmstabilitat">Schwimmstabilität</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flachentragheitsmoment">Flächenträgheitsmoment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlagen">Höhenlagen</a></li>
 </ul>
 </li>
 </ul>
