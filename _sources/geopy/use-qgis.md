@@ -60,6 +60,8 @@ Follow the below illustrated instructions to enable the *QGIS* *Toolbox*.
 Open QGIS' Toolbox window from the main menu.
 ```
 
+In addition, the **Digitizing Toolbar** (**View** > **Toolbars** > check **Digitizing Toolbar**) is required to complete this tutorial.
+
 The conversion between geospatial data types and numerical (computational) grids can be facilitated with plugins. To install any plugin in QGIS, go to the **Plugins** menu > **Manage and Install Plugins...** > **All** tab > **Search...** for a relevant plugin and install it.
 
 In the context of river analysis, the following plugins are recommended and used at multiple places on this website:
@@ -187,7 +189,7 @@ Start with loading satellite imagery and a street basemap (see above) in the lay
     * `StnName` (*Text data*)
     * `StnID`  (*Whole number*)
 * Edit/draw points
-  * **Toggle Editing** (i.e., enable by clicking on the yellow pen <img src="../img/qgis/yellow-pen.png">) > **Add Point Feature** <img src="../img/qgis/sym-add-point.png">
+  * **Toggle Editing** (i.e., enable by clicking on the yellow pen <img src="../img/qgis/yellow-pen.png">) > **Digitizing Toolbar** > **Add Point Feature** <img src="../img/qgis/sym-add-point.png">
   * Click on the PEGELHAUS to draw a point and set
     * `StnName`: `PlochingenFils`
     * `StnID`: `00025`
@@ -225,6 +227,7 @@ To draw the polygons:
 * Enable snapping to avoid gaps between the floodplain and main channel polygons
   * Activate the **snapping toolbar**: **View** > **Toolbars** > **Snapping Toolbar**
   * Enable snapping from **Snapping toolbar** > **Enable Snapping** and **Avoid Polygon Overlapping**
+* To draw a polygon, go to the **Digitizing Toolbar**  > **Add Polygon Feature** with the **Digitize with Segment** option enabled
 * Start drawing by clicking on the map (right-click finalizes Polygon)
 * Draw one polygon of the main channel and after finalizing set:
   * `AreaType`: `MainChannel`
