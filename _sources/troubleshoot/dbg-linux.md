@@ -56,6 +56,19 @@ To revert undesired changes in the re-partitioning plan (before clicking on the 
 
 Read more on the [developer's website](https://www.debian.org/doc/manuals/debian-faq/uptodate.en.html).
 
+### Power management (battery life)
+
+Working with Linux on a laptop often drains the battery quickly, especially when working with pure Debian. To increase power efficiency, consider installing lightweight Ubuntu (derivatives), that is **Mate** editions. Also, the following tool can help improve battery life on Ubuntu (derivatives):
+
+```
+sudo add-apt-repository ppa:linrunner/tlp 
+sudo apt update 
+sudo apt install tlp tlp-rdw 
+```
+
+Alternatively, [Fedora](https://fedoraproject.org/) or [Arch](https://archlinux.org/) are said to be power efficient. However, Arch can be difficult for Linux novices.
+
+
 (dbg-permissions)=
 ### Permission Denied Messages
 
