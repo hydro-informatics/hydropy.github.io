@@ -124,7 +124,7 @@ CONTINUITY CORRECTION : YES
 This example is typically installed in the following directory:
 
 ```
-/telemac/v8p4/examples/telemac2d/wesel/
+/telemac/v9.0.0/examples/telemac2d/wesel/
 ```
 ````
 

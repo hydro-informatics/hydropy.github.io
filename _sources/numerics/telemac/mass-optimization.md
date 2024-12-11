@@ -55,7 +55,7 @@ TYPE OF SOURCES : 2 / 2=Dirac is the only possibility for mass conservation, the
 CONTINUITY CORRECTION : YES / particularly important when not only discharge but also depth is imposed at boundaries
 ```
 
-Read more about the finite volume scheme in section 7.2.2 of the {{ tm2d }}, and the malpasset example (`telemac/v8p4/examples/malpasset/`).
+Read more about the finite volume scheme in section 7.2.2 of the {{ tm2d }}, and the malpasset example (`telemac/v9.0.0/examples/malpasset/`).
 
 ````
 

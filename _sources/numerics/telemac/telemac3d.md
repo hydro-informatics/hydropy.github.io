@@ -23,4 +23,4 @@ Optional files such as a friction data file or a liquid boundary file can also b
 This chapter provides two tutorials for 3d modeling with TELEMAC featuring two mesh file formats that are implemented in TELEMAC:
 
 1. A 3d steady hydrodynamic simulation with a standard SLF geometry file  is set up an run in the {ref}`Telemac3d (Standard) <chpt-telemac3d-slf>` tutorial.
-1. A 3d steady hydrodynamic simulation based on the MED file library is set up an run with the SALOME software (*Linux* only) in the {ref}`Telemac3d with Salome-Hydro and MED <chpt-telemac3d-med>` tutorial.
+1. A 3d steady hydrodynamic simulation based on the MED file library is set up an run with the SALOME software (*Linux* only; stale software - Salome Hydro is currently not maintained) in the {ref}`Telemac3d with Salome-Hydro and MED <chpt-telemac3d-med>` tutorial.

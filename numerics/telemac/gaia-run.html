@@ -362,7 +362,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../troubleshoot/dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-linux.html">Debugging Debian Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-linux.html">Debugging Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
@@ -573,7 +573,7 @@
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Expand to review the Gaia steering file <strong>gaia-morphodynamics.cas</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="o">/------------------------------------------------------------------/</span>
-<span class="o">/</span><span class="w"> </span><span class="n">Gaia</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">TELEMAC</span><span class="w"> </span><span class="n">Version</span><span class="w"> </span><span class="n">v8p2</span>
+<span class="o">/</span><span class="w"> </span><span class="n">Gaia</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">TELEMAC</span>
 <span class="o">/</span><span class="w"> </span><span class="n">GAIA</span><span class="w"> </span><span class="n">STEERING</span><span class="w"> </span><span class="k">FILE</span>
 <span class="o">/</span><span class="w"> </span><span class="k">file </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">gaia</span><span class="o">-</span><span class="n">morphdynamics</span><span class="p">.</span><span class="n">cas</span>
 <span class="o">/</span>
@@ -650,8 +650,8 @@
 </pre></div>
 </div>
 </div>
-</details><p>With these files available, open <em>Terminal</em>, go to the TELEMAC configuration folder (e.g., <code class="docutils literal notranslate"><span class="pre">~/telemac/v8p2/configs/</span></code>), and load the environment (e.g., <code class="docutils literal notranslate"><span class="pre">pysource.openmpi.sh</span></code> - use the same as for compiling TELEMAC).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v8p2</span><span class="o">/</span><span class="n">configs</span>
+</details><p>With these files available, open <em>Terminal</em>, go to the TELEMAC configuration folder (e.g., <code class="docutils literal notranslate"><span class="pre">~/telemac/v9.0.0/configs/</span></code>), and load the environment (e.g., <code class="docutils literal notranslate"><span class="pre">pysource.openmpi.sh</span></code> - use the same as for compiling TELEMAC).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v9</span><span class="mf">.0.0</span><span class="o">/</span><span class="n">configs</span>
 <span class="n">source</span> <span class="n">pysource</span><span class="o">.</span><span class="n">openmpi</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
@@ -663,8 +663,8 @@
 </pre></div>
 </div>
 </div>
-<p>With the TELEMAC environment loaded, change to the directory where the TELEMAC Gaia simulation lives (e.g., <code class="docutils literal notranslate"><span class="pre">/home/telemac/v8p2/mysimulations/gaia2d-tutorial/</span></code>) and run the <code class="docutils literal notranslate"><span class="pre">*.cas</span></code> file by calling it with the <strong><a class="reference external" href="http://telemac2d.py">telemac2d.py</a></strong> script (it will automatically know that it needs to use Gaia when it reads the line <code class="docutils literal notranslate"><span class="pre">COUPLING</span> <span class="pre">WITH</span> <span class="pre">:</span> <span class="pre">'GAIA'</span></code>).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v8p2</span><span class="o">/</span><span class="n">mysimulations</span><span class="o">/</span><span class="n">gaia2d</span><span class="o">-</span><span class="n">tutorial</span><span class="o">/</span>
+<p>With the TELEMAC environment loaded, change to the directory where the TELEMAC Gaia simulation lives (e.g., <code class="docutils literal notranslate"><span class="pre">/home/telemac/v9.0.0/mysimulations/gaia2d-tutorial/</span></code>) and run the <code class="docutils literal notranslate"><span class="pre">*.cas</span></code> file by calling it with the <strong><a class="reference external" href="http://telemac2d.py">telemac2d.py</a></strong> script (it will automatically know that it needs to use Gaia when it reads the line <code class="docutils literal notranslate"><span class="pre">COUPLING</span> <span class="pre">WITH</span> <span class="pre">:</span> <span class="pre">'GAIA'</span></code>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v9</span><span class="mf">.0.0</span><span class="o">/</span><span class="n">mysimulations</span><span class="o">/</span><span class="n">gaia2d</span><span class="o">-</span><span class="n">tutorial</span><span class="o">/</span>
 <span class="n">telemac2d</span><span class="o">.</span><span class="n">py</span> <span class="n">steady2d</span><span class="o">-</span><span class="n">gaia</span><span class="o">.</span><span class="n">cas</span>
 </pre></div>
 </div>

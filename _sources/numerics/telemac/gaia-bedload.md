@@ -124,7 +124,7 @@ Users can add more bedload transport formulae by adding a modified copy of a FOR
 
 ```{admonition} User Fortran Files
 :class: note, dropdown
-To implement a user Fortran file, copy the original TELEMAC Fortran file from the `/telemac/v8p2/sources/` directory (e.g., `/telemac/v8p2/sources/gaia/bedload_einst_gaia.f`) to the project directory (e.g., `/telemac/v8p2/simulations/gaia-tutorial/user_fortran/bedload_einst_gaia.f`). Finally, tell TELEMAC where to look for user fortran files by defining the following keyword in a steering file (e.g., in `gaia-morphodynamics.cas`):
+To implement a user Fortran file, copy the original TELEMAC Fortran file from the `/telemac/v9.0.0/sources/` directory (e.g., `/telemac/v9.0.0/sources/gaia/bedload_einst_gaia.f`) to the project directory (e.g., `/telemac/v9.0.0/simulations/gaia-tutorial/user_fortran/bedload_einst_gaia.f`). Finally, tell TELEMAC where to look for user fortran files by defining the following keyword in a steering file (e.g., in `gaia-morphodynamics.cas`):
 
 `FORTRAN FILE : 'user_fortran'`
 ```
@@ -403,11 +403,11 @@ Recall that the first and second values in the list of prescribed solid discharg
 The **PRESCRIBED SOLID DISCHARGES** keyword makes TELEMAC calculate sediment mass balances accounting for the riverbed porosity $\epsilon$. Thus, the solid mass flux printouts correspond to $q_{b}/(1-\epsilon)$.
 ```
 
-Gaia can be run with liquid boundary files for assigning time-dependent solid discharges (the outflow should be kept in equilibrium). Solid discharge time series can be implemented using `455`-`5` boundary definitions, analogous to the descriptions of the {ref}`Telemac2d unsteady boundary setup <tm2d-liq-file>`. For more guidance, have a look at the *yen-2d* example (`telemac/v8p2/examples/gaia/yen-2d`) featuring a quasi-steady bedload simulation at the Rhine River. In addition, more background information about the definition of bedload boundary conditions can be found in section 3.1.11 in the {{ gaia }}.
+Gaia can be run with liquid boundary files for assigning time-dependent solid discharges (the outflow should be kept in equilibrium). Solid discharge time series can be implemented using `455`-`5` boundary definitions, analogous to the descriptions of the {ref}`Telemac2d unsteady boundary setup <tm2d-liq-file>`. For more guidance, have a look at the *yen-2d* example (`telemac/v9.0.0/examples/gaia/yen-2d`) featuring a quasi-steady bedload simulation at the Rhine River. In addition, more background information about the definition of bedload boundary conditions can be found in section 3.1.11 in the {{ gaia }}.
 
 ## Example Applications
 
-Examples for the implementation of bedload come along with the TELEMAC installation (in the `/telemac/v8p2/examples/gaia/` directory). The following examples in the `gaia/` folder feature (pure) bedload calculations:
+Examples for the implementation of bedload come along with the TELEMAC installation (in the `/telemac/v9.0.0/examples/gaia/` directory). The following examples in the `gaia/` folder feature (pure) bedload calculations:
 
 * Application of the {ref}`Wilcock-Crowe formula <gaia-wilcock>` (multiple sediment classes): **wilcock_crowe-t2d/**
 * Bedload in a bend of the Rhine River with quasi steady (unsteady) flow conditions: **yen-2d/**

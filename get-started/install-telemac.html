@@ -360,7 +360,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../troubleshoot/dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-linux.html">Debugging Debian Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-linux.html">Debugging Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../troubleshoot/dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
@@ -723,8 +723,8 @@ To enable parallelism, a <em>C</em> compiler is required for recognition of the 
 <span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">list</span>
 </pre></div>
 </div>
-<p>At the time of writing these lines, the latest version is <code class="docutils literal notranslate"><span class="pre">v8p5r0</span></code>. Check out the last version as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">v8p5r0</span>
+<p>At the time of writing these lines, the latest version is <code class="docutils literal notranslate"><span class="pre">v9.0.0</span></code>. Check out the last version as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">v9</span><span class="mf">.0.0</span>
 </pre></div>
 </div>
 </section>
@@ -1030,7 +1030,7 @@ Template Usage</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>### TELEMAC settings -----------------------------------------------------------
 ###
 # Path to telemac root dir
-export HOMETEL=/home/USER-NAME/telemac/v8p5r0
+export HOMETEL=/home/USER-NAME/telemac/v9.0.0
 # Adding python scripts to PATH
 export PATH=$HOMETEL/scripts/python3:.:$PATH
 # Configuration file
@@ -1072,7 +1072,7 @@ export METISHOME=$SYSTEL/metis/build/
 export LD_LIBRARY_PATH=$METISHOME/lib:$LD_LIBRARY_PATH
 </pre></div>
 </div>
-<p><strong>Make sure do adapt the variable <code class="docutils literal notranslate"><span class="pre">HOMETEL=/home/USER-NAME/telemac/v8p5r0</span></code>.</strong></p>
+<p><strong>Make sure do adapt the variable <code class="docutils literal notranslate"><span class="pre">HOMETEL=/home/USER-NAME/telemac/v9.0.0</span></code>.</strong></p>
 <div class="note admonition">
 <p class="admonition-title">AED2, MUMPS, and GOTM deactivated</p>
 <p><a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_aed">AED2 (waqtel)</a>, <a class="reference external" href="http://mumps.enseeiht.fr/">MUMPS</a>, and <a class="reference external" href="http://wiki.opentelemac.org/doku.php?id=installation_linux_gotm">GOTM (general ocean)</a> are deactivated in our template. To activate them, uncomment (i.e., remove <code class="docutils literal notranslate"><span class="pre">#</span></code>) before the MUMPS variables, add AED2 and GOTM variables, and use the <code class="docutils literal notranslate"><span class="pre">systel.edf.cfg</span></code> configuration file.</p>

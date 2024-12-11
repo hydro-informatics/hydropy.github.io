@@ -267,7 +267,7 @@ In Telemac3d, it is recommended to use the so-called distributive predictor-corr
     + `SCHEME OPTION FOR ADVECTION OF K-EPSILON`: `4`
     + `SCHEME OPTION FOR ADVECTION OF TRACERS`: `4`
 
-These values (`5` for the scheme and `4` for the scheme option) are default values since *TELEMAC v8p1*, but it still makes sense to define these parameters for enabling backward compatibility of the steering file. If the occurrence of tidal flats can be excluded (note that already a little backwater upstream of a barrier can represent a tidal flat), the `SCHEME OPTIONS` can generally set to `2` for speeding up the simulation.
+These values (`5` for the scheme and `4` for the scheme option) are default values since v8p1, but it still makes sense to define these parameters for enabling backward compatibility of the steering file. If the occurrence of tidal flats can be excluded (note that already a little backwater upstream of a barrier can represent a tidal flat), the `SCHEME OPTIONS` can generally set to `2` for speeding up the simulation.
 
 Similar to {term}`Advection`, the above keywords can be used to define {term}`Diffusion` steps (replace `ADVECTION` with `DIFFUSION` in the keywords), where a value of `0` can be used to override the default value of `1` and disable diffusion.
 
@@ -281,7 +281,7 @@ The default is `SUPG OPTION : 1;0;1;1`, where the first list element refers to f
 
 An additional option for speeding up is to enable mass lumping for diffusion, depth, and/or weak characteristics. Mass lumping results in faster convergence, but it introduces artificial dispersion in the results, which is why enabling mass lumping is discouraged by the TELEMAC developers. The provided [steady3d.cas](https://github.com/hydro-informatics/telemac/raw/main/steady3d-tutorial/steady3d.cas) includes the keywords for mass lumping, though they are disabled through the `/` at the beginning of the line.
 
-**Implication parameters** (`IMPLICITATION FOR DEPTH` and `IMPLICITATION FOR VELOCITIES`) should be set between 0.55 and 0.60 (default is 0.55 since *TELEMAC v8p1*) and can be considered as a degree of implicitation. `IMPLICITATION FOR DIFFUSION` is set to `1.0` by default. Read more in section 6.4 of the {{ tm3d }}.
+**Implication parameters** (`IMPLICITATION FOR DEPTH` and `IMPLICITATION FOR VELOCITIES`) should be set between 0.55 and 0.60 (default is 0.55 since v8p1) and can be considered as a degree of implicitation. `IMPLICITATION FOR DIFFUSION` is set to `1.0` by default. Read more in section 6.4 of the {{ tm3d }}.
 
 The parameter `FREE SURFACE GRADIENT` can be used for increasing the stability of a model. Its default value is `1.0`, but it can be reduced to `0.1` to achieve stability.
 
@@ -301,7 +301,7 @@ Telemac3d will add *Horizontal levels* (i.e., layers) that correspond to copies 
 For unsteady simulations (time-variable inflow/outflow rates), pre-define the thickness of vertical layers with the `ZSTAR` parameter in a user Fortran file (subroutine) as described in section 4.1 of the {{ tm3d }}. Read more about setting up an unsteady simulation with TELEMAC in the {ref}`Telemac2d unsteady tutorial <chpt-unsteady>`.
 ```
 
-To get started with writing subroutines (it is no magic neither), have a look at the **bottom_bc** example (`~/telemac/v8p2/examples/telemac3d/bottom_bc/`). In particular, examine the user fortran file `/user_fortran-source/user_mesh_transf.f` and its call in the steering file `t3d_bottom_source.cas` through the definition of the `FORTRAN FILE` keyword and setting of `MESH TRANSFORMATION : 2`.
+To get started with writing subroutines (it is no magic neither), have a look at the **bottom_bc** example (`~/telemac/v9.0.0/examples/telemac3d/bottom_bc/`). In particular, examine the user fortran file `/user_fortran-source/user_mesh_transf.f` and its call in the steering file `t3d_bottom_source.cas` through the definition of the `FORTRAN FILE` keyword and setting of `MESH TRANSFORMATION : 2`.
 
 (tm3d-slf-boundaries)=
 ### Open (Liquid) Boundaries
@@ -376,10 +376,10 @@ If the `VERTICAL TURBULENCE MODEL` is set to `2` (`'MIXING LENGTH'`), a `MIXING 
 
 ## Run Telemac3d
 
-Go to the configuration folder of the local TELEMAC installation (e.g., `~/telemac/v8p2/configs/`) and launch the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
+Go to the configuration folder of the local TELEMAC installation (e.g., `~/telemac/v9.0.0/configs/`) and launch the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
 
 ```
-cd ~/telemac/v8p2/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.openmpi.sh
 ```
 
@@ -394,10 +394,10 @@ source pysource.hyfo-dyn.sh
 ```
 ````
 
-With the TELEMAC environment loaded, change to the directory where the above-created 3d-flume simulation lives (e.g., `/home/telemac/v8p2/mysimulations/steady3d-tutorial/`) and run the `*.cas` file by calling the **telemac3d.py** script.
+With the TELEMAC environment loaded, change to the directory where the above-created 3d-flume simulation lives (e.g., `/home/telemac/v9.0.0/mysimulations/steady3d-tutorial/`) and run the `*.cas` file by calling the **telemac3d.py** script.
 
 ```
-cd ~/telemac/v8p2/mysimulations/steady3d-tutorial/
+cd ~/telemac/v9.0.0/mysimulations/steady3d-tutorial/
 telemac3d.py steady3d.cas
 ```
 

@@ -198,10 +198,10 @@ cd telemac-mascaret
 git branch --list
 ```
 
-At the time of writing these lines, the latest version is `v8p5r0`. Check out the last version as follows:
+At the time of writing these lines, the latest version is `v9.0.0`. Check out the last version as follows:
 
 ```
-git checkout tags/v8p5r0
+git checkout tags/v9.0.0
 ```
 
 
@@ -588,7 +588,7 @@ To facilitate setting up the `pysource.gfortranHPC.sh` file, our template is des
 ### TELEMAC settings -----------------------------------------------------------
 ###
 # Path to telemac root dir
-export HOMETEL=/home/USER-NAME/telemac/v8p5r0
+export HOMETEL=/home/USER-NAME/telemac/v9.0.0
 # Adding python scripts to PATH
 export PATH=$HOMETEL/scripts/python3:.:$PATH
 # Configuration file
@@ -630,7 +630,7 @@ export METISHOME=$SYSTEL/metis/build/
 export LD_LIBRARY_PATH=$METISHOME/lib:$LD_LIBRARY_PATH
 ```
 
-**Make sure do adapt the variable `HOMETEL=/home/USER-NAME/telemac/v8p5r0`.**
+**Make sure do adapt the variable `HOMETEL=/home/USER-NAME/telemac/v9.0.0`.**
 
 ```{admonition} AED2, MUMPS, and GOTM deactivated
 :class: note

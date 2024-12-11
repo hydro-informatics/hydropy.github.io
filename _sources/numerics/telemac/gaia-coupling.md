@@ -37,7 +37,7 @@ The morphodynamics module Gaia can be internally **coupled** with the hydrodynam
 
 ### From Sisyphe to Gaia
 
-Sisyphe is the traditional sediment transport module in TELEMAC, which has already largely been replaced by the more logical Gaia module. To get specifications beyond the features presented here in the TELEMAC documentation and the TELEMAC forum, it is useful to know that there has been a predecessor module of Gaia called SISYPHE. SISYPHE and its routines are still available in recent TELEMAC versions in addition to and through Gaia. Although the use of SISYPHE routines through Gaia with functional enhancements require adjustments of some keywords. Read more in the {{ gaia }} in Appendix 8.1 and in the [gaia.dico](http://svn.opentelemac.org/svn/opentelemac/tags/v8p2r1/sources/gaia/gaia.dico) file (lives in the TELEMAC installation directory: `telemac/v8p2/sources/gaia/gaia.dico`).
+Sisyphe is the traditional sediment transport module in TELEMAC, which has already largely been replaced by the more logical Gaia module. To get specifications beyond the features presented here in the TELEMAC documentation and the TELEMAC forum, it is useful to know that there has been a predecessor module of Gaia called SISYPHE. SISYPHE and its routines are still available in recent TELEMAC versions in addition to and through Gaia. Although the use of SISYPHE routines through Gaia with functional enhancements require adjustments of some keywords. Read more in the {{ gaia }} in Appendix 8.1 and in the gaia.dico (`telemac/v9.0.0/sources/gaia/gaia.dico`).
 
 ### Coupling Hydrodynamics (Telemac2d/3d) and Morphodynamics (Gaia)
 

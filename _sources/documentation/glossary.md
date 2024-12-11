@@ -368,6 +368,9 @@ Rich Text Format
 Riffle pool
   Riffle-pool (or pool-riffle) sequences are a sequence of fast-flowing, shallow flow units and deeper, slower flowing units of a river, where the dimensions of one unit correspond approximately to one channel width {cite:p}`lisle1979sorting`. The maintenance of riffle-pool channels requires sufficient sediment supply during smaller floods and a velocity reversal when those floods occur {cite:p}`caamano_unifying_2009`.
 
+  *French: Rapide (m,?) - affouillement (m,?) <br>German: Rausche (w) - Kolk (m)*
+
+
   ```{figure} ../img/nature/pool-riffle.jpg
   :alt: riffle pool bedform gravel bed
   :name: riffle-pool

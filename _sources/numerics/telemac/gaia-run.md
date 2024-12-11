@@ -15,7 +15,7 @@ Make sure that the simulation folder (e.g., `/gaia2d-tutorial/`) contains at lea
 ````{dropdown} Expand to review the Gaia steering file **gaia-morphodynamics.cas**
 ```fortran
 /------------------------------------------------------------------/
-/ Gaia in TELEMAC Version v8p2
+/ Gaia in TELEMAC
 / GAIA STEERING FILE
 / file name: gaia-morphdynamics.cas
 /
@@ -92,10 +92,10 @@ LAYERS PARTHENIADES CONSTANT : 1.E-03 / in kg per m2 per s - default is 1.E-03
 ```
 ````
 
-With these files available, open *Terminal*, go to the TELEMAC configuration folder (e.g., `~/telemac/v8p2/configs/`), and load the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
+With these files available, open *Terminal*, go to the TELEMAC configuration folder (e.g., `~/telemac/v9.0.0/configs/`), and load the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
 
 ```
-cd ~/telemac/v8p2/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.openmpi.sh
 ```
 
@@ -110,10 +110,10 @@ source pysource.hyfo-dyn.sh
 ```
 ````
 
-With the TELEMAC environment loaded, change to the directory where the TELEMAC Gaia simulation lives (e.g., `/home/telemac/v8p2/mysimulations/gaia2d-tutorial/`) and run the `*.cas` file by calling it with the **telemac2d.py** script (it will automatically know that it needs to use Gaia when it reads the line `COUPLING WITH : 'GAIA'`).
+With the TELEMAC environment loaded, change to the directory where the TELEMAC Gaia simulation lives (e.g., `/home/telemac/v9.0.0/mysimulations/gaia2d-tutorial/`) and run the `*.cas` file by calling it with the **telemac2d.py** script (it will automatically know that it needs to use Gaia when it reads the line `COUPLING WITH : 'GAIA'`).
 
 ```
-cd ~/telemac/v8p2/mysimulations/gaia2d-tutorial/
+cd ~/telemac/v9.0.0/mysimulations/gaia2d-tutorial/
 telemac2d.py steady2d-gaia.cas
 ```
 

@@ -18,7 +18,7 @@ The analysis of hydro-environments with TELEMAC involves pre-processing for abst
 * Couple hydrodynamics (i.e., Telemac2d or Telemac3d) with morphodynamics (i.e., {term}`Sediment transport`) in the {ref}`Gaia tutorial <tm-gaia>`.
 
 
-The tutorials build on the user manuals provided by the TELEMAC developers at [http://wiki.opentelemac.org](http://wiki.opentelemac.org/doku.php?id=documentation_v8p3r0).
+The tutorials build on the user manuals provided by the TELEMAC developers at [http://wiki.opentelemac.org](http://wiki.opentelemac.org/doku.php).
 
 
 ### Pre-processing

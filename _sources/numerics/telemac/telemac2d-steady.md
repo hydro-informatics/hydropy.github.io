@@ -48,7 +48,7 @@ The below box shows the provided [steady2d.cas](https://github.com/hydro-informa
 
 ```fortran
 /---------------------------------------------------------------------
-/ TELEMAC2D Version v8p4
+/ TELEMAC2D
 / STEADY HYDRODYNAMICS TRAINING
 /---------------------------------------------------------------------
 
@@ -295,7 +295,7 @@ The default is `SUPG OPTION : 2;2;2;2`, where
 
 Note that the `SUPG OPTION` keyword **is not optional** for many keyword combinations and this tutorial uses `SUPG OPTION : 0;0;2;2`.
 
-**Implicitation parameters** (**IMPLICITATION FOR DEPTH**, **IMPLICITATION FOR VELOCITIES**, and **IMPLICITATION FOR DIFFUSION OF VELOCITY**) apply to the semi-implicit time discretization used in Telemac2d. To enable cross-version compatibility, implicitation parameters should be defined in the `*.cas` file. For **DEPTH** and **VELOCITIES** use values between `0.55` and `0.60` (**default is `0.55` since v8p1**); for **IMPLICITATION FOR DIFFUSION OF VELOCITY** set the v8p4 default of `1.0`.
+**Implicitation parameters** (**IMPLICITATION FOR DEPTH**, **IMPLICITATION FOR VELOCITIES**, and **IMPLICITATION FOR DIFFUSION OF VELOCITY**) apply to the semi-implicit time discretization used in Telemac2d. To enable cross-version compatibility, implicitation parameters should be defined in the `*.cas` file. For **DEPTH** and **VELOCITIES** use values between `0.55` and `0.60` (**default is `0.55` since v8p1**); for **IMPLICITATION FOR DIFFUSION OF VELOCITY** use `1.0` (default).
 
 The default `TREATMENT OF THE LINEAR SYSTEM : 2` involves so-called **mass lumping**, which leads to a smoothening of results. Specific mass lumping keywords and values are required for the flux control option of the **TREATMENT OF NEGATIVE DEPTHS** keyword and the default value for the treatment of tidal flats. To this end, the mass lumping keywords should be defined as:
 
@@ -318,7 +318,7 @@ None of these options should be used with tracers because they are not mass-cons
 (steady2d-fv)=
 ### Finite Volumes
 
-The finite volume method is mentioned here for completeness and detailed descriptions are available in section 7.2.2 of the {{ tm2d }}, and the malpasset example (`telemac/v8p4/examples/malpasset/`). To activate the finite volume scheme use:
+The finite volume method is mentioned here for completeness and detailed descriptions are available in section 7.2.2 of the {{ tm2d }}, and the malpasset example (`telemac/v9.0.0/examples/telemac2d/malpasset/`). To activate the finite volume scheme use:
 
 ```fortran
 EQUATIONS : 'SAINT-VENANT FV' / the apostrophes are strictly needed here
@@ -713,10 +713,10 @@ With these files prepared, load the TELEMAC environment, and run Telemac2d follo
 
 ### Load environment and files
 
-Go to the configuration folder of the Telemac installation (e.g., `HOMETEL/configs/` where `HOMETEL` could be something like `/home/telemac/v8p4/`) and load the environment (e.g., `pysource.gfortranHPC.sh` - use the same as for {ref}`compiling Telemac <tm-compile>`).
+Go to the configuration folder of the Telemac installation (e.g., `HOMETEL/configs/` where `HOMETEL` could be something like `/home/telemac/v9.0.0/`) and load the environment (e.g., `pysource.gfortranHPC.sh` - use the same as for {ref}`compiling Telemac <tm-compile>`).
 
 ```
-cd ~/telemac/v8p4/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.gfortranHPC.sh
 ```
 
@@ -736,7 +736,7 @@ source pysource.hyfo-dyn.sh
 To start a simulation, change to the directory (`cd`) where the simulation files live and run the steering file (`.cas`) with the **telemac2d.py** script:
 
 ```
-cd ~/telemac/v8p4/mysimulations/steady2d-tutorial/
+cd ~/telemac/v9.0.0/mysimulations/steady2d-tutorial/
 telemac2d.py steady2d.cas -s
 ```
 

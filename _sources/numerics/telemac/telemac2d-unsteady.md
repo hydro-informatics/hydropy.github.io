@@ -271,10 +271,10 @@ Thus, re-running the simulation will write the fluxes across the two define cont
 
 ## Run Telemac2d Unsteady
 
-Go to the configuration folder of the local TELEMAC installation (e.g., `~/telemac/v8p2/configs/`) and load the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
+Go to the configuration folder of the local TELEMAC installation (e.g., `~/telemac/v9.0.0/configs/`) and load the environment (e.g., `pysource.openmpi.sh` - use the same as for compiling TELEMAC).
 
 ```
-cd ~/telemac/v8p4/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.gfortranHPC.sh
 ```
 
@@ -289,10 +289,10 @@ source pysource.hyfo-dyn.sh
 ```
 ````
 
-With the TELEMAC environment loaded, change to the directory where the unsteady simulation lives (e.g., `/home/telemac/v8p2/mysimulations/unsteady2d-tutorial/`) and run the `*.cas` file by calling the **telemac2d.py** script.
+With the TELEMAC environment loaded, change to the directory where the unsteady simulation lives (e.g., `/home/telemac/v9.0.0/mysimulations/unsteady2d-tutorial/`) and run the `*.cas` file by calling the **telemac2d.py** script.
 
 ```
-cd ~/telemac/v8p2/mysimulations/unsteady2d-tutorial/
+cd ~/telemac/v9.0.0/mysimulations/unsteady2d-tutorial/
 telemac2d.py unsteady2d.cas
 ```
 

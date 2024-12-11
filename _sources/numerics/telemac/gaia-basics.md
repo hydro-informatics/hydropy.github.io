@@ -1,7 +1,7 @@
 (gaia-basics)=
 # Basic Setup of Gaia
 
-The following instructions refer to the setup of the above-created Gaia steering file (*gaia-morphodynamics.cas*), which needs some mandatory parameters and enables many more optional keywords settings. An overview of available keywords can be found in the {{ gaia_ref }} and the Gaia dictionary file `/telemac/v8p2/sources/gaia/gaia.dico`. Similar to the Telemac2d or Telemac3d hydrodynamics steering file, the Gaia steering file can be distinguished between keyword groups for general (file-related), physical (sediment transport), and numerical parameters. This section introduces general parameters embracing the setup of boundary condition files and basic definitions of sediment and riverbed characteristics. The implementation of {term}`Bedload` and/or {term}`Suspended load` is covered in separate sections.
+The following instructions refer to the setup of the above-created Gaia steering file (*gaia-morphodynamics.cas*), which needs some mandatory parameters and enables many more optional keywords settings. An overview of available keywords can be found in the {{ gaia_ref }} and the Gaia dictionary file `/telemac/v9.0.0/sources/gaia/gaia.dico`. Similar to the Telemac2d or Telemac3d hydrodynamics steering file, the Gaia steering file can be distinguished between keyword groups for general (file-related), physical (sediment transport), and numerical parameters. This section introduces general parameters embracing the setup of boundary condition files and basic definitions of sediment and riverbed characteristics. The implementation of {term}`Bedload` and/or {term}`Suspended load` is covered in separate sections.
 
 (gaia-gen)=
 ## General Parameters
@@ -178,7 +178,7 @@ The boundary type variables (no. 1, 2, 3, and 8) listed in {numref}`Tab. %s <tab
 To this end, create a sediment transport boundaries file (`*.cli`) for Gaia by **creating a copy of [boundaries.cli](https://github.com/hydro-informatics/telemac/raw/main/gaia2d-tutorial/boundaries.cli)** and calling the copy **boundaries-gaia.cli**. In the context of Gaia, the hydrodynamic boundary types can be kept, though their flags are differently interpreted according to the list in {numref}`Tab. %s <tab-gaia-bc>`.
 
 ```{admonition} Why two boundary condition files?
-Most examples of the TELEMAC installation (`/telemac/v8p2/examples/gaia/`) use a single boundary conditions file, which works fine because the numerical values are identical. However, the flags of a Gaia `*.cli` and a Telemac2d/3d `*.cli` file are not the same and for this reason, this eBook features good practice by using two (identical) boundary condition files. Thus, we could use a single `*.cli` file, but we do use `*.cli` two files to be prepared for more complex and physically correct simulations in the future. For instance, a more complex future simulation may require prescribing bedload fluxes in the `*.cli` file, where the extra Gaia boundary file is not just an option.
+Most examples of the TELEMAC installation (`/telemac/v9.0.0/examples/gaia/`) use a single boundary conditions file, which works fine because the numerical values are identical. However, the flags of a Gaia `*.cli` and a Telemac2d/3d `*.cli` file are not the same and for this reason, this eBook features good practice by using two (identical) boundary condition files. Thus, we could use a single `*.cli` file, but we do use `*.cli` two files to be prepared for more complex and physically correct simulations in the future. For instance, a more complex future simulation may require prescribing bedload fluxes in the `*.cli` file, where the extra Gaia boundary file is not just an option.
 ```
 
 To verify the correct setup of the boundary conditions files, open **boundaries.cli** and **boundaries-gaia.cli**  with a {ref}`text editor <npp>` and check on the liquid boundary definitions. Both the **boundaries.cli** and the **boundaries-gaia.cli** files are similarly organized according to {numref}`Tab. %s <tab-gaia-bc>`.
@@ -290,7 +290,7 @@ Particular sediment transport formulae for simulating {term}`Bedload` or {term}`
 
 ```{admonition} Zonal sediment size and fraction definitions
 :class: tip
-Sediment size classes can be declared for particular zones of a model, similar to friction zones (recall the friction zone box at the bottom of the {ref}`section on friction boundaries <tm2d-friction>`). Thus, a Selafin (`*.slf`) file containing riverbed characteristics can be declared with the geometry in the Gaia steering file. An example for zonal sediment definitions is provided with the Wilcock-Crowe model in the TELEMAC installation (e.g., `/telemac/v8p2/examples/gaia/wilcock_crowe-t2d/` -  have a look at **gai_ref_WC2003.slf** in {ref}`BlueKenue <bluekenue>`).
+Sediment size classes can be declared for particular zones of a model, similar to friction zones (recall the friction zone box at the bottom of the {ref}`section on friction boundaries <tm2d-friction>`). Thus, a Selafin (`*.slf`) file containing riverbed characteristics can be declared with the geometry in the Gaia steering file. An example for zonal sediment definitions is provided with the Wilcock-Crowe model in the TELEMAC installation (e.g., `/telemac/v9.0.0/examples/gaia/wilcock_crowe-t2d/` -  have a look at **gai_ref_WC2003.slf** in {ref}`BlueKenue <bluekenue>`).
 ```
 
 (gaia-active-lyr)=

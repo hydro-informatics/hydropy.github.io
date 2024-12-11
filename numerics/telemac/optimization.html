@@ -360,7 +360,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../troubleshoot/dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-linux.html">Debugging Debian Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-linux.html">Debugging Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshoot/dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
@@ -571,7 +571,7 @@
 <li><p>Deactivate <code class="docutils literal notranslate"><span class="pre">TIDAL</span> <span class="pre">FLATS</span></code>, even though deactivating <a class="reference internal" href="telemac2d-steady.html#tm2d-tidal"><span class="std std-ref">tidal flats</span></a> can not be recommended to yield physically meaningful and stable models.</p></li>
 <li><p>When using the GMRES solver (<code class="docutils literal notranslate"><span class="pre">SOLVER</span> <span class="pre">:</span> <span class="pre">7</span></code>), varying the <a class="reference internal" href="telemac2d-steady.html#tm2d-solver-pars"><span class="std std-ref">solver options</span></a> may aid to reduce the total calculation time.</p></li>
 <li><p>Make sure to use the default <code class="docutils literal notranslate"><span class="pre">MATRIX</span> <span class="pre">STORAGE</span> <span class="pre">:</span> <span class="pre">3</span></code> keyword.</p></li>
-<li><p>Use an earlier simulation (e.g., with a coarser mesh) to initiate the model with the <code class="docutils literal notranslate"><span class="pre">COMPUTATION</span> <span class="pre">CONTINUED</span> <span class="pre">:</span> <span class="pre">YES</span></code> and <code class="docutils literal notranslate"><span class="pre">PREVIOUS</span> <span class="pre">COMPUTATION</span> <span class="pre">FILE</span> <span class="pre">:</span> <span class="pre">*.slf</span></code> keywords (see section 4.1.3 in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac2d/user/telemac2d_user_v8p4.pdf">Telemac2d manual</a>).</p></li>
+<li><p>Use an earlier simulation (e.g., with a coarser mesh) to initiate the model with the <code class="docutils literal notranslate"><span class="pre">COMPUTATION</span> <span class="pre">CONTINUED</span> <span class="pre">:</span> <span class="pre">YES</span></code> and <code class="docutils literal notranslate"><span class="pre">PREVIOUS</span> <span class="pre">COMPUTATION</span> <span class="pre">FILE</span> <span class="pre">:</span> <span class="pre">*.slf</span></code> keywords (see section 4.1.3 in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v9.0.0/documentation/telemac2d/user/telemac2d_user_9.0.pdf">Telemac2d manual</a>).</p></li>
 </ul>
 <p>Moreover, Telemac2d provides a way to stop a simulation (step) when fluxes stabilize. To enable this feature, add the following block in the steering (<code class="docutils literal notranslate"><span class="pre">*.cas</span></code>) file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span> <span class="n">steady</span> <span class="n">state</span> <span class="n">stop</span> <span class="n">criteria</span> <span class="ow">in</span> <span class="n">steering</span><span class="o">.</span><span class="n">cas</span>
@@ -579,10 +579,10 @@
 <span class="n">STOP</span> <span class="n">CRITERIA</span> <span class="p">:</span> <span class="mf">1.E-3</span><span class="p">;</span><span class="mf">1.E-3</span><span class="p">;</span><span class="mf">1.E-3</span> <span class="o">/</span> <span class="n">use</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">three</span> <span class="n">values</span> <span class="o">-</span> <span class="n">defaults</span> <span class="n">are</span> <span class="mf">1.E-4</span>
 </pre></div>
 </div>
-<p>However, stop criteria are not functional for non-stationary flows (e.g., <span id="id1">Von Karmàn [<a class="reference internal" href="../../documentation/bibliography.html#id596" title="Theodor Von Karmàn. Mechanische ähnlichkeit und Turbulenz [Mechanical similarity and turbulence]. In Third International Congress for Applied Mechanics, volume 1, pages 79–93. Stockholm, 1930.">VK30</a>]</span> vortex street downstream of bridge piers). Read more about the convergence stop criteria in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac2d/user/telemac2d_user_v8p4.pdf">Telemac2d manual</a> (section 5.1).</p>
+<p>However, stop criteria are not functional for non-stationary flows (e.g., <span id="id1">Von Karmàn [<a class="reference internal" href="../../documentation/bibliography.html#id596" title="Theodor Von Karmàn. Mechanische ähnlichkeit und Turbulenz [Mechanical similarity and turbulence]. In Third International Congress for Applied Mechanics, volume 1, pages 79–93. Stockholm, 1930.">VK30</a>]</span> vortex street downstream of bridge piers). Read more about the convergence stop criteria in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v9.0.0/documentation/telemac2d/user/telemac2d_user_9.0.pdf">Telemac2d manual</a> (section 5.1).</p>
 <div class="tip admonition">
 <p class="admonition-title">More recommendations are in the user manual</p>
-<p>The <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac2d/user/telemac2d_user_v8p4.pdf">Telemac2d manual</a> provides more recommendations for computing time, stability, and model optimization, including the mesh, in section 16.</p>
+<p>The <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v9.0.0/documentation/telemac2d/user/telemac2d_user_9.0.pdf">Telemac2d manual</a> provides more recommendations for computing time, stability, and model optimization, including the mesh, in section 16.</p>
 </div>
 </section>
 <section id="stability-physical-correctness">
@@ -647,7 +647,7 @@
 </section>
 <section id="tidal-flats">
 <h3>Tidal Flats<a class="headerlink" href="#tidal-flats" title="Link to this heading">#</a></h3>
-<p>Wetting and drying of grid cells, for instance, during a simulation of dam breaks or flood hydrographs, may lead to model instability. While the <a class="reference internal" href="telemac2d-steady.html#tm2d-tidal"><span class="std std-ref">Tidal Flats</span></a> section in the Telemac2d steady modeling tutorial suggests physically and computationally meaningful keyword option combinations, section 16.5 in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac2d/user/telemac2d_user_v8p4.pdf">Telemac2d manual</a> recommends using the following settings in the steering file as conservative choices from the BAW’s Wesel example.</p>
+<p>Wetting and drying of grid cells, for instance, during a simulation of dam breaks or flood hydrographs, may lead to model instability. While the <a class="reference internal" href="telemac2d-steady.html#tm2d-tidal"><span class="std std-ref">Tidal Flats</span></a> section in the Telemac2d steady modeling tutorial suggests physically and computationally meaningful keyword option combinations, section 16.5 in the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v9.0.0/documentation/telemac2d/user/telemac2d_user_9.0.pdf">Telemac2d manual</a> recommends using the following settings in the steering file as conservative choices from the BAW’s Wesel example.</p>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="n">VELOCITY</span><span class="w"> </span><span class="n">PROFILES</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="mi">0</span>
 <span class="n">TURBULENCE</span><span class="w"> </span><span class="n">MODEL</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="n">VELOCITY</span><span class="w"> </span><span class="n">DIFFUSIVITY</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">2.</span>
@@ -668,7 +668,7 @@
 <div class="tip admonition">
 <p class="admonition-title">How to find the Wesel example</p>
 <p>This example is typically installed in the following directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v8p4</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">telemac2d</span><span class="o">/</span><span class="n">wesel</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">telemac</span><span class="o">/</span><span class="n">v9</span><span class="mf">.0.0</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">telemac2d</span><span class="o">/</span><span class="n">wesel</span><span class="o">/</span>
 </pre></div>
 </div>
 </div>

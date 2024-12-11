@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Debugging Debian Linux &#8212; Hydro-Informatics</title>
+    <title>Debugging Linux &#8212; Hydro-Informatics</title>
   
   
   
@@ -360,7 +360,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="dbg-os.html">Operating Systems (Linux and VMs)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Debugging Debian Linux</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Debugging Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
@@ -521,7 +521,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Debugging Debian Linux</h1>
+    <h1>Debugging Linux</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -531,10 +531,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management-battery-life">Power management (battery life)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particular-problems">Particular Problems</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-drive-is-running-out-of-disk-space">Root Drive Is Running Out of Disk Space</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-system-and-software-up-to-date">Keep System and Software up to Date</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management-battery-life">Power management (battery life)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permission-denied-messages">Permission Denied Messages</a></li>
 </ul>
 </li>
@@ -565,9 +565,19 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="debugging-debian-linux">
-<h1>Debugging Debian Linux<a class="headerlink" href="#debugging-debian-linux" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="debugging-linux">
+<h1>Debugging Linux<a class="headerlink" href="#debugging-linux" title="Link to this heading">#</a></h1>
 <p>Debian Linux is documented in a comprehensive <a class="reference external" href="https://wiki.debian.org/">wiki</a> with descriptions for setting up the system, installing software (packages), and tutorials for trouble shooting. This page provides guidance for problems that may occur in particular when Debian Linux is installed on a Virtual Machine (VM).</p>
+<section id="power-management-battery-life">
+<h2>Power management (battery life)<a class="headerlink" href="#power-management-battery-life" title="Link to this heading">#</a></h2>
+<p>Working with Linux on a laptop often drains the battery quickly, especially when working with pure Debian. To increase power efficiency, consider installing lightweight Ubuntu (derivatives), that is <strong>Mate</strong> editions. Also, the following tool can help improve battery life on Ubuntu (derivatives):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">linrunner</span><span class="o">/</span><span class="n">tlp</span> 
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> 
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tlp</span> <span class="n">tlp</span><span class="o">-</span><span class="n">rdw</span> 
+</pre></div>
+</div>
+<p>Alternatively, <a class="reference external" href="https://fedoraproject.org/">Fedora</a> or <a class="reference external" href="https://archlinux.org/">Arch</a> are said to be power efficient. However, Arch can be difficult for Linux novices.</p>
+</section>
 <section id="particular-problems">
 <h2>Particular Problems<a class="headerlink" href="#particular-problems" title="Link to this heading">#</a></h2>
 <section id="root-drive-is-running-out-of-disk-space">
@@ -622,16 +632,6 @@
 <h3>Keep System and Software up to Date<a class="headerlink" href="#keep-system-and-software-up-to-date" title="Link to this heading">#</a></h3>
 <p>Read more on the <a class="reference external" href="https://www.debian.org/doc/manuals/debian-faq/uptodate.en.html">developer’s website</a>.</p>
 </section>
-<section id="power-management-battery-life">
-<h3>Power management (battery life)<a class="headerlink" href="#power-management-battery-life" title="Link to this heading">#</a></h3>
-<p>Working with Linux on a laptop often drains the battery quickly, especially when working with pure Debian. To increase power efficiency, consider installing lightweight Ubuntu (derivatives), that is <strong>Mate</strong> editions. Also, the following tool can help improve battery life on Ubuntu (derivatives):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">linrunner</span><span class="o">/</span><span class="n">tlp</span> 
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> 
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tlp</span> <span class="n">tlp</span><span class="o">-</span><span class="n">rdw</span> 
-</pre></div>
-</div>
-<p>Alternatively, <a class="reference external" href="https://fedoraproject.org/">Fedora</a> or <a class="reference external" href="https://archlinux.org/">Arch</a> are said to be power efficient. However, Arch can be difficult for Linux novices.</p>
-</section>
 <section id="permission-denied-messages">
 <span id="dbg-permissions"></span><h3>Permission Denied Messages<a class="headerlink" href="#permission-denied-messages" title="Link to this heading">#</a></h3>
 <p><strong>Permission denied</strong> messages may occur because of the fail-safe design of Debian, but denied read and write rights may quickly become annoying, in particular if you need to switch between normal and superuser accounts for installing software packages.</p>
@@ -655,7 +655,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">rwx</span> <span class="o">/</span><span class="n">directory</span><span class="o">/*/*.*</span>
 </pre></div>
 </div>
-<p>This lifts all restrictions from a directory for all users, all its sub-folders and files contained (and sub-sub-folders and sub-sub-files contained, and so on):</p>
+<p>This lifts all restrictions from a directory for all users, all its sub-folders and files contained (and sub-sub-folders and sub-sub-files contained, and so on) – <strong>this can be a very harmful irreversible operation when applied to system directories!</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">777</span> <span class="o">/</span><span class="n">directory</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -902,10 +902,10 @@ line 188:         if (True):</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management-battery-life">Power management (battery life)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particular-problems">Particular Problems</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#root-drive-is-running-out-of-disk-space">Root Drive Is Running Out of Disk Space</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-system-and-software-up-to-date">Keep System and Software up to Date</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management-battery-life">Power management (battery life)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permission-denied-messages">Permission Denied Messages</a></li>
 </ul>
 </li>

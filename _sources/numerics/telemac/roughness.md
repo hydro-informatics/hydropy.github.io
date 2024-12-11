@@ -16,6 +16,11 @@ Similar to the assignment of multiple friction coefficient values to multiple mo
 * Installation of {ref}`BlueKenue (also works on Linux, see the installation guide) <bluekenue>`, and {ref}`Telemac <telemac-install>`.
 ```
 
+```{admonition} Roughness versus friction
+
+Roughness describes the unevenness or ruggedness of solid surfaces, like riverbeds. Boundary rougness increases resistance to flow, causing friction and slowing water movement.
+```
+
 
 (tm-friction-qgis)=
 ## Roughness.XYZ with QGIS (recommended)
@@ -632,7 +637,7 @@ Make sure all required files are placed in a simulation folder (e.g., `/HOME/mod
 Navigate (`cd`) to the Telemac installation directory (`HOEMTEL`) to activate (`source`) the Telemac environment in Terminal (use the same environment as for {ref}`compiling Telemac <tm-compile>`):
 
 ```
-cd ~/telemac/v8p4/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.gfortranHPC.sh
 ```
 
@@ -850,7 +855,7 @@ To run Telemac with friction IDs, make sure the above-indicated keywords are act
 With these files, activate and run Telemac as usual:
 
 ```
-cd ~/telemac/v8p4/configs
+cd ~/telemac/v9.0.0/configs
 source pysource.gfortranHPC.sh
 cd ~/modeling/frictionID-tutorial/
 telemac2d.py steady2d-zonal-ID.cas

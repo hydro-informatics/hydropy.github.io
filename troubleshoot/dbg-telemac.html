@@ -362,7 +362,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dbg-os.html">Operating Systems (Linux and VMs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="dbg-linux.html">Debugging Debian Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbg-linux.html">Debugging Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dbg-vm.html">Debugging Virtual Machines</a></li>
 </ul>
 </details></li>
@@ -575,7 +575,7 @@
 <p>Since its early development, TELEMAC has become a robust and reliable tool for the numerically modeling of open surface flows. Yet there are a few little challenges and this always growing page provides some answers.</p>
 <div class="tip admonition">
 <p class="admonition-title">Keyword-research the TELEMAC docs</p>
-<p>To look up the reference, implementation, and/or meaning of a variable, class, script, file, or module, visit the <a class="reference external" href="http://docs.opentelemac.org/doxydocs/v8p2r0/html/briefs.html">TELEMAC doxydocs</a>.</p>
+<p>To look up the reference, implementation, and/or meaning of a variable, class, script, file, or module, visit the <a class="reference external" href="http://docs.opentelemac.org/doxydocs/v8p2r0/html/briefs.html">TELEMAC doxydocs (stale!)</a>.</p>
 </div>
 <section id="traceback-errors">
 <h2>Traceback errors<a class="headerlink" href="#traceback-errors" title="Link to this heading">#</a></h2>
@@ -773,7 +773,7 @@ Correct line break (good)</label><div class="sd-tab-content docutils">
 <p>BlueKenue may throw errors or not correctly show when working with 3d meshes. Some of the issues can be resolved by using the latest version of BlueKenue (v3.12.2-alpha at the time of editing this article).</p>
 <dl class="simple myst">
 <dt><strong>OnFileOpendata(): ERROR: on Activate()</strong></dt><dd><p><strong>Causes:</strong> The error message typically occurs with parallelized model runs when Telemac3d / PARTEL did not correctly merge the mesh at the end of the simulation.</p>
-<p><strong>Solution:</strong> Force TELEMAC to not delete the temporary simulation folder (a folder that is visible in the simulation directory by default only while a simulation is running). Keeping the temporary calculation directory is achieved through adding a <code class="docutils literal notranslate"><span class="pre">-t</span></code> flag at the end of the simulation run command. For instance, tap the following to keep the simulation folder for a Telemac3d simulation (read more in in Annex A of the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/blob/v8p4r0/documentation/telemac3d/user/telemac3d_user_v8p4.pdf">Telemac3d manual</a>):</p>
+<p><strong>Solution:</strong> Force TELEMAC to not delete the temporary simulation folder (a folder that is visible in the simulation directory by default only while a simulation is running). Keeping the temporary calculation directory is achieved through adding a <code class="docutils literal notranslate"><span class="pre">-t</span></code> flag at the end of the simulation run command. For instance, tap the following to keep the simulation folder for a Telemac3d simulation (read more in in Annex A of the <a class="reference external" href="https://gitlab.pam-retd.fr/otm/telemac-mascaret/-/raw/v9.0.0/documentation/telemac3d/user/telemac3d_user_9.0.pdf">Telemac3d manual</a>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">telemac3d</span><span class="o">.</span><span class="n">py</span> <span class="n">steering</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">cas</span> <span class="o">-</span><span class="n">t</span>
 </pre></div>
 </div>
