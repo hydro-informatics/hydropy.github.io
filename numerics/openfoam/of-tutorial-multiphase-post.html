@@ -508,7 +508,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -524,6 +526,19 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-simulation-data">Retrieve simulation data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizatioin-with-paraview-parafoam">Visualizatioin with ParaView (paraFoam)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-parafoam">Launch paraFoam</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-pipelines">Visualization pipelines</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -539,6 +554,31 @@
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="post-processing">
 <h1>Post-processing<a class="headerlink" href="#post-processing" title="Link to this heading">#</a></h1>
+<p>Post-processing is a crucial step in understanding and analyzing the results of <a class="reference internal" href="../../documentation/glossary.html#term-CFD"><span class="xref std std-term">CFD</span></a> simulations, particularly for multiphase flow scenarios. This tutorial is designed to guide you through the essential steps of extracting meaningful insights from OpenFOAM simulations, emphasizing the visualization and analysis with ParaView (ParaFoam). On this page, you will learn how to efficiently use tools like ParaView to interpret simulation outcomes, manipulate and process OpenFOAM outputs.</p>
+<div class="tip admonition">
+<p class="admonition-title">Visualization software: ParaView and alternatives</p>
+<p>OpenFOAM post-processing can be accomplished with paraFoam, a software module that ships with OpenFOAM. ParaFOAM is a specialized version of ParaView configured to directly process OpenFOAM data files without additional plugins. ParaView is a general-purpose open-source visualization tool for analyzing and visualizing large datasets. ParaFOAM is tailored for OpenFOAM users with built-in compatibility, while ParaView requires additional steps to read OpenFOAM formats, but supports a wider range of data types and analysis pipelines.</p>
+<p>To directly work with ParaView in lieu of paraFOAM, either run the <code class="docutils literal notranslate"><span class="pre">foamToVTK</span></code> utility provided by OpenFOAM to convert the simulation results into VTK-compatible files that ParaView can natively read, or use ParaView plugins. For instance, the <strong>OpenFOAM Reader</strong> plugin allows to load a <code class="docutils literal notranslate"><span class="pre">.foam</span></code> file (typically created in the simulation case directory by adding an empty file named <code class="docutils literal notranslate"><span class="pre">&lt;case&gt;.foam</span></code>) and ParaView will parse the case using the plugin.</p>
+<p>Alternative software includes tools like <a class="reference external" href="https://visit-dav.github.io/visit-website/index.html">VisIt</a>, which provides similar visualization capabilities to ParaView. VisIt is also open-source visualization software and has an intuitive interface.</p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Enable VisIt for OpenFOAM</p>
+<p>To use VisIt for analyzing OpenFOAM simulation output, follow these steps:</p>
+<ol class="arabic">
+<li><p>Download and install VisIt from <a class="reference external" href="https://visit-dav.github.io/visit-website/index.html">https://visit-dav.github.io/visit-website/index.html</a> (ensure you have the required system dependencies).</p></li>
+<li><p>Since VisIt does not natively read OpenFOAM files, convert the simulation data into a format compatible with VisIt, such as VTK. To this end, use the <code class="docutils literal notranslate"><span class="pre">foamToVTK</span></code> utility provided by OpenFOAM:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>foamToVTK
+</pre></div>
+</div>
+<p>This will generate VTK files in a <code class="docutils literal notranslate"><span class="pre">VTK</span></code> directory within your simulation case folder.</p>
+</li>
+<li><p>To load data in VisIt, (open VisIt,) navigate to the <code class="docutils literal notranslate"><span class="pre">VTK</span></code> directory created by <code class="docutils literal notranslate"><span class="pre">foamToVTK</span></code>, and load the target VTK files. Select relevant fields such as velocity, pressure, or other quantities for visualization.</p></li>
+<li><p>To explore data, use VisIt’s visualization tools, such as slicing, contouring, vector field plotting, and temporal evolution visualization for dynamic simulations.</p></li>
+</ol>
+<p>Customized analysis can be implemented by leveraging VisIt’s scripting capabilities or using advanced filters to perform specific analyses, such as integrating flow quantities, exporting data, or visualizing complex interactions in your results.</p>
+</div>
+</div>
+<section id="retrieve-simulation-data">
+<h2>Retrieve simulation data<a class="headerlink" href="#retrieve-simulation-data" title="Link to this heading">#</a></h2>
 <p>In the case in which the simulations were run in parallel, before post-processing the data, the first step consists in reconstructing (i.e., reassembling) all solution steps of the analyzed case. This can either be done for all time steps or only for a specific one. The commands that need to be typed in the terminal window are shown below:</p>
 <ul class="simple">
 <li><p>To reconstruct all solution steps:</p></li>
@@ -552,10 +592,20 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>user@user123:~/OpenFOAM-9/channel/Simulation$ reconstructPar -time x
 </pre></div>
 </div>
-<p>Once the case has been reconstructed, as for the meshing process, the following command should be used to visualize the case in the software ParaView:</p>
+</section>
+<section id="visualizatioin-with-paraview-parafoam">
+<h2>Visualizatioin with ParaView (paraFoam)<a class="headerlink" href="#visualizatioin-with-paraview-parafoam" title="Link to this heading">#</a></h2>
+<p>ParaFoam is a customized version of the ParaView visualization software that comes pre-configured to read and process OpenFOAM simulation data directly. It simplifies post-processing by integrating OpenFOAM-specific file formats and functionalities, allowing users to visualize fields, extract insights, and analyze results without additional setup.</p>
+<p>Working with paraFoam requires that the simulation case has been constructed (see above section). A simulation case refers to the complete set of files and configurations required to define, run, and analyze a specific simulation scenario. It includes the geometry and mesh of the computational domain, initial and boundary conditions, solver settings, physical models, and any additional parameters necessary for the simulation. The case is organized into directories such as <code class="docutils literal notranslate"><span class="pre">constant</span></code> (material properties and mesh), <code class="docutils literal notranslate"><span class="pre">system</span></code> (solver controls), and <code class="docutils literal notranslate"><span class="pre">0</span></code> (initial conditions), forming a structured framework for numerical experiments.</p>
+<section id="launch-parafoam">
+<h3>Launch paraFoam<a class="headerlink" href="#launch-parafoam" title="Link to this heading">#</a></h3>
+<p>Once the case has been reconstructed, as for the meshing process, the following command can be used to visualize the case in the software ParaView:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>user@user123:~/OpenFOAM-9/channel/Simulation$ paraFoam
 </pre></div>
 </div>
+</section>
+<section id="visualization-pipelines">
+<h3>Visualization pipelines<a class="headerlink" href="#visualization-pipelines" title="Link to this heading">#</a></h3>
 <p>The <em>channel.OpenFOAM</em> should now be present in the Pipeline Browser and to visualize it in the layout, press the <em>Apply</em> button. Additionally, in the <em>Fields</em> section, the various fields that can be visualized are shown and can be selected/deselected according to the focus of the analysis.</p>
 <figure class="align-default" id="of-channelopenfoam">
 <img alt="openfoam" src="../../_images/channelOpenFOAM.png" />
@@ -613,6 +663,8 @@
 </figcaption>
 </figure>
 </section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -668,6 +720,27 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-simulation-data">Retrieve simulation data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizatioin-with-paraview-parafoam">Visualizatioin with ParaView (paraFoam)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-parafoam">Launch paraFoam</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-pipelines">Visualization pipelines</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
