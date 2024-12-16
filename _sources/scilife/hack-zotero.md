@@ -1,3 +1,4 @@
+(debug-zotero)=
 # Zotero Utilities
 
 ## Auto-merge Multiple Duplicates

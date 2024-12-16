@@ -53,6 +53,34 @@ Illustration of the Xournal++ app running on Linux Mint (dark scheme).
 ```
 
 
+(install-tex)=
+## LaTex & TexStudio
+
+TeXStudio is a graphical editor designed to help you write and organize LaTeX code with features like syntax highlighting, spell checking, auto-completion, and an integrated viewer. In addition, a TeX distribution such as [TeX Live](https://tug.org/texlive/) (Linux preference) or [MiKTeX](https://miktex.org/) (Windows preference) is required, since these are the actual LaTeX compilers that provide the packages and fonts needed to transform a `.tex` source file into a PDF document. Both an editor (that is, TexStudio) and a TeX distribution are required, because the editor alone cannot compile the code, and the distribution alone does not provide an integrated environment for writing and managing LaTeX documents. Therefore, before installing the graphical LaTeX editor, be sure to install a TeX distribution -- the LaTeX editor will try to find the installed TeX distribution during its own installation (next step).
+
+
+`````{admonition} LaTeX package installation
+:class: important
+
+LaTeX packages are collections of additional commands, macros, and formatting instructions that extend the capabilities of the LaTeX system. Packages are typically introduced into a TeX document by including commands such as `\usepackage{...}` in the preamble of a `.tex` file. This allows authors to leverage specialized functionality, such as enhanced math notations, improved bibliography management, or particular typographic styles, without having to redefine or recode basic LaTeX commands. A TeX distribution comes bundled with a large set of commonly used packages and is often configured to retrieve more packages as needed. If a source file calls for a package that is not installed locally, the distribution can automatically download and install it from a central repository, ensuring that you have the resources required to compile the `.tex` file into a PDF document without manually searching and installing additional files.
+
+````{tab-set}
+```{tab-item} Linux (Debian)
+Debian Linux users can simplify package installation by bulk installing all available TeX Live packages with `sudo apt install texlive-full`, although this will take up 3-4 GB of disk space.
+```
+
+```{tab-item} Windows
+
+Windows users are advised to install MiKTeX using a standard user account rather than administrator privileges. Doing so allows MiKTeX to download and install new packages *on-the-fly* without repeatedly requesting system-wide permissions. If MiKTeX were installed by an administrator, any additional package installation would require elevated rights and prompt the user to authenticate as an administrator each time, a process that is both inconvenient and potentially less secure. Instead, performing a user-level installation ensures that MiKTeX can write packages directly into the current user directories. During the installation, select the user-only installation option and answer "No" when prompted about using administrator rights. After setup, open the MiKTeX settings panel and confirm that *on-the-fly* package installation is enabled.
+
+```
+````
+````` 
+
+
+[TexStudio](https://www.texstudio.org/) is an open-source LaTeX editor available on both Windows and Linux. It can be installed on Windows by downloading the installer from the official website. Most Linux distributions provide TexStudio through their package managers. After installation, opening TexStudio represents a user-friendly interface that helps you create, edit, and manage LaTeX documents in one place. You can start a new document or open existing `.tex` files, use the integrated PDF viewer to check your compiled output, and run LaTeX or BibTeX tools directly from the toolbar or menu. For more detailed installation instructions, working with TexStudio. and setting up LaTeX documents, please have a look at our LaTeX thesis template at [https://github.com/Ecohydraulics/latex-thesis-template](https://github.com/Ecohydraulics/latex-thesis-template). We also provide more tips in the troubleshooting section on {ref}`LaTeX <debug-tex>`.
+
+
 (octave)=
 ## GNU Octave (Matlab&reg; alternative)
 *Matlab*&reg; still is one of the leading tools in science and engineering. However, license fees and its proprietary nature limit the use of *Matlab*&reg; to privileged entities and users. The good news is that there is a remedy in the shape of [GNU Octave](https://www.gnu.org/software/octave/). *GNU Octave* and *Matlab*&reg; use very similar syntax and `.m` files can be run with both programs.

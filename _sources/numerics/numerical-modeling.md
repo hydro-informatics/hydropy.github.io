@@ -21,8 +21,7 @@ This chapter introduces open-access and open-source software with extensive tuto
   * Get an overview of files and model options in the {ref}`TELEMAC introduction <chpt-telemac>` section.
   * The {ref}`chpt-telemac2d` tutorial introduces 2d hydrodynamic modelling with standard *SLF* (selafin) geometry files.
   * The {ref}`chpt-telemac3d-med` tutorial introduces 3d hydrodynamic modeling based on the highly efficient *MED* file library.
-
-**OpenFOAM** represents another powerful modeling tool, which **is recommended for modeling flow-structure interactions**, and this eBook provides a basic introduction by {{ scolari }} in the {ref}`OpenFOAM section <chpt-openfoam>`. In addition, the OpenFOAM developer's [3-week tutorial](https://wiki.openfoam.com/index.php?title=%223_weeks%22_series) is a good start into OpenFOAM modeling for PhD students or engineers. On {ref}`Debian Linux / Ubuntu / Mint <linux-install>`, preferably install OpenFOAM from the [Ubuntu repository](https://develop.openfoam.com/Development/openfoam/-/wikis/precompiled/debian#ubuntu).
+* **OpenFOAM** represents another powerful modeling tool, which **is recommended for modeling flow-structure interactions**, and this eBook provides a basic introduction by {{ scolari }} in the {ref}`OpenFOAM section <chpt-openfoam>`. In addition, the OpenFOAM developer's [3-week tutorial](https://wiki.openfoam.com/index.php?title=%223_weeks%22_series) is a good start into OpenFOAM modeling for PhD students or engineers. On {ref}`Debian Linux / Ubuntu / Mint <linux-install>`, preferably install OpenFOAM from the [Ubuntu repository](https://develop.openfoam.com/Development/openfoam/-/wikis/precompiled/debian#ubuntu).
 
 (calibration)=
 ## Calibration and Validation

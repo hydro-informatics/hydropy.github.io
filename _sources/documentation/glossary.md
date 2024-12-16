@@ -375,7 +375,7 @@ Rich Text Format
 Riffle pool
   Riffle-pool (or pool-riffle) sequences are a sequence of fast-flowing, shallow flow units and deeper, slower flowing units of a river, where the dimensions of one unit correspond approximately to one channel width {cite:p}`lisle1979sorting`. The maintenance of riffle-pool channels requires sufficient sediment supply during smaller floods and a velocity reversal when those floods occur {cite:p}`caamano_unifying_2009`.
 
-  *French: Rapide (m,?) - affouillement (m,?) <br>German: Furt (w) - Kolk (m); sometimes also Rausche (w) - Kolk (m); although "Rausche" rather refers to "glide".
+  *French: Rapide (m, verifcation required) - affouillement (m, verifcation required) <br>German: Furt (w) - Kolk (m); sometimes also Rausche (w) - Kolk (m); although "Rausche" rather refers to "glide".*
 
 
   ```{figure} ../img/nature/pool-riffle.jpg
@@ -406,7 +406,7 @@ Rouse number
 Saint-Venant equations
   The French mathematician Adhémar Jean Claude Barré de Saint-Venant introduced dimensional simplifications of the {term}`Navier-Stokes equations`. For simple cross-sections, the one-dimensional (1d), cross-section averaged Saint-Venant equations can be applied, and represent the baseline for the Manning-Strickler Formula (cf. the {ref}`1d Hydraulics Python exercise <ex-1d-hydraulics>`). The two-dimensional (2d), depth-averaged Saint-Venant equations are more frequently referred to as the {term}`Shallow water equations`, which imply a hydrostatic pressure distribution {cite:p}`graf_hydraulique_2011`.
 
-  *French: Équations (de Barré) de Saint-Venant <br>German: Saint-Venant-Gleichungen*
+  *French: Équations (de Barré) de Saint-Venant <br>German: Saint-Venant-Gleichungen / Flachwassergleichungen (f, pl.)*
 
 Sand bed
   Sand bed rivers are characterized by the abundance of fine sediment and sand bars. Compared with a gravel bed, a sand bed tends to have higher suspended load. This type of morphology is often observed lowland and coastal regions where the the hypothetic energy grade is low is less intense than in steeper regions {cite:p}`kleinhans2005, zyserman1994`.
