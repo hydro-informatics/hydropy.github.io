@@ -54,9 +54,9 @@ Illustration of the Xournal++ app running on Linux Mint (dark scheme).
 
 
 (install-tex)=
-## LaTex & TexStudio
+## LaTeX & TeXstudio
 
-TeXStudio is a graphical editor designed to help you write and organize LaTeX code with features like syntax highlighting, spell checking, auto-completion, and an integrated viewer. In addition, a TeX distribution such as [TeX Live](https://tug.org/texlive/) (Linux preference) or [MiKTeX](https://miktex.org/) (Windows preference) is required, since these are the actual LaTeX compilers that provide the packages and fonts needed to transform a `.tex` source file into a PDF document. Both an editor (that is, TexStudio) and a TeX distribution are required, because the editor alone cannot compile the code, and the distribution alone does not provide an integrated environment for writing and managing LaTeX documents. Therefore, before installing the graphical LaTeX editor, be sure to install a TeX distribution -- the LaTeX editor will try to find the installed TeX distribution during its own installation (next step).
+TeXStudio is a graphical editor designed to help you write and organize LaTeX code with features like syntax highlighting, spell checking, auto-completion, and an integrated viewer. In addition, a TeX distribution such as [TeX Live](https://tug.org/texlive/) (Linux preference) or [MiKTeX](https://miktex.org/) (Windows preference) is required, since these are the actual LaTeX compilers that provide the packages and fonts needed to transform a `.tex` source file into a PDF document. Both an editor (that is, TeXstudio) and a TeX distribution are required, because the editor alone cannot compile the code, and the distribution alone does not provide an integrated environment for writing and managing LaTeX documents. Therefore, before installing the graphical LaTeX editor, be sure to install a TeX distribution -- the LaTeX editor will try to find the installed TeX distribution during its own installation (next step).
 
 
 `````{admonition} LaTeX package installation
@@ -78,7 +78,7 @@ Windows users are advised to install MiKTeX using a standard user account rather
 ````` 
 
 
-[TexStudio](https://www.texstudio.org/) is an open-source LaTeX editor available on both Windows and Linux. It can be installed on Windows by downloading the installer from the official website. Most Linux distributions provide TexStudio through their package managers. After installation, opening TexStudio represents a user-friendly interface that helps you create, edit, and manage LaTeX documents in one place. You can start a new document or open existing `.tex` files, use the integrated PDF viewer to check your compiled output, and run LaTeX or BibTeX tools directly from the toolbar or menu. For more detailed installation instructions, working with TexStudio. and setting up LaTeX documents, please have a look at our LaTeX thesis template at [https://github.com/Ecohydraulics/latex-thesis-template](https://github.com/Ecohydraulics/latex-thesis-template). We also provide more tips in the troubleshooting section on {ref}`LaTeX <debug-tex>`.
+[TeXstudio](https://www.texstudio.org/) is an open-source LaTeX editor available on both Windows and Linux. It can be installed on Windows by downloading the installer from the official website. Most Linux distributions provide TeXstudio through their package managers. After installation, opening TeXstudio represents a user-friendly interface that helps you create, edit, and manage LaTeX documents in one place. You can start a new document or open existing `.tex` files, use the integrated PDF viewer to check your compiled output, and run LaTeX or BibTeX tools directly from the toolbar or menu. For more detailed installation instructions, working with TeXstudio, and setting up LaTeX documents, please have a look at our LaTeX thesis template at [https://github.com/Ecohydraulics/latex-thesis-template](https://github.com/Ecohydraulics/latex-thesis-template). We also provide more tips in the troubleshooting section on {ref}`LaTeX <debug-tex>`.
 
 
 (octave)=
