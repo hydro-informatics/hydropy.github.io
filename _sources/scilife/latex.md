@@ -1,5 +1,5 @@
 (debug-tex)=
-# LaTeX & Manuscript Writing
+# LaTeX & Citation Management (Zotero)
 
 Online LaTeX editors, such as Overleaf, offer convenient, real-time collaboration and cloud-based compilation, but advanced features like handling larger documents or extensive team collaboration often require a paid subscription. In contrast, working locally with a dedicated editor like TeXstudio (see {ref}`LaTeX installation <install-tex>`) allows you to edit and compile documents without depending on an internet connection while writing/compiling and without incurring subscription costs. This page is intended to provide guidance on effectively using LaTeX in a local environment.
 
@@ -7,6 +7,84 @@ Online LaTeX editors, such as Overleaf, offer convenient, real-time collaboratio
 ## Plaintext and word counting
 
 To estimate the number of words in a LaTeX manuscript using TeXstudio, begin by creating a plain text version of your document. Under the **Tools** menu, select **Convert to Abridged Plaintext**, which opens a new untitled tab containing your text without LaTeX commands. This stripped-down file is also suitable for sharing with collaborators who prefer (richtext) word processors. Next, choose **Analyse Text...** from the Tools menu and click the Count button. TeXstudio will display the number of paragraphs (that is, words) in your text and even provide a frequency analysis of specific terms. This functionality can be valuable for refining the manuscript writing style, for instance by identifying an overuse of transitional words like "however".
+
+## Citation management with Zotero and the Better BibTeX Plugin
+
+### Get and set up Zotero and Better BibTeX
+
+Better BibTeX is a plugin for Zotero that enhances its reference management capabilities for LaTeX users. It provides tools for generating, managing, and customizing BibTeX and BibLaTeX entries, making it a valuable citation tool within LaTeX environments. Better BibTeX offers several functionalities that make it a preferred choice:
+
+- Citation key management allows custom citation key generation, offering more control over key formatting.
+- Automatic export and continuously updated BibTeX and BibLaTeX exports ensure that the bibliography is always in sync with the Zotero library.
+- Handling of special characters prevents BibTeX / BibLaTeX errors.
+- Cite-as-you-write support for TeX (e.g., TeXstudio) and even Markdown editors.
+
+
+To install Better BibTeX for Zotero, follow these steps:
+
+1. Ensure you have the latest version of Zotero installed on your system. You can download it from the [Zotero website](https://www.zotero.org).
+
+2. Download Better BibTeX:
+   - Go to the official [Better BibTeX GitHub repository](https://github.com/retorquere/zotero-better-bibtex).
+   - Download the latest release of the plugin -- make sure to choose the `.xpi` file of the lates release.
+
+3. Install the plugin in Zotero:
+   - Open Zotero
+   - In Zotero, navigate to *Tools* in the top menu and select *Add-ons*
+   - In the Add-ons Manager, click the gear icon in the top-right corner and choose *Install Add-on From File*
+   - Locate the downloaded `.xpi` file and click *Open* - Zotero will install the plugin.
+   - Restart Zotero to activate the plugin.
+
+4. Configure Better BibTeX:
+   - After installation, you will find Better BibTeX settings in the Zotero Preferences (Windows) or Settings (Linux) menu under the *Better BibTeX* tab.
+   - Set up your citation key format and export preferences according to your workflow; our recommendation:
+     ```
+     auth.lower + year + shorttitle(1,1).lower
+     ```
+
+5. Export and use:
+   - To export a bibliography, select the desired references in Zotero, right-click, and choose *Export Items*
+   - Select *Better BibTeX* as the export format; note that the *Better BibLaTeX* may not produce the desired functionality and cause untraceable error messages when compiling a `.tex` file.
+   - Optionally, check the *keep updated* box in the next window
+
+For the domains of water resources reasearch and hydraulic engineering, you may want to work with our hydro-informatics.com library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library).
+
+(debug-zotero)=
+### Auto-merge multiple duplicates
+
+Merging duplicates in Zotero can be done by a mouse click, but only by a mouse click and item-by-item. This can take a lot of time when merging large libraries. Here is a workaround to auto-merge multiple duplicates in Zotero.
+
+```{admonition} Make sure all duplicates have the same Item Type
+:class: important
+
+To make the following auto-merge code work smoothly, go over your duplicate items and look for any marked duplicates that have different item types. Next, harmonize the item types of duplicate pairs (i.e., change the Item Type of one of the concerned entries). This is a bit tedious, but does not take too long and much faster than merging each duplicate additionally by mouse click.
+```
+
+* Open the Zotero application on your computer (not in the browser)
+* Go to the **Duplicate Items** entry of your library
+* Highlight all (press `CTRL` and `A` keys)
+* Go to **Tools** (top menu) > **Developer** > **Run JavaScript**, copy-paste the following code block into the **Code** field, and click **Run**
+
+
+```
+var DupPane = Zotero.getZoteroPanes();
+
+for(var i = 0; i < 999; i++) {
+  try {
+    await new Promise(r => setTimeout(r, 50));
+    DupPane[0].mergeSelectedItems();
+    Zotero_Duplicates_Pane.merge();
+  } catch (e) {
+    console.log(e);
+  }
+}
+```
+
+The code block makes at maximum 999 iterations, which can be increased by increasing the iteration number in the for loop of the JavaScript code.
+
+
+This response is inspired by discussions in the [Zotero Forum](https://forums.zotero.org/discussion/40457/merge-all-duplicates).
+
 
 
 ## Report writing template
