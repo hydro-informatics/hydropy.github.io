@@ -8,9 +8,9 @@ Online LaTeX editors, such as Overleaf, offer convenient, real-time collaboratio
 
 To estimate the number of words in a LaTeX manuscript using TeXstudio, begin by creating a plain text version of your document. Under the **Tools** menu, select **Convert to Abridged Plaintext**, which opens a new untitled tab containing your text without LaTeX commands. This stripped-down file is also suitable for sharing with collaborators who prefer (richtext) word processors. Next, choose **Analyse Text...** from the Tools menu and click the Count button. TeXstudio will display the number of paragraphs (that is, words) in your text and even provide a frequency analysis of specific terms. This functionality can be valuable for refining the manuscript writing style, for instance by identifying an overuse of transitional words like "however".
 
-## Citation management with Zotero and the Better BibTeX Plugin
+## Citation management with Zotero and Better BibTeX
 
-### Get and set up Zotero and Better BibTeX
+### Get and set up Zotero and the Better BibTeX plugin
 
 Better BibTeX is a plugin for Zotero that enhances its reference management capabilities for LaTeX users. It provides tools for generating, managing, and customizing BibTeX and BibLaTeX entries, making it a valuable citation tool within LaTeX environments. Better BibTeX offers several functionalities that make it a preferred choice:
 
