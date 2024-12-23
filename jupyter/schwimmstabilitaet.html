@@ -628,9 +628,9 @@
 <p>Parameterdefinitionen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho_k</span> <span class="o">=</span> <span class="mf">7860.</span> <span class="c1"># kg /m3 - Stahl- bzw. Eisendichte (ca. 7860)</span>
-<span class="n">rho_f</span> <span class="o">=</span> <span class="mf">1000.</span> <span class="c1"># kg /m3 - Wasserdichte (ca.)</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>      <span class="c1"># N / kg - Erdbeschleunigung</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho_k</span> <span class="o">=</span>  <span class="mf">870.</span> <span class="c1"># kg / m3 - Holzdichte</span>
+<span class="n">rho_f</span> <span class="o">=</span> <span class="mf">1000.</span> <span class="c1"># kg / m3 - Wasserdichte</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>      <span class="c1"># N / kg - Gravitationskonstante</span>
 <span class="n">b_x</span> <span class="o">=</span> <span class="mf">1.5</span>     <span class="c1"># m - Kastenbreite</span>
 <span class="n">b_y</span> <span class="o">=</span> <span class="mf">2.0</span>     <span class="c1"># m - Kastenlänge</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mf">1.5</span>       <span class="c1"># m - Kastenhöhe</span>
@@ -650,7 +650,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Koerpervolumen V_k = 0.13 m3
-Gewichtskraft: 10309.46 N
+Gewichtskraft: 1141.12 N
 </pre></div>
 </div>
 </div>
@@ -664,7 +664,7 @@ Gewichtskraft: 10309.46 N
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verdraengungsvolumen: 1.05 m3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Verdraengungsvolumen: 0.12 m3
 </pre></div>
 </div>
 </div>
@@ -683,8 +683,8 @@ Gewichtskraft: 10309.46 N
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eintauchtiefe d = 1.40 m
-Freibord f = 0.10 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eintauchtiefe d = 0.16 m
+Freibord f = 1.34 m
 Schwimmender Körper
 </pre></div>
 </div>
@@ -712,30 +712,19 @@ Schwimmender Körper
 </section>
 <section id="hohenlagen">
 <h3>Höhenlagen<a class="headerlink" href="#hohenlagen" title="Link to this heading">#</a></h3>
-<p>Höhe <span class="math notranslate nohighlight">\(h_{fg}\)</span> zwischen Wasseroberfläche (hier: horizontale Bezugsachse) und Gewichtsschwerpunkt:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_fg</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">b_x</span> <span class="o">*</span> <span class="n">b_y</span> <span class="o">*</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">V_k</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;h_fg = </span><span class="si">{</span><span class="n">h_fg</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h_fg = 0.31 m
-</pre></div>
-</div>
-</div>
-</div>
 <p>Höhe <span class="math notranslate nohighlight">\(h_g\)</span> des Gewichtsschwerpunkts:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_g</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">h_fg</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hoehe des Gewichtsschwerpunkts h_g = </span><span class="si">{</span><span class="n">h_g</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_k_lat_waende</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b_y</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="n">w</span> 
+<span class="n">V_k_front_back</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">b_x</span> <span class="o">*</span> <span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="n">w</span><span class="p">)</span> <span class="o">*</span> <span class="n">w</span>
+<span class="n">V_k_boden</span> <span class="o">=</span> <span class="n">b_x</span> <span class="o">*</span> <span class="n">b_y</span> <span class="o">*</span> <span class="n">w</span>
+<span class="n">h_g</span> <span class="o">=</span> <span class="p">((</span><span class="n">V_k_lat_waende</span> <span class="o">+</span> <span class="n">V_k_front_back</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">w</span> <span class="o">+</span> <span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">V_k_boden</span> <span class="o">*</span> <span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">V_k</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;h_g = </span><span class="si">{</span><span class="n">h_g</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Gewichtsschwerpunkts h_g = 1.09 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>h_g = 0.59 m
 </pre></div>
 </div>
 </div>
@@ -749,7 +738,7 @@ Schwimmender Körper
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Verdraengungsschwerpunkts h_v = 0.70 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Verdraengungsschwerpunkts h_v = 0.08 m
 </pre></div>
 </div>
 </div>
@@ -763,7 +752,7 @@ Schwimmender Körper
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehendifferenz h_gv = 0.39 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehendifferenz h_gv = 0.51 m
 </pre></div>
 </div>
 </div>
@@ -784,7 +773,7 @@ Schwimmender Körper
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Metazentrums h_M = 0.15 m
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hoehe des Metazentrums h_M = 4.32 m
 Stabile Lage.
 </pre></div>
 </div>
