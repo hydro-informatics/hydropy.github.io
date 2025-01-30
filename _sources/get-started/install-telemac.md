@@ -861,6 +861,11 @@ Older, partially non-working TELEMAC plugins for QGIS are:
 Note that *DEMto3D* will be available in the *Raster* menu: *DEMto3D* > *DEM 3D printing*.
 ```
 
+(artelia-mesh)=
+### Artelia Mesh Tools
+
+Artelia provides a Python-based meshing tool on their Github repository at [https://github.com/Artelia/Mesh_tools](https://github.com/Artelia/Mesh_tools). Hydro-informatics.com has not had a chance to test Mesh Tools, but it sounds promising (see [this entry](https://www.opentelemac.org/index.php/kunena/qgis-for-otm/14662-meshtools) in the Telemac Forum).
+
 (bluekenue)=
 ### BlueKenue (Windows or Linux+Wine)
 
